@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3835"
+   name=""
+   committed-date="2003-05-05T10:02:55.352841Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/working/xchat/src/pixmaps"
+   last-author="bornet"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:27:32.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="1697"
+   name="win.xpm"
+   text-time="2003-11-18T01:27:26.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="54da7d616b4476d823d674f65f5e5357"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:27:26.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="op.xpm"
+   text-time="2003-11-18T01:27:27.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="b9c592ecb9e29bab47530bf8de38c582"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:27:27.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="xchat_mini.xpm"
+   text-time="2003-11-18T01:27:27.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="28caa3574e7db034eddcbb912a7c6e69"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:27:27.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="voice.xpm"
+   text-time="2003-11-18T01:27:28.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="cd62f6c2c788cf71034014a0945629fa"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:27:28.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="server.xpm"
+   text-time="2003-11-18T01:27:28.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="32b2f6ce8019f7472a5890b23521775b"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:27:28.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="hop.xpm"
+   text-time="2003-11-18T01:27:29.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="c89b7e49eb6dc3707494de78a251ee0a"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:27:29.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="xchat.xpm"
+   text-time="2003-11-18T01:27:30.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="0854e651da8e7da88e304dd4da2b87eb"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:27:30.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="admin.xpm"
+   text-time="2003-11-18T01:27:31.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="5f5a2e652835c7692dfb8de82ebaada5"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:27:31.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="globe.xpm"
+   text-time="2003-11-18T01:27:32.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="7c3ad2c3a99b1797ea80e4233de2d1be"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:27:32.000000Z"/>
+</wc-entries>

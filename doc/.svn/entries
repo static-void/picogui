@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3974"
+   name=""
+   committed-date="2003-05-23T09:52:30.747999Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/doc"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:39:56.000000Z"
+   revision="4573"/>
+<entry
+   name="pgui-protocol"
+   kind="dir"/>
+<entry
+   name="html"
+   kind="dir"/>
+<entry
+   name="images"
+   kind="dir"/>
+<entry
+   name="src"
+   kind="dir"/>
+<entry
+   committed-rev="3973"
+   name="Makefile"
+   text-time="2003-11-18T15:29:51.000000Z"
+   committed-date="2003-05-23T09:51:05.221011Z"
+   checksum="b460e49d332e60318fc64e563b4d62e4"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:29:51.000000Z"/>
+<entry
+   name="doxygen"
+   kind="dir"/>
+<entry
+   committed-rev="3973"
+   name="README"
+   text-time="2003-11-18T15:39:56.000000Z"
+   committed-date="2003-05-23T09:51:05.221011Z"
+   checksum="9407c3161f04e9c8674765a06a3f2c94"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:39:56.000000Z"/>
+</wc-entries>

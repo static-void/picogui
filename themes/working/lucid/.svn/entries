@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4519"
+   name=""
+   committed-date="2003-07-16T22:47:05.851613Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/themes/working/lucid"
+   last-author="lalo"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:17:09.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3985"
+   name="mod_lucid_small.ths"
+   text-time="2003-11-18T15:17:05.000000Z"
+   committed-date="2003-05-23T13:50:52.075627Z"
+   checksum="55c4627685951d401d096fcf8c32b881"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:17:05.000000Z"/>
+<entry
+   name="data"
+   kind="dir"/>
+<entry
+   committed-rev="4519"
+   name="lucid.ths"
+   text-time="2003-11-18T15:17:09.000000Z"
+   committed-date="2003-07-16T22:47:05.851613Z"
+   checksum="2ff373bb884ccad8a7e9416d544c009f"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:17:09.000000Z"/>
+</wc-entries>

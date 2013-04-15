@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3978"
+   name=""
+   committed-date="2003-05-23T10:19:38.050153Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/dev/pgl/pgl-launcher"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T14:59:56.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3836"
+   name="pgl-launcher.c"
+   text-time="2003-11-18T14:59:43.000000Z"
+   committed-date="2003-05-05T14:06:05.654126Z"
+   checksum="22c1c419a9a8c54b2d09e533c2685f1e"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T14:59:43.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="linkedList.c"
+   text-time="2003-11-18T14:59:45.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="c35b3cbe2ddee3e843e8e6e55b77db89"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:59:45.000000Z"/>
+<entry
+   committed-rev="1862"
+   name="Makefile.static"
+   text-time="2003-11-18T14:59:46.000000Z"
+   committed-date="2002-01-09T16:40:18.000000Z"
+   checksum="3ff29c0f4b7fc7573c800076b27b3c30"
+   last-author="carpman"
+   kind="file"
+   prop-time="2003-11-18T14:59:46.000000Z"/>
+<entry
+   committed-rev="2097"
+   name="app.conf"
+   text-time="2003-11-18T14:59:47.000000Z"
+   committed-date="2002-02-07T02:44:44.000000Z"
+   checksum="8ce1d8a96ee7b6e990e7ae89ee1b82c7"
+   last-author="carpman"
+   kind="file"
+   prop-time="2003-11-18T14:59:47.000000Z"/>
+<entry
+   committed-rev="1750"
+   name="launcher.conf"
+   text-time="2003-11-18T14:59:48.000000Z"
+   committed-date="2001-12-18T17:17:18.000000Z"
+   checksum="9cdc63956f93d4b4ab5a0273d48d94b0"
+   last-author="carpman"
+   kind="file"
+   prop-time="2003-11-18T14:59:48.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="applet.c"
+   text-time="2003-11-18T14:59:49.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="83500cc1ed495e06e9fd04adab7f254b"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:59:49.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="configfile.c"
+   text-time="2003-11-18T14:59:51.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="5edafe5ac9b455e76a3fb064db98e327"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:59:51.000000Z"/>
+<entry
+   committed-rev="3836"
+   name="pgl-launcher.h"
+   text-time="2003-11-18T14:59:52.000000Z"
+   committed-date="2003-05-05T14:06:05.654126Z"
+   checksum="52ca62c892469ef8196b9764c1d743cb"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T14:59:52.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="linkedList.h"
+   text-time="2003-11-18T14:59:53.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="9e8e88a2d288cdccb15504260bc16b85"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:59:53.000000Z"/>
+<entry
+   committed-rev="3836"
+   name="Makefile.am"
+   text-time="2003-11-18T14:59:54.000000Z"
+   committed-date="2003-05-05T14:06:05.654126Z"
+   checksum="76246470577d7a57fe5d7b1580603213"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T14:59:54.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="configfile.h"
+   text-time="2003-11-18T14:59:55.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="1605fd700a812524a8cea9b445f5a65e"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:59:55.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="applet.h"
+   text-time="2003-11-18T14:59:56.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="88cdbca3a3ae0803b6cb023992d942b2"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:59:56.000000Z"/>
+</wc-entries>

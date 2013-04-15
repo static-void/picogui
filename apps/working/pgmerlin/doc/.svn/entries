@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3840"
+   name=""
+   committed-date="2003-05-05T18:42:26.188241Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/working/pgmerlin/doc"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:48:51.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3840"
+   name="screenshot.png"
+   text-time="2003-11-18T01:48:12.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="41408d573bad077193db0415ef8f7076"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:48:12.000000Z"/>
+<entry
+   committed-rev="2484"
+   name="numerical.gif"
+   text-time="2003-11-18T01:48:12.000000Z"
+   committed-date="2002-05-07T15:03:23.000000Z"
+   checksum="b00d1b7c14c25ad4705daf1e8a98e162"
+   last-author="bigthor"
+   kind="file"
+   prop-time="2003-11-18T01:48:12.000000Z"/>
+<entry
+   committed-rev="2484"
+   name="extended.gif"
+   text-time="2003-11-18T01:48:13.000000Z"
+   committed-date="2002-05-07T15:03:23.000000Z"
+   checksum="eda4c3d29cabe725544bc859b0df29d4"
+   last-author="bigthor"
+   kind="file"
+   prop-time="2003-11-18T01:48:13.000000Z"/>
+<entry
+   committed-rev="2484"
+   name="alpha.gif"
+   text-time="2003-11-18T01:48:15.000000Z"
+   committed-date="2002-05-07T15:03:23.000000Z"
+   checksum="dc0afb5a5de26ea80194cfe3993b7335"
+   last-author="bigthor"
+   kind="file"
+   prop-time="2003-11-18T01:48:15.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="pgmerlin.jpg"
+   text-time="2003-11-18T01:48:47.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="55609c182b5407ba3e3a3f73866752a7"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:48:47.000000Z"/>
+<entry
+   committed-rev="2484"
+   name="README"
+   text-time="2003-11-18T01:48:51.000000Z"
+   committed-date="2002-05-07T15:03:23.000000Z"
+   checksum="1fc84aec7865f0361afca3e6bf0cc1f6"
+   last-author="bigthor"
+   kind="file"
+   prop-time="2003-11-18T01:48:51.000000Z"/>
+</wc-entries>

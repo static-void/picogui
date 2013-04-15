@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3978"
+   name=""
+   committed-date="2003-05-23T10:19:38.050153Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/tools/thdump"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:18:30.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3978"
+   name="mksymtab.pl"
+   text-time="2003-11-18T01:18:27.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="bc7f14724e7a2c546a598730650f6450"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:18:27.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="main.c"
+   text-time="2003-11-18T01:18:28.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="935ca1fe2f88cd84965dbd6e38ec5a46"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:18:28.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="thdump.h"
+   text-time="2003-11-18T01:18:29.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="824c751d75fd7b4f06aae03741af1d6b"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:18:29.000000Z"/>
+<entry
+   committed-rev="2380"
+   name="Makefile.am"
+   text-time="2003-11-18T01:18:30.000000Z"
+   committed-date="2002-04-09T17:12:17.000000Z"
+   checksum="9260dd572bc431e3e3574e8402363310"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:18:30.000000Z"/>
+</wc-entries>

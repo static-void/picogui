@@ -1,0 +1,7 @@
+bin_PROGRAMS = blackout
+blackout_SOURCES = blackout.c
+
+AM_LDFLAGS = @PICOGUI_LDFLAGS@
+LDADD = @PICOGUI_LIBS@
+
+AM_CFLAGS = @CFLAGS@ @PICOGUI_CFLAGS@

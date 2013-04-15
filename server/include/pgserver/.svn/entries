@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4560"
+   name=""
+   committed-date="2003-11-17T00:33:08.533668Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/server/include/pgserver"
+   last-author="lalo"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T16:21:29.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3978"
+   name="textedit.h"
+   text-time="2003-11-18T16:18:30.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="b17937d6e9b3d618f75b35be6e94dcf7"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:18:30.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="handle.h"
+   text-time="2003-11-18T16:18:32.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="b664be9cf580816745f7abd492aa3b34"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:18:32.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="svrtheme.h"
+   text-time="2003-11-18T16:18:34.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="3164282327fba5b838a6ee6459aa414f"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:18:34.000000Z"/>
+<entry
+   committed-rev="4551"
+   name="g_error.h"
+   text-time="2003-11-18T16:18:34.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="09b7e6510c33cfd0c4e9866d321c1bf2"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T16:18:34.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="hotspot.h"
+   text-time="2003-11-18T16:18:36.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="d4f93ff1681f4421202512ed1e9105b4"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:18:36.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="divtree.h"
+   text-time="2003-11-18T16:18:42.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="308b905251fdefb79d2e3dd922d7834d"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:18:42.000000Z"/>
+<entry
+   committed-rev="4507"
+   name="gl.h"
+   text-time="2003-11-18T16:18:44.000000Z"
+   committed-date="2003-07-11T13:36:43.001383Z"
+   checksum="22c34a88a054cfdd8205096ca3566ecd"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:18:44.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="init.h"
+   text-time="2003-11-18T16:18:46.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="1f2a82a1e179f3cd0a3c98766fb5bb32"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:18:46.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="os_posix.h"
+   text-time="2003-11-18T16:18:47.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="a8360be3ba527b282e6671e564f4820a"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:18:47.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="types.h"
+   text-time="2003-11-18T16:18:49.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="74837682b78dbc4b22c7570c0469f2d7"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:18:49.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="paragraph.h"
+   text-time="2003-11-18T16:19:08.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="c1293ca00b8da7fab8ba3f2bf3f86ade"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:19:08.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="font.h"
+   text-time="2003-11-18T16:19:10.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="e94477c84afa30fcbc6de6bcedce63f3"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:19:10.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="inlstring.h"
+   text-time="2003-11-18T16:19:14.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="d756b46e824fcd373838f26a7ea6748f"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:19:14.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="x11.h"
+   text-time="2003-11-18T16:19:17.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="da62db925893db526dfe9f5cbac48a4e"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:19:17.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="requests.h"
+   text-time="2003-11-18T16:19:18.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="4b457523cc165d2a8f0158970647b522"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:19:18.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="os.h"
+   text-time="2003-11-18T16:19:19.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="dcbace428da03e6cbb2dd6c2a32c8deb"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:19:19.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="fbkeys.h"
+   text-time="2003-11-18T16:19:25.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="25577f5288ef8e6b7896a1294dca8f49"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:19:25.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="widget.h"
+   text-time="2003-11-18T16:19:23.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="61a2a1e617f67111ab870a48aaebcdc1"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:19:23.000000Z"/>
+<entry
+   committed-rev="4560"
+   name="debug.h"
+   text-time="2003-11-18T16:19:28.000000Z"
+   committed-date="2003-11-17T00:33:08.533668Z"
+   checksum="c6e859fdb97a8ce2aa5468a645c691c4"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:19:28.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="appmgr.h"
+   text-time="2003-11-18T16:19:27.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="b738921175d1d0d7ead87b1f99c6ae9b"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:19:27.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="llist.h"
+   text-time="2003-11-18T16:19:30.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="9f06f49ad77608bac915ad0dca015ad5"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:19:30.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="pgstring.h"
+   text-time="2003-11-18T16:19:38.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="702724cc901daad4b240c9a592d6ccab"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:19:38.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="textbox.h"
+   text-time="2003-11-18T16:19:32.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="5aa5a4e6aecd2deb622c2dae75d295dd"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:19:32.000000Z"/>
+<entry
+   committed-rev="4560"
+   name="input.h"
+   text-time="2003-11-18T16:19:42.000000Z"
+   committed-date="2003-11-17T00:33:08.533668Z"
+   checksum="5262b25060b4c8246469d5c3236e9b97"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:19:42.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="configfile.h"
+   text-time="2003-11-18T16:19:43.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="83fb8dcfee6570bd2efbb402932dbfe3"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:19:43.000000Z"/>
+<entry
+   committed-rev="4560"
+   name="video.h"
+   text-time="2003-11-18T16:19:53.000000Z"
+   committed-date="2003-11-17T00:33:08.533668Z"
+   checksum="912f313b79a62c32a49855c3470b9ab3"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:19:53.000000Z"/>
+<entry
+   committed-rev="4437"
+   name="terminal.h"
+   text-time="2003-11-18T16:20:25.000000Z"
+   committed-date="2003-06-29T01:00:10.476946Z"
+   checksum="816f2cd35fcb1837fefa32aa9611bc17"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:20:25.000000Z"/>
+<entry
+   committed-rev="4551"
+   name="pgnet.h"
+   text-time="2003-11-18T16:20:40.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="77b6a55974620c16f49fb56e125901c4"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T16:20:40.000000Z"/>
+<entry
+   committed-rev="4551"
+   name="g_malloc.h"
+   text-time="2003-11-18T16:20:38.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="f9678986fb0b6f4ce09ea64296b237bb"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T16:20:38.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="render.h"
+   text-time="2003-11-18T16:20:52.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="a8c35d013638805b38c5fc4bfeda6f7a"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:20:52.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="timer.h"
+   text-time="2003-11-18T16:21:03.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="c70ce0bf6e3f765aa0c4a60416968869"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:21:03.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="font_bdf.h"
+   text-time="2003-11-18T16:21:05.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="5b7d1bf346afd8405e178abee1252ecf"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:21:05.000000Z"/>
+<entry
+   committed-rev="4551"
+   name="os_mingw.h"
+   text-time="2003-11-18T16:21:06.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="5adfbb75780ee758a3ae9875bcdec2a7"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T16:21:06.000000Z"/>
+<entry
+   committed-rev="3412"
+   name="Makefile.am"
+   text-time="2003-11-18T16:21:08.000000Z"
+   committed-date="2002-11-25T05:48:52.000000Z"
+   checksum="d743e6da4e8b9b8e72474b0b4939805f"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:21:08.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="svrwt.h"
+   text-time="2003-11-18T16:21:27.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="d3d16a3cca52c18a4d85013966dc0f13"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:21:27.000000Z"/>
+<entry
+   committed-rev="4551"
+   name="common.h"
+   text-time="2003-11-18T16:21:29.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="3dfb31d922929e06175e173fc291d236"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T16:21:29.000000Z"/>
+</wc-entries>

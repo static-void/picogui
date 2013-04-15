@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4573"
+   name=""
+   committed-date="2003-11-19T00:45:34.491413Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/dev/nifty"
+   last-author="lalo"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:02:35.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="4570"
+   name="nifty.py"
+   text-time="2003-11-18T15:01:23.000000Z"
+   committed-date="2003-11-18T00:49:13.293416Z"
+   checksum="8cbf8339542ca5645b031c92831abd9a"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:01:23.000000Z"/>
+<entry
+   committed-rev="3773"
+   name="pdaNifty.py"
+   text-time="2003-11-18T15:01:29.000000Z"
+   committed-date="2003-04-16T00:32:50.000000Z"
+   checksum="1c6c999245187c344ac53ccb4cf94935"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:01:29.000000Z"/>
+<entry
+   committed-rev="3736"
+   name="AUTHORS"
+   text-time="2003-11-18T15:01:30.000000Z"
+   committed-date="2003-04-02T22:17:49.000000Z"
+   checksum="bda8daf6d5eeef9ef237d4b3eeb6600b"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:01:30.000000Z"/>
+<entry
+   committed-rev="3736"
+   name="INSTALL"
+   text-time="2003-11-18T15:01:31.000000Z"
+   committed-date="2003-04-02T22:17:49.000000Z"
+   checksum="8146f13742f20728ace5cfe1f3999d65"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:01:31.000000Z"/>
+<entry
+   name="Nifty"
+   kind="dir"/>
+</wc-entries>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3835"
+   name=""
+   committed-date="2003-05-05T10:02:55.352841Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/working/xchat/src"
+   last-author="bornet"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:32:46.000000Z"
+   revision="4573"/>
+<entry
+   name="pixmaps"
+   kind="dir"/>
+<entry
+   name="fe-picogui"
+   kind="dir"/>
+<entry
+   name="common"
+   kind="dir"/>
+<entry
+   committed-rev="1697"
+   name="makeinc.msc"
+   text-time="2003-11-18T01:30:01.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="870779a7d7adc1dc69094d183fd66e36"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:30:01.000000Z"/>
+<entry
+   committed-rev="1698"
+   name="Makefile.am"
+   text-time="2003-11-18T01:30:02.000000Z"
+   committed-date="2001-12-15T04:05:16.000000Z"
+   checksum="c48b888f99e7158a3eade479d210cbfb"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:30:02.000000Z"/>
+<entry
+   name="fe-text"
+   kind="dir"/>
+<entry
+   name="fe-gtk"
+   kind="dir"/>
+<entry
+   committed-rev="1697"
+   name="makefile.msc"
+   text-time="2003-11-18T01:32:46.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="aae0f387b03291fd9a2491bddb7ca5ca"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:32:46.000000Z"/>
+</wc-entries>

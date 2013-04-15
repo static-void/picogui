@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3835"
+   name=""
+   committed-date="2003-05-05T10:02:55.352841Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/working/pgmon"
+   last-author="bornet"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:24:12.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3828"
+   name="pgmon.c"
+   text-time="2003-11-18T01:24:11.000000Z"
+   committed-date="2003-05-05T08:19:42.807520Z"
+   checksum="cdd73df72aa7a5740d54e7882fa0eae7"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T01:24:11.000000Z"/>
+<entry
+   committed-rev="3831"
+   name="Makefile.am"
+   text-time="2003-11-18T01:24:12.000000Z"
+   committed-date="2003-05-05T09:30:28.726185Z"
+   checksum="0f04d16995f45c7c8a31804f15b45e15"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T01:24:12.000000Z"/>
+</wc-entries>

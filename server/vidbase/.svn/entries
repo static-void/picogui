@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4551"
+   name=""
+   committed-date="2003-09-03T18:22:27.534629Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/server/vidbase"
+   last-author="Dentoid"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T16:16:37.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="4551"
+   name="linear4.c"
+   text-time="2003-11-18T16:11:59.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="3cb1de23982867a50ca5368e880a0ffc"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T16:11:59.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="gl_util.c"
+   text-time="2003-11-18T16:12:10.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="9f2a8b81959c3a8d0731bde606e25a74"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:12:10.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="font_base.c"
+   text-time="2003-11-18T16:12:12.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="01a1a3e99cf85351996c17f385586dab"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:12:12.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="linear8.c"
+   text-time="2003-11-18T16:12:21.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="ec52ccd814dc989b5eaeafcf9f560e16"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:12:21.000000Z"/>
+<entry
+   committed-rev="4551"
+   name="dvbl_primitives_aa.c"
+   text-time="2003-11-18T16:12:25.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="b0173931e8728c8b37e2fc004346932e"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T16:12:25.000000Z"/>
+<entry
+   committed-rev="4507"
+   name="font_freetype.c"
+   text-time="2003-11-18T16:12:36.000000Z"
+   committed-date="2003-07-11T13:36:43.001383Z"
+   checksum="d0521839d30cf41ff0c8fedb9d807d08"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:12:36.000000Z"/>
+<entry
+   committed-rev="3827"
+   name="dvbl_init.c"
+   text-time="2003-11-18T16:12:54.000000Z"
+   committed-date="2003-05-04T20:55:42.578296Z"
+   checksum="4ac90f7468d6a53251f303ba06b4c69a"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:12:54.000000Z"/>
+<entry
+   committed-rev="4503"
+   name="vgaplan4.c"
+   text-time="2003-11-18T16:13:04.000000Z"
+   committed-date="2003-07-11T13:21:38.027914Z"
+   checksum="0e870b75178819d7997677fa41d5053b"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:13:04.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="dvbl_font.c"
+   text-time="2003-11-18T16:13:08.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="35e2f63fca0113e2f812961baa44401c"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:13:08.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="dvbl_sprite.c"
+   text-time="2003-11-18T16:13:10.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="e2cd45384fb5597bc45833272cd783a4"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:13:10.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="gl_primitives.c"
+   text-time="2003-11-18T16:13:20.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="29cbb8918a97c22e2a3bde6ae6b19891"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:13:20.000000Z"/>
+<entry
+   committed-rev="4551"
+   name="yuv16_422_planar.c"
+   text-time="2003-11-18T16:14:18.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="f0066e75e2b578408daca532d2d6651c"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T16:14:18.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="font_textmode.c"
+   text-time="2003-11-18T16:14:24.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="1000ca86a79eb20177f88fca48df506f"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:14:24.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="linear24.c"
+   text-time="2003-11-18T16:14:24.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="2c3b6c01c1f3f30b248346a88e8767a4"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:14:24.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="font_ftgl.c"
+   text-time="2003-11-18T16:14:46.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="ade6a12aa506a42201951b9f9eaf282b"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:14:46.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="dvbl_color.c"
+   text-time="2003-11-18T16:14:50.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="ca167e0364efddf51c61b80e20334904"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:14:50.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="font_xft.c"
+   text-time="2003-11-18T16:14:52.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="8025d890e5ec24ade262173fd61e8143"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:14:52.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="yuv.h"
+   text-time="2003-11-18T16:14:53.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="ae56be4c63a2a4cb960dc56fbf704b4f"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:14:53.000000Z"/>
+<entry
+   committed-rev="3579"
+   name="README.yuv"
+   text-time="2003-11-18T16:14:55.000000Z"
+   committed-date="2003-02-03T11:47:30.000000Z"
+   checksum="8a4e47896d3f281a0cd9472fafdb5fdb"
+   last-author="thierrythevoz"
+   kind="file"
+   prop-time="2003-11-18T16:14:55.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="gl_bitmap.c"
+   text-time="2003-11-18T16:14:58.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="a0844241834d230e4055c1a0e0ab06fd"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:14:58.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="visibone2.c"
+   text-time="2003-11-18T16:15:26.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="7dd9a66ca52156f5895257f5f459acaa"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:15:26.000000Z"/>
+<entry
+   committed-rev="4551"
+   name="dvbl_primitives.c"
+   text-time="2003-11-18T16:15:42.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="c02007cfd715e4360a519f42d0df9b50"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T16:15:42.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="dvbl_lgop.c"
+   text-time="2003-11-18T16:15:43.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="0657b0334fb3d1f7378831dfe0c93561"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:15:43.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="gl_camera.c"
+   text-time="2003-11-18T16:15:51.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="b79d351bbc712ba62e705b50c613cef6"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:15:51.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="linear32.c"
+   text-time="2003-11-18T16:15:56.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="04c3867dd8a5cb7d4ceafc7e5c0cd99e"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:15:56.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="linear16.c"
+   text-time="2003-11-18T16:16:04.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="84e2c2230de7d29150790f215499f988"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:16:04.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="font_bdf.c"
+   text-time="2003-11-18T16:16:09.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="1a63a98f836167e5dfa7e7ffd2f5e87b"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:16:09.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="dvbl_bitmap.c"
+   text-time="2003-11-18T16:16:13.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="783dfbcc652801bd5b9a950aa2aed061"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:16:13.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="gl_init.c"
+   text-time="2003-11-18T16:16:15.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="4928fe431a4a58db8c8e7707a5c91ab4"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:16:15.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="dvbl_dither.c"
+   text-time="2003-11-18T16:16:18.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="3f702441025c58b0342c923ce9806b62"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:16:18.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="dvbl_effects.c"
+   text-time="2003-11-18T16:16:23.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="6a479b3a0c442296525e854fbcc79b27"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:16:23.000000Z"/>
+<entry
+   committed-rev="3563"
+   name="Makefile.am"
+   text-time="2003-11-18T16:16:25.000000Z"
+   committed-date="2003-01-20T17:12:25.000000Z"
+   checksum="7ce6c8e009b5ef8b03cbb396d48a80e5"
+   last-author="thierrythevoz"
+   kind="file"
+   prop-time="2003-11-18T16:16:25.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="slowvbl.c"
+   text-time="2003-11-18T16:16:27.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="f1032d2d23104252179cfd1aa96ef39d"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:16:27.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="gl_grop.c"
+   text-time="2003-11-18T16:16:28.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="6c119b3b2004340948a169e664c17a9b"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:16:28.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="linear1.c"
+   text-time="2003-11-18T16:16:33.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="47028ebd805810ba7891c4fdbc350af1"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:16:33.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="linear2.c"
+   text-time="2003-11-18T16:16:37.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="b297a2d4be8940c07ddabcb8537ade3e"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:16:37.000000Z"/>
+</wc-entries>

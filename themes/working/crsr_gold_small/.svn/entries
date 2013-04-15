@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3840"
+   name=""
+   committed-date="2003-05-05T18:42:26.188241Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/themes/working/crsr_gold_small"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:18:00.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3794"
+   name="crsr_gold_small.ths"
+   text-time="2003-11-18T15:17:52.000000Z"
+   committed-date="2003-05-03T10:13:02.433148Z"
+   checksum="f39178e9cf2065fe93359e0253880243"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:17:52.000000Z"/>
+<entry
+   name="data"
+   kind="dir"/>
+</wc-entries>

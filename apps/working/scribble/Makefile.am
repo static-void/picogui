@@ -1,0 +1,7 @@
+bin_PROGRAMS = scribble
+scribble_SOURCES = scribble.c
+
+AM_LDFLAGS = @PICOGUI_LDFLAGS@
+LDADD = @PICOGUI_LIBS@
+
+AM_CFLAGS = @CFLAGS@ @PICOGUI_CFLAGS@

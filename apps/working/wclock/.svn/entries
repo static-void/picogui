@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4563"
+   name=""
+   committed-date="2003-11-17T03:51:03.133070Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/working/wclock"
+   last-author="lalo"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:25:10.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3978"
+   name="zones.c"
+   text-time="2003-11-18T01:24:46.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="058e3412be9ecf245e6a5a1ff22f28e1"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:24:46.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="wclock.c"
+   text-time="2003-11-18T01:24:50.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="e802fe24b38e03da8d71612252d5637a"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:24:50.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="world-grey.pnm"
+   text-time="2003-11-18T01:25:02.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="bc78d2385764c20ac1114519b3a5f034"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:25:02.000000Z"/>
+<entry
+   committed-rev="2478"
+   name="TODO"
+   text-time="2003-11-18T01:25:02.000000Z"
+   committed-date="2002-04-30T09:56:32.000000Z"
+   checksum="50d3c5c1359ab0c04a37f6c8a3bfcc35"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:25:02.000000Z"/>
+<entry
+   committed-rev="2476"
+   name="ChangeLog"
+   text-time="2003-11-18T01:25:03.000000Z"
+   committed-date="2002-04-29T23:35:24.000000Z"
+   checksum="68b329da9893e34099c7d8ad5cb9c940"
+   last-author="bauermeister"
+   kind="file"
+   prop-time="2003-11-18T01:25:03.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="wclock.h"
+   text-time="2003-11-18T01:25:04.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="68a92de0b46dbf02f5b4c4708c1cc6e0"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:25:04.000000Z"/>
+<entry
+   committed-rev="4563"
+   name="Makefile.am"
+   text-time="2003-11-18T01:25:06.000000Z"
+   committed-date="2003-11-17T03:51:03.133070Z"
+   checksum="3d07bee33ed764aee718f203fe80807e"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T01:25:06.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="debug.h"
+   text-time="2003-11-18T01:25:08.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="657e8e9a9b0a4cd074425f1ad3173be1"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:25:08.000000Z"/>
+<entry
+   committed-rev="2476"
+   name="README"
+   text-time="2003-11-18T01:25:09.000000Z"
+   committed-date="2002-04-29T23:35:24.000000Z"
+   checksum="969e4206bffcc2ee2e80e6915aac2c1e"
+   last-author="bauermeister"
+   kind="file"
+   prop-time="2003-11-18T01:25:09.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="map.c"
+   text-time="2003-11-18T01:25:10.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="d163053296e51b41c1c891cdd91ac34c"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:25:10.000000Z"/>
+</wc-entries>

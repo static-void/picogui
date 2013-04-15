@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3835"
+   name=""
+   committed-date="2003-05-05T10:02:55.352841Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/working/xchat/debian"
+   last-author="bornet"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:27:19.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="1697"
+   name="control"
+   text-time="2003-11-18T01:27:05.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="86a49afb758a6d49b0828e26f2bfa01a"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:27:05.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="xchat.links"
+   text-time="2003-11-18T01:27:06.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="55fafb4ab720c8cacd4e17281b11c42a"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:27:06.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="changelog"
+   text-time="2003-11-18T01:27:10.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="9883df527b8a698d82dd2a44d3f83b95"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:27:10.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="xchat-text.1"
+   text-time="2003-11-18T01:27:11.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="b1bea4b759050db67c1a22f2814afbb5"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:27:11.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="xchat.postinst"
+   text-time="2003-11-18T01:27:11.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="2cb89cd02c1f14aaf230464ee2157acd"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:27:11.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="xchat-gnome.links"
+   text-time="2003-11-18T01:27:13.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="81772dacc0c0b1e4313ffdf85244046f"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:27:13.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="rules"
+   text-time="2003-11-18T01:27:15.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="402447968a323b3a350408f3b8ea1b05"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:27:15.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="xchat-text.menu"
+   text-time="2003-11-18T01:27:17.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="d435dba71c8452fbc23712a9ceadf8dc"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:27:17.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="xchat-normal.1"
+   text-time="2003-11-18T01:27:18.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="62fb27910069678ec09a8bcc9c20345f"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:27:18.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="xchat-gnome.postinst"
+   text-time="2003-11-18T01:27:19.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="4492dffa3b9356bc5285ac9e95edec05"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:27:19.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="copyright"
+   text-time="2003-11-18T01:27:10.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="87ec5031c376d9be4d4352fbc15530c2"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:27:10.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="xchat-gnome.1"
+   text-time="2003-11-18T01:27:12.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="72b2b66151a725966388ae1819e01adc"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:27:12.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="xchat.menu"
+   text-time="2003-11-18T01:27:16.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="6c4b039bb790f6234b12185ddd1cb1e2"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:27:16.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="xchat-text.postinst"
+   text-time="2003-11-18T01:27:17.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="25f836a3a81951c8eac2247d16768eca"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:27:17.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="xchat-gnome.menu"
+   text-time="2003-11-18T01:27:19.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="1089bfcb7b4f8b4e702d63937aa6cad1"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:27:19.000000Z"/>
+</wc-entries>

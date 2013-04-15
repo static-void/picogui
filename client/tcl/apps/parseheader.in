@@ -1,0 +1,77 @@
+proc FromFile {filename} {
+        set data ""
+        set f [open $filename]
+        fconfigure $f -translation binary
+        while { ![eof $f] } {
+                set data [append data [read -nonewline $f]]
+        }
+        close $f
+        return $data
+}
+
+if {[llength $argv] != 4} {
+	puts "Usage $argv0 inputfile outputfile replacestring arrayname"
+	exit 1
+}
+set input [lindex $argv 0]
+set output [lindex $argv 1]
+set search [lindex $argv 2]
+set arrayname [lindex $argv 3]
+
+set fdata [split [FromFile $input] "\n"]
+set data ""
+set cut [string length "#define "]
+set scut [string length "$search"]
+set indx 0
+while {$indx < [llength $fdata]} {
+	set line [lindex $fdata $indx]
+	set start [string first "#define $search" $line]
+	if {$start ==0} {
+		set line [string range $line $cut end ]
+		regsub -all "\t+" $line " " nline
+		regsub -all " +" $nline " " line
+		while {[string index $line end]=="\\"} {
+			incr indx
+			append line [string trim [lindex $fdata $indx]]
+		}
+		set line [join [split $line "\\"] ""]
+		set data [lappend data $line]
+	}
+	incr indx
+}
+foreach line $data {
+	set line [split $line]
+	set indx [string range [lindex $line 0] $scut end]
+	set [lindex $line 0] [lindex $line 1]
+	set line [join [lrange $line 1 end]]
+	set i [string first "//" $line]
+	if {$i >=0} {
+		set line [string range $line 0 [expr $i -1]]
+	}
+	set i [string first "/*" $line]
+	if {$i >=0} {
+		set line [string range $line 0 [expr $i -1]]
+	}
+	set line [string trim $line]
+	if {[string index $indx 0]=="_"} {
+		set indx [string range $indx 1 end]
+	}
+	set temp([string tolower $indx]) $line
+}
+set out [open $output w]
+puts $out "array set $arrayname \""
+foreach line [lsort [array names temp]] {
+	puts -nonewline $out "\t$line\t"
+	if {[info exists $temp($line)]} {
+		set temp($line) [format {$%s} $temp($line)]
+	}
+	if {[string first $search $temp($line)]!=-1} {
+		set temp($line) [join [split $temp($line) " "] ""]
+		set temp($line) [join [split $temp($line) "|"] "|$"]
+		set temp($line) [join [split $temp($line) "("] "($"]
+		set temp($line) [eval expr $temp($line)]
+	}
+	puts $out [format "%sexpr $temp($line)%s" {[} {]}]
+}
+puts $out "\""
+close $out

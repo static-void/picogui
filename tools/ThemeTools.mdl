@@ -1,0 +1,20 @@
+# -*- python -*-
+
+from Bee.Autoconf import compile, install, clean
+
+native = 1
+multicompile = 1
+
+license = ''' GNU GPL '''
+
+description = 'PicoGUI Themes compiler'
+
+depends = [ 'picoguiserver' ]
+
+def prepare (module, platform, project):
+    sequence ("rm -f config.status",
+              "test ! -f ../autogen.sh || (cd .. ; ./autogen.sh || true)",
+              "../configure --prefix=%s " % module.path ['prefix'] +
+              "--with-pgserver=%s " % project ['module/picoguiserver'].path ['dfl'])
+    return
+

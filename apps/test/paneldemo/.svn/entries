@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3841"
+   name=""
+   committed-date="2003-05-05T18:45:20.897937Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/test/paneldemo"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:22:57.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3841"
+   name="tux_mask.pnm"
+   text-time="2003-11-18T01:22:55.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="72539395855990ba2edbf59fac73fa3a"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:22:55.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="paneldemo.c"
+   text-time="2003-11-18T01:22:56.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="197796dd6ad92a4a7cc477d0af6becf8"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:22:56.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="tux.pnm"
+   text-time="2003-11-18T01:22:56.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="e4021a122563bc906aa9eef25bdddef8"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:22:56.000000Z"/>
+<entry
+   committed-rev="1884"
+   name="Makefile"
+   text-time="2003-11-18T01:22:57.000000Z"
+   committed-date="2002-01-15T08:28:03.000000Z"
+   checksum="3f0f011b5282fcab913cdf58a967ffaa"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:22:57.000000Z"/>
+</wc-entries>

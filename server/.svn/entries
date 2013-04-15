@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4564"
+   name=""
+   committed-date="2003-11-17T03:52:27.956389Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/server"
+   last-author="lalo"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T16:46:44.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3412"
+   name="README.opengl"
+   text-time="2003-11-18T15:40:40.000000Z"
+   committed-date="2002-11-25T05:48:52.000000Z"
+   checksum="2b974430a3f42d230513d2e237637471"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T15:40:40.000000Z"/>
+<entry
+   name="os"
+   kind="dir"/>
+<entry
+   name="profiles"
+   kind="dir"/>
+<entry
+   name="widget"
+   kind="dir"/>
+<entry
+   committed-rev="2897"
+   name="AUTHORS"
+   text-time="2003-11-18T15:45:32.000000Z"
+   committed-date="2002-10-04T02:49:21.000000Z"
+   checksum="ba5468b444a2ff44002e531381fe10d9"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T15:45:32.000000Z"/>
+<entry
+   name="appmgr"
+   kind="dir"/>
+<entry
+   name="debug"
+   kind="dir"/>
+<entry
+   committed-rev="3978"
+   name="pgmain.c"
+   text-time="2003-11-18T15:47:03.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="430a92608ba30cb66e69adb020d50f2f"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:47:03.000000Z"/>
+<entry
+   committed-rev="4560"
+   name="config.help"
+   text-time="2003-11-18T15:47:01.000000Z"
+   committed-date="2003-11-17T00:33:08.533668Z"
+   checksum="6978c6757f3685e3cb915ff6fa0955bc"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:47:01.000000Z"/>
+<entry
+   name="input"
+   kind="dir"/>
+<entry
+   committed-rev="1056"
+   name="INSTALL"
+   text-time="2003-11-18T16:09:31.000000Z"
+   committed-date="2001-07-16T07:02:10.000000Z"
+   checksum="4a59af300ba4d61cd1d9a7e5ce295a81"
+   last-author="gobry"
+   kind="file"
+   prop-time="2003-11-18T16:09:31.000000Z"/>
+<entry
+   name="video"
+   kind="dir"/>
+<entry
+   committed-rev="3594"
+   name="COPYING"
+   text-time="2003-11-18T16:10:01.000000Z"
+   committed-date="2003-03-10T23:43:26.000000Z"
+   checksum="7fbc338309ac38fefcd64b04bb903e34"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:10:01.000000Z"/>
+<entry
+   committed-rev="4564"
+   name="config.in"
+   text-time="2003-11-18T16:10:37.000000Z"
+   committed-date="2003-11-17T03:52:27.956389Z"
+   checksum="3e6a6e93d526c987ff054615b92d8e70"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:10:37.000000Z"/>
+<entry
+   committed-rev="1142"
+   name="autogen.sh"
+   text-time="2003-11-18T16:11:00.000000Z"
+   committed-date="2001-08-06T09:49:17.000000Z"
+   checksum="7acec4f5e6b77213732c63a76eeab5ca"
+   last-author="gobry"
+   kind="file"
+   prop-time="2003-11-18T16:11:00.000000Z"/>
+<entry
+   name="pic"
+   kind="dir"/>
+<entry
+   name="vidwrap"
+   kind="dir"/>
+<entry
+   committed-rev="851"
+   name="NEWS"
+   text-time="2003-11-18T16:11:33.000000Z"
+   committed-date="2001-04-25T09:54:32.000000Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="gobry"
+   kind="file"
+   prop-time="2003-11-18T16:11:33.000000Z"/>
+<entry
+   name="vidbase"
+   kind="dir"/>
+<entry
+   committed-rev="2047"
+   name="README.psion5mx"
+   text-time="2003-11-18T16:16:45.000000Z"
+   committed-date="2002-02-04T22:36:37.000000Z"
+   checksum="d9410f710631dc70e33330022a6b5805"
+   last-author="tader"
+   kind="file"
+   prop-time="2003-11-18T16:16:45.000000Z"/>
+<entry
+   name="log"
+   kind="dir"/>
+<entry
+   name="include"
+   kind="dir"/>
+<entry
+   committed-rev="1190"
+   name="README.skins"
+   text-time="2003-11-18T16:16:57.000000Z"
+   committed-date="2001-08-14T07:43:46.000000Z"
+   checksum="c5440eea3eebcfcd90f23acc531880dc"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:16:57.000000Z"/>
+<entry
+   committed-rev="4560"
+   name="select.in"
+   text-time="2003-11-18T16:21:35.000000Z"
+   committed-date="2003-11-17T00:33:08.533668Z"
+   checksum="5180eadfe7f8e3026f5cd6837f709271"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:21:35.000000Z"/>
+<entry
+   name="macros"
+   kind="dir"/>
+<entry
+   committed-rev="4560"
+   name="TODO.DirectFB"
+   text-time="2003-11-18T16:22:07.000000Z"
+   committed-date="2003-11-17T00:33:08.533668Z"
+   checksum="a7b2e1cd522a53d10242d6b7965413c0"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:22:07.000000Z"/>
+<entry
+   committed-rev="4564"
+   name="pgserver-cvs-0.ebuild"
+   text-time="2003-11-18T16:22:15.000000Z"
+   committed-date="2003-11-17T03:52:27.956389Z"
+   checksum="b393be5cd7a7f85ec4c8d9473b5b4ebb"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:22:15.000000Z"/>
+<entry
+   committed-rev="4560"
+   name="configure.in"
+   text-time="2003-11-18T16:22:19.000000Z"
+   committed-date="2003-11-17T00:33:08.533668Z"
+   checksum="776bb3fa193aff90765c05265ce59657"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:22:19.000000Z"/>
+<entry
+   name="net"
+   kind="dir"/>
+<entry
+   committed-rev="4106"
+   name="SConscript"
+   text-time="2003-11-18T16:22:38.000000Z"
+   committed-date="2003-05-31T16:11:12.292150Z"
+   checksum="563fbaf9a5d3b9101b2f81af48fcfc85"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:22:38.000000Z"/>
+<entry
+   committed-rev="3563"
+   name="ChangeLog"
+   text-time="2003-11-18T16:22:40.000000Z"
+   committed-date="2003-01-20T17:12:25.000000Z"
+   checksum="cae59a41d8bca06c42d3135624186601"
+   last-author="thierrythevoz"
+   kind="file"
+   prop-time="2003-11-18T16:22:40.000000Z"/>
+<entry
+   name="configscript"
+   kind="dir"/>
+<entry
+   committed-rev="3169"
+   name="README"
+   text-time="2003-11-18T16:24:04.000000Z"
+   committed-date="2002-11-01T21:01:18.000000Z"
+   checksum="6e5b2b5b6dba890b46dd0b2fda34e160"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:24:04.000000Z"/>
+<entry
+   name="gcore"
+   kind="dir"/>
+<entry
+   committed-rev="3806"
+   name="acconfig.h"
+   text-time="2003-11-18T16:24:56.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="f96a1dd07ce2f739bb2b75909394a0c9"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:24:56.000000Z"/>
+<entry
+   committed-rev="4559"
+   name="PicoGUIServer.mdl"
+   text-time="2003-11-18T16:24:59.000000Z"
+   committed-date="2003-11-14T13:20:30.265342Z"
+   checksum="07c41f17997fbaacc84c2acaec2563fd"
+   last-author="cgrigis"
+   kind="file"
+   prop-time="2003-11-18T16:24:59.000000Z"/>
+<entry
+   committed-rev="3777"
+   name="README.configfile"
+   text-time="2003-11-18T16:25:03.000000Z"
+   committed-date="2003-04-25T16:10:41.000000Z"
+   checksum="aeee27b996419b208502592d58b1cf65"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:25:03.000000Z"/>
+<entry
+   committed-rev="1759"
+   name="picogui-server.spec.in"
+   text-time="2003-11-18T16:25:06.000000Z"
+   committed-date="2001-12-21T18:00:15.000000Z"
+   checksum="bf6881e140afda98f4ed5a05ba455309"
+   last-author="cgrigis"
+   kind="file"
+   prop-time="2003-11-18T16:25:06.000000Z"/>
+<entry
+   name="theme"
+   kind="dir"/>
+<entry
+   name="skin"
+   kind="dir"/>
+<entry
+   name="script"
+   kind="dir"/>
+<entry
+   committed-rev="1004"
+   name="README.vr3"
+   text-time="2003-11-18T16:30:58.000000Z"
+   committed-date="2001-06-29T04:02:37.000000Z"
+   checksum="7f5fb6f53632633af6df07320336030c"
+   last-author="sbarnes"
+   kind="file"
+   prop-time="2003-11-18T16:30:58.000000Z"/>
+<entry
+   name="font"
+   kind="dir"/>
+<entry
+   committed-rev="3563"
+   name="profile.defaults"
+   text-time="2003-11-18T16:45:31.000000Z"
+   committed-date="2003-01-20T17:12:25.000000Z"
+   checksum="4882230506eb13290b403a92ad3adc99"
+   last-author="thierrythevoz"
+   kind="file"
+   prop-time="2003-11-18T16:45:31.000000Z"/>
+<entry
+   committed-rev="3569"
+   name="Makefile.am"
+   text-time="2003-11-18T16:45:33.000000Z"
+   committed-date="2003-01-21T13:19:15.000000Z"
+   checksum="50e469ac6e1fccb0c15b10c6b10cf458"
+   last-author="thierrythevoz"
+   kind="file"
+   prop-time="2003-11-18T16:45:33.000000Z"/>
+<entry
+   name="etc"
+   kind="dir"/>
+<entry
+   name="formats"
+   kind="dir"/>
+</wc-entries>

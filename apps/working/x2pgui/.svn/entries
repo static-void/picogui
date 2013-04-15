@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3835"
+   name=""
+   committed-date="2003-05-05T10:02:55.352841Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/working/x2pgui"
+   last-author="bornet"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T14:58:08.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3806"
+   name="x2pgui.c"
+   text-time="2003-11-18T14:57:52.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="6396557ebc2849891a02efc44b3ac755"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:57:52.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="x2pgui.h"
+   text-time="2003-11-18T14:57:54.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="d5599ec3e790219acfb6d03f6117f39d"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:57:54.000000Z"/>
+<entry
+   committed-rev="2153"
+   name="COPYING"
+   text-time="2003-11-18T14:57:59.000000Z"
+   committed-date="2002-02-18T17:32:01.000000Z"
+   checksum="8ca43cbc842c2336e835926c2166c28b"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T14:57:59.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="x.c"
+   text-time="2003-11-18T14:58:05.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="39d55a4f53deabbbd1037d2163decd7e"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:58:05.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="args.c"
+   text-time="2003-11-18T14:58:06.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="4237ea72ba5a7b0db38b9c0d7208c4b0"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:58:06.000000Z"/>
+<entry
+   committed-rev="2153"
+   name="Makefile"
+   text-time="2003-11-18T14:58:07.000000Z"
+   committed-date="2002-02-18T17:32:01.000000Z"
+   checksum="24ce74b1fbd392ed5a656bc9f42fb896"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T14:58:07.000000Z"/>
+<entry
+   committed-rev="2153"
+   name="README"
+   text-time="2003-11-18T14:58:08.000000Z"
+   committed-date="2002-02-18T17:32:01.000000Z"
+   checksum="504a0155ac8dfd61c9fa37f8a347266e"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T14:58:08.000000Z"/>
+</wc-entries>

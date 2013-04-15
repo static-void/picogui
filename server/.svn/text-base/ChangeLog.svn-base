@@ -1,0 +1,50 @@
+2003-01-15  Thierry Thévoz  <thierry.thevoz@smartdata.ch>
+
+	* Renamed CONFIG_FB_YUV16 into CONFIG_FB_YUV16_422_PLANAR
+	
+	* Created a separate driver for YUV16 : vidbase/yuv16_422_planar.c
+
+2002-04-23  Pascal Bauermeister  <pascal.bauermeister@smartdata.ch>
+
+	* config.in configure.in video/x11.c x11logo/pglogo-big.bmp
+	x11logo/pglogo-border.xpm x11logo/pglogo-dblborder.xpm
+	x11logo/pglogo-noborder.xpm x11logo/pglogo.bmp: Added icon
+	associated to pgserver's X11 window
+	
+	* config.help: updated for some symbols
+
+2002-04-12  Pascal Bauermeister  <pascal.bauermeister@smartdata.ch>
+
+	* include/picogui/constants.h net/dispatch.c: the base rotation is
+	available in the video mode flags. Extremely seldom cases require
+	clients to access this info.
+
+2002-03-27  Pascal Bauermeister  <pascal.bauermeister@smartdata.ch>
+
+	* video/fbdev.c: now supports offscreen bitmaps and has an RGB
+	shadow buffer
+	
+	* video/README.yuv: updates
+
+2002-03-27  Pascal Bauermeister  <pascal.bauermeister@smartdata.ch>
+
+	* config.in: Added option CONFIG_FB_YUV16
+
+	* profiles/profile.SMARTDATA-ppc-linux-redwood4: uses CONFIG_FB_YUV16
+	
+	* video/Makefile.am: added header yuv.h
+
+	* video/fbdev.c: added yuv 16 support
+	
+	* video/yuv.h: file added
+
+	* video/README.yuv: file added
+	
+
+2001-05-11  Frédéric Gobry  <frederic.gobry@smartdata.ch>
+
+	* configure.in: changed option to use the name "profile" for
+	operations concerning the menuconfig profiles
+
+	* Makefile.am: make distclean in the configscript directory
+

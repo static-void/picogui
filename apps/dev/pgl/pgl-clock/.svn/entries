@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3978"
+   name=""
+   committed-date="2003-05-23T10:19:38.050153Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/dev/pgl/pgl-clock"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:00:31.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3806"
+   name="pgl-clock.h"
+   text-time="2003-11-18T15:00:21.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="d5a34d08e927c9247954dc846ac551a3"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:00:21.000000Z"/>
+<entry
+   committed-rev="1862"
+   name="Makefile.static"
+   text-time="2003-11-18T15:00:21.000000Z"
+   committed-date="2002-01-09T16:40:18.000000Z"
+   checksum="bf041c93d5fb8a1e0cf7167e24dd241b"
+   last-author="carpman"
+   kind="file"
+   prop-time="2003-11-18T15:00:21.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="applet.c"
+   text-time="2003-11-18T15:00:25.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="83500cc1ed495e06e9fd04adab7f254b"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:00:25.000000Z"/>
+<entry
+   committed-rev="2088"
+   name="Makefile.am"
+   text-time="2003-11-18T15:00:27.000000Z"
+   committed-date="2002-02-07T01:34:17.000000Z"
+   checksum="89249ff2beeb8aa8081736295ed91778"
+   last-author="carpman"
+   kind="file"
+   prop-time="2003-11-18T15:00:27.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="applet.h"
+   text-time="2003-11-18T15:00:28.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="88cdbca3a3ae0803b6cb023992d942b2"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:00:28.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="pgl-clock.c"
+   text-time="2003-11-18T15:00:31.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="55a931f9c89a748df9e5e85e64b7db98"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:00:31.000000Z"/>
+</wc-entries>

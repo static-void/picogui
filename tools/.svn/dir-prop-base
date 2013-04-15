@@ -1,0 +1,14 @@
+K 10
+svn:ignore
+V 104
+.beeinfo
+native-linux-any-any
+INSTALL
+aclocal.m4
+configure
+install-sh
+missing
+mkinstalldirs
+Makefile.in
+
+END

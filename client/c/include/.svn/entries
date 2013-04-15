@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4511"
+   name=""
+   committed-date="2003-07-14T18:25:37.802189Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/client/c/include"
+   last-author="lalo"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T16:50:51.000000Z"
+   revision="4573"/>
+<entry
+   name="picogui"
+   kind="dir"/>
+<entry
+   committed-rev="3978"
+   name="picogui.h"
+   text-time="2003-11-18T16:50:50.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="f51bd47027baa96ecff47b17c2c5109b"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:50:50.000000Z"/>
+<entry
+   committed-rev="2342"
+   name="Makefile.am"
+   text-time="2003-11-18T16:50:51.000000Z"
+   committed-date="2002-04-06T19:35:55.000000Z"
+   checksum="724e33c97168b80542151089f55d3ca7"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:50:51.000000Z"/>
+</wc-entries>

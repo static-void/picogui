@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3835"
+   name=""
+   committed-date="2003-05-05T10:02:55.352841Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/dev/edemo/templates"
+   last-author="bornet"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:03:35.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3583"
+   name="xwtcompile.py"
+   text-time="2003-11-18T15:03:05.000000Z"
+   committed-date="2003-02-10T23:35:06.000000Z"
+   checksum="8ff2d2ff6e7ad4bc96786974022b931e"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T15:03:05.000000Z"/>
+<entry
+   committed-rev="3583"
+   name="epage01.xwt"
+   text-time="2003-11-18T15:03:07.000000Z"
+   committed-date="2003-02-10T23:35:06.000000Z"
+   checksum="149223af737287c341955278f312bc68"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T15:03:07.000000Z"/>
+<entry
+   committed-rev="3585"
+   name="epage02.xwt"
+   text-time="2003-11-18T15:03:08.000000Z"
+   committed-date="2003-02-12T16:11:41.000000Z"
+   checksum="ff8f86652b51bffe960306acc2228106"
+   last-author="tsho"
+   kind="file"
+   prop-time="2003-11-18T15:03:08.000000Z"/>
+<entry
+   committed-rev="3583"
+   name="xwtcompile.sh"
+   text-time="2003-11-18T15:03:10.000000Z"
+   committed-date="2003-02-10T23:35:06.000000Z"
+   checksum="147ee54e04e063c38f8a12598a62e370"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T15:03:10.000000Z"/>
+<entry
+   committed-rev="3583"
+   name="epage03.xwt"
+   text-time="2003-11-18T15:03:12.000000Z"
+   committed-date="2003-02-10T23:35:06.000000Z"
+   checksum="2e79e5b5247a06ae9d340c68eb9aad05"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T15:03:12.000000Z"/>
+<entry
+   committed-rev="3583"
+   name="epage04.xwt"
+   text-time="2003-11-18T15:03:14.000000Z"
+   committed-date="2003-02-10T23:35:06.000000Z"
+   checksum="7e039ed589a9ed0dfcedb477b1f420f5"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T15:03:14.000000Z"/>
+<entry
+   committed-rev="3583"
+   name="epage05.xwt"
+   text-time="2003-11-18T15:03:25.000000Z"
+   committed-date="2003-02-10T23:35:06.000000Z"
+   checksum="fc780e14348300d80090a00a7ffd40ab"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T15:03:25.000000Z"/>
+<entry
+   committed-rev="3583"
+   name="epage06.xwt"
+   text-time="2003-11-18T15:03:26.000000Z"
+   committed-date="2003-02-10T23:35:06.000000Z"
+   checksum="2f44e312e4ef3fc85d4d4bbaf6956278"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T15:03:25.000000Z"/>
+<entry
+   name="data"
+   kind="dir"/>
+<entry
+   committed-rev="3583"
+   name="edemo.xwt"
+   text-time="2003-11-18T15:03:35.000000Z"
+   committed-date="2003-02-10T23:35:06.000000Z"
+   checksum="c256ff12dc687b41d07d29aec3be429d"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T15:03:35.000000Z"/>
+</wc-entries>

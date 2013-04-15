@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4551"
+   name=""
+   committed-date="2003-09-03T18:22:27.534629Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/server/include/picogui"
+   last-author="Dentoid"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T16:18:14.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="4551"
+   name="network.h"
+   text-time="2003-11-18T16:17:22.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="73820a687004380796fa4b5c21648423"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T16:17:22.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="wt.h"
+   text-time="2003-11-18T16:17:32.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="343555055c4d3222317513917600b6bb"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:17:32.000000Z"/>
+<entry
+   committed-rev="3940"
+   name="canvas.h"
+   text-time="2003-11-18T16:17:34.000000Z"
+   committed-date="2003-05-16T22:08:47.450569Z"
+   checksum="26bf8df707b47e09050d41de33ef13a5"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:17:34.000000Z"/>
+<entry
+   committed-rev="4533"
+   name="constants.h"
+   text-time="2003-11-18T16:17:54.000000Z"
+   committed-date="2003-08-09T18:10:29.386678Z"
+   checksum="aff370fb3ffd057f6eb6b3f6921855e4"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:17:54.000000Z"/>
+<entry
+   committed-rev="4547"
+   name="pgkeys.h"
+   text-time="2003-11-18T16:18:02.000000Z"
+   committed-date="2003-08-21T13:30:49.922271Z"
+   checksum="825a9932848141c1bdb246c32ceefb36"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T16:18:02.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="theme.h"
+   text-time="2003-11-18T16:18:08.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="aad2b192c1dc224d56673066e18bd771"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:18:08.000000Z"/>
+<entry
+   committed-rev="3169"
+   name="Makefile.am"
+   text-time="2003-11-18T16:18:10.000000Z"
+   committed-date="2002-11-01T21:01:18.000000Z"
+   checksum="dea5b9e0906c28c8f9ea161adbf186ca"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:18:10.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="opengl.h"
+   text-time="2003-11-18T16:18:12.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="057a388846cad274b3997824309fefa9"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:18:12.000000Z"/>
+<entry
+   committed-rev="4551"
+   name="types.h"
+   text-time="2003-11-18T16:18:13.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="69db764fa9a778c88b125fa582ee2017"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T16:18:13.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="version.h"
+   text-time="2003-11-18T16:18:14.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="1271c9fc3eb1b9f13d04b5beb7c32c15"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:18:14.000000Z"/>
+</wc-entries>

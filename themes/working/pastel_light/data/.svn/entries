@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3841"
+   name=""
+   committed-date="2003-05-05T18:45:20.897937Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/themes/working/pastel_light/data"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:12:20.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3841"
+   name="pastel_rotatebtn_on.pnm"
+   text-time="2003-11-18T15:12:10.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="d559b75b6fa45e0aadb7a98845598212"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:12:10.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="check_unchecked.pnm"
+   text-time="2003-11-18T15:12:11.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="b6972c07f6e6fbaac7a0c4db4bb5bae8"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:12:11.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="pastel_rotatebtn.pnm"
+   text-time="2003-11-18T15:12:13.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="3ecc383f55861376348ca6be9fdf1e08"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:12:13.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="pastel_zoombtn_on.pnm"
+   text-time="2003-11-18T15:12:14.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="19314300e54c3117d257a4c14bb36c3b"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:12:14.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="pastel_closebtn_on.pnm"
+   text-time="2003-11-18T15:12:15.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="619aa567a69e29620084314e045b9cb1"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:12:15.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="pastel_zoombtn.pnm"
+   text-time="2003-11-18T15:12:17.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="f429adb28d833d44ad08ac9530bee3d6"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:12:17.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="pastel_closebtn.pnm"
+   text-time="2003-11-18T15:12:19.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="add10feeb813a42fc9eedc24d6dd68e3"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:12:19.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="check_checked.pnm"
+   text-time="2003-11-18T15:12:20.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="7631f675b79c1600328f611031231a09"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:12:20.000000Z"/>
+</wc-entries>

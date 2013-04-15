@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3835"
+   name=""
+   committed-date="2003-05-05T10:02:55.352841Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/working/xchat/intl"
+   last-author="bornet"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:34:19.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="1697"
+   name="po2tbl.sed.in"
+   text-time="2003-11-18T01:33:41.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="606344532ffc07b36812c0d04acb1f38"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:33:41.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="loadinfo.h"
+   text-time="2003-11-18T01:33:42.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="eea45725e2601ab7dd122a20871ecf76"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:33:42.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="Makefile.in"
+   text-time="2003-11-18T01:33:44.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="a0e066a2e506da38dba0b0e4b3e70b99"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:33:44.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="explodename.c"
+   text-time="2003-11-18T01:33:45.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="930994e607ac485929753d7caddcb584"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:33:45.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="VERSION"
+   text-time="2003-11-18T01:33:45.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:33:45.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="xopen-msg.sed"
+   text-time="2003-11-18T01:33:47.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="0be261721efcbc3f04680d99e149f18a"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:33:47.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="ChangeLog"
+   text-time="2003-11-18T01:33:53.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="1c8847d1090caf9d9ed7be8ef2b27742"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:33:53.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="finddomain.c"
+   text-time="2003-11-18T01:33:55.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="a3604c7c8eb409eb8e9e385096fa099b"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:33:55.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="localealias.c"
+   text-time="2003-11-18T01:33:57.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="432350d759a37ec39245d656d83e27cc"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:33:57.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="gettextP.h"
+   text-time="2003-11-18T01:33:58.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="2fcb82a7def25bcd2549a394af4cc67d"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:33:58.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="textdomain.c"
+   text-time="2003-11-18T01:34:00.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="9f197f8e4cafdfa82382882bbe04694f"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:34:00.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="linux-msg.sed"
+   text-time="2003-11-18T01:34:01.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="88c9303406b57aeed1f313b827c28e3a"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:34:01.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="l10nflist.c"
+   text-time="2003-11-18T01:34:03.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="dca9627004c526250d47351899faf37f"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:34:03.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="loadmsgcat.c"
+   text-time="2003-11-18T01:34:05.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="2cb45953ee0685f05d4eecf3e5decaec"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:34:05.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="libgettext.h"
+   text-time="2003-11-18T01:34:07.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="cbb38948ae7c116ea7aa981874709e73"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:34:07.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="bindtextdom.c"
+   text-time="2003-11-18T01:34:09.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="0d0f701f3de2b7d66164cd9dfc174378"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:34:09.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="gettext.c"
+   text-time="2003-11-18T01:34:10.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="07fdb4d82208430fdcf4e9c57799b742"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:34:10.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="intl-compat.c"
+   text-time="2003-11-18T01:34:10.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="93e4ab4b2eba5d2b8a36e1b2380190c5"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:34:10.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="cat-compat.c"
+   text-time="2003-11-18T01:34:12.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="caa3581b00edb0a7d3811a24a3e46c5c"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:34:12.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="dgettext.c"
+   text-time="2003-11-18T01:34:13.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="4ef4d731f96a4c2a4901fa03a97abc60"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:34:13.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="gettext.h"
+   text-time="2003-11-18T01:34:14.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="c46b419b2ebd68930fcb8491fae2bd32"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:34:14.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="dcgettext.c"
+   text-time="2003-11-18T01:34:19.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="cc8f13a4eca50e459ace9fc8dd63febc"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:34:19.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="hash-string.h"
+   text-time="2003-11-18T01:34:19.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="b23eb0ee50448b24ec0b942ff382da10"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:34:19.000000Z"/>
+</wc-entries>

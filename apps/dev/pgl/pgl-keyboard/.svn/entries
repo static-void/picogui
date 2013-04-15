@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3835"
+   name=""
+   committed-date="2003-05-05T10:02:55.352841Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/dev/pgl/pgl-keyboard"
+   last-author="bornet"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T14:59:34.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3806"
+   name="pgl-keyboard.c"
+   text-time="2003-11-18T14:59:32.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="6189a19bce227bf708acc0b775cb424d"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:59:32.000000Z"/>
+<entry
+   committed-rev="2089"
+   name="kbicon.bmp"
+   text-time="2003-11-18T14:59:33.000000Z"
+   committed-date="2002-02-07T01:44:55.000000Z"
+   checksum="cd581030f920cc0e773386da0aaeca46"
+   last-author="carpman"
+   kind="file"
+   prop-time="2003-11-18T14:59:33.000000Z"/>
+<entry
+   committed-rev="2089"
+   name="Makefile.am"
+   text-time="2003-11-18T14:59:34.000000Z"
+   committed-date="2002-02-07T01:44:55.000000Z"
+   checksum="4e8ee8074462f6de7af1e1d0e403a3f7"
+   last-author="carpman"
+   kind="file"
+   prop-time="2003-11-18T14:59:34.000000Z"/>
+</wc-entries>

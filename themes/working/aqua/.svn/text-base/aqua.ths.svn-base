@@ -1,0 +1,459 @@
+/* $Id$
+ *
+ * The obligatory Aqua theme (every OS has one, right :)
+ * Looks nice, and it's a good test of the server's bitmap primitives.
+ *
+ * NOTE: This theme is not a good example of theme coding style, since it was
+ *       written before a lot of nice themec features were implemented.
+ *       read the source to a newer theme like Fluidity to get some better examples.
+ *
+ * Version 1.09
+ *
+ * -- Micah Dowty
+ *
+ * Changelog:
+ *
+ *  1.10 - Resized several textures to become more OpenGL friendly
+ *  1.09 - Support for the tab widget
+ *  1.08 - Fixed textbox background
+ *  1.07 - Black background for terminal
+ *  1.06 - Fixed textbox margins
+ *  1.05 - Used the new widget object to fix interlacing alignment, panelbtn cleanups
+ *  1.04 - Fixed a small bug that affected bouncyball
+ *  1.03 - Patch from Florian Berger to support horizontal scrollbar rendering
+ *  1.02 - new indicator, removed many objects' borders for a cleaner look
+ *  1.01 - Fixed terminal background
+ *  1.0  - First stable release
+ */
+
+prop interlace;
+
+/* The stripey background */
+object default {
+  name = "PicoAqua 1.10";
+
+  bgfill = Copy(default::interlace);
+  bitmap1 = LoadBitmap("data/aq_bg.pnm");
+  interlace = fillstyle {
+    SetSrc(widget::PG_WP_ABSOLUTEX - widget->app[0]::PG_WP_ABSOLUTEX + x,
+	   widget::PG_WP_ABSOLUTEY - widget->app[0]::PG_WP_ABSOLUTEY + y,
+	   w,h);
+    Bitmap(x,y,w,h,bitmap1);
+    SetSrc(0,0,0,0);
+  };
+
+  margin=0;
+}
+
+object terminal {
+  bitmap1 = LoadBitmap("data/aq_bg_black.pnm");
+}
+
+/* Jellybean-like buttons! */
+object button {
+  bitmap1 = LoadBitmap("data/aq_button.pnm");
+  bgfill = fillstyle {
+    /* Draw the top and bottom half. Tile the middle horizontally to make
+     * buttons of any width. Usually this is all that needs drawing
+     */
+
+    // Top-left corner
+    Bitmap(x,y,12,10,bitmap1);
+    // Top-right corner
+    SetSrc(49,0,0,0);
+    Bitmap(x+w-12,y,12,10,bitmap1);
+    // Top edge
+    SetSrc(12,0,34,10);
+    Tilebitmap(x+12,y,w-24,10,bitmap1);
+    // Bottom-left corner
+    SetSrc(0,10,0,0);
+    Bitmap(x,y+h-10,12,10,bitmap1);
+    // Bottom-right corner
+    SetSrc(49,10,0,0);
+    Bitmap(x+w-12,y+h-10,12,10,bitmap1);
+    // Bottom edge
+    SetSrc(12,10,34,10);
+    Tilebitmap(x+12,y+h-10,w-24,10,bitmap1);
+
+    /* For taller-than-usual buttons, tile betweent the two halves */
+    
+    // Left edge
+    SetSrc(0,10,12,1);
+    Tilebitmap(x,y+10,12,h-20,bitmap1);
+    // Right edge
+    SetSrc(49,10,12,1);
+    Tilebitmap(x+w-12,y+10,12,h-20,bitmap1);
+    // Center
+    SetSrc(12,10,34,1);
+    Tilebitmap(x+12,y+10,w-24,h-20,bitmap1);
+
+    SetSrc(0,0,0,0);  
+  };  
+  height = 20;
+  width  = 21;   // Tiny buttons get a cute sphere shape :)
+  margin = 8;
+  spacing = 5;
+}
+/* For different states, just change the bitmap */
+object button.on bitmap1 = LoadBitmap("data/aq_button_on.pnm");
+object button.hilight bitmap1 = LoadBitmap("data/aq_button_over.pnm");
+
+object flatbutton {
+  margin = 6;
+  spacing = 5;
+}
+   
+/* A nice resizable grey box
+*/
+object base.display {
+  bitmap1 = LoadBitmap("data/aq_box.pnm");
+  bgfill = fillstyle {
+    /* Like the button, but expand the border in 2 dimensions and
+       fill with a solid color */
+
+    /* Top edge */
+    SetSrc(5,0,5,10);
+    Tilebitmap(x+5,y,w-10,10,bitmap1);
+    SetSrc(0,0,0,0);
+    Bitmap(x,y,5,10,bitmap1);
+    SetSrc(12,0,0,0);
+    Bitmap(x+w-5,y,5,10,bitmap1);
+
+    /* Bottom edge */
+    SetSrc(5,9,5,10);
+    Tilebitmap(x+5,y+h-10,w-10,10,bitmap1);
+    SetSrc(0,9,0,0);
+    Bitmap(x,y+h-10,5,10,bitmap1);
+    SetSrc(12,9,0,0);
+    Bitmap(x+w-5,y+h-10,5,10,bitmap1);
+
+    /* Left and right edges */
+    SetSrc(0,8,5,4);
+    Tilebitmap(x,y+10,5,h-20,bitmap1);
+    SetSrc(12,8,5,4);
+    Tilebitmap(x+w-5,y+10,5,h-20,bitmap1);
+
+    /* Filling */
+    SetColor(0xE7E7E7);
+    Rect(x+5,y+10,w-10,h-20);
+
+    /* space from the edge */
+    x = x+2; y = y+2;
+    w = w-4; h = h-4;
+
+    /* Reset rendering */
+    SetSrc(0,0,0,0);
+  };
+
+  margin = 3;
+}
+
+/* Settings common to all indicators */
+object indicator {
+  width = 15;
+  margin = 0;
+  fgcolor = 0x4080af;
+}
+
+/* Horizontal indicator */
+object indicator.h {
+  bitmap1 = LoadBitmap("data/aq_indicator_gray_h.pnm");	
+  bitmap2 = LoadBitmap("data/aq_indicator_h.png");
+
+  bgfill = fillstyle {
+    Bitmap(x,y+(h-15)/2,w,15,bitmap1);
+  };
+    
+  overlay = fillstyle {
+    SetColor(widget::PG_WP_COLOR);
+    Rect(x-w,y+(h-13)/2,w*2,13);
+    SetLgop(PG_LGOP_ALPHA);
+    Bitmap(x-w,y+(h-15)/2,w*2,15,bitmap2);
+    SetLgop(PG_LGOP_NONE);
+  };
+}
+
+/* Vertical indicator */
+object indicator.v {
+  bitmap1 = LoadBitmap("data/aq_indicator_gray_v.pnm");	
+  bitmap2 = LoadBitmap("data/aq_indicator_v.png");
+
+  bgfill = fillstyle {
+    Bitmap(x+(w-15)/2,y,15,h,bitmap1);
+  };
+    
+  overlay = fillstyle {
+    SetColor(widget::PG_WP_COLOR);
+    Rect(x+(w-13)/2,y-h,13,h*2);
+    SetLgop(PG_LGOP_ALPHA);
+    Bitmap(x+(w-15)/2,y-h,15,h*2,bitmap2);
+    SetLgop(PG_LGOP_NONE);
+  };
+}
+
+/* Nice scrollbar thumb (doubles as indicator overlay) */
+object scroll {
+  bitmap2 = LoadBitmap("data/aq_thumb_v.pnm");
+  bitmap3 = LoadBitmap("data/aq_thumb_h.pnm");
+  overlay = fillstyle {
+    /* This would all be much nicer with real if/else conditionals */
+    var hz,bmp;
+    hz = w>h;
+    bmp = hz ? scroll::bitmap3 : scroll::bitmap2;
+
+     SetSrc(0,0,0,0);    /* Because the rendering engine is not
+			  * reset before drawing an overlay */
+     Bitmap(x,y,hz?5:10,hz?10:5,bmp);
+     SetSrc(hz?5:0,hz?0:5,10,10);
+     Tilebitmap(x+(hz?5:0),y+(hz?0:5),hz?w-10:10,hz?10:h-10,bmp);
+     SetSrc(hz?17:0,hz?0:17,0,0);
+     Bitmap(hz?x+w-5:x,hz?y:y+h-5,hz?5:10,hz?10:5,bmp);
+  };
+  width = 13;
+  margin = 0;
+
+  /* A simple background for the thumb to slide in */
+  bitmap4 = LoadBitmap("data/aq_trough_h.pnm");
+  bitmap1 = LoadBitmap("data/aq_trough_v.pnm");
+  bgfill = fillstyle {
+    var hz,bmp;
+    hz = w>h;
+    bmp = hz ? scroll::bitmap4 : scroll::bitmap1;
+    Bitmap(x,y,hz?20:13,hz?13:20,bmp);
+    SetSrc(hz?20:0,hz?0:20,hz?5:13,hz?13:5);
+    Tilebitmap(x+(hz?20:0),y+(hz?0:20),hz?w-13:13,hz?40:h-40,bmp);
+    SetSrc(hz?25:0,hz?0:25,0,0);
+    Bitmap(x+(hz?w-20:0),y+(hz?0:h-20),hz?20:13,hz?13:20,bmp);
+
+    /* Don't quite go all the way to the top/bottom */
+    y = y+(hz?0:4);
+    x = x+(hz?4:0);
+    h = h-(hz?0:8);
+    w = w-(hz?8:0);
+    /* Center the thumb */
+    x = x+(hz?0:2);
+    y = y+(hz?2:0);
+  };
+}
+
+object label {
+  bgfill = Copy(default::interlace);
+  bitmap1 = Copy(default::bitmap1);
+  margin = 4;
+}
+
+/* Use a simple scrollbar-safe background when the label scrolls */
+object label.scroll {
+  bgfill = fillstyle {
+    SetColor(0xE7E7E7);
+    Rect(x,y,w,h);
+  };
+}
+
+/* Wallpaper */
+object background bitmap1 = LoadBitmap("data/aq_screenbg.pnm");
+
+/* Interactive titlebar */
+object panel margin = 5;
+object panelbar {
+  margin = 0;
+  bitmap1 = LoadBitmap("data/aq_title_wht_v.pnm");
+  bitmap2 = LoadBitmap("data/aq_title_wht_h.pnm");
+  bgfill = fillstyle {
+    Bitmap(x,y,w,h,h>w ? bitmap1 : bitmap2);
+    SetColor(0xC0C0C0);
+    Frame(x,y,w,h);
+  };
+  width = 20;
+}
+object panelbar.hilight {
+  bitmap1 = LoadBitmap("data/aq_title_blu_v.pnm");
+  bitmap2 = LoadBitmap("data/aq_title_blu_h.pnm");
+}
+
+/* Panelbar buttons */
+object base.panelbtn {
+  width = 20;
+  height = 20;
+  spacing = 0;
+  margin = 0;
+  bgfill = fillstyle {
+    var hz;
+    hz = widget::PG_WP_SIDE == PG_S_LEFT || widget::PG_WP_SIDE == PG_S_RIGHT;
+
+    /* Background */
+    Bitmap(x,y,w,h, hz ? panelbar::bitmap2 : panelbar::bitmap1);
+    SetColor(0xC0C0C0);
+
+    /* Horizontal frame */
+    SetLgop(hz ? PG_LGOP_NONE : PG_LGOP_NULL);
+    Slab(x,y,w,1);
+    Slab(x,y+h-1,w,1);
+
+    /* Vertical frame */
+    SetLgop(hz ? PG_LGOP_NULL : PG_LGOP_NONE);
+    Bar(x,y,1,h);
+    Bar(x+w-1,y,1,h);
+
+    /* Button image */
+    SetLgop(PG_LGOP_NONE);
+    Bitmap(3,3,15,16,bitmap1);
+  };
+} 
+object closebtn bitmap1 = LoadBitmap("data/aq_closebtn.pnm");
+object closebtn.hilight bitmap1 = LoadBitmap("data/aq_closebtn_over.pnm");
+object rotatebtn bitmap1 = LoadBitmap("data/aq_rotatebtn.pnm");
+object rotatebtn.hilight bitmap1 = LoadBitmap("data/aq_rotatebtn_over.pnm");
+object zoombtn bitmap1 = LoadBitmap("data/aq_zoombtn.pnm");
+object zoombtn.hilight bitmap1 = LoadBitmap("data/aq_zoombtn_over.pnm");
+
+object box margin = 3;
+
+object toolbar {
+  bgfill = fillstyle {
+    interlace(x,y,w,h);
+    SetColor(0xA0A0A0);
+    Frame(x,y,w,h);
+    SetLgop(PG_LGOP_SUBTRACT);
+    Gradient(x,y,margin,h,0,0x202020,0x000000);
+    Gradient(x,y,w,margin,90,0x202020,0x000000);
+    SetLgop(PG_LGOP_NONE); 
+  };
+
+  margin = 6;
+}
+
+object popup {
+  /* Normal background, but with shading on the edge, and
+     a thin black border */
+  bgfill = fillstyle {
+    default::interlace(x,y,w,h);
+    SetColor(0x000000);
+    Frame(x,y,w,h);
+    SetLgop(PG_LGOP_SUBTRACT);
+    Gradient(x+w-margin,y,margin,h,0,0x000000,0x808080);
+    Gradient(x,y+h-margin,w,margin,90,0x000000,0x808080);
+  };
+  
+  /* Extra padding */
+  margin = 7;
+  width = 70;
+  height = 50;
+
+  /*** Dim the stuff behind us */
+
+/*
+  backdrop = fillstyle { 
+    SetLgop(PG_LGOP_MULTIPLY);
+    Gradient(x,y,w,h,75,0x808040,0x404040);
+  };
+ */
+}
+object label.dlgtitle {
+  bitmap1 = LoadBitmap("data/aq_title_blu_h.pnm");
+  bgfill = Copy(toolbar::bgfill);  // nifty re-use of the shadowed fill
+  margin = 6;
+}
+
+/* Menus */
+object popup.menu {
+  bgfill = fillstyle {
+    Bitmap(x,y,w,h,bitmap1);
+    SetColor(0x808080);
+    Frame(x,y,w,h);
+  };
+  margin = 1;
+
+}
+object menuitem {
+  align = PG_A_LEFT;
+  spacing = 0;
+  height = 20;
+
+  bitmap1 = Copy(default::bitmap1);
+  bgfill = fillstyle {
+    /* Standard background */
+    interlace(x,y,w,h);
+
+    /* Right arrow */
+    SetLgop(PG_LGOP_MULTIPLY);
+    Bitmap(x+w-9,5,6,9,bitmap2);
+
+    /* Cleanup */
+    SetLgop(PG_LGOP_NONE);
+    SetSrc(0,0,0,0);
+  };
+}
+object menuitem.hilight bitmap1 = LoadBitmap("data/aq_menuselect.pnm");
+object submenuitem {
+  bitmap2 = LoadBitmap("data/r_arrow.png");
+}
+object submenuitem.hilight {
+  bitmap2 = Copy(submenuitem::bitmap2);
+}
+
+/* Check boxes */
+object checkbox {
+   bgfill = fillstyle {
+      Bitmap(x+1,y+((h-21)>>1)-1,19,21,bitmap1);
+      x = x + 24;
+   };
+   bitmap1 = LoadBitmap("data/aq_check.pnm");
+   align = PG_A_LEFT;
+   margin = 12;
+   spacing = 5;
+}
+object checkbox.on bitmap1 = LoadBitmap("data/aq_check_on.pnm");
+
+object field height = 20;
+
+object textbox {
+  bgfill = Copy(default::bgfill);
+  bitmap1 = Copy(default::bitmap1);
+}
+
+object tab.bar {
+  bgfill = fillstyle {
+    default::interlace(x,y,w,h-8);
+    Bitmap(x,y+h-9,w,8,bitmap2);
+    SetColor(0x808080);
+    Bar(x,y+h-9,1,7);
+    Bar(x+w-1,y+h-9,1,7);
+  };
+  bitmap2 = LoadBitmap("data/aq_tabbar.pnm");
+  margin = 0;
+}
+
+object tab {
+  bitmap1 = LoadBitmap("data/aq_tab_light.pnm");
+  offset = 2;
+  height = 33;
+  spacing = 0;
+  bgfill = fillstyle {
+    var o;
+    o = offset;
+    x = x+2;
+    w = w-4;
+    Bitmap(x,y,w,o,default::bitmap1);
+    SetSrc(0,0,10,25);
+    Bitmap(x,y+o,10,25,bitmap1);
+    SetSrc(62,0,10,25);
+    Bitmap(x+w-11,y+o,10,25,bitmap1);
+    SetSrc(10,0,53,25);
+    Tilebitmap(x+10,y+o,w-20,25,bitmap1);
+    SetSrc(0,0,0,0);
+    Bitmap(x,y+h-9,w,8,tab.bar::bitmap2);
+    h = h - 8;
+    y = y + o;
+  };
+}
+
+object tab.on {
+  parent = PGTH_O_TAB;
+  bitmap1 = LoadBitmap("data/aq_tab_dark.pnm");
+  offset = 0;
+}
+
+object tab.hilight parent = PGTH_O_TAB;
+
+/* The End */

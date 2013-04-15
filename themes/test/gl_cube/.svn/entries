@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3841"
+   name=""
+   committed-date="2003-05-05T18:45:20.897937Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/themes/test/gl_cube"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:09:17.000000Z"
+   revision="4573"/>
+<entry
+   name="data"
+   kind="dir"/>
+<entry
+   committed-rev="3794"
+   name="gl_cube.ths"
+   text-time="2003-11-18T15:09:17.000000Z"
+   committed-date="2003-05-03T10:13:02.433148Z"
+   checksum="6ed7348be207631a060d71ad7bb27b25"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:09:17.000000Z"/>
+</wc-entries>

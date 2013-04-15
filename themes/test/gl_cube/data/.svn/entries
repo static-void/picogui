@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3841"
+   name=""
+   committed-date="2003-05-05T18:45:20.897937Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/themes/test/gl_cube/data"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:09:14.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3841"
+   name="fgl_interlace.pgm"
+   text-time="2003-11-18T15:08:56.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="381530e404720355190f6d76a6ee4b33"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:08:56.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="fgl_panel.png"
+   text-time="2003-11-18T15:09:04.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="853a55a047f9b8823abc6388574dffeb"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:09:04.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="fgl_water.jpeg"
+   text-time="2003-11-18T15:09:14.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="de2d3e2b2a66c87a8bcd320215845a34"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:09:14.000000Z"/>
+</wc-entries>

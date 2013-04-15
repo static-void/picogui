@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4559"
+   name=""
+   committed-date="2003-11-14T13:20:30.265342Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/server/profiles"
+   last-author="cgrigis"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:45:30.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3563"
+   name="profile.tuxscreen"
+   text-time="2003-11-18T15:44:52.000000Z"
+   committed-date="2003-01-20T17:12:25.000000Z"
+   checksum="329a2680c3be6ebf762ca954474eb2f7"
+   last-author="thierrythevoz"
+   kind="file"
+   prop-time="2003-11-18T15:44:52.000000Z"/>
+<entry
+   committed-rev="4346"
+   name="profile.SMARTDATA-native-linux-debian"
+   text-time="2003-11-18T15:44:54.000000Z"
+   committed-date="2003-06-18T16:43:26.618834Z"
+   checksum="7d997f3d3d9af3f5c8c1cc44362fed98"
+   last-author="cgrigis"
+   kind="file"
+   prop-time="2003-11-18T15:44:54.000000Z"/>
+<entry
+   committed-rev="3936"
+   name="profile.SMARTDATA-ppc-linux-redwood4"
+   text-time="2003-11-18T15:44:59.000000Z"
+   committed-date="2003-05-15T15:44:55.937978Z"
+   checksum="56eb8f9c82e5aee5ae1b68acff86949a"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T15:44:59.000000Z"/>
+<entry
+   committed-rev="1686"
+   name="profile.tiny"
+   text-time="2003-11-18T15:45:01.000000Z"
+   committed-date="2001-12-14T22:20:32.000000Z"
+   checksum="a54f8b14e698411a964258e6ebb1b2aa"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T15:45:01.000000Z"/>
+<entry
+   committed-rev="2448"
+   name="profile.SMARTDATA-m68k-pic-coff-softrpr"
+   text-time="2003-11-18T15:45:02.000000Z"
+   committed-date="2002-04-17T14:11:35.000000Z"
+   checksum="fa250bcc2ccfadfa821d02694bb049f2"
+   last-author="pney"
+   kind="file"
+   prop-time="2003-11-18T15:45:02.000000Z"/>
+<entry
+   committed-rev="2452"
+   name="profile.SMARTDATA-m68k-pic-coff-vz"
+   text-time="2003-11-18T15:45:03.000000Z"
+   committed-date="2002-04-19T09:52:08.000000Z"
+   checksum="9c81b60bff7207443619f76521f61712"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T15:45:03.000000Z"/>
+<entry
+   committed-rev="2283"
+   name="js_2axis2button.conf"
+   text-time="2003-11-18T15:45:04.000000Z"
+   committed-date="2002-03-27T12:50:47.000000Z"
+   checksum="ef67c63f388593c8cc2c2eae68961982"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T15:45:04.000000Z"/>
+<entry
+   committed-rev="2441"
+   name="profile.SMARTDATA-m68k-pic-coff-rpr"
+   text-time="2003-11-18T15:45:05.000000Z"
+   committed-date="2002-04-16T16:00:46.000000Z"
+   checksum="a9f2131e3d223da4eb8d5646ddd56106"
+   last-author="pney"
+   kind="file"
+   prop-time="2003-11-18T15:45:05.000000Z"/>
+<entry
+   committed-rev="3563"
+   name="profile.zaurus"
+   text-time="2003-11-18T15:45:07.000000Z"
+   committed-date="2003-01-20T17:12:25.000000Z"
+   checksum="b4088c235dd2095346e263bb20d68875"
+   last-author="thierrythevoz"
+   kind="file"
+   prop-time="2003-11-18T15:45:07.000000Z"/>
+<entry
+   committed-rev="1522"
+   name="profile.mm2"
+   text-time="2003-11-18T15:45:08.000000Z"
+   committed-date="2001-11-09T17:31:06.000000Z"
+   checksum="23f0efe83f4325b4958f40589f844f7a"
+   last-author="pney"
+   kind="file"
+   prop-time="2003-11-18T15:45:08.000000Z"/>
+<entry
+   committed-rev="3563"
+   name="profile.SMARTDATA-arm-linux-omapevm"
+   text-time="2003-11-18T15:45:09.000000Z"
+   committed-date="2003-01-20T17:12:25.000000Z"
+   checksum="e27a2c69ce84a7132b1ee7314d1001c0"
+   last-author="thierrythevoz"
+   kind="file"
+   prop-time="2003-11-18T15:45:09.000000Z"/>
+<entry
+   committed-rev="1522"
+   name="profile.ucsimm"
+   text-time="2003-11-18T15:45:11.000000Z"
+   committed-date="2001-11-09T17:31:06.000000Z"
+   checksum="bd7bee7ec48786c1daeab1312519a58f"
+   last-author="pney"
+   kind="file"
+   prop-time="2003-11-18T15:45:11.000000Z"/>
+<entry
+   committed-rev="1348"
+   name="README"
+   text-time="2003-11-18T15:45:12.000000Z"
+   committed-date="2001-10-07T23:25:36.000000Z"
+   checksum="b054d532e9112bc4b257fe2bbdad3d84"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T15:45:12.000000Z"/>
+<entry
+   committed-rev="2239"
+   name="profile.serial40x4"
+   text-time="2003-11-18T15:45:14.000000Z"
+   committed-date="2002-03-16T10:20:24.000000Z"
+   checksum="b76964f6d16319c808b1a2d311243429"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T15:45:14.000000Z"/>
+<entry
+   committed-rev="2432"
+   name="profile.SMARTDATA-m68k-pic-coff-soft"
+   text-time="2003-11-18T15:45:15.000000Z"
+   committed-date="2002-04-15T08:59:47.000000Z"
+   checksum="00fc752ae213ac7db8409a5d95434f4f"
+   last-author="pney"
+   kind="file"
+   prop-time="2003-11-18T15:45:15.000000Z"/>
+<entry
+   committed-rev="1522"
+   name="profile.helio"
+   text-time="2003-11-18T15:45:16.000000Z"
+   committed-date="2001-11-09T17:31:06.000000Z"
+   checksum="b85f1c2f90f58d9c7ca7664972ccaf96"
+   last-author="pney"
+   kind="file"
+   prop-time="2003-11-18T15:45:16.000000Z"/>
+<entry
+   committed-rev="4542"
+   name="profile.SMARTDATA-ppc-linux-zukerino"
+   text-time="2003-11-18T15:45:19.000000Z"
+   committed-date="2003-08-14T12:18:29.308309Z"
+   checksum="fd09ce070c85765925636f9cbdeb032b"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T15:45:19.000000Z"/>
+<entry
+   committed-rev="1829"
+   name="profile.SMARTDATA-m68k-pic-coff-zukero"
+   text-time="2003-11-18T15:45:20.000000Z"
+   committed-date="2002-01-07T10:54:14.000000Z"
+   checksum="ba4b74c118d925f9badd19df528a89c3"
+   last-author="gobry"
+   kind="file"
+   prop-time="2003-11-18T15:45:20.000000Z"/>
+<entry
+   committed-rev="1563"
+   name="Makefile.am"
+   text-time="2003-11-18T15:45:21.000000Z"
+   committed-date="2001-11-14T22:09:14.000000Z"
+   checksum="a38a43066eebe23cec7a58bb45b348e8"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T15:45:21.000000Z"/>
+<entry
+   committed-rev="2065"
+   name="profile.vr3"
+   text-time="2003-11-18T15:45:26.000000Z"
+   committed-date="2002-02-06T03:36:45.000000Z"
+   checksum="3d6dceb401936839266cf9abe116fff5"
+   last-author="sbarnes"
+   kind="file"
+   prop-time="2003-11-18T15:45:26.000000Z"/>
+<entry
+   committed-rev="3563"
+   name="profile.SMARTDATA-arm-linux-remora"
+   text-time="2003-11-18T15:45:28.000000Z"
+   committed-date="2003-01-20T17:12:25.000000Z"
+   checksum="e27a2c69ce84a7132b1ee7314d1001c0"
+   last-author="thierrythevoz"
+   kind="file"
+   prop-time="2003-11-18T15:45:28.000000Z"/>
+<entry
+   committed-rev="4559"
+   name="profile.SMARTDATA-ppc-linux-zukerinoz2"
+   text-time="2003-11-18T15:45:29.000000Z"
+   committed-date="2003-11-14T13:20:30.265342Z"
+   checksum="049ff37b86dedd501a9e30529ef4cdd9"
+   last-author="cgrigis"
+   kind="file"
+   prop-time="2003-11-18T15:45:29.000000Z"/>
+<entry
+   committed-rev="2369"
+   name="zaurus.conf"
+   text-time="2003-11-18T15:45:30.000000Z"
+   committed-date="2002-04-09T00:59:30.000000Z"
+   checksum="13ba238b39cebb0814b3e39e515decf8"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T15:45:30.000000Z"/>
+</wc-entries>

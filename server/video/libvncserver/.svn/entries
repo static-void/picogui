@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3835"
+   name=""
+   committed-date="2003-05-05T10:02:55.352841Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/server/video/libvncserver"
+   last-author="bornet"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T16:08:28.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3806"
+   name="tableinittctemplate.c"
+   text-time="2003-11-18T15:57:34.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="cd7246d4c6f90e53f2420e05480a6cd2"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:57:34.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="sraRegion.h"
+   text-time="2003-11-18T15:57:35.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="47253ec39820a0f49bc66169fc9d2fc0"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:57:35.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="stats.c"
+   text-time="2003-11-18T15:57:37.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="1585de2604ac9d96e9db200632fbe9ef"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:57:37.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="pnmshow24.c"
+   text-time="2003-11-18T15:57:38.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="645eec42beb54ce1ea73a6c5e7607b00"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:57:38.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="tabletrans24template.c"
+   text-time="2003-11-18T15:57:41.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="c6ed83744b5d71d6288db24c11400d86"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:57:41.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="rfbproto.h"
+   text-time="2003-11-18T15:57:46.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="d16cdef41b9bb21ea2f50d7749b1e99b"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:57:46.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="font.c"
+   text-time="2003-11-18T15:57:48.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="41e035364f5081b5c85e22035dff124d"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:57:48.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="corre.c"
+   text-time="2003-11-18T15:57:53.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="6c6eec632f416eac4f84fada73e23fc1"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:57:53.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="fontsel.c"
+   text-time="2003-11-18T15:57:58.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="05814e9ec2d24610f6647bd0edd1fbc1"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:57:58.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="sockets.c"
+   text-time="2003-11-18T15:58:08.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="84b99a9f4889838f4e5c9f221b174e5c"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:58:08.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="rfb.h"
+   text-time="2003-11-18T15:58:31.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="0d9e4c94c55ded6b9a0785544187e060"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:58:31.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="storepasswd.c"
+   text-time="2003-11-18T15:58:43.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="d75d68f1cddb8f0111a7139c086845c6"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:58:43.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="tight.c"
+   text-time="2003-11-18T15:59:50.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="76fcf4d015a5b3ac45c46ff351437546"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:59:50.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="x11vnc.c"
+   text-time="2003-11-18T15:59:56.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="5e17241cbf52006275cf2e5cd88e1c8c"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:59:56.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="vncev.c"
+   text-time="2003-11-18T16:00:02.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="3bab895c17801307c2dedfc2c368092a"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:00:02.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="tableinit24.c"
+   text-time="2003-11-18T16:00:00.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="920489fac97056ed4594278edeac38b4"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:00:00.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="1instance.c"
+   text-time="2003-11-18T16:00:03.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="2a91763ad33e73b1eb5b63faf1916e87"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:00:03.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="keysym.h"
+   text-time="2003-11-18T16:00:21.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="5a0f58dca5a8566534de6e4cc474c7f1"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:00:21.000000Z"/>
+<entry
+   committed-rev="3675"
+   name="COPYING"
+   text-time="2003-11-18T16:00:31.000000Z"
+   committed-date="2003-03-24T10:30:02.000000Z"
+   checksum="361b6b837cad26c6900a926b62aada5f"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:00:31.000000Z"/>
+<entry
+   committed-rev="3675"
+   name="CHANGES"
+   text-time="2003-11-18T16:00:25.000000Z"
+   committed-date="2003-03-24T10:30:02.000000Z"
+   checksum="cb4aefe58ab64f89af6fea71b407f4ea"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:00:25.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="tableinitcmtemplate.c"
+   text-time="2003-11-18T16:00:23.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="f8f57fb03c8ad4eaae3e5ff67c387761"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:00:23.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="rre.c"
+   text-time="2003-11-18T16:00:37.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="b7fae55f13b1206f123d431d449045c5"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:00:37.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="example.c"
+   text-time="2003-11-18T16:00:44.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="c449ba689aaed6f7bb08f26e3b2f9e03"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:00:44.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="pnmshow.c"
+   text-time="2003-11-18T16:00:41.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="51c6dd900c50a113557dcf9733e8b569"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:00:41.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="tabletranstemplate.c"
+   text-time="2003-11-18T16:00:39.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="056aa1b8fd2488874d10386a7bafddd8"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:00:39.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="selbox.c"
+   text-time="2003-11-18T16:00:46.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="fbece3ae51ae845e3d8d6d0161b40dc5"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:00:46.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="draw.c"
+   text-time="2003-11-18T16:00:58.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="86fe02ed007996e675c540d80ec8cc1f"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:00:58.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="translate.c"
+   text-time="2003-11-18T16:00:55.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="b52e7caec467ca40f2c3efd2ce1147db"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:00:55.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="cargs.c"
+   text-time="2003-11-18T16:01:03.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="dbf70c0769dd6a72be23777062fcfac3"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:01:03.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="mac.c"
+   text-time="2003-11-18T16:01:26.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="df1a098de0c0effbac4d01345c665a0a"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:01:26.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="zlib.c"
+   text-time="2003-11-18T16:01:10.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="4e37b784f2b36670a2ed5b66520228a1"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:01:10.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="rfbserver.c"
+   text-time="2003-11-18T16:01:47.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="dcabee8612d071db09f66b9db2f1158e"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:01:47.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="auth.c"
+   text-time="2003-11-18T16:01:49.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="10ac9e8851c15fa9fbe14d9c231c0392"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:01:49.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="d3des.c"
+   text-time="2003-11-18T16:06:26.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="84ee769700ad846b09bc500c20b6787b"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:06:26.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="hextile.c"
+   text-time="2003-11-18T16:06:35.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="ccfadaa1bf2d12528f298e493072db03"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:06:35.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="d3des.h"
+   text-time="2003-11-18T16:06:37.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="09e284e4a9e3d459df44cf6ea0f41e8e"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:06:37.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="radon.h"
+   text-time="2003-11-18T16:06:44.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="4fffb85a671439f3834199cee3c8bec4"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:06:44.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="vncauth.c"
+   text-time="2003-11-18T16:06:47.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="c5677ce5dec5f7434f6212c758915e7a"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:06:47.000000Z"/>
+<entry
+   committed-rev="3674"
+   name="bdf2c.pl"
+   text-time="2003-11-18T16:06:48.000000Z"
+   committed-date="2003-03-24T10:28:15.000000Z"
+   checksum="4d9629adb76eb69e9266235647683a5e"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:06:48.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="zippy.c"
+   text-time="2003-11-18T16:06:50.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="530c884beb83e38c27f84d826f8f4ea6"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:06:50.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="cursor.c"
+   text-time="2003-11-18T16:06:55.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="f1b8a91ad5e3b0c26082666c209b2315"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:06:55.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="default8x16.h"
+   text-time="2003-11-18T16:07:01.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="c515a52c199b0ab1fbd48591aed86bef"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:07:01.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="httpd.c"
+   text-time="2003-11-18T16:07:04.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="06f5c9cc342c5befcca4871ac7d5eec6"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:07:04.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="main.c"
+   text-time="2003-11-18T16:07:12.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="9b8e9902caedf121a199f8aa6205c53e"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:07:12.000000Z"/>
+<entry
+   committed-rev="3674"
+   name="TODO"
+   text-time="2003-11-18T16:07:13.000000Z"
+   committed-date="2003-03-24T10:28:15.000000Z"
+   checksum="2d52919e24a924176478575cc2912574"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:07:13.000000Z"/>
+<entry
+   committed-rev="3674"
+   name="Makefile.am"
+   text-time="2003-11-18T16:07:18.000000Z"
+   committed-date="2003-03-24T10:28:15.000000Z"
+   checksum="de846c09fdb8f0307459b7ed4c795aa3"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:07:18.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="cutpaste.c"
+   text-time="2003-11-18T16:07:23.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="7593017d440af4a202e7bdfe158b5ce9"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:07:23.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="sraRegion.c"
+   text-time="2003-11-18T16:08:26.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="a171a77faa3f77fea071daf81bb741c4"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:08:26.000000Z"/>
+</wc-entries>

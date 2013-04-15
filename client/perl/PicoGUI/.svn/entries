@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3978"
+   name=""
+   committed-date="2003-05-23T10:19:38.050153Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/client/perl/PicoGUI"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T16:52:53.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3978"
+   name="Server.pm"
+   text-time="2003-11-18T16:52:50.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="dbeea88c92907301856716ce2ff0030a"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:52:50.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="Constants.pm"
+   text-time="2003-11-18T16:52:52.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="73d594f0d7607bdd610b9360b16f790c"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:52:52.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="Widget.pm"
+   text-time="2003-11-18T16:52:53.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="e0188678d01dc9499d4d5875d5b15e2f"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:52:53.000000Z"/>
+</wc-entries>

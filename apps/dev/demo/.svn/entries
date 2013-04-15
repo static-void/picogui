@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3840"
+   name=""
+   committed-date="2003-05-05T18:42:26.188241Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/dev/demo"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:01:00.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3560"
+   name="page02.xwt"
+   text-time="2003-11-18T15:00:38.000000Z"
+   committed-date="2003-01-20T02:47:55.000000Z"
+   checksum="80839b50a082d71d92928cc9e1eea5c2"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T15:00:38.000000Z"/>
+<entry
+   committed-rev="3556"
+   name="pgdemo.py"
+   text-time="2003-11-18T15:00:42.000000Z"
+   committed-date="2003-01-20T00:59:23.000000Z"
+   checksum="e7d3624c111f055f64ee2928689050b8"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T15:00:42.000000Z"/>
+<entry
+   name="data"
+   kind="dir"/>
+<entry
+   committed-rev="3560"
+   name="page00.xwt"
+   text-time="2003-11-18T15:00:59.000000Z"
+   committed-date="2003-01-20T02:47:55.000000Z"
+   checksum="210114fd0700f6c8587c4ef475dce89b"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T15:00:59.000000Z"/>
+<entry
+   committed-rev="3560"
+   name="page01.xwt"
+   text-time="2003-11-18T15:01:00.000000Z"
+   committed-date="2003-01-20T02:47:55.000000Z"
+   checksum="c9c1c219d6c50560441d5c7a592a9c7a"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T15:01:00.000000Z"/>
+</wc-entries>

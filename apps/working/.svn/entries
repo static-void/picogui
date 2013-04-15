@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4563"
+   name=""
+   committed-date="2003-11-17T03:51:03.133070Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/working"
+   last-author="lalo"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T14:58:09.000000Z"
+   revision="4573"/>
+<entry
+   name="gridgame"
+   kind="dir"/>
+<entry
+   name="pgmon"
+   kind="dir"/>
+<entry
+   name="wclock"
+   kind="dir"/>
+<entry
+   name="pgremote"
+   kind="dir"/>
+<entry
+   name="ghost-launcher"
+   kind="dir"/>
+<entry
+   name="connectfour"
+   kind="dir"/>
+<entry
+   name="scribble"
+   kind="dir"/>
+<entry
+   name="pterm"
+   kind="dir"/>
+<entry
+   name="picosm"
+   kind="dir"/>
+<entry
+   name="gremlin"
+   kind="dir"/>
+<entry
+   name="battleship"
+   kind="dir"/>
+<entry
+   name="tpcal"
+   kind="dir"/>
+<entry
+   name="blackout"
+   kind="dir"/>
+<entry
+   name="pqw"
+   kind="dir"/>
+<entry
+   name="xchat"
+   kind="dir"/>
+<entry
+   name="imgview"
+   kind="dir"/>
+<entry
+   committed-rev="4563"
+   name="Makefile.am"
+   text-time="2003-11-18T01:47:26.000000Z"
+   committed-date="2003-11-17T03:51:03.133070Z"
+   checksum="fa6b214f2070f94ccf40d1d6908ffb73"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T01:47:26.000000Z"/>
+<entry
+   name="vrcalc"
+   kind="dir"/>
+<entry
+   name="pgedit"
+   kind="dir"/>
+<entry
+   name="pgmerlin"
+   kind="dir"/>
+<entry
+   name="lcdclock"
+   kind="dir"/>
+<entry
+   name="pgboard"
+   kind="dir"/>
+<entry
+   name="x2pgui"
+   kind="dir"/>
+</wc-entries>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4551"
+   name=""
+   committed-date="2003-09-03T18:22:27.534629Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/server/appmgr"
+   last-author="Dentoid"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:46:29.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="4551"
+   name="panel.c"
+   text-time="2003-11-18T15:46:23.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="01893b8f02fb83b40abac1145c943db7"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T15:46:23.000000Z"/>
+<entry
+   committed-rev="4551"
+   name="managed_rootless.c"
+   text-time="2003-11-18T15:46:25.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="2c8d7497d47f97e7351e002326e81c4f"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T15:46:25.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="appmgr.c"
+   text-time="2003-11-18T15:46:27.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="aa412724606526a726b8dd370cb0cbda"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:46:27.000000Z"/>
+<entry
+   committed-rev="3175"
+   name="Makefile.am"
+   text-time="2003-11-18T15:46:28.000000Z"
+   committed-date="2002-11-03T04:54:25.000000Z"
+   checksum="3b79d0234c3ccdaabc632a2527f7d5ba"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T15:46:28.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="null.c"
+   text-time="2003-11-18T15:46:29.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="ec22c85e69b341d9e6137789888c7a75"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:46:29.000000Z"/>
+</wc-entries>

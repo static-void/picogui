@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3841"
+   name=""
+   committed-date="2003-05-05T18:45:20.897937Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/test/menutest"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:22:52.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3806"
+   name="menutest.c"
+   text-time="2003-11-18T01:22:37.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="142f291cfcc8a3c141d919fe59b75fe8"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:22:37.000000Z"/>
+<entry
+   name="data"
+   kind="dir"/>
+<entry
+   committed-rev="1371"
+   name="Makefile"
+   text-time="2003-11-18T01:22:52.000000Z"
+   committed-date="2001-10-11T05:37:25.000000Z"
+   checksum="5e07cca6bb4f8e0f2794932820989536"
+   last-author="gork"
+   kind="file"
+   prop-time="2003-11-18T01:22:52.000000Z"/>
+</wc-entries>

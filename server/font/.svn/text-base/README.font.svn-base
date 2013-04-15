@@ -1,0 +1,10 @@
+These fonts were converted from X11 fonts to BDF using fstobdf. (Except for
+console8, which was converted from Linux's gr8x8 console font)
+
+The .fi file defines a font style, containing one or more actual fonts.
+(Normal, bold, etc.) The actual fonts use the standard .bdf format.
+fontdef.pl converts the .fi and .bdf files into a C source file with font
+structures.
+
+Example: to generate the clean8.bdf file, do:
+  fstobdf -s :7100 -fn "-*-clean-medium-r-*-*-*-80-*-*-*-*-*-*" > clean8.bdf

@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4560"
+   name=""
+   committed-date="2003-11-17T00:33:08.533668Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/server/input"
+   last-author="lalo"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:55:03.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="4551"
+   name="if_magic.c"
+   text-time="2003-11-18T15:47:46.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="7cb4ef77d009831274df0f64ef31c2d4"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T15:47:46.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="rrttykb.c"
+   text-time="2003-11-18T15:47:52.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="fa71cf2266ecfb43df8fe8eb523c372e"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:47:52.000000Z"/>
+<entry
+   name="sdl"
+   kind="dir"/>
+<entry
+   committed-rev="4502"
+   name="ncursesinput.c"
+   text-time="2003-11-18T15:47:58.000000Z"
+   committed-date="2003-07-11T13:18:03.047508Z"
+   checksum="8ab14aadfd3229286056d8094f2b2a86"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:47:58.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="sdlinput.c"
+   text-time="2003-11-18T15:48:00.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="f9278357fbea4b914012b76fa7bf5475"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:48:00.000000Z"/>
+<entry
+   committed-rev="2185"
+   name="README.ericsson_cb"
+   text-time="2003-11-18T15:48:01.000000Z"
+   committed-date="2002-03-01T08:04:54.000000Z"
+   checksum="09fcae4b390086b786a3ddb6c3ed3609"
+   last-author="bauermeister"
+   kind="file"
+   prop-time="2003-11-18T15:48:01.000000Z"/>
+<entry
+   committed-rev="4551"
+   name="if_client_adaptor.c"
+   text-time="2003-11-18T15:48:03.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="ed441d5ad2afc364d4f7572d5987880d"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T15:48:03.000000Z"/>
+<entry
+   committed-rev="4551"
+   name="if_pntr_preprocess.c"
+   text-time="2003-11-18T15:48:05.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="31dec09b05f56c12b42b13382dbba21e"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T15:48:05.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="vncinput.c"
+   text-time="2003-11-18T15:48:09.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="d137ab0883ce063fa54ca953c258be30"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:48:09.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="h3600ts.c"
+   text-time="2003-11-18T15:48:10.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="e2de9698022a111445fe7adc041fd3e0"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:48:10.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="rawttykb.c"
+   text-time="2003-11-18T15:48:14.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="d1158c7ed48ae263c18eb8968ab10fc8"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:48:14.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="chipslicets.c"
+   text-time="2003-11-18T15:48:17.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="8f3dd720b1cee3a70a4c7611835073d3"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:48:17.000000Z"/>
+<entry
+   committed-rev="4551"
+   name="if_key_preprocess.c"
+   text-time="2003-11-18T15:48:18.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="d5a91ab0499a96f4d232cf265d59967a"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T15:48:18.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="ps2mouse.c"
+   text-time="2003-11-18T15:48:20.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="3425adec57bc544ec4ab4194c9a9051a"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:48:20.000000Z"/>
+<entry
+   committed-rev="4547"
+   name="btkey.c"
+   text-time="2003-11-18T15:48:21.000000Z"
+   committed-date="2003-08-21T13:30:49.922271Z"
+   checksum="f4cffeecc4325830ed0371d409ad3634"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T15:48:21.000000Z"/>
+<entry
+   committed-rev="4551"
+   name="if_pntr_dispatch.c"
+   text-time="2003-11-18T15:48:22.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="fed0e10aa9c364998a02c573803faad4"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T15:48:22.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="vr3ts.c"
+   text-time="2003-11-18T15:48:25.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="106734c207297100ec6986a7ab3a0539"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:48:25.000000Z"/>
+<entry
+   committed-rev="4551"
+   name="if_pntr_normalize.c"
+   text-time="2003-11-18T15:48:24.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="7cb08965a0cefbf700f23a7d2596dce1"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T15:48:24.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="ucb1x00.c"
+   text-time="2003-11-18T15:48:26.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="0d1907e20eb63f5b77d0184657952919"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:48:26.000000Z"/>
+<entry
+   committed-rev="4502"
+   name="gpm.c"
+   text-time="2003-11-18T15:48:27.000000Z"
+   committed-date="2003-07-11T13:18:03.047508Z"
+   checksum="fcf6f07c4c8e13344bb01f83cf5c39ac"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:48:27.000000Z"/>
+<entry
+   committed-rev="4551"
+   name="if_key_dispatch.c"
+   text-time="2003-11-18T15:48:28.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="b4e19d26db9a13300d958f2b311edc6e"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T15:48:28.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="palmaxts.c"
+   text-time="2003-11-18T15:48:34.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="2d9cbf6d066eed6a2f13a1847f3729d9"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:48:34.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="x11input.c"
+   text-time="2003-11-18T15:48:32.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="92790c1a2761e062fa8aa6656153103e"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:48:32.000000Z"/>
+<entry
+   committed-rev="4547"
+   name="README.btkey"
+   text-time="2003-11-18T15:48:29.000000Z"
+   committed-date="2003-08-21T13:30:49.922271Z"
+   checksum="3eee72e4f6726ff54ac079e0330445be"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T15:48:29.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="rrts.c"
+   text-time="2003-11-18T15:48:36.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="3cb147e533c0f94f03fa3f1f9e28df84"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:48:36.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="rr_sim.c"
+   text-time="2003-11-18T15:48:38.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="04079ccad5fa431ad2a4fe66e992eafb"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:48:38.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="input_drivers.c"
+   text-time="2003-11-18T15:48:42.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="0ad3ec9138ffff85649d3ad15063f0ca"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:48:42.000000Z"/>
+<entry
+   committed-rev="4551"
+   name="ttykb.c"
+   text-time="2003-11-18T15:48:40.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="310c080a0a3862ef76c94395ac88e1be"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T15:48:40.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="sc3ts.c"
+   text-time="2003-11-18T15:48:46.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="95056ea90e969dfd715110cbe15474c6"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:48:46.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="if_touchscreen.c"
+   text-time="2003-11-18T15:48:50.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="a4025445535b31d3690c7b6f6f94dc0e"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:48:50.000000Z"/>
+<entry
+   committed-rev="4560"
+   name="directfbinput.c"
+   text-time="2003-11-18T15:48:52.000000Z"
+   committed-date="2003-11-17T00:33:08.533668Z"
+   checksum="7b99423b3453b3fb12f65ed9615bca3e"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:48:52.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="remorakb.c"
+   text-time="2003-11-18T15:53:16.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="4ffddfde31f964e2e4754d15a7a5396b"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:53:16.000000Z"/>
+<entry
+   name="svgalib"
+   kind="dir"/>
+<entry
+   committed-rev="3978"
+   name="jsdev.c"
+   text-time="2003-11-18T15:53:35.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="dc16ae1dbab9140a0cddb5a7dec97163"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:53:35.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="if_key_alpha.c"
+   text-time="2003-11-18T15:53:38.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="2a8af0c55bc14e75c936125c88f09e4d"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:53:38.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="adc7843.c"
+   text-time="2003-11-18T15:53:40.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="ca12ca497798bf2ada08d8f0176ec9be"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:53:40.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="cursor.c"
+   text-time="2003-11-18T15:53:45.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="84e6120ee1d3c95a94cffe6f4177e465"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:53:45.000000Z"/>
+<entry
+   committed-rev="4551"
+   name="if_hotspot.c"
+   text-time="2003-11-18T15:54:00.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="567f98651f184eb0cb61de3402d09cdb"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T15:54:00.000000Z"/>
+<entry
+   committed-rev="4272"
+   name="svgainput.c"
+   text-time="2003-11-18T15:54:05.000000Z"
+   committed-date="2003-06-05T17:23:05.057574Z"
+   checksum="808fb6fedd7efb18e6e6da08b9ea3c28"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:54:05.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="mgl2input.c"
+   text-time="2003-11-18T15:54:17.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="152145c6571f097a2a3aa28a3cc145d3"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:54:17.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="eventbroker.c"
+   text-time="2003-11-18T15:54:22.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="34221cdd9ebedf68be4c82d270964038"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:54:22.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="r3912ts.c"
+   text-time="2003-11-18T15:54:30.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="649814f18b42c6b7c5d82294c09c0180"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:54:30.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="tuxts.c"
+   text-time="2003-11-18T15:54:37.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="2220bf3b0a2dfc6b82267f3861fe9f28"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:54:37.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="input_filters.c"
+   text-time="2003-11-18T15:54:41.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="6614da821a7e99df3c8fd081325f83df"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:54:41.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="serialmouse.c"
+   text-time="2003-11-18T15:54:46.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="10ff6a30850e6ba470b71ec9ae0e1f40"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:54:46.000000Z"/>
+<entry
+   committed-rev="4266"
+   name="Makefile.am"
+   text-time="2003-11-18T15:54:48.000000Z"
+   committed-date="2003-06-04T08:20:48.511013Z"
+   checksum="10be460d020c684102ba38899f16f2a3"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T15:54:48.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="ericsson_cb.c"
+   text-time="2003-11-18T15:54:56.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="320ed263406d7c94dc7aa18b7172cecb"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:54:56.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="zaurus.c"
+   text-time="2003-11-18T15:54:58.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="42e48e08d02ec4fea407a404158037af"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:54:58.000000Z"/>
+<entry
+   name="null"
+   kind="dir"/>
+<entry
+   committed-rev="3978"
+   name="input_util.c"
+   text-time="2003-11-18T15:55:02.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="a94d530e8b48ab55c27707f3b096bc77"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:55:02.000000Z"/>
+</wc-entries>

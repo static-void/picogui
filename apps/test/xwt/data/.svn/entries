@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3959"
+   name=""
+   committed-date="2003-05-23T08:27:32.261219Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/test/xwt/data"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   revision="4573"/>
+<entry
+   committed-rev="3959"
+   name="crystal_lime_16.png"
+   text-time="2003-11-18T01:20:08.000000Z"
+   committed-date="2003-05-23T08:27:32.261219Z"
+   checksum="06ce5a24a2368e567b1c4717170c49a6"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:20:08.000000Z"/>
+<entry
+   committed-rev="3959"
+   name="crystal_penguin_128.png"
+   text-time="2003-11-18T01:20:11.000000Z"
+   committed-date="2003-05-23T08:27:32.261219Z"
+   checksum="2e71b334e6d7cc0d11e41ac3d95276ef"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:20:11.000000Z"/>
+<entry
+   committed-rev="3959"
+   name="crystal_kscreensaver_128.png"
+   text-time="2003-11-18T01:20:15.000000Z"
+   committed-date="2003-05-23T08:27:32.261219Z"
+   checksum="66533f415eca961c145fd64f9816657c"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:20:15.000000Z"/>
+<entry
+   committed-rev="3959"
+   name="albuquerque.txt"
+   text-time="2003-11-18T01:20:17.000000Z"
+   committed-date="2003-05-23T08:27:32.261219Z"
+   checksum="2644297e09246fdff6a08eb436fb1543"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:20:17.000000Z"/>
+<entry
+   committed-rev="3959"
+   name="crystal_konsole2_128.png"
+   text-time="2003-11-18T01:20:22.000000Z"
+   committed-date="2003-05-23T08:27:32.261219Z"
+   checksum="8bf207f56a38ee9c8e81c2f565b58636"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:20:22.000000Z"/>
+</wc-entries>

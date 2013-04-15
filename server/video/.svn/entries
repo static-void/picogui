@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4560"
+   name=""
+   committed-date="2003-11-17T00:33:08.533668Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/server/video"
+   last-author="lalo"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T16:09:24.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3806"
+   name="s1d13806.h"
+   text-time="2003-11-18T15:55:13.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="f4543e4729d084ae3c5cb6b6a1007358"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:55:13.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="serial40x4.c"
+   text-time="2003-11-18T15:55:18.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="46bf31b4a8a4b7ba7c54bb674b96719f"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:55:18.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="sed133x.h"
+   text-time="2003-11-18T15:55:15.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="d4432013642a7c0c1c0df01fda47078e"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:55:15.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="x11_window.c"
+   text-time="2003-11-18T15:55:22.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="f817d9c5eefa8d4b9a51aa3f401aa26c"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:55:22.000000Z"/>
+<entry
+   name="sdl"
+   kind="dir"/>
+<entry
+   committed-rev="4551"
+   name="video_drivers.c"
+   text-time="2003-11-18T15:55:33.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="c4331ba268710c7ae51a683bc2e69534"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T15:55:33.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="x11_bitmap.c"
+   text-time="2003-11-18T15:55:37.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="f41d0cf48f6839858b05d429baa8302f"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:55:37.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="sdlgl.c"
+   text-time="2003-11-18T15:55:35.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="b06c3747ed501683b70f75f70f8a4f92"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:55:35.000000Z"/>
+<entry
+   name="svgalib"
+   kind="dir"/>
+<entry
+   committed-rev="3978"
+   name="glcontext.c"
+   text-time="2003-11-18T15:55:46.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="1a09761804f8196b9119a54a96d51a7b"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:55:46.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="svgafb.c"
+   text-time="2003-11-18T15:55:49.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="f6298d6284bc633dc153ae246a6e078a"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:55:49.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="mgl2fb.c"
+   text-time="2003-11-18T15:56:33.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="ca35bfa9e93413868133a3a96e44ecae"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:56:33.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="ez328vga.c"
+   text-time="2003-11-18T15:56:32.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="f48b0a07816f8252be42b4deee8ee362"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:56:32.000000Z"/>
+<entry
+   name="x11logo"
+   kind="dir"/>
+<entry
+   committed-rev="3806"
+   name="serial40x4.firmware.c"
+   text-time="2003-11-18T15:56:35.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="aba3e606dde8bdb95fc6c2a4a6d5c4e7"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:56:35.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="null.c"
+   text-time="2003-11-18T15:56:40.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="7c91e5b844f33941115052e0a8e9e39f"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:56:40.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="ez328.c"
+   text-time="2003-11-18T15:56:42.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="0cc06e2245464f2af473951c6809067e"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:56:42.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="vncserver.c"
+   text-time="2003-11-18T15:56:49.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="0cd8e6ad0ff4eccdfd84aeb556f31f52"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:56:49.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="nullfb.c"
+   text-time="2003-11-18T15:56:56.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="49fc7f1691dac44877d7917f4e92523c"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:56:56.000000Z"/>
+<entry
+   committed-rev="4510"
+   name="ncurses.c"
+   text-time="2003-11-18T15:57:04.000000Z"
+   committed-date="2003-07-14T18:19:52.698546Z"
+   checksum="d0d52f9700be8d6257be92922bf6d234"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:57:04.000000Z"/>
+<entry
+   committed-rev="4560"
+   name="directfb.c"
+   text-time="2003-11-18T15:57:06.000000Z"
+   committed-date="2003-11-17T00:33:08.533668Z"
+   checksum="715fcaf1aeb3bc117ad122b8e39c39bb"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:57:06.000000Z"/>
+<entry
+   name="libvncserver"
+   kind="dir"/>
+<entry
+   committed-rev="3978"
+   name="x11_primitives.c"
+   text-time="2003-11-18T16:08:42.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="75a44eb0f320158141edd8e41358a01b"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:08:42.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="scrshot.c"
+   text-time="2003-11-18T16:08:45.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="43e7cabc987e2315fede3601c310a663"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:08:45.000000Z"/>
+<entry
+   committed-rev="4551"
+   name="fbdev.c"
+   text-time="2003-11-18T16:08:51.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="0cfd552c12298801b23eda9d5610d9ab"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T16:08:51.000000Z"/>
+<entry
+   committed-rev="3571"
+   name="Makefile.am"
+   text-time="2003-11-18T16:08:59.000000Z"
+   committed-date="2003-01-21T17:35:14.000000Z"
+   checksum="71933219522fb0188efde3e9f9e2ca79"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:08:59.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="s1d13806.c"
+   text-time="2003-11-18T16:09:05.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="0c34f0a5f35a4ac27dd53c4479ab5934"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:09:05.000000Z"/>
+<entry
+   committed-rev="4551"
+   name="sdlfb.c"
+   text-time="2003-11-18T16:09:13.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="c28b3a9b80a1dde6580b12422bd7e901"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T16:09:13.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="sed133x.c"
+   text-time="2003-11-18T16:09:17.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="98c30e22f66fdd4dc3650f6eb54d5b06"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:09:17.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="x11_init.c"
+   text-time="2003-11-18T16:09:21.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="22526661d36b0d599b2d92424bb47024"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:09:21.000000Z"/>
+</wc-entries>

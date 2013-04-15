@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4469"
+   name=""
+   committed-date="2003-07-01T18:00:29.107246Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/server/script"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T16:30:53.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="4469"
+   name="fontdef.pl"
+   text-time="2003-11-18T16:30:50.000000Z"
+   committed-date="2003-07-01T18:00:29.107246Z"
+   checksum="d013c044b5022e38922c4a10332e43a1"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:30:50.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="pnm_embed.pl"
+   text-time="2003-11-18T16:30:51.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="38cfcad4da3cc8e749f62fd33bb7de1b"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:30:51.000000Z"/>
+<entry
+   committed-rev="2122"
+   name="divflagsplit.pl"
+   text-time="2003-11-18T16:30:52.000000Z"
+   committed-date="2002-02-11T19:39:24.000000Z"
+   checksum="84776e2a2f9357825aaa69d91ef7db75"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:30:52.000000Z"/>
+<entry
+   committed-rev="999"
+   name="lserrors.pl"
+   text-time="2003-11-18T16:30:53.000000Z"
+   committed-date="2001-06-28T21:06:44.000000Z"
+   checksum="b4444164e76c041c99f91f76ac0116c9"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:30:53.000000Z"/>
+</wc-entries>

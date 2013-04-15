@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3978"
+   name=""
+   committed-date="2003-05-23T10:19:38.050153Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/working/xchat"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:46:26.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="1697"
+   name="INSTALL.w32"
+   text-time="2003-11-18T01:27:01.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="7288ef5a1f2cee7d21a6b8a0de9fb41e"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:27:01.000000Z"/>
+<entry
+   name="debian"
+   kind="dir"/>
+<entry
+   committed-rev="1697"
+   name="AUTHORS"
+   text-time="2003-11-18T01:27:20.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:27:20.000000Z"/>
+<entry
+   name="src"
+   kind="dir"/>
+<entry
+   committed-rev="3840"
+   name="xchat.png"
+   text-time="2003-11-18T01:32:47.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="98a3ad5de1cdd7f59ca8025141000f48"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:32:47.000000Z"/>
+<entry
+   committed-rev="1705"
+   name="config.guess"
+   text-time="2003-11-18T01:32:53.000000Z"
+   committed-date="2001-12-15T04:34:16.000000Z"
+   checksum="214c38b62216e4c15e9aecb811d7216b"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:32:53.000000Z"/>
+<entry
+   committed-rev="1704"
+   name="config.sub"
+   text-time="2003-11-18T01:32:58.000000Z"
+   committed-date="2001-12-15T04:32:35.000000Z"
+   checksum="a571500b921cc7367b1be579cdce720a"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:32:58.000000Z"/>
+<entry
+   committed-rev="1702"
+   name="ABOUT-NLS"
+   text-time="2003-11-18T01:32:59.000000Z"
+   committed-date="2001-12-15T04:19:48.000000Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:32:59.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="foo2"
+   text-time="2003-11-18T01:33:02.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="1d35c1ca12bf2f505ad788321d935ddb"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:33:02.000000Z"/>
+<entry
+   name="doc"
+   kind="dir"/>
+<entry
+   name="intl"
+   kind="dir"/>
+<entry
+   committed-rev="1697"
+   name="INSTALL"
+   text-time="2003-11-18T01:34:20.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="fab03d38f82c704101f33572c1c15362"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:34:20.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="COPYING"
+   text-time="2003-11-18T01:34:26.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="c93c0550bd3173f4504b2cbd8991e50b"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:34:26.000000Z"/>
+<entry
+   committed-rev="1756"
+   name="autogen.sh"
+   text-time="2003-11-18T01:34:27.000000Z"
+   committed-date="2001-12-19T15:27:57.000000Z"
+   checksum="422ed182c945aefa4b842fd1d1d55632"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T01:34:27.000000Z"/>
+<entry
+   committed-rev="1702"
+   name="NEWS"
+   text-time="2003-11-18T01:34:27.000000Z"
+   committed-date="2001-12-15T04:19:48.000000Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:34:27.000000Z"/>
+<entry
+   name="po"
+   kind="dir"/>
+<entry
+   committed-rev="1697"
+   name="xchat.desktop"
+   text-time="2003-11-18T01:45:40.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="4aeb81bb09f8f433abb97cd474587dda"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:45:40.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="mkinstalldirs"
+   text-time="2003-11-18T01:45:41.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="2dbba06d0c89d4bc541eb2c404bf5efe"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:45:41.000000Z"/>
+<entry
+   name="plugins"
+   kind="dir"/>
+<entry
+   committed-rev="1697"
+   name="foo"
+   text-time="2003-11-18T01:45:48.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="00fdf1271d7c3f784c2842c5a6f2e3e1"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:45:48.000000Z"/>
+<entry
+   committed-rev="1698"
+   name="configure.in"
+   text-time="2003-11-18T01:45:52.000000Z"
+   committed-date="2001-12-15T04:05:16.000000Z"
+   checksum="d57f348453f6d693c2ed722c71a3a160"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:45:52.000000Z"/>
+<entry
+   name="scripts-perl"
+   kind="dir"/>
+<entry
+   committed-rev="1697"
+   name="ChangeLog"
+   text-time="2003-11-18T01:46:07.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="871f96e738c2e4e6540356ddaacfa3bc"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:46:07.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="README"
+   text-time="2003-11-18T01:46:08.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="6d53a039d2a0c0f2e66996480f8e724a"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:46:08.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="acconfig.h"
+   text-time="2003-11-18T01:46:09.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="dda2fb3a51f0f3af8e14c69f159428fc"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:46:09.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="xchat.spec"
+   text-time="2003-11-18T01:46:10.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="517f55b08a9978020ef313ed8ab8284a"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:46:10.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="config.h.w32"
+   text-time="2003-11-18T01:46:11.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="5493b6e223af45fe4f785b0d27a8004a"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:46:11.000000Z"/>
+<entry
+   name="scripts-python"
+   kind="dir"/>
+<entry
+   committed-rev="1697"
+   name="FAQ"
+   text-time="2003-11-18T01:46:23.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="888906c48d15d3b049ac8106735c8066"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:46:23.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="Makefile.am"
+   text-time="2003-11-18T01:46:23.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="04ea915b8491ae1bfa673dde4d358149"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:46:23.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="missing"
+   text-time="2003-11-18T01:46:25.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="fef7dcbb4fbdb713bd60f665e8ae67a2"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:46:25.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="install-sh"
+   text-time="2003-11-18T01:46:26.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="9a98c7b799ad906d61a88d52b5790b1c"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:46:26.000000Z"/>
+</wc-entries>

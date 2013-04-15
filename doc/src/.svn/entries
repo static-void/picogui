@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3971"
+   name=""
+   committed-date="2003-05-23T09:45:34.629920Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/doc/src"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:29:50.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3840"
+   name="picogui_arch.png"
+   text-time="2003-11-18T15:29:07.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="df6752982226d2c4b32beccfe02cf0ae"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:29:07.000000Z"/>
+<entry
+   committed-rev="3963"
+   name="dot.sh"
+   text-time="2003-11-18T15:29:09.000000Z"
+   committed-date="2003-05-23T09:02:14.811636Z"
+   checksum="1cdde24c8d2ec27f7cb62a6571e0cb72"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:29:09.000000Z"/>
+<entry
+   committed-rev="3963"
+   name="mk_theme_hierarchy.pl"
+   text-time="2003-11-18T15:29:11.000000Z"
+   committed-date="2003-05-23T09:02:14.811636Z"
+   checksum="1b1858668930beb5b7d3b39bd791b7d9"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:29:11.000000Z"/>
+<entry
+   committed-rev="439"
+   name="picogui_arch.flw"
+   text-time="2003-11-18T15:29:16.000000Z"
+   committed-date="2000-11-11T08:42:57.000000Z"
+   checksum="bcb9da9a159856d33a66735cca80482d"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T15:29:16.000000Z"/>
+<entry
+   committed-rev="3971"
+   name="cli_c_Doxyfile"
+   text-time="2003-11-18T15:29:28.000000Z"
+   committed-date="2003-05-23T09:45:34.629920Z"
+   checksum="0d563a2e0669efffb991b1ea28c51f69"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:29:28.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="thumb.picogui_arch.png"
+   text-time="2003-11-18T15:29:50.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="0a3122c2b9dc8902300b13e84198a93b"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:29:50.000000Z"/>
+</wc-entries>

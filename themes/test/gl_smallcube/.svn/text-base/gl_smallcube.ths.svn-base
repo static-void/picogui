@@ -1,0 +1,109 @@
+/*
+ * Example of how small the picogui theme file gets when defining a cube,
+ * one light, a background, and some initialization.
+ *
+ * For comparison:
+ *  -rw-r--r--    1 micah    micah       34036 Mar  5 22:21 cube.blend
+ *  -rw-r--r--    1 micah    micah        1806 Mar  5 22:24 cube.dxf
+ *  -rw-r--r--    1 micah    micah         361 Mar  5 22:24 cube.obj
+ *  -rw-r--r--    1 micah    micah        1831 Mar  5 22:24 cube.wrl
+ *  -rw-r--r--    1 micah    micah         520 Mar  5 23:05 gl_smallcube.th
+ */
+
+object default name = "Simple cube demo (OpenGL)";
+
+object background {
+
+/* Fillstyle */
+  bgfill = fillstyle {
+    var s, u;
+
+    /*** Blue background fill */
+    
+    SetColor(0x8282BC);
+    Rect(x,y,w,h);
+
+    /*** Setup */
+
+    u  = 1<<16;        /* Unit */    
+    s  = (w/4)<<16;    /* Size of the cube */
+
+    GL.pushmatrix();
+    GL.enable(GL_DEPTH_TEST);
+    GL.depthfunc(GL_LESS);
+    GL.disable(GL_BLEND);
+    GL.enable(GL_LIGHT1);
+    GL.enable(GL_LIGHTING);
+    GL.lightfv(GL_LIGHT1, GL_AMBIENT,1,0, 0x0A000,0x0A000,0x0A000);
+    GL.lightfv(GL_LIGHT1, GL_DIFFUSE,1,0, 0x10000,0x10000,0x12000);
+
+    /*** Transformations */
+    
+    GL.translatef((x<<16)+(w<<15),(y<<16)+(h<<15),s);          /* Float above the divnode */
+
+    /* Set up the light relative to the cube's center.
+     * Hover it in front of the cube for nice shading effects.
+     */
+    GL.lightfv(GL_LIGHT1, GL_POSITION,1,0, 0,0,w<<15);
+
+    GL.rotatef(28,0,0,0, u,0,0);             /* Small vertical tilt */
+    GL.rotatef(28,0,0,0, 0,u,0); 
+    GL.translatef(-(s>>1),-(s>>1),-(s>>1));  /* Center on the origin */
+
+    /*** Cube */
+    
+    GL.begin(GL_QUADS);
+    
+    /* Right */
+    GL.normal3f(u,0,0);
+    GL.vertex3f(s,0,0);
+    GL.vertex3f(s,s,0);
+    GL.vertex3f(s,s,s);
+    GL.vertex3f(s,0,s);
+    
+    /* Left */
+    GL.normal3f(-u,0,0);
+    GL.vertex3f(0,0,0);
+    GL.vertex3f(0,s,0);
+    GL.vertex3f(0,s,s);
+    GL.vertex3f(0,0,s);
+    
+    /* Bottom */
+    GL.normal3f(0,u,0);
+    GL.vertex3f(0,s,0);
+    GL.vertex3f(s,s,0);
+    GL.vertex3f(s,s,s);
+    GL.vertex3f(0,s,s);
+    
+    /* Top */
+    GL.normal3f(0,-u,0);
+    GL.vertex3f(0,0,0);
+    GL.vertex3f(s,0,0);
+    GL.vertex3f(s,0,s);
+    GL.vertex3f(0,0,s);
+    
+    /* Front */
+    GL.normal3f(0,0,-u);
+    GL.vertex3f(0,0,0);
+    GL.vertex3f(s,0,0);
+    GL.vertex3f(s,s,0);
+    GL.vertex3f(0,s,0);
+    
+    /* Back */
+    GL.normal3f(0,0,u);
+    GL.vertex3f(0,0,s);
+    GL.vertex3f(s,0,s);
+    GL.vertex3f(s,s,s);
+    GL.vertex3f(0,s,s);
+    
+    GL.end();
+
+    /*** Cleanup */
+    
+    GL.disable(GL_DEPTH_TEST);
+    GL.disable(GL_LIGHTING);
+    GL.popmatrix();
+  };
+}
+
+/* The End */

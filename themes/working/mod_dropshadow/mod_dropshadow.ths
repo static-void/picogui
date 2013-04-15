@@ -1,0 +1,32 @@
+/* $Id: mod_dropshadow.ths 3978 2003-05-23 10:19:38Z micah $
+ *
+ * Drop shadows for popup boxes
+ *
+ * -- Micah Dowty
+ */
+
+object default name = "Modifier: Drop shadows";
+
+prop shadowmask;
+
+object popup {
+  /* Alpha channel for drop shadow */
+  shadowmask = LoadBitmap("data/dropshadow.pgm");
+
+  backdrop = fillstyle {
+    SetLgop(PG_LGOP_MULTIPLY);
+    SetSrc(34,0,20,20);
+    Bitmap(x+w,y,20,20,shadowmask);
+    SetSrc(0,33,20,19);
+    Bitmap(x,y+h,20,19,shadowmask);
+    SetSrc(34,33,20,19);
+    Bitmap(x+w,y+h,20,19,shadowmask);
+    SetSrc(20,33,14,19);
+    Tilebitmap(x+20,y+h,w-20,19,shadowmask);
+    SetSrc(34,19,20,14);
+    Tilebitmap(x+w,y+20,20,h-20,shadowmask);
+    SetLgop(PG_LGOP_NONE);
+  };
+}
+
+/* The End */

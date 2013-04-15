@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3978"
+   name=""
+   committed-date="2003-05-23T10:19:38.050153Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/dev/pgtuxphone"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:07:29.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3978"
+   name="tuxclient.c"
+   text-time="2003-11-18T15:07:14.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="c95b8a2d82c8b157a67740e147f1371c"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:07:14.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="tuxphone.h"
+   text-time="2003-11-18T15:07:15.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="256e76906739982cdce6e53b6d27d05c"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:07:15.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="tuxclient.h"
+   text-time="2003-11-18T15:07:15.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="4282effd5d1eff8965114e6dc4fce886"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:07:15.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="phonecall.c"
+   text-time="2003-11-18T15:07:20.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="5c5ecf1669eb51b23322f03745bc49e0"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:07:20.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="phoneui.c"
+   text-time="2003-11-18T15:07:22.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="b67ba611a9803acecfcc11f0e85dda13"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:07:22.000000Z"/>
+<entry
+   committed-rev="1653"
+   name="Makefile.am"
+   text-time="2003-11-18T15:07:23.000000Z"
+   committed-date="2001-12-01T01:37:09.000000Z"
+   checksum="3d5b45868d56f14866d5e7084e3716bf"
+   last-author="gork"
+   kind="file"
+   prop-time="2003-11-18T15:07:23.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="phonecall.h"
+   text-time="2003-11-18T15:07:24.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="b255b5fb26687f7fa544a193a50e5385"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:07:24.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="eventloop.c"
+   text-time="2003-11-18T15:07:28.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="84a11e0aa536445c9a18de3fb7c522d1"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:07:28.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="phoneui.h"
+   text-time="2003-11-18T15:07:29.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="df698f252e8546e82a0ecac8ac0c8b5b"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:07:29.000000Z"/>
+</wc-entries>

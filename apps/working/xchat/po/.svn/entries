@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3978"
+   name=""
+   committed-date="2003-05-23T10:19:38.050153Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/working/xchat/po"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:45:40.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="1697"
+   name="cs.po"
+   text-time="2003-11-18T01:34:56.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="3db0f4a6da63e71ea946034420b3ba06"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:34:56.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="pt_BR.po"
+   text-time="2003-11-18T01:35:18.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="939897c583cd3671c4744b2ebda9199f"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:35:18.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="es.po"
+   text-time="2003-11-18T01:35:50.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="18b5d69ae244d381c31bd7e1aa39cfeb"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:35:50.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="ko.po"
+   text-time="2003-11-18T01:36:14.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="77de8e2ed5e542bcb6468a2e6e3ce54c"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:36:14.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="Makefile.in.in"
+   text-time="2003-11-18T01:36:17.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="b192f0691d49f0ace03d9e06031d090d"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:36:17.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="hu.po"
+   text-time="2003-11-18T01:36:34.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="9627485283784751ea9b07f34467e0b8"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:36:34.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="no.po"
+   text-time="2003-11-18T01:36:54.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="13755f144156a915d930657dc0f5fdb8"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:36:54.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="sk.po"
+   text-time="2003-11-18T01:37:27.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="62280df533765ce9874b8d1239f7fd2f"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:37:27.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="POTFILES.in"
+   text-time="2003-11-18T01:37:28.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="27e96bc5d0dfef41547a8cc342918e7c"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:37:28.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="uk.po"
+   text-time="2003-11-18T01:37:52.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="45020a212160aa368ec5b58a14e31dd8"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:37:52.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="ro.po"
+   text-time="2003-11-18T01:38:18.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="dff895e0e90c4a9b8ee6a016600d2351"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:38:18.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="ru.po"
+   text-time="2003-11-18T01:38:41.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="960a9cad55bf7ebc672347089f57e427"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:38:41.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="el.po"
+   text-time="2003-11-18T01:39:13.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="d2ac785e98f48d578b7377c619aa7c1b"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:39:13.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="fr.po"
+   text-time="2003-11-18T01:39:35.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="a978f6cc2d67408594d672650c741ece"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:39:35.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="nl.po"
+   text-time="2003-11-18T01:39:51.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="8be9a8c2ab3aa651cfc68f7bffb752eb"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:39:51.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="ChangeLog"
+   text-time="2003-11-18T01:39:51.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:39:51.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="it.po"
+   text-time="2003-11-18T01:40:13.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="c186f4fc6f2b91e4398889d2c3ee36bc"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:40:13.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="sl.po"
+   text-time="2003-11-18T01:40:33.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="92e46bde7f31386655057fdd81b2154a"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:40:33.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="lt.po"
+   text-time="2003-11-18T01:40:59.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="bf6c5161463049468a257011c735106c"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:40:59.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="zh_TW.Big5.po"
+   text-time="2003-11-18T01:41:15.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="b49a4e3ce51b486d049ccc35b6ee0b1e"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:41:15.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="pt.po"
+   text-time="2003-11-18T01:41:35.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="e5ffa66986d366c0b86c5a68417d3ed7"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:41:35.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="ca.po"
+   text-time="2003-11-18T01:41:54.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="9ab8824929ac10438e307e9d0c1fb31c"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:41:54.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="sr.po"
+   text-time="2003-11-18T01:42:17.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="ffb4fdd171d651767b49dddddbcdd23f"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:42:17.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="da.po"
+   text-time="2003-11-18T01:42:37.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="4b16884ce49561d3c3d1bdd0107363bc"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:42:37.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="tr.po"
+   text-time="2003-11-18T01:42:56.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="f184ac6f5f2d43cf006d487795193f48"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:42:56.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="sv.po"
+   text-time="2003-11-18T01:43:28.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="02243bb25a689e61c39c0a4582d7eddb"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:43:28.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="de.po"
+   text-time="2003-11-18T01:43:47.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="cb856b5e6d86dcde47f5e533a8362952"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:43:47.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="ja.po"
+   text-time="2003-11-18T01:44:16.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="263d98243a1b74ef509bb2612e2935f0"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:44:16.000000Z"/>
+<entry
+   committed-rev="1702"
+   name="xchat.pot"
+   text-time="2003-11-18T01:44:35.000000Z"
+   committed-date="2001-12-15T04:19:48.000000Z"
+   checksum="d76ba5495185d071c6ad4e5c9ff0d278"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:44:35.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="he.po"
+   text-time="2003-11-18T01:45:00.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="6b47b7f67cfdcdd9d60e30cd592a6b09"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:45:00.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="fi.po"
+   text-time="2003-11-18T01:45:20.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="2c63cb9466bb7b8800bc98c277d0aff2"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:45:20.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="zh_CN.po"
+   text-time="2003-11-18T01:45:40.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="964896c01b07f1fce067512b6fdd269a"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:45:40.000000Z"/>
+</wc-entries>

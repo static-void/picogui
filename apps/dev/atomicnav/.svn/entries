@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3978"
+   name=""
+   committed-date="2003-05-23T10:19:38.050153Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/dev/atomicnav"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T14:59:22.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3978"
+   name="p_file.c"
+   text-time="2003-11-18T14:59:02.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="f94faa608288883bee4f738d5326c992"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:59:02.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="p_http.c"
+   text-time="2003-11-18T14:59:06.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="f712e448c2f409e06dbf36784da8b4cb"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:59:06.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="browserwin.c"
+   text-time="2003-11-18T14:59:08.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="95c24a6d0db2b74ee6c132f0ada09c12"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:59:08.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="protocol.c"
+   text-time="2003-11-18T14:59:09.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="68908284b780b65ef35b015b9a0c162c"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:59:09.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="url.c"
+   text-time="2003-11-18T14:59:11.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="5f1d769765c243b99447f021fad928b9"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:59:11.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="main.c"
+   text-time="2003-11-18T14:59:15.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="0953a92a84f59737e2141e7b4082743a"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:59:15.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="protocol.h"
+   text-time="2003-11-18T14:59:16.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="8d2b123786b412055762b02d4cd20dc7"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:59:16.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="browserwin.h"
+   text-time="2003-11-18T14:59:17.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="26ae6514dd272c239869e787d63f923e"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:59:17.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="url.h"
+   text-time="2003-11-18T14:59:19.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="d48873918308a9b0338accf4979f10f0"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:59:19.000000Z"/>
+<entry
+   committed-rev="2039"
+   name="Makefile.am"
+   text-time="2003-11-18T14:59:20.000000Z"
+   committed-date="2002-02-04T15:23:02.000000Z"
+   checksum="f70fdc69a96e7317431e3bad01c19b6a"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T14:59:20.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="debug.h"
+   text-time="2003-11-18T14:59:22.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="ab467577bcd16abf6aed76963b993089"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:59:22.000000Z"/>
+</wc-entries>

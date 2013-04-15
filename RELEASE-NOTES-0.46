@@ -1,0 +1,43 @@
+- PicoGUI v0.46 "Lagbored" -
+
+------------ Release Notes
+
+The major changes in this release include:
+
+ - the repository changed from CVS to Subversion. Not that this affects the
+   average end-user, but it's still important.
+ - new directory layout. For example, now themes are under (surprise) themes, and
+   all client libraries are under client.
+ - PicoGUI now compiles and runs under Windows, with cygwin, mingw, or msvc. The
+   only drivers supported are SDL.
+ - other new drivers; notably, very alphaish DirectFB support.
+ - bugfixes, lots of them
+
+As always, this isn't meant to be a stable release, it is only provided so
+people can more easily experiment with PicoGUI and possibly help in its
+development.
+ 
+-------------- To get started:
+
+ - If you're still fuzzy on what this is supposed to be exactly, take a look
+   at some of the docs at http://picogui.org, specifically the FAQ.
+   
+ - If you're wondering what order you should examine the packages here, please
+   read very carefully the INSTALL document located in this same directory.
+   
+ - Read all the README files and INSTALL in the pgserver directory!
+   The PicoGUI server has a lot of compile time options. The defaults are
+   reasonable for developing picogui apps on a desktop, but this is where you
+   can tweak picogui for different confgurations.
+   
+ - Note that there is also a good deal of optional runtime configuration,
+   documented in README.configfile, and to a lesser extent in the output of
+   "pgserver -h"
+   
+ - If you still have questions, send them to the pgui-devel mailing list
+   (at http://picogui.org) or drop by #picogui on irc.freenode.net and ask.
+   
+Have a lot of fun!
+
+-- Lalo Martins <lalo@laranja.org>
+

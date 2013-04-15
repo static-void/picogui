@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3978"
+   name=""
+   committed-date="2003-05-23T10:19:38.050153Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/working/pgremote"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:24:23.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3978"
+   name="sdlremote.c"
+   text-time="2003-11-18T01:24:15.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="a1cb63b4a9cef367c74df4ac4b656db1"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:24:15.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="gpmremote.c"
+   text-time="2003-11-18T01:24:16.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="b2c6ed24a1366a374208392c95823be4"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:24:16.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="infilter_uppercase.c"
+   text-time="2003-11-18T01:24:17.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="65d5768f83592cab5e548aafd80a12d8"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:24:17.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="main.c"
+   text-time="2003-11-18T01:24:18.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="f1a223d5a41ea225c860b5269b3804d6"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:24:18.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="serialremote.c"
+   text-time="2003-11-18T01:24:19.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="1ae3e60d2e0eeb7a1af6d82dcb877abf"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:24:19.000000Z"/>
+<entry
+   committed-rev="2583"
+   name="Makefile"
+   text-time="2003-11-18T01:24:19.000000Z"
+   committed-date="2002-07-03T22:03:32.000000Z"
+   checksum="375a2700455256b5ec0ceb6c9ad33684"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:24:19.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="svgaremote.c"
+   text-time="2003-11-18T01:24:22.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="39a45190da45e3ffc5666d971db34f9b"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:24:22.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="infilter_circle.c"
+   text-time="2003-11-18T01:24:23.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="183b5c257f9be2a8910f80bb746ade73"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:24:23.000000Z"/>
+</wc-entries>

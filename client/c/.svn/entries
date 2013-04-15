@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4537"
+   name=""
+   committed-date="2003-08-14T08:48:04.893104Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/client/c"
+   last-author="bornet"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T16:52:36.000000Z"
+   revision="4573"/>
+<entry
+   name="include"
+   kind="dir"/>
+<entry
+   committed-rev="931"
+   name="Doxyfile"
+   text-time="2003-11-18T16:50:53.000000Z"
+   committed-date="2001-05-17T04:46:36.000000Z"
+   checksum="082375ff5693ebeb108d62d17f2457c2"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:50:53.000000Z"/>
+<entry
+   name="macros"
+   kind="dir"/>
+<entry
+   committed-rev="856"
+   name="AUTHORS"
+   text-time="2003-11-18T16:51:00.000000Z"
+   committed-date="2001-04-25T13:58:32.000000Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="gobry"
+   kind="file"
+   prop-time="2003-11-18T16:51:00.000000Z"/>
+<entry
+   committed-rev="2623"
+   name="configure.in"
+   text-time="2003-11-18T16:51:01.000000Z"
+   committed-date="2002-07-28T17:06:49.000000Z"
+   checksum="f337c4417916f8f7ca76d4fa95bc0ab3"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:51:01.000000Z"/>
+<entry
+   committed-rev="856"
+   name="ChangeLog"
+   text-time="2003-11-18T16:51:02.000000Z"
+   committed-date="2001-04-25T13:58:32.000000Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="gobry"
+   kind="file"
+   prop-time="2003-11-18T16:51:02.000000Z"/>
+<entry
+   name="src"
+   kind="dir"/>
+<entry
+   committed-rev="232"
+   name="README"
+   text-time="2003-11-18T16:52:08.000000Z"
+   committed-date="2000-09-09T05:07:21.000000Z"
+   checksum="d709518f99beb929fcac7a769646ae3d"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:52:08.000000Z"/>
+<entry
+   committed-rev="4514"
+   name="grab_keynames.py"
+   text-time="2003-11-18T16:52:10.000000Z"
+   committed-date="2003-07-14T19:06:42.317034Z"
+   checksum="7c0d10346246f11565a54f9eaa692acd"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:52:10.000000Z"/>
+<entry
+   committed-rev="3657"
+   name="pgui-cli_c-cvs-0.ebuild"
+   text-time="2003-11-18T16:52:12.000000Z"
+   committed-date="2003-03-23T09:53:27.000000Z"
+   checksum="7ea3f1a07566a44d7ecdd2b5f3ef3101"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:52:12.000000Z"/>
+<entry
+   committed-rev="1551"
+   name="INSTALL"
+   text-time="2003-11-18T16:52:14.000000Z"
+   committed-date="2001-11-14T00:15:40.000000Z"
+   checksum="bf0114709c224613615d758282de86ae"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T16:52:14.000000Z"/>
+<entry
+   name="demos"
+   kind="dir"/>
+<entry
+   committed-rev="798"
+   name="COPYING"
+   text-time="2003-11-18T16:52:26.000000Z"
+   committed-date="2001-04-11T16:42:10.000000Z"
+   checksum="7fbc338309ac38fefcd64b04bb903e34"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:52:26.000000Z"/>
+<entry
+   committed-rev="4537"
+   name="PicoGUIClient.mdl"
+   text-time="2003-11-18T16:52:27.000000Z"
+   committed-date="2003-08-14T08:48:04.893104Z"
+   checksum="9bb9925ad0582fee255761e42cc8658b"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T16:52:27.000000Z"/>
+<entry
+   committed-rev="1369"
+   name="Makefile.am"
+   text-time="2003-11-18T16:52:33.000000Z"
+   committed-date="2001-10-11T05:14:40.000000Z"
+   checksum="4e16caf1d38a7a746d744bd2bba8e56e"
+   last-author="gork"
+   kind="file"
+   prop-time="2003-11-18T16:52:33.000000Z"/>
+<entry
+   committed-rev="1759"
+   name="picogui-client.spec.in"
+   text-time="2003-11-18T16:52:34.000000Z"
+   committed-date="2001-12-21T18:00:15.000000Z"
+   checksum="da4d5037feb6199fd3e5dd06334292c0"
+   last-author="cgrigis"
+   kind="file"
+   prop-time="2003-11-18T16:52:34.000000Z"/>
+<entry
+   committed-rev="1143"
+   name="autogen.sh"
+   text-time="2003-11-18T16:52:35.000000Z"
+   committed-date="2001-08-06T09:49:37.000000Z"
+   checksum="38a3163c9e7b10dd77ebca6ed5ea6c5a"
+   last-author="gobry"
+   kind="file"
+   prop-time="2003-11-18T16:52:35.000000Z"/>
+<entry
+   committed-rev="856"
+   name="NEWS"
+   text-time="2003-11-18T16:52:36.000000Z"
+   committed-date="2001-04-25T13:58:32.000000Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="gobry"
+   kind="file"
+   prop-time="2003-11-18T16:52:36.000000Z"/>
+</wc-entries>

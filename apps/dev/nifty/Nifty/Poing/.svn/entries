@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3835"
+   name=""
+   committed-date="2003-05-05T10:02:55.352841Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/dev/nifty/Nifty/Poing"
+   last-author="bornet"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:02:34.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3739"
+   name="Data.py"
+   text-time="2003-11-18T15:02:22.000000Z"
+   committed-date="2003-04-03T01:44:43.000000Z"
+   checksum="d381ae7e667e9076770c16e7123f6e7f"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:02:22.000000Z"/>
+<entry
+   committed-rev="3772"
+   name="Views.py"
+   text-time="2003-11-18T15:02:26.000000Z"
+   committed-date="2003-04-16T00:26:16.000000Z"
+   checksum="64c29280efa75cf2776ec9e0e54d73e7"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:02:26.000000Z"/>
+<entry
+   committed-rev="3737"
+   name="__init__.py"
+   text-time="2003-11-18T15:02:33.000000Z"
+   committed-date="2003-04-03T00:12:34.000000Z"
+   checksum="866551d97ac97be3bc2e169cab5888de"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:02:33.000000Z"/>
+<entry
+   committed-rev="3741"
+   name="db.py"
+   text-time="2003-11-18T15:02:34.000000Z"
+   committed-date="2003-04-03T03:53:28.000000Z"
+   checksum="5edd795ae61b5ff9cc9c75b94494a679"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:02:34.000000Z"/>
+</wc-entries>

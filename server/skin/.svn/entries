@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3840"
+   name=""
+   committed-date="2003-05-05T18:42:26.188241Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/server/skin"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T16:30:40.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3763"
+   name="palm3x.map"
+   text-time="2003-11-18T16:26:03.000000Z"
+   committed-date="2003-04-15T04:22:59.000000Z"
+   checksum="8bcd40159bd172900fbb11c10f0a96c7"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:26:03.000000Z"/>
+<entry
+   committed-rev="1296"
+   name="niftycomm.map"
+   text-time="2003-11-18T16:26:04.000000Z"
+   committed-date="2001-09-11T00:50:25.000000Z"
+   checksum="3618de9f5a44bfc7bcd834d1b7de1ee9"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:26:04.000000Z"/>
+<entry
+   committed-rev="1187"
+   name="chipslice.conf"
+   text-time="2003-11-18T16:26:06.000000Z"
+   committed-date="2001-08-14T07:01:27.000000Z"
+   checksum="6da08232a1cafed430b6c5145f17513c"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:26:06.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="chipslice.jpeg"
+   text-time="2003-11-18T16:26:09.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="37acff5cc405c08354a42d9d76ea4566"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:26:09.000000Z"/>
+<entry
+   committed-rev="3763"
+   name="palm3x.conf"
+   text-time="2003-11-18T16:26:14.000000Z"
+   committed-date="2003-04-15T04:22:59.000000Z"
+   checksum="597c8f8db9817dafa885d411c94d1978"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:26:14.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="cybiko.jpeg"
+   text-time="2003-11-18T16:26:27.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="d803826a012478ae9e10b83986089821"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:26:27.000000Z"/>
+<entry
+   committed-rev="1832"
+   name="ipc3219.map"
+   text-time="2003-11-18T16:26:28.000000Z"
+   committed-date="2002-01-07T16:43:07.000000Z"
+   checksum="073ed24e1cbafeaba66bf8c2fbec3c6e"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:26:28.000000Z"/>
+<entry
+   committed-rev="2025"
+   name="psion5mx.conf"
+   text-time="2003-11-18T16:26:29.000000Z"
+   committed-date="2002-02-03T19:31:56.000000Z"
+   checksum="05f4e941cb70c143cde6de143427163c"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:26:29.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="psion5mx.jpeg"
+   text-time="2003-11-18T16:26:35.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="65b2134d12a8cd1f09ba7ed410c3094f"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:26:35.000000Z"/>
+<entry
+   committed-rev="2193"
+   name="cybiko_large.map"
+   text-time="2003-11-18T16:26:56.000000Z"
+   committed-date="2002-03-03T01:13:09.000000Z"
+   checksum="dc5e27098c4cdf6ba89f85b5500dea00"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:26:56.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="zaurus_nokbd_big.jpeg"
+   text-time="2003-11-18T16:27:21.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="35fe167236bd925340a21a6e0d71e3cc"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:27:21.000000Z"/>
+<entry
+   committed-rev="1187"
+   name="helio.map"
+   text-time="2003-11-18T16:27:28.000000Z"
+   committed-date="2001-08-14T07:01:27.000000Z"
+   checksum="84ff7e1c43c4c8d57b26d9d81e2dd822"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:27:28.000000Z"/>
+<entry
+   committed-rev="2176"
+   name="zaurus.conf"
+   text-time="2003-11-18T16:27:46.000000Z"
+   committed-date="2002-02-26T06:42:16.000000Z"
+   checksum="74801a43c512daa2fa04c171ffb5d206"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:27:46.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="zaurus.jpeg"
+   text-time="2003-11-18T16:28:12.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="6acb83a3a019fee009aa437fd5feabaa"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:28:12.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="cybiko_large.jpeg"
+   text-time="2003-11-18T16:29:02.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="0a1fca83786ae2fe1ca575edf041bb9f"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:29:02.000000Z"/>
+<entry
+   committed-rev="2193"
+   name="cybiko_large.conf"
+   text-time="2003-11-18T16:29:03.000000Z"
+   committed-date="2002-03-03T01:13:09.000000Z"
+   checksum="716c55dac107e1388acec76525f2057d"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:29:03.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="ipc3219.jpeg"
+   text-time="2003-11-18T16:29:21.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="02f638960f4202552e8e01ae7251a9bd"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:29:21.000000Z"/>
+<entry
+   committed-rev="1832"
+   name="ipc3219.conf"
+   text-time="2003-11-18T16:29:22.000000Z"
+   committed-date="2002-01-07T16:43:07.000000Z"
+   checksum="e7860c2117bd313cafd4e206d23641b1"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:29:22.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="mm2.jpeg"
+   text-time="2003-11-18T16:29:33.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="18591b84424d9ea22d5e339352776674"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:29:33.000000Z"/>
+<entry
+   committed-rev="1187"
+   name="chipslice.map"
+   text-time="2003-11-18T16:29:35.000000Z"
+   committed-date="2001-08-14T07:01:27.000000Z"
+   checksum="97be5464478fe0f8c082051f25363a7c"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:29:35.000000Z"/>
+<entry
+   committed-rev="1289"
+   name="mm2.conf"
+   text-time="2003-11-18T16:29:36.000000Z"
+   committed-date="2001-09-09T18:57:08.000000Z"
+   checksum="6f7ecb1975003bbfcf777f092d0815cd"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:29:36.000000Z"/>
+<entry
+   committed-rev="2212"
+   name="mobile.th"
+   text-time="2003-11-18T16:29:41.000000Z"
+   committed-date="2002-03-04T00:53:00.000000Z"
+   checksum="6c993ef3712c7a9eba2b6ed31686d8fa"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:29:41.000000Z"/>
+<entry
+   committed-rev="1798"
+   name="term_white.th"
+   text-time="2003-11-18T16:29:42.000000Z"
+   committed-date="2002-01-05T07:40:24.000000Z"
+   checksum="417d4041677accbe7132993d76af3beb"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:29:42.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="zaurus_nokbd_small.jpeg"
+   text-time="2003-11-18T16:29:55.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="453428349aa01c72d658335f193a89c1"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:29:55.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="palm3x.jpg"
+   text-time="2003-11-18T16:29:58.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="46f2b1fe60a6114b7e6d2bcd9bbc8e7d"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:29:58.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="helio.jpeg"
+   text-time="2003-11-18T16:30:01.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="9b38a901f88ae7e27879b4380e4e38cc"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:30:01.000000Z"/>
+<entry
+   committed-rev="1517"
+   name="helio.conf"
+   text-time="2003-11-18T16:30:03.000000Z"
+   committed-date="2001-11-09T08:33:50.000000Z"
+   checksum="6bf950f8f8b5a9e234ca96b19d3702cc"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:30:03.000000Z"/>
+<entry
+   committed-rev="1187"
+   name="helio_large.map"
+   text-time="2003-11-18T16:30:04.000000Z"
+   committed-date="2001-08-14T07:01:27.000000Z"
+   checksum="c6605b174ad98c694a2de0738895dd67"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:30:04.000000Z"/>
+<entry
+   committed-rev="1187"
+   name="vr3.map"
+   text-time="2003-11-18T16:30:04.000000Z"
+   committed-date="2001-08-14T07:01:27.000000Z"
+   checksum="f2a20d72ba5b8e8dc13f3bfe3c087ae0"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:30:04.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="niftycomm.jpeg"
+   text-time="2003-11-18T16:30:12.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="2049ac38bca511a62b4bd4f471aa3697"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:30:12.000000Z"/>
+<entry
+   committed-rev="1296"
+   name="niftycomm.conf"
+   text-time="2003-11-18T16:30:12.000000Z"
+   committed-date="2001-09-11T00:50:25.000000Z"
+   checksum="2ed8d198a9ab4903c2d491dda93a6249"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:30:12.000000Z"/>
+<entry
+   committed-rev="2681"
+   name="zaurus_nokbd.conf"
+   text-time="2003-11-18T16:30:13.000000Z"
+   committed-date="2002-08-21T11:46:26.000000Z"
+   checksum="aaebd08f2fc06712b4b5cbc8ae61bb71"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:30:13.000000Z"/>
+<entry
+   committed-rev="2663"
+   name="nifty3d.th"
+   text-time="2003-11-18T16:30:15.000000Z"
+   committed-date="2002-08-13T18:31:52.000000Z"
+   checksum="1e40fca276020ba8d6695b1749fc2416"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:30:15.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="helio_large.jpeg"
+   text-time="2003-11-18T16:30:18.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="a5aee49403d8fdd8ec42123f588f6d05"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:30:18.000000Z"/>
+<entry
+   committed-rev="1517"
+   name="helio_large.conf"
+   text-time="2003-11-18T16:30:18.000000Z"
+   committed-date="2001-11-09T08:33:50.000000Z"
+   checksum="b160dbc20a2d21c5c6abcb4ccf3985bc"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:30:18.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="vr3.jpeg"
+   text-time="2003-11-18T16:30:21.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="35fd3160a9f82a4f12dca3f898f08edf"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:30:21.000000Z"/>
+<entry
+   committed-rev="1543"
+   name="vr3.conf"
+   text-time="2003-11-18T16:30:22.000000Z"
+   committed-date="2001-11-12T23:52:29.000000Z"
+   checksum="ddbaef6161cece29f32856b7d13929fb"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:30:22.000000Z"/>
+<entry
+   committed-rev="1186"
+   name="vr3_large.map"
+   text-time="2003-11-18T16:30:24.000000Z"
+   committed-date="2001-08-14T06:18:53.000000Z"
+   checksum="3adb64e566ae6709c7d8deec4addf483"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:30:24.000000Z"/>
+<entry
+   committed-rev="2681"
+   name="zaurus_nokbd_big.map"
+   text-time="2003-11-18T16:30:25.000000Z"
+   committed-date="2002-08-21T11:46:26.000000Z"
+   checksum="048d0d7bfe66afc94f98efa2ee9742de"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:30:25.000000Z"/>
+<entry
+   committed-rev="2681"
+   name="zaurus_nokbd_large.conf"
+   text-time="2003-11-18T16:30:26.000000Z"
+   committed-date="2002-08-21T11:46:26.000000Z"
+   checksum="a990e9098cd52ed1728c65fe294f743e"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:30:26.000000Z"/>
+<entry
+   committed-rev="2063"
+   name="lcdmono.th"
+   text-time="2003-11-18T16:30:26.000000Z"
+   committed-date="2002-02-05T23:26:07.000000Z"
+   checksum="49de931e8f5d138439fe8c294b9fd366"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:30:26.000000Z"/>
+<entry
+   committed-rev="2030"
+   name="zaurus.map"
+   text-time="2003-11-18T16:30:27.000000Z"
+   committed-date="2002-02-04T09:15:41.000000Z"
+   checksum="b3aa19db24e37a0b2edd0aa607998d2b"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:30:27.000000Z"/>
+<entry
+   committed-rev="1290"
+   name="mm2.map"
+   text-time="2003-11-18T16:30:28.000000Z"
+   committed-date="2001-09-09T20:54:52.000000Z"
+   checksum="862539b236c1d007d673d3c00eb04f44"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:30:28.000000Z"/>
+<entry
+   committed-rev="1517"
+   name="vr3_large.conf"
+   text-time="2003-11-18T16:30:29.000000Z"
+   committed-date="2001-11-09T08:33:50.000000Z"
+   checksum="9bd80ba1dd52e79e6ee0baf8468ecb63"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:30:29.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="vr3_large.jpeg"
+   text-time="2003-11-18T16:30:36.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="de10781991cc4808190ff6773266a7dc"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:30:36.000000Z"/>
+<entry
+   committed-rev="2176"
+   name="bg_zaurus.th"
+   text-time="2003-11-18T16:30:40.000000Z"
+   committed-date="2002-02-26T06:42:16.000000Z"
+   checksum="63add4f0e83d35092b25556f89546b24"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:30:40.000000Z"/>
+</wc-entries>

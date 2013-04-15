@@ -1,0 +1,54 @@
+prop center, scale;
+prop message1, message2, message1font, message2font;
+prop logo;
+
+obj "tpcal" {
+  /* FIXME: if we could measure the text, this would 
+   * work on different display sizes and fonts better.
+   */
+  bgfill = fillstyle {
+      var ypos;
+  
+      //Bitmap(x,y,w,h,background::bitmap1);
+      Gradient(x,y,w,h,80,0x9195ce, 0xcfd3ec);
+
+      /* Approximately center the whole thing vertically */
+      ypos = y+((h - 280)>>1);
+  
+      /* logo */
+      SetLgop(PG_LGOP_ALPHA);
+      Bitmap(x+((w-108)>>1) + 7, ypos+14, 108,113, logo);
+      ypos = ypos + 170;
+      SetLgop(PG_LGOP_NONE);
+      
+      /* Messages */
+      SetColor(fgcolor);
+      SetFont(message1font);
+      Text(x + ((w-150)>>1), ypos, 1, 1, message1);
+      ypos = ypos + 40;
+      SetFont(message2font);
+      Text(x + ((w-150)>>1), ypos, 1, 1, message2);
+    };
+  PGTH_P_USER = fillstyle {
+    //Frame(x-center-1, y-center-1, center*2+3, center*2+3);
+      Frame(x-center, y-center, center*2+1, center*2+1);
+      Bar(x, y-scale, 1, scale*2+1);
+      Slab(x-scale, y, scale*2+1, 1);
+    };
+  center = 4;
+  scale = 12;
+  message1 = "Welcome to PicoGUI";
+  message2 = "Tap each target firmly and\naccurately to calibrate\nyour touchscreen.";
+  logo = LoadBitmap("data/micropingizauru.png");
+  bgcolor = 0xE0E0D0;
+  fgcolor = 0x000000;
+  message1font = Font(NULL,15,PG_FSTYLE_BOLD);
+  message2font = Font(NULL,13,0);
+}
+
+/* Hack to disable popup borders, since the fluidity border looks bad crushed */
+object popup {
+  margin = 0;
+  backdrop = fillstyle { Nop(); };
+  bgfill = fillstyle { Nop(); };
+}

@@ -1,0 +1,142 @@
+/* $Id$
+ *
+ * This is not a single look for PicoGUI, but more of a library to easily
+ * create 100% bitmapped themes. The source bitmap is given in the bitmap1
+ * property of the default theme object. This theme will provide fillstyles
+ * and sizing data for other theme objects using bitmap1 as a 'skin' to define
+ * the theme's look.
+ *
+ * Themes beginning with 'be_' are BitmapEngine themes, and they must have
+ * this theme loaded first.
+ *
+ * Version 1.1
+ *
+ * Micah Dowty
+ */
+
+/*********************************************** Fillstyle definitions */
+
+/* Fillstyles */
+prop fs_expand, fs_simple;
+
+/* X and Y of source bitmap */
+prop srcx, srcy, srcw, srch;
+
+/* Amount not to tile on each side */
+prop left_sz, right_sz, top_sz, bottom_sz;
+
+object default {
+
+  name = "BitmapEngine";
+
+  /* Expand horizontally and vertically by tiling 
+   */
+  fs_expand = fillstyle {
+    var bit, sx, sy, sw, sh, l, r, t, b, bsy, by;
+
+    /* Load theme properties now */
+    bit = bitmap1;
+    sx  = srcx;
+    sy  = srcy;
+    sw  = srcw;
+    sh  = srch;
+    l   = left_sz;
+    r   = right_sz;
+    t   = top_sz;
+    b   = bottom_sz;
+    SetLgop(bitmap2);
+
+    /* Some common subexpressions */
+    bsy = sy+sh-b;
+    by  = y+h-b;
+
+    /* Top-left */
+    SetSrc(sx,sy,l,t);
+    Bitmap(x,y,l,t,bit);
+
+    /* Top edge */
+    SetSrc(sx+l,sy,sw-l-r,t);
+    Tilebitmap(x+l,y,w-l-r,t,bit);
+
+    /* Top-right */
+    SetSrc(sx+sw-r,sy,r,t);
+    Bitmap(x+w-r,y,r,t,bit);
+
+    /* Left edge */
+    SetSrc(sx,sy+t,l,sh-t-b);
+    Tilebitmap(x,y+t,l,h-t-b,bit);
+
+    /* Middle */
+    SetSrc(sx+l,sy+t,sw-l-r,sh-t-b);
+    Tilebitmap(x+l,y+t,w-l-r,h-t-b,bit);
+
+    /* Right edge */
+    SetSrc(sx+sw-r,sy+t,r,sh-t-b);
+    Tilebitmap(x+w-r,y+t,r,h-t-b,bit);
+
+    /* Bottom-left */
+    SetSrc(sx,bsy,l,t);
+    Bitmap(x,by,l,t,bit);
+
+    /* Bottom edge */
+    SetSrc(sx+l,bsy,sw-l-r,t);
+    Tilebitmap(x+l,by,w-l-r,t,bit);
+
+    /* Bottom-right */
+    SetSrc(sx+sw-r,bsy,r,t);
+    Bitmap(x+w-r,by,r,t,bit);
+
+    /* Reset params to not mess up the widget.. */
+    SetLgop(PG_LGOP_NONE);
+    SetSrc(0,0,0,0);
+  };
+
+  /* Only tile the bitmap
+   */
+  fs_simple = fillstyle {
+    SetLgop(bitmap2);
+    SetSrc(srcx,srcy,srcw,srch);
+    Tilebitmap(x,y,w,h,bitmap1);
+    SetLgop(PG_LGOP_NONE);
+    SetSrc(0,0,0,0);
+  };
+   
+  bitmap2 = PG_LGOP_NONE;
+  margin = 0;
+}
+
+/**************************************** Objects for standard bitmapengine template */
+
+object button {
+  bgfill = Copy(default::fs_expand);
+  left_sz = 9;
+  right_sz = 9;
+  top_sz = 9;
+  bottom_sz = 9;
+  srcx = 3;
+  srcy = 86;
+  srcw = 28;
+  srch = 28;
+  width = 20;
+  height = 20;
+  spacing = 2;
+  margin = 5;
+}
+object button.hilight srcx = 38;
+object button.on srcx = 73;
+
+object panelbar {
+  bgfill = Copy(default::fs_expand);
+  left_sz = 9;
+  right_sz = 9;
+  top_sz = 0;
+  bottom_sz = 0;
+  srcx = 113;
+  srcy = 185;
+  srcw = 64;
+  srch = 20;
+  width = 20;
+}
+object panelbar.hilight srcy = 212;
+
+/* The End */

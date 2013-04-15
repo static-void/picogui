@@ -1,0 +1,5 @@
+NAME = Times
+SIZE = 10
+STYLE = encoding_isolatin1
+NORMAL = times10
+BOLD = times10b

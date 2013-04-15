@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3841"
+   name=""
+   committed-date="2003-05-05T18:45:20.897937Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/themes/working/lcdgray/data"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:14:17.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3841"
+   name="lcd_check_unchecked.pnm"
+   text-time="2003-11-18T15:14:14.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="5f7bd3bcd6b4602fe98b2baa0de0866f"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:14:14.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="mono_rotate.pbm"
+   text-time="2003-11-18T15:14:15.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="5fe352e57794651feeee80eb88fc3525"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:14:15.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="mono_zoom_on.pbm"
+   text-time="2003-11-18T15:14:15.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="74344736329027af2851b00ac3f21b7e"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:14:15.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="mono_zoom.pbm"
+   text-time="2003-11-18T15:14:16.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="9ebef860b60c67b781c2eefb58a824a9"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:14:16.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="mono_x.pbm"
+   text-time="2003-11-18T15:14:17.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="013c7edd6e180c4d90c2bc4982bd3bc2"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:14:17.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="lcd_check_checked.pnm"
+   text-time="2003-11-18T15:14:17.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="630fdc1003abf9c0b019bb36cd8a83a0"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:14:17.000000Z"/>
+</wc-entries>

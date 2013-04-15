@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4532"
+   name=""
+   committed-date="2003-08-09T18:06:16.181005Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/test/python"
+   last-author="lalo"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:20:03.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3935"
+   name="wt_test.py"
+   text-time="2003-11-18T01:19:46.000000Z"
+   committed-date="2003-05-15T15:39:24.852996Z"
+   checksum="4ef420a303ff87bf2b00f84d54ad1184"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T01:19:46.000000Z"/>
+<entry
+   committed-rev="3935"
+   name="Hello_World_and_bye.py"
+   text-time="2003-11-18T01:19:47.000000Z"
+   committed-date="2003-05-15T15:39:24.852996Z"
+   checksum="db7e2d6798cbabab003800b4be3a86fc"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T01:19:47.000000Z"/>
+<entry
+   committed-rev="3935"
+   name="microcosm.py"
+   text-time="2003-11-18T01:19:48.000000Z"
+   committed-date="2003-05-15T15:39:24.852996Z"
+   checksum="2adef2dd5fe5da56b9229cb1df8dd77f"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T01:19:48.000000Z"/>
+<entry
+   committed-rev="3935"
+   name="Hello_World1.py"
+   text-time="2003-11-18T01:19:49.000000Z"
+   committed-date="2003-05-15T15:39:24.852996Z"
+   checksum="c9313f384c3c69461e97ca4388f2c39a"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T01:19:49.000000Z"/>
+<entry
+   committed-rev="3305"
+   name="xwtcompile.py"
+   text-time="2003-11-18T01:19:49.000000Z"
+   committed-date="2002-11-12T03:34:38.000000Z"
+   checksum="8ff2d2ff6e7ad4bc96786974022b931e"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:19:49.000000Z"/>
+<entry
+   committed-rev="3960"
+   name="Hello_World_with_Server.py"
+   text-time="2003-11-18T01:19:51.000000Z"
+   committed-date="2003-05-23T08:31:35.543142Z"
+   checksum="caf50afb8dcbea08e5794a61a6e459f9"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:19:51.000000Z"/>
+<entry
+   committed-rev="3935"
+   name="textbox_test.py"
+   text-time="2003-11-18T01:19:53.000000Z"
+   committed-date="2003-05-15T15:39:24.852996Z"
+   checksum="2baf5b340b693269376be98536bab6f1"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T01:19:53.000000Z"/>
+<entry
+   committed-rev="3935"
+   name="infilter_test_low.py"
+   text-time="2003-11-18T01:19:54.000000Z"
+   committed-date="2003-05-15T15:39:24.852996Z"
+   checksum="4986762ac0ee0a3ba9204068da1ba26b"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T01:19:54.000000Z"/>
+<entry
+   committed-rev="4532"
+   name="all_widgets.py"
+   text-time="2003-11-18T01:19:55.000000Z"
+   committed-date="2003-08-09T18:06:16.181005Z"
+   checksum="3a7c13e9e6e6f782e48f8394201311f5"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T01:19:55.000000Z"/>
+<entry
+   committed-rev="3935"
+   name="tabpage.py"
+   text-time="2003-11-18T01:19:56.000000Z"
+   committed-date="2003-05-15T15:39:24.852996Z"
+   checksum="5d8b9aa1c7681e9bf82c68084ed12569"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T01:19:56.000000Z"/>
+<entry
+   committed-rev="3935"
+   name="thread_test.py"
+   text-time="2003-11-18T01:19:57.000000Z"
+   committed-date="2003-05-15T15:39:24.852996Z"
+   checksum="69fcdafa2f06da9ebb150daceb52fde3"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T01:19:57.000000Z"/>
+<entry
+   committed-rev="3341"
+   name="test.xwt"
+   text-time="2003-11-18T01:19:58.000000Z"
+   committed-date="2002-11-15T20:52:22.000000Z"
+   checksum="ec1663920c4d2e9d396a52a8461889e2"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:19:58.000000Z"/>
+<entry
+   committed-rev="3935"
+   name="infilter_test.py"
+   text-time="2003-11-18T01:19:58.000000Z"
+   committed-date="2003-05-15T15:39:24.852996Z"
+   checksum="a117f04559887a0c42ce1430030d7a40"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T01:19:58.000000Z"/>
+<entry
+   committed-rev="3935"
+   name="listtest.py"
+   text-time="2003-11-18T01:19:59.000000Z"
+   committed-date="2003-05-15T15:39:24.852996Z"
+   checksum="4312fbbde8557eb48ffd8a2e9b840bd0"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T01:19:59.000000Z"/>
+<entry
+   committed-rev="3934"
+   name="canvasdemo.py"
+   text-time="2003-11-18T01:20:00.000000Z"
+   committed-date="2003-05-15T15:27:42.046006Z"
+   checksum="4f2eb1871120814d73d9b46cbbc6e267"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T01:20:00.000000Z"/>
+<entry
+   committed-rev="3960"
+   name="hell_low_level_library.py"
+   text-time="2003-11-18T01:20:00.000000Z"
+   committed-date="2003-05-23T08:31:35.543142Z"
+   checksum="4bc4586482cd04160c06f53ec774a5e4"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:20:00.000000Z"/>
+<entry
+   committed-rev="3960"
+   name="gropseq.py"
+   text-time="2003-11-18T01:20:01.000000Z"
+   committed-date="2003-05-23T08:31:35.543142Z"
+   checksum="d3459a4d10d6bb7c433c2f7136dd17f5"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:20:01.000000Z"/>
+<entry
+   committed-rev="3934"
+   name="xwttest.py"
+   text-time="2003-11-18T01:20:02.000000Z"
+   committed-date="2003-05-15T15:27:42.046006Z"
+   checksum="4b1e5da84a6a6d03cefcf4692e941a9a"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T01:20:02.000000Z"/>
+<entry
+   committed-rev="3960"
+   name="Hello_World_WT.py"
+   text-time="2003-11-18T01:20:02.000000Z"
+   committed-date="2003-05-23T08:31:35.543142Z"
+   checksum="305dfb01811b882586af3c1b0d2f943f"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:20:02.000000Z"/>
+<entry
+   committed-rev="3935"
+   name="gridtest.py"
+   text-time="2003-11-18T01:20:03.000000Z"
+   committed-date="2003-05-15T15:39:24.852996Z"
+   checksum="70e4e2ffda28708144eb3560aca1627f"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T01:20:03.000000Z"/>
+<entry
+   committed-rev="3935"
+   name="unicode.py"
+   text-time="2003-11-18T01:20:03.000000Z"
+   committed-date="2003-05-15T15:39:24.852996Z"
+   checksum="ddadd8d7fcb6199d7d400ddae7b6fcf7"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T01:20:03.000000Z"/>
+</wc-entries>

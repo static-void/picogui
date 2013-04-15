@@ -1,0 +1,71 @@
+#include "overflow.h"
+
+/* We're multiplying by odd fractions here */
+
+object custom {
+  name = "checkers.player1";
+  fourquarters = fillstyle {
+    SetColor(bgcolor);
+    Fellipse(x,y,w,h);
+    SetColor(fgcolor);
+    Ellipse(x,y,w,h);
+  };
+  threequarters = fillstyle {
+    var ox, oy;
+    ox=500*w/7464;
+    oy=500*h/7464;
+    x=x+ox;
+    y=y+oy;
+    w=w-2*ox;
+    h=h-2*oy;
+    SetColor(bgcolor);
+    Fellipse(x,y,w,h);
+    SetColor(fgcolor);
+    Ellipse(x,y,w,h);
+  };
+  twoquarters = fillstyle {
+    var ox, oy;
+    ox=500*w/3414;
+    oy=500*w/3414;
+    x=x+ox;
+    y=y+oy;
+    w=w-2*ox;
+    h=h-2*oy;
+    SetColor(bgcolor);
+    Fellipse(x,y,w,h);
+    SetColor(fgcolor);
+    Ellipse(x,y,w,h);
+  };
+  onequarter = fillstyle {
+    var ox, oy;
+    ox=w/4;
+    oy=h/4;
+    x=x+ox;
+    y=y+oy;
+    w=w-2*ox;
+    h=h-2*oy;
+    SetColor(bgcolor);
+    Fellipse(x,y,w,h);
+    SetColor(fgcolor);
+    Ellipse(x,y,w,h);
+  };
+  ownedbutempty = fillstyle {
+    x=x+w/4;
+    y=y+h/4;
+    w=w/2;
+    h=h/2;
+    SetColor(fgcolor);
+    Ellipse(x,y,w,h);
+    SetColor(bgcolor);
+    SetOffset(-1,-1,2,2);
+    Ellipse(x,y,w,h);
+    SetOffset(1,1,-2,-2);
+    Ellipse(x,y,w,h);
+  };
+}
+
+object custom {
+  name = "checkers.player2";
+  parent = FindThemeObject("checkers.player1");
+}
+

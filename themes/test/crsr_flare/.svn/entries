@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3840"
+   name=""
+   committed-date="2003-05-05T18:42:26.188241Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/themes/test/crsr_flare"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:10:32.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3784"
+   name="crsr_flare.ths"
+   text-time="2003-11-18T15:09:41.000000Z"
+   committed-date="2003-05-03T06:22:15.571995Z"
+   checksum="b4f647ecf4758970cbe69b57a344569a"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:09:41.000000Z"/>
+<entry
+   name="data"
+   kind="dir"/>
+</wc-entries>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4565"
+   name=""
+   committed-date="2003-11-17T03:53:49.481122Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/themes/working"
+   last-author="lalo"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:24:04.000000Z"
+   revision="4573"/>
+<entry
+   name="pastel_light"
+   kind="dir"/>
+<entry
+   name="nifty3d"
+   kind="dir"/>
+<entry
+   name="term_retro"
+   kind="dir"/>
+<entry
+   name="term_c64"
+   kind="dir"/>
+<entry
+   name="photonic"
+   kind="dir"/>
+<entry
+   name="lcdgray"
+   kind="dir"/>
+<entry
+   name="icon_color"
+   kind="dir"/>
+<entry
+   name="bg_tuxscreen"
+   kind="dir"/>
+<entry
+   name="fluidity"
+   kind="dir"/>
+<entry
+   name="flat16"
+   kind="dir"/>
+<entry
+   name="icon_color_large"
+   kind="dir"/>
+<entry
+   name="lucid"
+   kind="dir"/>
+<entry
+   name="mod_blur"
+   kind="dir"/>
+<entry
+   name="crsr_gold_small"
+   kind="dir"/>
+<entry
+   name="text_lcd"
+   kind="dir"/>
+<entry
+   name="term_white"
+   kind="dir"/>
+<entry
+   name="bg_picogui"
+   kind="dir"/>
+<entry
+   name="mobile"
+   kind="dir"/>
+<entry
+   committed-rev="4565"
+   name="build.sh"
+   text-time="2003-11-18T15:19:07.000000Z"
+   committed-date="2003-11-17T03:53:49.481122Z"
+   checksum="a824ca6c6ec14e6b70f2dbe98aebaf96"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:19:07.000000Z"/>
+<entry
+   name="crsr_ibeam_gold"
+   kind="dir"/>
+<entry
+   name="crsr_gold"
+   kind="dir"/>
+<entry
+   name="bg_dark_curves"
+   kind="dir"/>
+<entry
+   name="ncurses_color"
+   kind="dir"/>
+<entry
+   name="bg_swirlypond"
+   kind="dir"/>
+<entry
+   name="bg_solid"
+   kind="dir"/>
+<entry
+   name="term_wet"
+   kind="dir"/>
+<entry
+   name="pseudo3d"
+   kind="dir"/>
+<entry
+   name="aqua"
+   kind="dir"/>
+<entry
+   name="classique"
+   kind="dir"/>
+<entry
+   name="lcdmono"
+   kind="dir"/>
+<entry
+   name="bg_waves"
+   kind="dir"/>
+<entry
+   name="term_fogstreaks"
+   kind="dir"/>
+<entry
+   name="bg_zaurus"
+   kind="dir"/>
+<entry
+   name="crsr_hand"
+   kind="dir"/>
+<entry
+   name="mod_dropshadow"
+   kind="dir"/>
+<entry
+   name="mod_dimmer"
+   kind="dir"/>
+<entry
+   name="crsr_alpha"
+   kind="dir"/>
+</wc-entries>

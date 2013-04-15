@@ -1,0 +1,117 @@
+/* $Id: mod_blur.ths 3978 2003-05-23 10:19:38Z micah $
+ *
+ * Give popup boxes a blurry background, with various hilighting and drop shadows :)
+ *
+ * -- Micah Dowty
+ */
+
+object default name = "Modifier: Blurry transparent dialog boxes";
+
+/*
+ * The actual popup. Do rendering in the backdrop fillstyle so it shouldn't be drawn more than once
+ */
+object popup { 
+  margin = 8;
+  bitmap1 = LoadBitmap("data/shadow.pgm");
+
+  backdrop = fillstyle {
+    /* This is a bunch of really messy code copied from
+     * bitmapengine to handle the drop shadow...
+     */
+  
+    var bit, sx, sy, sw, sh, l, r, t, b, bsy, by;
+
+    /* Load theme properties now */
+    bit = bitmap1;
+    sx  = 0;
+    sy  = 0;
+    sw  = 98;
+    sh  = 101;
+    l   = 40;
+    r   = 40;
+    t   = 40;
+    b   = 40;
+    SetLgop(PG_LGOP_MULTIPLY);
+    
+    w = w + 30;
+    h = h + 30;
+
+    /* Some common subexpressions */
+    bsy = sy+sh-b;
+    by  = y+h-b;
+
+    /* Top-left */
+    SetSrc(sx,sy,l,t);
+    Bitmap(x,y,l,t,bit);
+
+    /* Top edge */
+    SetSrc(sx+l,sy,sw-l-r,t);
+    Tilebitmap(x+l,y,w-l-r,t,bit);
+
+    /* Top-right */
+    SetSrc(sx+sw-r,sy,r,t);
+    Bitmap(x+w-r,y,r,t,bit);
+
+    /* Left edge */
+    SetSrc(sx,sy+t,l,sh-t-b);
+    Tilebitmap(x,y+t,l,h-t-b,bit);
+
+    /* Middle */
+    SetSrc(sx+l,sy+t,sw-l-r,sh-t-b);
+    Tilebitmap(x+l,y+t,w-l-r,h-t-b,bit);
+
+    /* Right edge */
+    SetSrc(sx+sw-r,sy+t,r,sh-t-b);
+    Tilebitmap(x+w-r,y+t,r,h-t-b,bit);
+
+    /* Bottom-left */
+    SetSrc(sx,bsy,l,t);
+    Bitmap(x,by,l,t,bit);
+
+    /* Bottom edge */
+    SetSrc(sx+l,bsy,sw-l-r,t);
+    Tilebitmap(x+l,by,w-l-r,t,bit);
+
+    /* Bottom-right */
+    SetSrc(sx+sw-r,bsy,r,t);
+    Bitmap(x+w-r,by,r,t,bit);
+
+    /* Reset params to not mess up the widget.. */
+    SetLgop(PG_LGOP_NONE);
+    SetSrc(0,0,0,0);
+    
+    w = w - 30;
+    h = h - 30;
+
+    Blur(x,y,w,h,8);
+    SetLgop(PG_LGOP_ALPHA);
+    SetColor(PGCF_ALPHA | PGC_WHITE | (30<<24));
+    Rect(x,y,w,h);
+
+    SetLgop(PG_LGOP_ADD);
+    Gradient(x,y,w/2,h,0,PGC_BLACK,0x404040);
+    Gradient(x+w/2,y,w/2,h,0,0x404040,PGC_BLACK);
+
+  };
+  bgfill = fillstyle {
+    /* Only the opaque parts should go in "bgfill", in this case
+     * it's a simple 1-pixel black border
+     */
+    Frame(x,y,w,h);
+  };
+}
+
+/*
+ * Make menuitems transparent, to show off the background
+ */
+
+object menuitem {
+  bgfill = fillstyle {
+    Nop();
+  };
+  fgcolor = 0x000000;
+  align = PG_A_CENTER;
+}
+
+
+/* The End */

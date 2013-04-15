@@ -1,0 +1,14 @@
+/* $Id$
+ *
+ * The hand cursor, formerly PicoGUI's default
+ *
+ * Version 1.0
+ *
+ * Micah Dowty
+ */
+ 
+object default {
+   name = "Classic Hand Cursor";
+   cursorbitmap = LoadBitmap("data/hand.pnm");
+   cursorbitmask = LoadBitmap("data/hand_mask.pnm");
+}

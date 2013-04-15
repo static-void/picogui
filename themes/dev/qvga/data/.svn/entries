@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3841"
+   name=""
+   committed-date="2003-05-05T18:45:20.897937Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/themes/dev/qvga/data"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:25:35.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3840"
+   name="blue_h.png"
+   text-time="2003-11-18T15:25:17.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="08430098938d6cae3545364ef108ee8d"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:25:17.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="btn_zoom_blue.png"
+   text-time="2003-11-18T15:25:18.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="4eb07b022b86bd053504d58d1f97c783"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:25:18.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="btn_rotate.png"
+   text-time="2003-11-18T15:25:18.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="a01b00c2544f48537d3daeda1b3d9cc0"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:25:18.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="interlace.png"
+   text-time="2003-11-18T15:25:19.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="38c85ad01b677187d595e90e6339d075"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:25:19.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="btn_menu.png"
+   text-time="2003-11-18T15:25:19.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="900f0f0b09f4ccdb3514b44f2aa45f8f"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:25:19.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="btn_rotate_blue.png"
+   text-time="2003-11-18T15:25:21.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="21db5793f0efd7e59244828d8b13b5ce"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:25:21.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="gray_h.png"
+   text-time="2003-11-18T15:25:21.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="e1ab728b06a9ba9188cf32772dd61e09"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:25:21.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="btn_x.png"
+   text-time="2003-11-18T15:25:22.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="85249fd56a6a17a204b88e7a140f57d7"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:25:22.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="tilted_interlace.png"
+   text-time="2003-11-18T15:25:23.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="c92eeba05045197d30273b97866dc85e"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:25:23.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="blue_v.png"
+   text-time="2003-11-18T15:25:24.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="2a992494319ee3219658ec9b160e04d3"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:25:24.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="picogui_watermark.png"
+   text-time="2003-11-18T15:25:25.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="7d5304391b4a6ce77953edcc55a53483"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:25:25.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="btn_menu_blue.png"
+   text-time="2003-11-18T15:25:26.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="35e3bfb5c6c82d755b2b709d44bfa1c2"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:25:26.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="btn_x_blue.png"
+   text-time="2003-11-18T15:25:26.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="a8612c5f52c58316d78d8c1e58855f8a"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:25:26.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="shadow.pgm"
+   text-time="2003-11-18T15:25:32.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="e86d27c8e0b4acddfd4c3449231080b6"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:25:32.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="btn_zoom.png"
+   text-time="2003-11-18T15:25:33.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="c6604fca7fb400c8b54abcf92f773f5c"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:25:33.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="gray_v.png"
+   text-time="2003-11-18T15:25:33.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="c4baf93939daa52a078004ec6af80660"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:25:33.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="btn_blue.png"
+   text-time="2003-11-18T15:25:34.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="42450f1e075c75044f15b4532f5893a1"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:25:34.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="btn_blank.png"
+   text-time="2003-11-18T15:25:35.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="01e82f969594e65dd19fb1462c218fd3"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:25:35.000000Z"/>
+</wc-entries>

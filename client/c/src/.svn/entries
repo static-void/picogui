@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4524"
+   name=""
+   committed-date="2003-07-22T07:06:28.186835Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/client/c/src"
+   last-author="bornet"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T16:52:07.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3978"
+   name="netcore.c"
+   text-time="2003-11-18T16:51:21.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="73c8b7160365ffffdbb715c563103202"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:51:21.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="pgfx_canvas.c"
+   text-time="2003-11-18T16:51:24.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="7189d4cb4b894877ff80924e4da54531"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:51:24.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="pgfx_bitmap.c"
+   text-time="2003-11-18T16:51:26.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="7dee93030906fcf023f09cb8ceb28d8f"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:51:26.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="dlg_datepicker.c"
+   text-time="2003-11-18T16:51:33.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="f48c8a9e0697393626b1b6a8ade4def1"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:51:33.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="dlg_colorpicker.c"
+   text-time="2003-11-18T16:51:36.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="a9b6e02bf81f7e5e827231ab99990e84"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:51:36.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="dlg_filepicker.c"
+   text-time="2003-11-18T16:51:45.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="de0718ea15eb1fca205a47c359ce71c0"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:51:45.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="pgfx.c"
+   text-time="2003-11-18T16:51:46.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="adfcf1fcdba492488c37a9a3caefc0ac"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:51:46.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="platform.c"
+   text-time="2003-11-18T16:51:49.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="59108a43719a780f3bfe805ffdb4d3d0"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:51:49.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="applet.c"
+   text-time="2003-11-18T16:51:50.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="f4234df782f31e2efcd1d02104e5deb9"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:51:50.000000Z"/>
+<entry
+   committed-rev="4524"
+   name="Makefile.am"
+   text-time="2003-11-18T16:51:51.000000Z"
+   committed-date="2003-07-22T07:06:28.186835Z"
+   checksum="f580ccb555246c58446323872f487bd9"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T16:51:51.000000Z"/>
+<entry
+   committed-rev="4511"
+   name="api.c"
+   text-time="2003-11-18T16:51:59.000000Z"
+   committed-date="2003-07-14T18:25:37.802189Z"
+   checksum="44064017ebd118deee2b1452e4e99b8a"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:51:59.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="dlg_fontpicker.c"
+   text-time="2003-11-18T16:52:01.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="80456e93488be2a7a486dbc83a349765"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:52:01.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="clientlib.h"
+   text-time="2003-11-18T16:52:04.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="90b149978712ff042c98aa0d0bb3756a"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:52:04.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="stddialog.c"
+   text-time="2003-11-18T16:52:07.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="426d5bc8b6c06b4af4ef97fdefc84164"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:52:07.000000Z"/>
+</wc-entries>

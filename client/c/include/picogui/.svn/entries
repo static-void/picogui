@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4511"
+   name=""
+   committed-date="2003-07-14T18:25:37.802189Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/client/c/include/picogui"
+   last-author="lalo"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T16:50:49.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3978"
+   name="stddialog.h"
+   text-time="2003-11-18T16:49:57.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="65c502e2ba69ed39d2d4e6dde3cff585"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:49:57.000000Z"/>
+<entry
+   committed-rev="4511"
+   name="client_c.h"
+   text-time="2003-11-18T16:50:33.000000Z"
+   committed-date="2003-07-14T18:25:37.802189Z"
+   checksum="f48b78573304f11742a332d1303bdc73"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:50:33.000000Z"/>
+<entry
+   committed-rev="2570"
+   name="Makefile.am"
+   text-time="2003-11-18T16:50:34.000000Z"
+   committed-date="2002-06-21T14:04:47.000000Z"
+   checksum="4ce316242284ab830417bf7166b149ba"
+   last-author="gobry"
+   kind="file"
+   prop-time="2003-11-18T16:50:34.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="pgfx.h"
+   text-time="2003-11-18T16:50:41.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="2b3a2dbf453ece683788ed2acf35d98e"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:50:41.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="applet.h"
+   text-time="2003-11-18T16:50:49.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="408aa69ca6bdec69f19209a70ca7f625"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:50:49.000000Z"/>
+</wc-entries>

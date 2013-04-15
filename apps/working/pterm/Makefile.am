@@ -1,0 +1,7 @@
+bin_PROGRAMS = pterm
+pterm_SOURCES = main.c ptyfork.c pterm.h
+
+AM_LDFLAGS = @PICOGUI_LDFLAGS@
+LDADD = @PICOGUI_LIBS@
+
+AM_CFLAGS = @CFLAGS@ @PICOGUI_CFLAGS@

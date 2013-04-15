@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4522"
+   name=""
+   committed-date="2003-07-18T09:36:32.831932Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/tools"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:19:15.000000Z"
+   revision="4573"/>
+<entry
+   name="pgbg"
+   kind="dir"/>
+<entry
+   committed-rev="1123"
+   name="themetools.spec.in"
+   text-time="2003-11-18T01:18:24.000000Z"
+   committed-date="2001-08-03T17:01:52.000000Z"
+   checksum="3c59eed271ec60ae5b364ef4456c63b4"
+   last-author="gobry"
+   kind="file"
+   prop-time="2003-11-18T01:18:24.000000Z"/>
+<entry
+   name="xwt"
+   kind="dir"/>
+<entry
+   committed-rev="1120"
+   name="AUTHORS"
+   text-time="2003-11-18T01:18:31.000000Z"
+   committed-date="2001-08-03T16:54:40.000000Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="gobry"
+   kind="file"
+   prop-time="2003-11-18T01:18:31.000000Z"/>
+<entry
+   committed-rev="2623"
+   name="configure.in"
+   text-time="2003-11-18T01:18:46.000000Z"
+   committed-date="2002-07-28T17:06:49.000000Z"
+   checksum="269df88df63dfa6b09d170a5be3183a2"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:18:46.000000Z"/>
+<entry
+   committed-rev="1120"
+   name="ChangeLog"
+   text-time="2003-11-18T01:18:47.000000Z"
+   committed-date="2001-08-03T16:54:40.000000Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="gobry"
+   kind="file"
+   prop-time="2003-11-18T01:18:47.000000Z"/>
+<entry
+   committed-rev="320"
+   name="README"
+   text-time="2003-11-18T01:19:14.000000Z"
+   committed-date="2000-10-10T00:49:06.000000Z"
+   checksum="19be93e01ffaf42ab8bcc98916239a55"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:19:14.000000Z"/>
+<entry
+   committed-rev="4347"
+   name="ThemeTools.mdl"
+   text-time="2003-11-18T01:19:15.000000Z"
+   committed-date="2003-06-20T10:49:15.048865Z"
+   checksum="1e4acabe06eae7005c3429905ca6ad61"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T01:19:15.000000Z"/>
+<entry
+   name="thdump"
+   kind="dir"/>
+<entry
+   name="themec"
+   kind="dir"/>
+<entry
+   committed-rev="275"
+   name="COPYING"
+   text-time="2003-11-18T01:18:50.000000Z"
+   committed-date="2000-09-23T08:11:28.000000Z"
+   checksum="8ca43cbc842c2336e835926c2166c28b"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:18:50.000000Z"/>
+<entry
+   name="themedc"
+   kind="dir"/>
+<entry
+   committed-rev="2378"
+   name="Makefile.am"
+   text-time="2003-11-18T01:19:12.000000Z"
+   committed-date="2002-04-09T16:28:48.000000Z"
+   checksum="89d27d4b096364b77cc06dde01ffd364"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:19:12.000000Z"/>
+<entry
+   committed-rev="2527"
+   name="autogen.sh"
+   text-time="2003-11-18T01:19:13.000000Z"
+   committed-date="2002-05-22T16:29:39.000000Z"
+   checksum="4204d65b3c81e6e6510245c9099c8b6e"
+   last-author="gobry"
+   kind="file"
+   prop-time="2003-11-18T01:19:13.000000Z"/>
+<entry
+   committed-rev="1120"
+   name="NEWS"
+   text-time="2003-11-18T01:19:14.000000Z"
+   committed-date="2001-08-03T16:54:40.000000Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="gobry"
+   kind="file"
+   prop-time="2003-11-18T01:19:14.000000Z"/>
+</wc-entries>

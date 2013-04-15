@@ -1,0 +1,5 @@
+NAME = Helvetica
+SIZE = 18
+STYLE = encoding_isolatin1 default
+NORMAL = helvetica18
+BOLD = helvetica18b

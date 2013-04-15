@@ -1,0 +1,2973 @@
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V3.1//EN"[]>
+
+<book id="PicoGUI.Protocol">
+ <bookinfo>
+  <title>PicoGUI Protocol</title>
+  <subtitle>Version 21</>
+
+  <authorgroup>
+   <author>
+    <firstname>Dave</firstname>
+    <surname>Poirier</surname>
+    <affiliation>
+     <address>
+      <email>instinc@users.sf.net</email>
+     </address>
+    </affiliation>
+   </author>
+  </authorgroup>
+
+  <copyright>
+   <year>2002</year>
+   <year>2003</year>
+   <holder>Dave Poirier</holder>
+  </copyright>
+
+  <legalnotice>
+   <para>
+	Permission is granted to copy, distribute and/or modify this document
+	under the terms of the GNU Free Documentation License, Version 1.1
+	or any later version published by the Free Software Foundation;
+	with no Invariant Sections, with no Front-Cover Texts, and with no
+	Back-Cover Texts.  A copy of the license can be acquired
+	electronically from http://www.fsf.org/licenses/fdl.html or by
+	writing to 59 Temple Place, Suite 330,Boston, MA 02111-1307 USA
+   </para>
+  </legalnotice>
+ </bookinfo>
+
+ 
+
+<toc></toc>
+
+ <chapter id="intro">
+  <title>Introduction</title>
+  <para>
+	This book aims to describe the protocol used to communicate between
+	a PicoGUI server and client; the client part is normally implemented
+	in the cli_c library.
+  </para>
+  <para>
+	This book is not aimed to be a tutorial to PicoGUI but
+	a rather crude technical manual of its communication protocol.
+  </para>
+ </chapter>
+ <chapter id="assumptions">
+  <title>Assumptions</title>
+  <para>
+	It is assumed that the reader have a good general programming
+	background, good knowledge of data structures and basic network
+	principles.
+  </para>
+  <para>
+	Unless otherwise stated, every value is stored in network
+	byte order.
+  </para>
+  <para>
+	The following types are used throughout the document:
+  </para>
+  <table frame=none><title>data types</title>
+  <tgroup cols=2 align=left>
+  <tbody>
+  <row><entry>char</><entry>signed 8bit value</entry></row>
+  <row><entry>s8</><entry>signed 8bit value (same as char)</entry></row>
+  <row><entry>u8</><entry>unsigned 8bit value</entry></row>
+  <row><entry>s16</><entry>signed 16bit value</entry></row>
+  <row><entry>u16</><entry>unsigned 16bit value</entry></row>
+  <row><entry>s32</><entry>signed 32bit value</entry></row>
+  <row><entry>u32</><entry>unsigned 32bit value</entry></row>
+  </tbody>
+  </tgroup>
+  </table>
+  <table frame=none><title>special variables</title>
+  <tgroup cols=2 align=left>
+  <tbody>
+  <row><entry>dummy</><entry>used in various structures to denote bytes of
+	padding</entry></row>
+  </tbody>
+  </tgroup>
+  </table>
+ </chapter>
+
+<!--..............................................................-->
+
+ <chapter id="ClientServer">
+  <title>Client/Server communication</title>
+  <para>
+  	PicoGUI is a client/server based graphical user interface aimed
+	at embedded devices, where the executable size does matter but
+	a minimum of flexibility is required.
+  </para>
+  <para>
+	The client application sends requests using <quote>packets</quote>
+	which are sent via sockets. Currently supported protocols include
+	tcp/ip and unix sockets, each described in its own chapter.
+  </para>
+  <para>
+	A packet is a simple data structure and each request has its own
+	format and packet length.  The various packet structures and
+	allowed values are defined in the next chapter (see
+	<xref linkend="packets">).
+  </para>
+  <para>
+	Establishing a connection with the PicoGUI server is conceived of
+	protocol dependant and independant parts.
+  </para>
+
+ <sect1 id="prottcp">
+  <title>Establishing a TCP/IP connection with PicoGUI</title>
+  <para>
+	A TCP/IP connection is established by connecting to the tcp port
+	PicoGUI is listening to, by default this should be 30450+display.
+	A connection to pgserver on display 0 would then be established by
+	connecting to port 30450 while a connection to display 1 would be
+	done on port 30451.
+  </para>
+  <para>
+	The server may be running on a different host as long as the client is
+	able to determine the IP address on which the server is running.
+  </para>
+  <sect2 id="tcprecommendations">
+   <title>Recommendations for TCP/IP communication</title>
+   <para>
+        When possible, respect the $PGSERVER environment variable. It uses the
+        X-like syntax of hostname:display, but both halves are optional. For
+        example, on a computer named "menchi", the following are all equal:
+        menchi:0, menchi, :0, localhost, localhost:0, or an empty $PGSERVER.
+   </para>
+   <para>
+        To decrease latency to pgserver, disable the operating system's TCP
+        delays if they exist. On Linux, there is a TCP_NODELAY option for
+        setsockopt() that can be used to disable its "tinygram prevention".
+        This sacrifices throughput for latency, but in cases where the client
+        is waiting for a server response this increases the client's throughput.
+   </para>
+   <para>
+        To increase throughput to pgserver by decreasing network overhead,
+        groups of requests can be combined in 
+        <link linkend="pgreq-batch">batch requests</>. Since the server only
+        sends one return packet for the entire group of requests, it's good
+        for processing large numbers of requests that don't have a useful
+        return value.
+  </sect2>
+ </sect1>
+
+<!--..............................................................-->
+
+ <sect1 id="protunix">
+  <title>Establishing a Unix socket connection with PicoGUI</title>
+  <para>
+	A Unix socket connection is established by opening the
+	<quote>/var/tmp/.pgui.X</quote> where X is the display number. As an
+	example, if pgserver is running on display 0, the socket name would be
+	<quote>/var/tmp/.pgui.0</quote> while a connection for display 1 would
+	be done using <quote>/var/tmp/.pgui.1</quote><footnote>
+	<para>
+	At the time of writing this document, the unix socket layer
+	of PicoGUI does not support multiple displays without modifying the
+	source code and building separate binaries.  This should be fixed
+	pretty soon though, so the chances are that while you are reading 
+	this it is already available.  By default at this time the socket
+	name is	<quote>/var/tmp/.pgui</quote>.</para></footnote>
+  </para>
+ </sect1>
+ <sect1 id="protindependant"><title>Protocol Independant Initialization</title>
+  <para>
+	As soon as the connection is established the server will send to the
+	client a <quote>pghello</quote> packet.  The client is then able
+	to enter the cycle of request->response and may do so by sending
+	its first request immediately following the reception of the pghello
+	packet.
+  </para>
+
+  <sect2 id="pghello">
+   <title>pghello</title>
+   <para>
+	Whenever a connection is established, the server immediately sends
+	a <structname>pghello</structname> packet which can be used by the
+	client to determine if the server is compatible or not.
+   </para>
+   <figure><title>struct pghello</title><programlisting>
+struct pghello {
+  u32 magic;
+  u16 protover;
+  u16 dummy;
+};
+   </programlisting></figure>
+   <para>
+	The <structfield>magic</structfield> id is a value of
+	<constant>0x31415926</constant>	identifying a PicoGUI server.
+   </para>
+   <para>
+	The <structfield>protover</structfield> identifies the protocol
+	version in use.	The version number is incremented every time a
+	change is made to the protocol specifications.  At the time of
+	writing this document the latest value was <constant>20</constant>.
+   </para>
+  </sect2>
+ </sect1>
+ </chapter>
+
+<!--..............................................................-->
+
+ <chapter id="packets">
+  <title>PicoGUI packets</title>
+  <para>
+	Packets are the basic communication units with a PicoGUI server.
+	They can be used to send requests, receive responses and perform
+	various actions.
+  </para>
+  <para>
+	You can find the original definitions in
+	<filename class=headerfile>picogui/network.h</filename>, or on their
+	cvs in
+	<filename class=headerfile>pgserver/include/picogui/network.h</filename>.
+  </para>
+
+ <sect1 id="twoways">
+  <title>Requests and Responses</title>
+  <para>
+	The client performs action by sending
+	<quote><link linkend="requests">requests</link></quote> for
+	which the server sends
+	<quote><link linkend="responses">responses</link></quote>.
+	Note that the server will always send a response packet whether the
+	request was valid or not.  The client will be able to determine
+	the outcome of a specific request by looking at the response packets
+	values.<footnote><para>At the time of writing this document, the server
+	does not send individual replies if multiple requests were sent as
+	a single packet.</para></footnote>
+  </para>
+ </sect1>
+
+ <sect1 id="requests">
+  <title>Client Requests</title>
+  <para>
+	Requests are the only packet type allowed from the client.  Each
+	request is composed of a common header and optionally by as many bytes
+	of data as required.
+  </para>
+  <para>
+	The client proceeds with a request by allocating the required memory
+	for the <structname>pgrequest</> structure, filling in the
+	<structfield>id</>, <structfield>size</> and <structfield>type</>
+	fields, then sending it and the associated data (if any) to the
+	server via the network connection.
+  </para>
+  <figure><title>struct pgrequest</title><programlisting>
+struct pgrequest {
+  u32 id;
+  u32 size;
+  u16 type;
+  u16 dummy;
+};
+  </programlisting></figure>
+  <para>
+	The <structfield>id</structfield> field is a value used by the client
+	to match the answers returned for a specific request.  This value does
+	not have any particular significance for the server and can be set to
+	any value at the discretion of the client.
+  </para>
+  <para>
+	The <structfield>size</structfield> field is used to indicate how many
+	bytes of data are attached to the request, excluding the size of the
+	common header.
+  </para>
+  <para>
+	The <structfield>type</structfield> is the numerical value identifying
+	the request made (see <xref linkend="requesttypes"> for a complete
+	listing of valid values).
+  </para>
+
+  <!--................................................................-->
+
+  <sect2 id="pgreq-appmsg">
+   <title>PGREQ_APPMSG - Send PG_WE_APPMSG to any widget</>
+   <programlisting>
+type                 : PGREQ_APPMSG (45)
+client lib equivalent: pgAppMessage()
+additional data      : <link linkend="pgreqdhandlestruct">struct pgreqd_handlestruct</>
+                       data
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : none
+   </programlisting>
+   <para>
+	Send a message to a widget owned by any application.
+   </para>
+   <para>
+	See <xref linkend="pgreqdhandlestruct"> for the format of the
+	<structname>pgreqd_handlestruct</> structure.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-attachwidget">
+   <title>PGREQ_ATTACHWIDGET - Attach widget</>
+   <programlisting>
+type                 : PGREQ_ATTACHWIDGET (47)
+client lib equivalent: pgAttachWidget()
+additional data      : <link linkend="pgreqdattachwidget">struct pgreqd_attachwidget</>
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : none
+   </programlisting>
+   <para>
+	Attach a widget to a new parent.
+   </para>
+   <figure id="pgreqdattachwidget"><title>struct pgreqd_attachwidget</><programlisting>
+struct pgreqd_attachwidget {
+  u32 parent;
+  u32 widget;
+  u16 rship;
+  u16 dummy;
+};
+   </programlisting></figure>
+   <para>
+	The <structfield>parent</> is the handle of the new parent to set, or zero to detach the widget.
+   </para>
+   <para>
+	The <structfield>widget</> is the handle of the widget that needs
+	to be attached.
+   </para>
+   <para>
+	The <structfield>rship</> is a <constant>PG_DERIVE_*</> constant
+	indicating the new widget's relationship to it's parent
+	(see <xref linkend="derivetypes"> for a complete listing). This is
+	ignored if there is no parent.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-batch">
+   <title>PGREQ_BATCH - Batch multiple requests</title> 
+   <programlisting>
+type                 : PGREQ_BATCH (18)
+client lib equivalent: none
+additional data      : requests
+server response type : set to response type of the last request
+server returned data : set to returned data of the last request
+   </programlisting>
+   <para>
+	This request allows to send a batch of multiple requests that will
+	be executed in sequence.  If any command fails, its error code is
+	returned and the other commands are ignored.  Only the return value
+	from the last command is saved.
+   </para>
+   <para>
+	The <structfield>size</> of this request must be set to the sum of
+	all the requests combined.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-chcontext">
+   <title>PGREQ_CHCONTEXT - Change a handle's context </>
+   <programlisting>
+type                 : PGREQ_CHCONTEXT (30)
+client lib equivalent: pgChangeContext()
+additional data      : <link linkend="pgreqdchcontext">struct pgreqd_chcontext</>
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : none
+   </programlisting>
+   <para>
+	Change the handle context of an object.
+   </para>
+   <figure id="pgreqdchcontext"><title>struct pgreqd_chcontext</><programlisting>
+struct pgreqd_chcontext {
+  u32 handle;
+  s16 delta;
+  u16 dummy;
+};
+   </programlisting></figure>
+   <para>
+	The <structfield>handle</> is the handle of the object for which the
+	context must be changed.
+   </para>
+   <para>
+	The <structfield>delta</> is a signed value that will modify the
+	current context.  A positive delta value increases the object's
+	context, equivalent to adding extra <constant>PGREQ_MKCONTEXT</>
+	layers. The delta value may be negative, to 'send' the handle to a
+	higher-level context.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-checkevent">
+   <title>PGREQ_CHECKEVENT - Return number of queued events</>
+   <programlisting>
+type                 : PGREQ_CHECKEVENT (43)
+client lib equivalent: pgCheckEvent()
+additional data      : none
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : <structfield>pgresponse_ret.data</>
+   </programlisting>
+   <para>
+	Check the number of pending events and returns the quantity queued
+	as an integer in <structfield>pgresponse_ret.data</>.
+   </para>
+   <para>
+	The PicoGUI server keeps a ring buffer of waiting events for each
+	client connected to it. This request returns the number of events
+	waiting in this buffer. Note that this buffer is usually relatively
+	small. At the time of writing this, it is set to hold 16 events.
+	If the buffer is full, old events will be discarded.
+   </para>
+   <para>
+	You can use this request if, for some reason, you need to poll
+	PicoGUI events instead of waiting for them. In the middle of a long
+	operation, for example, you may wish to periodically check if the
+	user clicks a cancel button. If this request indicates that there are
+	events waiting, a <constant>PGREQ_WAIT</> request will immediately
+	return the oldest queued event.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-createwidget">
+   <title>PGREQ_CREATEWIDGET - Create a widget</title> 
+   <programlisting>
+type                 : PGREQ_CREATEWIDGET (46)
+client lib equivalent: pgCreateWidget()
+additional data      : <link linkend="pgreqdcreatewidget">struct pgreqd_createwidget</>
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : <structfield>presponse_ret.data</>
+   </programlisting>
+   <para>
+	Create a widget, but does not attach it to the parent widget. You can
+	still set the widget's properties and attach child widgets to this
+	one, but the widget cannot be drawn until a
+	<constant>PGREQ_ATTACHWIDGET</constant> request successfully
+	completed.
+   </para>
+   <para>
+	Then handle of the widget created is returned in
+	<structfield>pgresponse_ret.data</>.
+   </para>
+   <figure id="pgreqdcreatewidget"><title>struct pgreqd_createwidget</><programlisting>
+struct pgreqd_createwidget {
+   u16 type;
+   u16 dummy;
+};
+   </programlisting></figure>
+   <para>
+	Where <structfield>type</> is a type defined in
+	<xref linkend="widgettypes">.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-drivermsg">
+   <title>PGREQ_DRIVERMSG - Send a message to all drivers</>
+   <programlisting>
+type                 : PGREQ_DRIVERMSG (39)
+client lib equivalent: pgDriverMessage()
+additional data      : <link linkend="pgreqddrivermsg">struct pgreqd_drivermsg</>
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : none
+   </programlisting>
+   <para>
+	This command can send 'extra' commands that may be
+	hardware-specific, like beeps, cursor blanking, and backlight
+	control.
+   </para>
+   <figure id="pgreqddrivermsg"><title>struct pgreqd_drivermsg</><programlisting>
+struct pgreqd_drivermsg {
+  u32 message;
+  u32 param;
+};
+   </programlisting></figure>
+   <para>
+	Where <structfield>message</> is a <constant>PGDM_*</> constant
+	specying the message type and <structfield>param</> is the
+	associated data for the specific message type sent (see
+	<xref linkend="pgdmtypes"> for a complete listing).
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-dup">
+   <title>PGREQ_DUP - Duplicate an object</>
+   <programlisting>
+type                 : PGREQ_DUP (27)
+client lib equivalent: pgDup()
+additional data      : <link linkend="pgreqdhandlestruct">struct pgreqd_handlestruct</>
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : <structfield>pgresponse_ret.data</>
+   </programlisting>
+   <para>
+	Duplicate an object that has a handle. The handle of the new created
+	object is returned in <structfield>pgresponse_ret.data</>.
+   </para>
+   <para>
+	Some objects simply can't be duplicated: For example, it would not
+	make sense to duplicate a widget, driver, or theme.
+	<footnote><para>At the time of writing this, the only object type
+	for which duplication is implemented is the string object.</></>
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-findthobj">
+   <title>PGREQ_FINDTHOBJ - Find theme object by name</>
+   <programlisting>
+type                 : PGREQ_FINDTHOBJ (48)
+client lib equivalent: pgFindThemeObject()
+additional data      : data (name)
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : <structfield>pgresponse_ret.data</>
+   </programlisting>
+   <para>
+	Find a theme object's ID given its name.  Theme objects defined as
+	custom are assigned an ID automatically at load time. These objects
+	can be found with this request as long as each is assigned a unique
+	name property.
+   </para>
+   <para>
+	The <structfield>data</> is the name of the property to search for.
+	The theme ID is returned as an integer in 
+	<structfield>pgresponse_ret.data</>.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-findwidget">
+   <title>PGREQ_FINDWIDGET - Get widget handle by name</>
+   <programlisting>
+type                 : PGREQ_FINDWIDGET (42)
+client lib equivalent: pgFindWidget()
+additional data      : data (name)
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : <structfield>pgresponse_ret.data</>
+   </programlisting>
+   <para>
+	Search for a widget by its PG_WP_NAME property.  The handle of the
+	found widget is returned in <structfield>pgresponse_ret.data</>.
+   </para>
+   <para>
+	Every widget can be given a name by setting it's PG_WP_NAME property
+	to a string handle. This request can search for a widget's handle
+	based on this name. Note that this request will search all widgets,
+	even those not owned by the client.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-focus">
+   <title>PGREQ_FOCUS - Forces focus to a specified widget</>
+   <programlisting>
+type                 : PGREQ_FOCUS (25)
+client lib equivalent: pgFocus()
+additional data      : <link linkend="pgreqdhandlestruct">struct pgreqd_handlestruct</>
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : none
+   </programlisting>
+   <para>
+	Give a widget the keyboard focus.
+   </para>
+   <para>
+	See <xref linkend="pgreqdhandlestruct"> for more info about
+	<structname>pgreqd_handlestruct</>.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-free">
+   <title>PGREQ_FREE - Free a handle</title> 
+   <programlisting>
+type                 : PGREQ_FREE (6)
+client lib equivalent: pgDelete()
+additional data      : <link linkend="pgreqdhandlestruct">struct pgreqd_handlestruct</>
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : none
+   </programlisting>
+   <para>
+	Free the handle specified and delete its associated object.
+   </para>
+   <figure id="pgreqdhandlestruct"><title>struct pgreqd_handlestruct</title><programlisting>
+struct pgreqd_handlestruct {
+  u32 h;
+};
+   </programlisting></figure>
+   <para>
+	Where <structfield>h</> is the handle to free.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-get">
+   <title>PGREQ_GET - Get a widget's property</title> 
+   <programlisting>
+type                 : PGREQ_GET (8)
+client lib equivalent: pgGetWidget()
+additional data      : <link linkend="pgreqdget">struct pgreqd_get</>
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : <structfield>pgresponse_ret.data</>
+   </programlisting>
+   <para>
+	Get a widget property.  The value of the wdiget is returned as
+	a long in <structfield>pgresponse_ret.data</>.
+   </para>
+   <figure id="pgreqdget"><title>struct pgreqd_get</><programlisting>
+struct pgreqd_get {
+  u32 widget;
+  u16 property; 
+  u16 dummy;
+};
+   </programlisting></figure>
+   <para>
+	The <structfield>widget</> is the handle of the widget to get the
+	property from.
+   </para>
+   <para>
+	The <structfield>property</> is a property identifier (see
+	<xref linkend="propertytypes"> for a complete listing).
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-getcontext">
+   <title>PGREQ_GETCONTEXT - Get the app's current handle context</>
+   <programlisting>
+type                 : PGREQ_GETCONTEXT (52)
+client lib equivalent: pgGetContext()
+additional data      : none
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : <structfield>pgresponse_ret.data</>
+   </programlisting>
+   <para>
+	Every handle created by a PicoGUI is given a numerical "context" ID, that usually
+	works much like variable scopes in C. This function lets you get the
+	ID that new handles in an app are created at.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-getfstyle">
+   <title>PGREQ_GETFSTYLE - Get information on a font</>
+   <programlisting>
+type                 : PGREQ_GETFSTYLE (41)
+client lib equivalent: pgGetFontStyle()
+additional data      : <link linkend="pgreqdgetfstyle">struct pgreqd_getfstyle</>
+server response type : <link linkend="pgresponsedata">PG_RESPONSE_DATA</>
+server returned data : <link linkend="pgdatagetfstyle">struct pgdata_getfstyle</>
+   </programlisting>
+   <para>
+	Get information about a font style
+   </para>
+   <figure id="pgreqdgetfstyle"><title>struct pgreqd_getfstyle</><programlisting>
+struct pgreqd_getfstyle {
+  u16 index;
+  u16 dummy;
+};
+   </programlisting></figure>
+   <para>
+	The <structfield>index</> is a zero-based index to select a font style
+	in the order that the were compiled or loaded into pgserver.
+   </para>
+   <figure id="pgdatagetfstyle"><title>struct pgdata_getfstyle</><programlisting>
+struct pgdata_getfstyle {
+  char name[40];
+  unsigned short size;
+  unsigned short fontrep;
+  unsigned long  flags;
+};
+   </programlisting></figure>
+   <para>
+	The <structfield>name</> is the name of the font family.  If the first
+	char of the name (Name[0]) is 0, the index requested was invalid.
+	<footnote><para>It is expected in the future protocol version that a
+	<constant>PG_RESPONSE_ERR</> will be returned if the index is invalid
+	rather than returning a NULL name.</para></footnote>
+   </para>
+   <para>
+	If the font is bitmapped, the <structfield>size</> is the height
+	in pixels, otherwise the value is undetermined.
+   </para>
+   <para>
+	The <structfield>fontrep</> is a bitmask of <constant>PG_FR_*</>
+	constants for the font representation (see
+	<xref linkend="fontreps"> for a complete listing).
+   </para>
+   <para>
+	The <structfield>flags</> is a bitmask of <constant>PG_FSTYLE_*</>
+	constants for the font style itself (see
+	<xref linkend="fontstyles"> for a complete listing).
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-getinactive">
+   <title>PGREQ_GETINACTIVE - Get miliseconds of inactivity</>
+   <programlisting>
+type                 : PGREQ_GETINACTIVE (37)
+client lib equivalent: pgGetInactivity()
+additional data      : none
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : <structfield>pgresponse_ret.data</>
+   </programlisting>
+   <para>
+	Get the number of miliseconds of inactivity.  The value is returned
+	as a unsigned long in <structfield>pgresponse_ret.data</>.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-getmode">
+   <title>PGREQ_GETMODE - Get video mode information</>
+   <programlisting>
+type                 : PGREQ_GETMODE (22)
+client lib equivalent: pgGetVideoMode()
+additional data      : none
+server response type : <link linkend="pgresponsedata">PG_RESPONSE_DATA</>
+server returned data : <link linkend="pgmodeinfo">struct pgmodeinfo</>
+   </programlisting>
+   <para>
+	Get information about the current video mode.
+   </para>
+   <figure id="pgmodeinfo"><title>struct pgmodeinfo</><programlisting>
+struct pgmodeinfo {
+   u32 flags;
+   u16 xres;
+   u16 yres;
+   u16 lxres;
+   u16 lyres;
+   u16 bpp;
+   u16 dummy;
+};
+   </programlisting></figure>
+   <para>
+	The <structfield>flags</> is a bitmask of <constant>PG_VID_*</>
+	(see <xref linkend="videoflags"> for a complete listing).
+   </para>
+   <para>
+	The <structfield>xres</> and <structfield>yres</> are the
+	width and height in pixels of the set video mode before any
+	rotation is applied.  They should normally not be used by
+	anything else than input/video drivers.
+   </para>
+   <para>
+	The <structfield>lxres</> and <structfield>lyres</> are the
+	logical width and height in pixels of the video mode after
+	the rotation is applied.  They represent the actual width
+	and height of the display the user is presented with.
+   </para>
+   <para>
+	The <structfield>bpp</> is the bits per pixel value of the
+	currently set video mode.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-getpayload">
+   <title>PGREQ_GETPAYLOAD - Get the payload of an object </>
+   <programlisting>
+type                 : PGREQ_GETPAYLOAD (29)
+client lib equivalent: pgGetPayload()
+additional data      : <link linkend="pgreqdhandlestruct">struct pgreqd_handlestruct</>
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : <structfield>pgresponse_ret.data</>
+   </programlisting>
+   <para>
+	Get an object's payload.  The payload value is returned as an unsigned
+	long in <structfield>pgresponse_ret.data</>. See
+	<xref linkend="pgreq-setpayload"> for more information.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-getresource">
+   <title>PGREQ_GETRESOURCE - Get a handle to a server-owned resource</>
+   <programlisting>
+type                 : PGREQ_GETRESOURCE (12)
+client lib equivalent: pgGetServerRes()
+additional data      : <link linkend="pgreqdgetresource">struct pgreqd_getresource</>
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : <structfield>pgresponse_ret.data</>
+   </programlisting>
+   <para>
+	Get the handle associated with a particular server-side resource ID.  See
+   </para>
+   <figure id="pgreqdgetresource"><title>struct pgreqd_getresource</><programlisting>
+struct pgreqd_getresource {
+  u32 id;
+};
+   </programlisting></figure>
+   <para>
+        The <structfield>id</> is a <link linkend="pgres">PGRES_*</> constant identifying the resource
+	to retrieve. The value returned should not change over the duration of the client's
+        connection, so it is safe for the client libarary to cache the server resources.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-getstring">
+   <title>PGREQ_GETSTRING - Return a string data</>
+   <programlisting>
+type                 : PGREQ_GETSTRING (26)
+client lib equivalent: pgGetString()
+additional data      : <link linkend="pgreqdhandlestruct">struct pgreqd_handlestruct</>
+server response type : <link linkend="pgresponsedata">PG_RESPONSE_DATA</>
+server returned data : string
+   </programlisting>
+   <para>
+	Get the contents of a string handle.  See
+	<xref linkend="pgreqdhandlestruct"> for
+	<structname>pgreqd_handlestruct</> format.
+   </para>
+   <para>
+        The string is returned in Unicode UTF-8 encoding, which is compatible with 7-bit
+	ASCII. The string is returned without zero-termination.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-infiltersend">
+   <title>PGREQ_INFILTERSEND - Send a trigger to an input filter</>
+   <programlisting>
+type                 : PGREQ_INFILTERSEND (53)
+client lib equivalent: pgInFilterSend()
+additional data      : <link linkend="pgreqdinfiltersend">struct pgreqd_infiltersend</>
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : none
+   </programlisting>
+   <para>
+        Send a trigger to an input filter. This may be used to resend a trigger
+	after it's processed by a client-side input filter, or you could use to create
+	a new trigger to write client-side input drivers.
+   </para>
+   <figure id="pgreqdinfiltersend"><title>struct pgreqd_infiltersend</><programlisting>
+struct pgreqd_infiltersend {
+  union pg_client_trigger trig;
+};
+   </programlisting></figure>
+   <para>
+        The <link linkend="pgclienttrigger">pg_client_trigger</> union is the
+	same one passed from server to client when a client-side input filter recieves
+	a trigger. For forward compatibility with changes in the server, the client must
+	preserve the entire structure when passing it forward in the input filter chain, even
+	if it doesn't know about all the members. This is the reason for the <structfield>array</>
+	field in the union. When the client is creating a new trigger, all unused fields should be
+	set to zero. If <structfield>infilter_from</> is zero, it will be sent to the first filter
+	in the chain, as if it came from a driver.
+   </para>
+   <figure id="pgclienttrigger"><title>union pg_client_trigger</><programlisting>
+/* A client-side representation of triggers, used for client-side input filters
+ * and event handling. The whole structure can be viewed as a 64-byte packet of
+ * 16 u32 variables, so that more trigger types can be added without disrupting
+ * the client libraries or the protocol.
+ */
+union pg_client_trigger {
+  u32 array[16];
+  struct {
+    u32 infilter_from;           /* Handle of input filter this is generated by */
+    u32 type;                    /* PG_TRIGGER_* constant                       */
+    union {                      /* Type-dependent data (must be 14 or less vars each) */
+      
+      struct {
+	u32 x,y,btn,pressure;    /* Current status */
+	u32 chbtn;               /* Changed buttons */
+	u32 cursor_handle;
+	u32 is_logical;          /* Nonzero if events are in logical coordinates */
+	u32 ts_calibration;      /* Handle of a calibration string for the touchscreen */
+      } mouse;
+
+      struct {
+	u32 key;                 /* PGKEY_* constant */
+	u32 mods;                /* PGMOD_* constant */
+	u32 flags;               /* PG_KF_* constants */
+	u32 consume;             /* Consume event during widget propagation */
+      } kbd;
+
+    } u;
+  } content;
+};
+   </programlisting></figure>
+  </sect2>
+
+  <sect2 id="pgreq-loaddriver">
+   <title>PGREQ_LOADDRIVER - Load input/misc driver</>
+   <programlisting>
+type                 : PGREQ_LOADDRIVER (40)
+client lib equivalent: pgLoadDriver()
+additional data      : data
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : <structfield>pgresponse_ret.data</>
+   </programlisting>
+   <para>
+	Load a named driver.  The name is specified as the
+	<structfield>data</> argument and the handle to the driver
+	is returned in <structfield>pgresponse_ret.data</>
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-mkarray">
+   <title>PGREQ_MKARRAY - Make an array</>
+   <programlisting>
+type                 : PGREQ_MKARRAY (33)
+client lib equivalent: pgNewArray()
+additional data      : data
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : <structfield>pgresponse_ret.data</>
+   </programlisting>
+   <para>
+	Create a new array object.  Each array entry is 32bit and must be sent
+	to the server in the network byte order.  The <structfield>size</> of
+	the request will set the size of the array.
+   </para>
+   <para>
+	Arrays can be used for various things, like setting the palettes for
+	the terminal widget or giving the polygon gropnode a list of points.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-mkbitmap">
+   <title>PGREQ_MKBITMAP - Load a bitmap</title> 
+   <programlisting>
+type                 : PGREQ_MKBITMAP (3)
+client lib equivalent: pgLoadBitmap()
+additional data      : image data
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : <structfield>pgresponse_ret.data</>
+   </programlisting>
+   <para>
+	Load a bitmap in any format supported by pgserver. The contents of the
+        PNG, PNM, JPEG, BMP, etc. is just dumped into the packet and sent to pgserver.
+        The format and size is autodetected, the bitmap converted to the video
+        driver's format, and a handle to the bitmap returned
+	in the <structfield>pgresponse_ret.data</>. If the format is one not supported
+        by pgserver, an error will be returned.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-mkcontext">
+   <title>PGREQ_MKCONTEXT - Enter a new context</>
+   <programlisting>
+type                 : PGREQ_MKCONTEXT (23)
+client lib equivalent: pgEnterContext()
+additional data      : none
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : <structfield>pgresponse_ret.data</>
+   </programlisting>
+   <para>
+	Enter a new context.
+   </para>
+   <para>
+	PicoGUI uses a context system, similar to a variable's scope in C.
+	Whenever the program leaves a context, all objects created while in
+	that context are deleted. No memory is used by creating a context,
+	and they can be nested a very large number of times. An ID number
+        for the newly entered context is returned.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-mkcursor">
+   <title>PGREQ_MKCURSOR - Make a new cursor, return the handle</>
+   <programlisting>
+type                 : PGREQ_MKCURSOR (10)
+client lib equivalent: pgNewCursor()
+additional data      : none
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : <structfield>pgresponse_ret.data</>
+   </programlisting>
+   <para>
+	Create a new cursor object.
+   </para>
+   <para>
+        PicoGUI drivers or input filters that need a visual representation of
+        the pointing device position should create a cursor object, and pass
+	it along with triggers they send. This cursor creates a sprite independent
+	of any other cursors that may be active.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-mkfillstyle">
+   <title>PGREQ_MKFILLSTYLE - Load a fill style</title>
+   <programlisting>
+type                 : PGREQ_MKFILLSTYLE
+client lib equivalent: none
+additional data      : raw fillstyle bytecode
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : <structfield>pgresponse_ret.data</>
+   </programlisting>
+   <para>
+	This request is used by the compiled theme and should not be used by
+	the client.  More information about raw fillstyle bytecode can be
+	found in <filename>pgserver/include/picogui/theme.h</>
+   </para>
+   <para>
+	The handle to the fill style is returned in
+	<structfield>pgresponse_ret.data</>
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-mkfont">
+   <title>PGREQ_MKFONT - Make a font descriptor</title> 
+   <programlisting>
+type                 : PGREQ_MKFONT (4)
+client lib equivalent: pgNewFont()
+additional data      : <link linkend="pgreqdmkfont">struct pgreqd_mkfont</>
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : <structfield>pgresponse_ret.data</>
+   </programlisting>
+   <para>
+	Create a new font object using the specified font name and properties.
+	The font handle will be returned in
+	<structfield>pgresponse_ret.data</>
+   </para>
+   <figure id="pgreqdmkfont"><title>struct pgreqd_mkfont</><programlisting>
+struct pgreqd_mkfont {
+  char name[40];
+  u32 style;
+  u16 size;
+  u16 dummy;
+};	
+   </programlisting></figure>
+   <para>
+	Where <structfield>name</> is the name of the font to search for. It
+	is possible to specify no specific font name by using 
+	<literal>name[0]=0</>.
+   </para>
+   <para>
+	The <structfield>style</> value is zero or more PG_FSTYLE_* flags
+	or'ed together (see <xref linkend="fontstyles"> for a complete
+	listing).
+   </para>
+   <para>
+	The <structfield>size</> or height in pixels of the font to search
+	for, or zero for any.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-mkinfilter">
+   <title>PGREQ_MKINFILTER - Create a client-side input filter</title>
+   <programlisting>
+type                 : PGREQ_MKINFILTER (11)
+client lib equivalent: pgNewInFilter()
+additional data      : <link linkend="pgreqdmkinfilter">struct pgreqd_mkinfilter</>
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : <structfield>pgresponse_ret.data</>
+   </programlisting>
+   <para>
+        Create a client-side input filter, that can intercept and/or modify
+	the server's "triggers" used to send events from drivers to widgets.
+   </para>
+   <figure id="pgreqdmkinfilter"><title>struct pgreqd_mkinfilter</><programlisting>
+struct pgreqd_mkinfilter {
+  u32 insert_after;        /* Handle of the filter to insert this one after, or 0
+			    * for this filter to be the first in the chain.
+			    */
+  u32 accept_trigs;        /* Mask of triggers that this filter should accept */
+  u32 absorb_trigs;        /* Mask of triggers not to automatically pass on   */
+};
+   </programlisting></figure>
+   <para>
+        The <structfield>insert_after</> field is the handle of the input filter
+	to insert this one after. If you want it to be the first filter in the
+	chain, this should be zero. You can get handles to the server's built-in
+	filters using <link linkend="pgreq-getresource">PGREQ_GETRESOURCE</>.
+   </para>
+   <para>
+        The <structfield>accept_trigs</> and <structfield>absorb_trigs</> are,
+	respectively, masks of which triggers to process in this filter and which
+	triggers to prevent from passing on to the next trigger. Note that these
+	two masks are independent of each other, and you can still manually pass
+	on triggers using <link linkend="pgreq-infiltersend">PGREQ_INFILTERSEND</>
+	regardless of the setting in <structfield>absorb_trigs</>.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-mkshmbitmap">
+   <title>PGREQ_MKSHMBITMAP - Convert a picogui bitmap to a shared memory segment</>
+   <programlisting>
+type                 : PGREQ_MKSHMBITMAP (54)
+client lib equivalent: pgMakeSHMBitmap()
+additional data      : <link linkend="pgreqdmkshmbitmap">struct pgreqd_mkshmbitmap</>
+server response type : <link linkend="pgresponsedata">PG_RESPONSE_DATA</>
+server returned data : <link linkend="pgshmbitmap">struct pgshmbitmap</>
+   </programlisting>
+   <para>
+        Convert a PicoGUI bitmap to a shared memory segment. This allows very low-level
+        access to the contents of a picogui bitmaps, suitable for 2D games and media players.
+        The application must write data in the video driver's native format and this only
+        works on systems that support shared memory and where the client and server are on
+        the same machine, so this request should be avoided when possible.
+   </para>
+   <figure id="pgreqdmkshmbitmap"><title>struct pgreqd_mkshmbitmap</><programlisting>
+struct pgreqd_mkshmbitmap {
+  u32 bitmap;    /* Bitmap handle to memory map */
+  u32 uid;       /* UID of the client process   */
+};
+   </programlisting></figure>
+   <para>
+        The bitmap handle supplied is converted to a shared memory segment. The supplied
+        UID is used for setting permissions on that memory segment so that the client may
+        access it. After this call, the bitmap can be used as normal in PicoGUI requests,
+        as well as by the client using the information returned:
+   </para>
+   <figure id="pgshmbitmap"><title>struct pgshmbitmap</><programlisting>
+/* Returned by rqh_mkshmbitmap, represents a picogui bitmap
+ * that has been exported as shared memory. The returned SHM key
+ * will be valid as long as the bitmap it was created from exists.
+ * This structure supplies as much information about the bitmap's
+ * internal representation as possible, as the client must manipulate
+ * the bitmap in our video driver's native format, whatever that
+ *  might be. All values here are in network byte order.
+ */
+struct pgshmbitmap {
+  u32 shm_key;             /* System V shared memory key          */
+  u32 shm_length;          /* Length in bytes of shared segment   */
+
+  u32 format;              /* PG_BITFORMAT_* flags                */
+  u32 palette;             /* A handle to the associated palette  */
+
+  u16 width;               /* Physical resolution of bitmap       */
+  u16 height;              /*   (doesn't account for rotation)    */
+  u16 bpp;
+  u16 pitch;
+
+  u32 red_mask;            /* For true color modes, masks of bits */
+  u32 green_mask;          /*   occupied by all the color fields  */
+  u32 blue_mask;
+  u32 alpha_mask;
+
+  u16 red_shift;           /* For true color modes, number of     */
+  u16 green_shift;         /*   bits each color field is shifted  */
+  u16 blue_shift;          /*   left.                             */
+  u16 alpha_shift;
+
+  u16 red_length;          /* For true color modes, length        */
+  u16 green_length;        /*   in bits of each color field       */
+  u16 blue_length;
+  u16 alpha_length;
+};  
+   </programlisting></figure>
+  </sect2>
+
+  <sect2 id="pgreq-mkstring">
+   <title>PGREQ_MKSTRING - Create a string</title>
+   <programlisting>
+type                 : PGREQ_MKSTRING (5)
+client lib equivalent: pgNewString()
+additional data      : string
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : <structfield>pgresponse_ret.data</>
+   </programlisting>
+   <para>
+	Create a new string object.  The string handle will be returned
+	in <structfield>pgresponse_ret.data</>
+   </para>
+   <para>
+        The string is submitted in Unicode UTF-8 encoding, which is
+	compatible with 7-bit ASCII. A zero-termination on the end of the
+	string is optional.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-mktheme">
+   <title>PGREQ_MKTHEME - Load a compiled theme</title>
+   <programlisting>
+type                 : PGREQ_MKTHEME (9)
+client lib equivalent: pgLoadTheme()
+additional data      : compiled theme data
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : <structfield>pgresponse_ret.data</>
+   </programlisting>
+   <para>
+	Load a compiled theme.  The theme ID (or handle) will be
+	returned in <structfield>pgresponse_ret.data</>
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-mkwidget">
+   <title>PGREQ_MKWIDGET - Make a new widget</title> 
+   <programlisting>
+type                 : PGREQ_MKWIDGET (2)
+client lib equivalent: pgNewWidget()
+additional data      : <link linkend="pgreqdmkwidget">struct pgreqd_mkwidget</>
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : <structfield>pgresponse_ret.data</>
+   </programlisting>
+   <para>
+	Create a new widget, derived from a parent widget.  The handle
+	to the new widget will be returned in
+	<structfield>pgresponse_ret.data</>
+   </para>
+   <figure id="pgreqdmkwidget"><title>struct pgreqd_mkwidget</><programlisting>
+struct pgreqd_mkwidget {
+  u16 rship;
+  u16 type;
+  u32 parent;
+};
+   </programlisting></figure>
+   <para>
+	The <structfield>rship</> is a <constant>PG_DERIVE_*</> constant
+	indicating the new widget's relationship to it's parent
+	(see <xref linkend="derivetypes"> for a complete listing).
+   </para>
+   <para>
+	The <structfield>type</> is a <constant>PG_WIDGET_*</> constant for
+	the widget type (see <xref linkend="widgettypes"> for a complete listing).
+   </para>
+   <para>
+	The <structfield>parent</> is the handle of the parent widget.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-newbitmap">
+   <title>PGREQ_NEWBITMAP - Create a blank bitmap</>
+   <programlisting>
+type                 : PGREQ_NEWBITMAP (35)
+client lib equivalent: pgCreateBitmap()
+additional data      : <link linkend="pgreqdnewbitmap">struct pgreqd_newbitmap</>
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : <structfield>pgresponse_ret.data</>
+   </programlisting>
+   <para>
+	Create a blank bitmap object of the specified size. The
+	handle to the new bitmap will be returned in
+	<structfield>pgresponse_ret.data</>
+   </para>
+   <figure id="pgreqdnewbitmap"><title>struct pgreqd_newbitmap</><programlisting>
+struct pgreqd_newbitmap {
+  u16 width;
+  u16 height;
+};
+   </programlisting></figure>
+   <para>
+	Where <structfield>width</> and <structfield>height</> for the new
+	image are specified in pixels.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-ping">
+   <title>PGREQ_PING - Ping request</title>
+   <programlisting>
+type                 : PGREQ_PING (0)
+client lib equivalent: none
+additional data      : none
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : none
+   </programlisting>
+   <para>
+	return <constant>success</> if the server connection is ok.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-register">
+   <title>PGREQ_REGISTER - Register an application</title> 
+   <programlisting>
+type                 : PGREQ_REGISTER (15)
+client lib equivalent: pgRegisterApp()
+additional data      : <link linkend="pgreqdregister">struct pgreqd_register</>
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : <structfield>pgresponse_ret.data</>
+   </programlisting>
+   <para>
+	Create a root widget of an application, and registers the application
+	in the server's list of running apps.  The handle to the root widget
+	created will be returned in the <structfield>pgresponse_ret.data</>
+   </para>
+   <figure id="pgreqdregister"><title>struct pgreqd_register</><programlisting>
+struct pgreqd_register {
+  u32 name;
+  u16 type;
+  u16 dummy;
+};
+   </programlisting></figure>
+   <para>
+	The <structfield>name</> is the handle of the string to use as the
+	application name.  If applicable, it will be displayed in its panelbar.
+   </para>
+   <para>
+	The <structfield>type</> is a <constant>PG_APP_*</> constant.
+   </para>
+   <table frame=none pgwide=1><title>PG_APP values</title>
+   <tgroup cols=3 align=left>
+   <colspec colwidth="45*">
+   <colspec colwidth="10*">
+   <colspec colwidth="45*">
+   <tbody>
+   <row><entry>PG_APP_NORMAL</><entry>1</><entry>Normal application assigned
+   a resizeable window</></>
+   <row><entry>PG_APP_TOOLBAR</><entry>2</><entry>Toolbar application using a
+   fixed width window without panelbar</></>
+   </tbody>
+   </tgroup>
+   </table>
+  </sect2>
+
+  <sect2 id="pgreq-regowner">
+   <title>PGREQ_REGOWNER - Get exclusive privileges </>
+   <programlisting>
+type                 : PGREQ_REGOWNER (19)
+client lib equivalent: pgRegisterOwner()
+additional data      : <link linkend="pgreqdregowner">struct pgreqd_regowner</>
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : none
+   </programlisting>
+   <para>
+	Register exclusive access to a resource.
+   </para>
+   <figure id="pgreqdregowner"><title>struct pgreqd_regowner</><programlisting>
+struct pgreqd_regowner {
+  u16 res;
+};
+   </programlisting></figure>
+   <para>
+	Where <structfield>res</> is the <constant>PG_OWN_*</> constant value
+	of the resource to get exclusive privileges of.
+   </para>
+   <table frame=none pgwide=1 id="pgowntypes"><title>PG_OWN values</>
+   <tgroup cols=3 align=left>
+   <colspec colwidth="45*">
+   <colspec colwidth="10*">
+   <colspec colwidth="45*">
+   <tbody>
+   <row><entry>PG_OWN_KEYBOARD</><entry>1</><entry>Exclusive access to the keyboard</></>
+   <row><entry>PG_OWN_POINTER</><entry>2</><entry>Exclusive access to the pointer</></>
+   <row><entry>PG_OWN_SYSEVENTS</><entry>3</><entry>Receive system events like app open/close, click on background, etc.</></>
+   <row><entry>PG_OWN_DISPLAY</><entry>4</><entry>Exclusive access to the display via <constant>PGREQ_RENDER</> requests</></>
+   </tbody>
+   </tgroup>
+   </table>
+   <para>
+	<emphasis>NOTE:</> In the next protocol version the <structname>pgreqd_regowner</> structure will be padded to 32bits.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-render">
+   <title>PGREQ_RENDER - Render a gropnode to a bitmap</>
+   <programlisting>
+type                 : PGREQ_RENDER (34)
+client lib equivalent: pgRender()
+additional data      : <link linkend="pgreqdrender">struct pgreqd_render</>
+                       gropnode data
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : none
+   </programlisting>
+   <para>
+	Render a gropnode to a bitmap
+   </para>
+   <figure id="pgreqdrender"><title>struct pgreqd_render</><programlisting>
+struct pgreqd_render {
+  u32 dest;
+  u32 groptype;
+};
+   </programlisting></figure>
+   <para>
+	The <structfield>dest</> is a bitmap handle to render to.
+	Alternatively, if the app has registered exclusive display access
+	this can be zero to draw directly to the display.
+   </para>
+   <para>
+	The <structfield>groptype</> is a <constant>PG_GROP_*</> constant
+	indicating the type of gropnode (see below for a list of valid values).
+   </para>
+   <para>
+	Immediately following the <structfield>groptype</> the gropnode parameters
+	should follow.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-rmcontext">
+   <title>PGREQ_RMCONTEXT - Clean up and kill a context </>
+   <programlisting>
+type                 : PGREQ_RMCONTEXT (24)
+client lib equivalent: pgLeaveContext()
+additional data      : optional <link linkend="pgreqdrmcontext">struct pgreqd_rmcontext</>
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : none
+   </programlisting>
+   <para>
+	Leave a context. This takes one optional parameter, specifying the context ID.
+	Without that parameter, the context system is treated like a stack. The current
+	context number (the last one returned by PGREQ_MKCONTEXT) is deleted, and
+	the current context number is decremented.
+   </para>
+   <figure id="pgreqdrmcontext"><title>struct pgreqd_rmcontext</><programlisting>
+struct pgreqd_rmcontext {
+  u32 context;
+};
+   </programlisting></figure>
+   <para>
+        With the optional pgreqd_rmcontext structure, the context specified therein in
+        deleted without effecting the current context number used by PGREQ_MKCONTEXT.
+   </para>
+   <para>
+	When leaving a context, all objects created within it are deleted.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-set">
+   <title>PGREQ_SET - Set a widget's properties</title>
+   <programlisting>
+type                 : PGREQ_SET (7)
+client lib equivalent: pgSetWidget()
+additional data      : <link linkend="pgreqdset">struct pgreqd_set</>
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : none
+   </programlisting>
+   <para>
+	Set the properties of a widget.
+   </para>
+   <figure id="pgreqdset"><title>struct pgreqd_set</><programlisting>
+struct pgreqd_set {
+  u32 widget;
+  u32 glob;
+  u16 property;
+  u16 dummy;
+};	
+   </programlisting></figure>
+   <para>
+	The <structfield>widget</> is the handle of the widget for which the
+	propertie needs to be set.
+   </para>
+   <para>
+	The <structfield>glob</> is the new value to assign to this property.
+   </para>
+   <para>
+	The <structfield>property</> is a property identifier (see
+	<xref linkend="propertytypes"> for a complete listing).
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-setcontext">
+   <title>PGREQ_SETCONTEXT - Set the app's current handle context</>
+   <programlisting>
+type                 : PGREQ_SETCONTEXT (51)
+client lib equivalent: pgSetContext()
+additional data      : <link linkend="pgreqdsetcontext">struct pgreqd_setcontext</>
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : none
+   </programlisting>
+   <para>
+	Every handle created by a PicoGUI is given a numerical "context" ID, that usually
+	works much like variable scopes in C. This function lets you manipulate the
+	ID that new handles in an app are created at.
+   </para>
+   <figure id="pgreqdsetcontext"><title>struct pgreqd_setcontext</><programlisting>
+struct pgreqd_setcontext {
+  u32 context;
+};
+   </programlisting></figure>
+   <para>
+	Where <structfield>context</> is the new initial handle context ID for this client.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-setinactive">
+   <title>PGREQ_SETINACTIVE - Set miliseconds of inactivity</>
+   <programlisting>
+type                 : PGREQ_SETINACTIVE (38)
+client lib equivalent: pgSetInactivity()
+additional data      : <link linkend="pgreqdsetinactive">struct pgreqd_setinactive</>
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : none
+   </programlisting>
+   <para>
+	Set the number of milisecond of inactivity.
+   </para>
+   <figure id="pgreqdsetinactive"><title>struct pgreqd_setinactive</><programlisting>
+struct pgreqd_setinactive {
+  u32 time;
+};
+   </programlisting></figure>
+   <para>
+	Where <structfield>time</> is the number of miliseconds to use as
+	timer delta.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-setmode">
+   <title>PGREQ_SETMODE - Set video mode/depth/rotation</>
+   <programlisting>
+type                 : PGREQ_SETMODE (21)
+client lib equivalent: pgSetVideoMode()
+additional data      : <link linkend="pgreqdsetmode">struct pgreqd_setmode</>
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : none
+   </programlisting>
+   <para>
+	Change video mode/depth/rotation at runtime.
+   </para>
+   <figure id="pgreqdsetmode"><title>struct pgreqd_setmode</><programlisting>
+struct pgreqd_setmode {
+  u16 xres;
+  u16 yres;
+  u16 bpp;
+  u16 flagmode;
+  u32 flags;
+};
+   </programlisting></figure>
+   <para>
+ 	The <structfield>xres</> and <structfield>yres</> indicate the width
+	and height, respectively, of the video mode to use.  A value of 0 for
+	either of them means to not change the current value.
+   </para>
+   <para>
+	The <structfield>bpp</> indicates the depth to use (bits per pixel).
+	A value of 0 indicates to the server to keep the current video mode
+	depth.
+   </para>
+   <para>
+	The <structfield>flagmode</> is a <constant>PG_FM_*</> constant
+	specifying how to combine flags with the current video flags
+	(see <xref linkend="flagmodes"> below).
+   </para>
+   <para>
+	The <structfield>flags</> specifies extra optional features that may
+	be present in the video driver. Unsupported flags are ignored. It can
+	be zero or more <constant>PG_VID_*</> values or'ed together
+	(see <xref linkend="videoflags"> below).
+   </para>
+   <table id="flagmodes" frame=none pgwide=1>
+   <title>PG_FM values</title>
+   <tgroup cols=3 align=left>
+   <colspec colwidth="45*">
+   <colspec colwidth="10*">
+   <colspec colwidth="45*">
+   <tbody>
+   <row><entry>PG_FM_SET</><entry>0</><entry>Sets all flags to the specified value</></>
+   <row><entry>PG_FM_ON</><entry>1</><entry>Turns on specified flags</></>
+   <row><entry>PG_FM_OFF</><entry>2</><entry>Turns off specified flags</></>
+   <row><entry>PG_FM_TOGGLE</><entry>3</><entry>Toggles specified flags</></>
+   </tbody>
+   </tgroup>
+   </table>
+   <para>
+   </para>
+   <table id="videoflags" frame=none pgwide=1>
+   <title>PG_VID values</title>
+   <tgroup cols=3 align=left>
+   <colspec colwidth="45*">
+   <colspec colwidth="10*">
+   <colspec colwidth="45*">
+   <tbody>
+   <row><entry>PG_VID_FULLSCREEN</><entry>0x0001</><entry>Deprecated</></>
+   <row><entry>PG_VID_DOUBLEBUFFER</><entry>0x0002</><entry>Deprecated</></>
+   <row><entry>PG_VID_ROTATE90</><entry>0x0004</><entry>Rotate the display 90 degree clockwise</></>
+   <row><entry>PG_VID_ROTATE180</><entry>0x0008</><entry>Rotate the display 180 degree clockwise</></>
+   <row><entry>PG_VID_ROTATE270</><entry>0x0010</><entry>Rotate the display 270 degree clockwise</></>
+   </tbody>
+   </tgroup>
+   </table>
+   <para>
+	note: the <constant>PG_VID_ROTATE*</> flags are mutually exclusive.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-setpayload">
+   <title>PGREQ_SETPAYLOAD - Set an object's payload</>
+   <programlisting>
+type                 : PGREQ_SETPAYLOAD (28)
+client lib equivalent: pgSetPayload()
+additional data      : <link linkend="pgreqdsetpayload">struct pgreqd_setpayload</>
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : none
+   </programlisting>
+   <para>
+	Set an object's payload.  The "payload" is a client-defined chunk of
+	data attatched to any object that has a handle. Some good uses for
+	this are assigning numerical values to buttons, or even creating a
+	linked list of objects by storing a handle in the payload. It is
+	usually possible for the client to store pointers in the payload, but
+	this is not recommended, for two reasons:
+   </para>
+   <itemizedlist mark=opencircle>
+   <listitem>
+   <para>
+	If the pgserver is buggy or compromised, the client is vulnerable to
+	crashes or data corruption.
+   </para>
+   </listitem>
+   <listitem>
+   <para>
+	If the client-side architecture uses pointers of more than 32 bits,
+	it will not work.
+   </para>
+   </listitem>
+   </itemizedlist>
+   <figure id="pgreqdsetpayload"><title>struct pgreqd_setpayload</><programlisting>
+struct pgreqd_setpayload {
+  u32 h;
+  u32 payload;
+};
+   </programlisting></figure>
+   <para>
+	Where <structfield>payload</> is the 32bit value to assign as payload
+	and <structfield>h</> is the handle of the object to assign the
+	payload to.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-sizebitmap">
+   <title>PGREQ_SIZEBITMAP - Find the size of a bitmap</>
+   <programlisting>
+type                 : PGREQ_SIZEBITMAP (44)
+client lib equivalent: pgSizeBitmap()
+additional data      : <link linkend="pgreqdhandlestruct">struct pgreqd_handlestruct</>
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : <structfield>pgresponse_ret.data</>
+   </programlisting>
+   <para>
+	Find the width and height of a bitmap matching the provided handle
+	of a valid PicoGUI bitmap object.
+   </para>
+   <para>
+	The <structfield>width</> is located in the high 16bits of
+	<structfield>pgresponse_ret.data</> while the
+	<structfield>height</> is located in the lowest 16bits of it.
+   </para>
+   <para>
+	See <xref linkend="pgreqdhandlestruct"> for the
+	<structname>pgreqd_handlestruct</> structure format.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-sizetext">
+   <title>PGREQ_SIZETEXT - Find the size of text</title> 
+   <programlisting>
+type                 : PGREQ_SIZETEXT (17)
+client lib equivalent: pgSizeText()
+additional data      : <link linkend="pgreqdsizetext">struct pgreqd_sizetext</>
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : <structfield>pgresponse_ret.data</>
+   </programlisting>
+   <para>
+	Measure the length and height of a string of text. The
+	<structfield>width</> is located in the high 16bits of
+	<structfield>pgresponse_ret.data</> while the
+	<structfield>height</> is located in the lowest 16bits of it.
+   </para>
+   <figure id="pgreqdsizetext"><title>struct pgreqd_sizetext</><programlisting>
+struct pgreqd_sizetext {
+  u32 text;
+  u32 font;
+};
+   </programlisting></figure>
+   <para>
+	Where <structfield>text</> and <structfield>font</> are handles of the
+	string and font to use respectively.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-thlookup">
+   <title>PGREQ_THLOOKUP - Perform a theme lookup</>
+   <programlisting>
+type                 : PGREQ_THLOOKUP (36)
+client lib equivalent: pgThemeLookup()
+additional data      : <link linkend="pgreqdthlookup">struct pgreqd_thlookup</>
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : <structfield>pgresponse_ret.data</>
+   </programlisting>
+   <para>
+	Retrieve a theme property. The property is returned as an unsigned
+	long in <structfield>pgresponse_ret.data</>
+   </para>
+   <figure id="pgreqdthlookup"><title>struct pgreqd_thlookup</><programlisting>
+truct pgreqd_thlookup {
+  u16 object;
+  u16 property;
+};
+   </programlisting></figure>
+   <para>
+	The <structfield>object</> is a <constant>PGTH_O_*</> theme object
+	constant (see <xref linkend="pgthotypes"> for a complete listing).
+   </para>
+   <para>
+	The <structfield>property</> is a <constant>PGTH_P_*</> theme
+	property constant (see <xref linkend="pgthptypes"> for a complete
+	listing).
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-traversewgt">
+   <title>PGREQ_TRAVERSEWGT - Find widgets after this one</>
+   <programlisting>
+type                 : PGREQ_TRAVERSEWGT (49)
+client lib equivalent: pgTraverseWidget()
+additional data      : <link linkend="pgreqdtraversewgt">struct pgreqd_traversewgt</>
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : <structfield>pgresponse_ret.data</>
+   </programlisting>
+   <para>
+	Finds a widget in relation to another widget.  The handle of the widget
+	found will be returned in <structfield>pgresponse_ret.data</>
+   </para>
+   <figure id="pgreqdtraversewgt"><title>struct pgreqd_traversewgt</><programlisting>
+struct pgreqd_traversewgt {
+  u32 widget;
+  u16 direction;
+  u16 count;
+};  
+   </programlisting></figure>
+   <para>
+	The <structfield>widget</> is the handle of the widget referenced.
+   </para>
+   <para>
+	The <structfield>direction</> is the direction to traverse
+	specified with a <constant>PG_TRAVERSE_*</> constant (see
+	<xref linkend="pgtraversetypes"> for a complete listing).
+   </para>
+   <para>
+	The <structfield>count</> is the number of steps to take in that
+	direction.
+   </para>
+   <table frame=none pgwide=1 id="pgtraversetypes"><title>PG_TRAVERSE values</>
+   <tgroup cols=3 align=left>
+   <colspec colwidth="45*">
+   <colspec colwidth="10*">
+   <colspec colwidth="45*">
+   <tbody>
+   <row><entry>PG_TRAVERSE_CHILDREN</><entry>1</><entry>Starting with this widget's first child, traverse forward</></>
+   <row><entry>PG_TRAVERSE_FORWARD</><entry>2</><entry></></>
+   <row><entry>PG_TRAVERSE_BACKWARD</><entry>3</><entry>Going backwards is much slower than going forward right now</></>
+   <row><entry>PG_TRAVERSE_CONTAINER</><entry>4</><entry><structfield>count</> is the number of container levels to traverse up</></>
+   </tbody>
+   </tgroup>
+   </table>
+  </sect2>
+
+  <sect2 id="pgreq-unregowner">
+   <title>PGREQ_UNREGOWNER - Give up exclusive privileges</>
+   <programlisting>
+type                 : PGREQ_UNREGOWNER (20)
+client lib equivalent: pgUnregisterOwner()
+additional data      : <link linkend="pgreqdregowner">struct pgreqd_regowner</>
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : none
+   </programlisting>
+   <para>
+	Unregister exclusive access to a resouce.  An error will be returned
+	if the client does not already own the specified resource.
+   </para>
+   <para>
+	See also <xref linkend="pgreq-regowner"> and
+	<xref linkend="pgowntypes">.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-update">
+   <title>PGREQ_UPDATE - Update the screen</title> 
+   <programlisting>
+type                 : PGREQ_UPDATE (1)
+client lib equivalent: pgUpdate()
+additional data      : none
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : none
+   </programlisting>
+   <para>
+	Redraw portions of the screen if necessary. This forces all unsent
+	packets to be flushed to the server, and instructs the server to
+	draw changed areas of the screen.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-updatepart">
+   <title>PGREQ_UPDATEPART - Update a subtree of widgets</>
+   <programlisting>
+type                 : PGREQ_UPDATEPART (32)
+client lib equivalent: pgSubUpdate()
+additional data      : <link linkend="pgreqdhandlestruct">struct pgreqd_handlestruct</>
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : none
+   </programlisting>
+   <para>
+	Update a subsection of the screen.
+   </para>
+   <para>
+	The given widget and all other widgets contained within it are redrawn if necessary. The request buffer is flushed and the section is redrawn independantly and immediately.
+   </para>
+   <para>
+	This function is recommended for animation. Areas of the screen other than the specified widget and its children are never updated, and SubUpdates can occur in toolbars even while a popup dialog is onscreen.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-wait">
+   <title>PGREQ_WAIT - Wait for an event</title> 
+   <programlisting>
+type                 : PGREQ_WAIT (13)
+client lib equivalent: pgEvent()
+additional data      : none
+server response type : <link linkend="pgresponseevent">PG_RESPONSE_EVENT</>
+server returned data : depends of the event type
+   </programlisting>
+   <para>
+	Indicate to the server that the client is waiting for an event, if
+	any event is available it will be sent as a response immediately,
+	otherwise the client is placed in a waiting queue.
+   </para>
+   <para>
+	If any request is received by the server after a 
+	<constant>PGREQ_MKWAIT</>, the client will be removed from the wait
+	queue and the new request wil be processed. In the event where the
+	new request would be a <constant>PGREQ_MKWAIT</>, the client is sent
+	back in the waiting queue after discarding the previous request.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-writecmd">
+   <title>PGREQ_WRITECMD - Send a command to a widget </>
+   <programlisting>
+type                 : PGREQ_WRITECMD (31)
+client lib equivalent: pgWriteCmd()
+additional data      : <link linkend="pgreqdhandlestruct">struct pgreqd_handlestruct</>
+                       data
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : none
+   </programlisting>
+   <para>
+	Write a widget-defined command to a widget. For example,
+	this can be used to send commands to a terminal, textbox or
+	canvas widget.
+   </para>
+   <para>
+        The first 32 bits of the data are the command code; after that, follows
+	a number of 16-bit arguments to that command. The meaning of the command
+	and arguments is defined by the widget.
+   </para>
+   <para>
+	See <xref linkend="pgreqdhandlestruct"> for the
+	<constant>pgreqd_handlestruct</> format.
+   </para>
+  </sect2>
+
+  <sect2 id="pgreq-writeto">
+   <title>PGREQ_WRITETO - Write data to a widget </>
+   <programlisting>
+type                 : PGREQ_WRITEDATA (55)
+client lib equivalent: pgWriteData()
+additional data      : <link linkend="pgreqdhandlestruct">struct pgreqd_handlestruct</>
+                       data
+server response type : <link linkend="pgresponseret">PG_RESPONSE_RET</>
+server returned data : none
+   </programlisting>
+   <para>
+	Write a chunk of widget-defined data to a widget. For example, this
+	can be used to send text to a textbox widget.
+   </para>
+   <para>
+	See <xref linkend="pgreqdhandlestruct"> for the
+	<constant>pgreqd_handlestruct</> format.
+   </para>
+  </sect2>
+
+ </sect1>
+
+ <sect1 id="responses">
+  <title>Server Responses</title>
+  <para>
+	After each request, or once after a requests batch, the PicoGUI server
+	sends a response. All responses are at least 32bits long from which
+	the first 16bits can be used to identify the type of response
+	received.  The following table list the various types:
+  </para>
+  <table frame=none pgwide=1 id="pgresponsetypes">
+  <title>PG_RESPONSE values</title>
+  <tgroup cols=3 align=left>
+  <colspec colwidth="45*">
+  <colspec colwidth="10*">
+  <colspec colwidth="45*">
+  <tbody>
+  <row><entry><link linkend="pgresponseerr">PG_RESPONSE_ERR</></><entry>1</><entry>response is a pgresponse_err struct</></>
+  <row><entry><link linkend="pgresponseret">PG_RESPONSE_RET</></><entry>2</><entry>response is a pgresponse_ret struct</></>
+  <row><entry><link linkend="pgresponseevent">PG_RESPONSE_EVENT</></><entry>3</><entry>response is a pgresponse_event struct</></>
+  <row><entry><link linkend="pgresponsedata">PG_RESPONSE_DATA</></><entry>4</><entry>response is a pgresponse_data struct</></>
+  </tbody>
+  </tgroup>
+  </table>
+
+  <sect2 id="pgresponseerr"><title>PG_RESPONSE_ERR - Error Code</>
+   <para>
+	Sent only if an error occured, the request could not be completed for
+	some reason.  The response include a general error type, the id of the
+	requests for which this packet is sent, as well as a text message.
+	<footnote><para>In the future protocol versions it is expected that
+	the text message will be replaced by a string handle and an error code
+	be returned.</para></footnote>
+   </para>
+   <figure><title>struct pgresponse_err</><programlisting>
+struct pgresponse_err {
+  u16 type;
+  u16 errt;
+  u16 msglen;
+  u16 dummy;
+  u32 id;
+};
+   </programlisting></figure>
+   <para>
+	The <structfield>type</> is the <constant>PG_RESPONSE_ERR</>(1) constant
+	identifying the packet as a <structname>pgresponse_err</>.
+   </para>
+   <para>
+	The <structfield>errt</> is a broad error category which value is a
+	<constant>PG_ERRT_*</> constant (see <xref linkend="pgerrtypes"> for
+	a complete listing).
+   </para>
+   <para>
+	The <structfield>msglen</> is the length in bytes of the associated
+	text error message following immediately the
+	<structname>pgresponse_err</>.
+   </para>
+   <para>
+	The <structfield>id</> is the client provided id that was located
+	in the <structname>pgrequest</> causing the error.
+   </para>
+   <table frame=none pgwide=1 id="pgerrtypes"><title>PG_ERRT values</>
+   <tgroup cols=3 align=left>
+   <tbody>
+   <row><entry>PG_ERRT_NONE</><entry>0x0000</><entry>No error condition</></>
+   <row><entry>PG_ERRT_MEMORY</><entry>0x0101</><entry>Error allocating memory</></>
+   <row><entry>PG_ERRT_IO</><entry>0x0200</><entry>Filesystem, operating system, or other IO error</></>
+   <row><entry>PG_ERRT_NETWORK</><entry>0x0300</><entry>Network (or IPC) communication error</></>
+   <row><entry>PG_ERRT_BADPARAM</><entry>0x0400</><entry>Invalid parameters</></>
+   <row><entry>PG_ERRT_HANDLE</><entry>0x0500</><entry>Invalid handle ID, type, or ownership</></>
+   <row><entry>PG_ERRT_INTERNAL</><entry>0x0600</><entry>Shouldn't happen (tell a developer!)</></>
+   <row><entry>PG_ERRT_BUSY</><entry>0x0700</><entry>Try again later?</></>
+   <row><entry>PG_ERRT_FILEFMT</><entry>0x0800</><entry>Error in a loaded file format (theme files, bitmaps)</></>
+   <row><entry>PG_ERRT_CLIENT</><entry>0x8000</><entry>An error caused by the client lib, not the server</></>
+   </tbody>
+   </tgroup>
+   </table>
+  </sect2>
+
+  <sect2 id="pgresponseret"><title>PG_RESPONSE_RET - 32bit Value</>
+   <para>
+	Sent by the server after most requests where a single 32bit value
+	is returned, such as a widget/string handle.
+   </para>
+   <figure><title>struct pgresponse_ret</><programlisting>
+struct pgresponse_ret {
+  u16 type;
+  u16 dummy;
+  u32 id;
+  u32 data;
+};
+   </programlisting></figure>
+   <para>
+	The <structfield>type</> is the
+	<constant>PG_RESPONSE_RET</>(2) constant identifying the
+	response as a <structname>pgresponse_ret</>.
+   </para>
+   <para>
+	The <structfield>id</> is the client provided id that was located
+	in the <structname>pgrequest</> for which the value is returned.
+   </para>
+   <para>
+	The <structfield>data</> is a 32bit value specific to the type
+	of request made.  More often than note a widget/string handle.
+   </para>
+  </sect2>
+
+  <sect2 id="pgresponseevent"><title>PG_RESPONSE_EVENT - Event</>
+   <para>
+	This response is returned after a <constant>PGREQ_WAIT</> request.
+   </para>
+   <figure><title>struct pgresponse_event</><programlisting>
+struct pgresponse_event {
+  u16 type;
+  u16 event;
+  u32 from;
+  u32 param;
+};
+   </programlisting></figure>
+   <para>
+	The <structfield>type</> is the 
+	<constant>PG_RESPONSE_EVENT</>(3) constant identifying the
+	response as a <structname>pgresponse_event</>.
+   </para>
+   <para>
+	The <structfield>event</> is a <constant>PG_WE_*</> or
+	<constant>PG_NWE_*</> constant identyfing the type of event
+	received (see <xref linkend="pgwetypes"> and
+	<xref linkend="pgnwetypes"> respectively for complete listings).
+   </para>
+   <para>
+	The <structfield>from</> is a a widget handle if the event is a
+	<constant>PG_WE_*</> or 0 if it's one of the <constant>PG_NWE_*</>.
+   </para>
+   <para>
+	The <structfield>param</> contains the packed data for the event,
+	which varies with the event type.  It is explained in more detail
+	in <xref linkend="eventparam">
+   </para>
+  </sect2>
+
+  <sect2 id="pgresponsedata"><title>PG_RESPONSE_DATA - Variable Length Data</>
+   <para>
+	Sent by the server whenever more than 32bit of data needs to be
+	returned, such as after a <constant>PGREQ_GETSTRING</> (see
+	<xref linkend="pgreq-getstring">).
+   </para>
+   <figure><title>struct pgresponse_data</><programlisting>
+struct pgresponse_data {
+  u16 type;
+  u16 dummy;
+  u32 id;
+  u32 size;
+};
+   </programlisting></figure>
+   <para>
+	The <structfield>type</> is the 
+	<constant>PG_RESPONSE_DATA</>(4) constant identifying the
+	response as a <structname>pgresponse_data</>.
+   </para>
+   <para>
+	The <structfield>id</> is the client provided id that was located
+	in the <structname>pgrequest</> for which the data is returned.
+   </para>
+   <para>
+	The <structfield>size</> is the number of bytes of data following
+	the <structname>pgresponse_data</> structure.
+   </para>
+  </sect2>
+ </sect1>
+ </chapter>
+
+ <chapter id="eventparam">
+  <title>Event Parameters</title>
+  <para>
+	Events can return various types of data that the client library
+	will separate out for the app. To indicate a type of encoding, the
+	<constant>PG_WE_</> constant is logically or'ed with one of these:
+  </para>
+  <table frame=none pgwide=1 id="pgeventcodingtypes">
+  <title>PG_EVENTCODING values</>
+  <tgroup cols=3 align=left>
+  <colspec colwidth="45*">
+  <colspec colwidth="10*">
+  <colspec colwidth="45*">
+  <tbody>
+  <row><entry>PG_EVENTCODING_PARAM</><entry>0x000</><entry>Just a 32-bit parameter</></>
+  <row><entry>PG_EVENTCODING_XY</><entry>0x100</><entry>X,Y coordinates packed into param</></>
+  <row><entry>PG_EVENTCODING_PNTR</><entry>0x200</><entry>Mouse parameters (x,y,btn,chbtn)</></>
+  <row><entry>PG_EVENTCODING_DATA</><entry>0x300</><entry>Arbitrary data block</></>
+  <row><entry>PG_EVENTCODING_KBD</><entry>0x400</><entry>Keyboard params</></>
+  <row><entry>PG_EVENTCODING_MASK</><entry>0xF00</><entry></></>
+  </tbody>
+  </tgroup>
+  </table>
+  <para>
+	Determining the parameter encoding can thus be resumed in the following operations:
+  </para>
+  <programlisting>
+  1.) Do a bitwise AND between <structfield>pgresponse_event.event</> and <constant>PG_EVENTCODING_MASK</>
+  2.) Compare the result with the <constant>PG_EVENTCODING_*</> values
+  </programlisting>
+  <sect1 id="pgeventcodingparam">
+   <title>PG_EVENTCODING_PARAM - 32bit Parameter</>
+   <para>
+	The <structfield>pgresponse_event.param</> is a 32bit value,
+	no special decoding required.
+   </para>
+  </sect1>
+
+  <sect1 id="pgeventcodingxy">
+   <title>PG_EVENTCODING_XY - X,Y Coordinates</>
+   <para>
+	Mostly returned with width/size of bitmaps and/or string size.  The
+	X coordinate (or width) is located in the highest 16bits while the
+	Y coordinate (or height) is located in the lowest 16bits.
+   </para>
+   <programlisting>
+x = <structfield>pgresponse_event.param</> &gt;&gt; 16;
+y = <structfield>pgresponse_event.param</> &amp; 0xFFFF;
+   </programlisting>
+  </sect1>
+
+  <sect1 id="pgeventcodingpntr">
+   <title>PG_EVENTCODING_PNTR - Pointer Parameters (x,y,btn,chbtn)</>
+   <para>
+	Used to return the x,y absolute coordinates as well as the
+	pressed buttons bitmask (btn) and changed buttons bitmask
+	since last event (chbtn).  This will be generated whenever
+	the pointing device is moved or one of its button is pressed
+	or released.
+   </para>
+   <para>
+	The <structfield>x</> is located in bits 11-0 of
+	<structfield>pgresponse_event.param</> and represents the
+	absolute x coordinate of the new pointer location.
+   </para>
+   <para>
+	The <structfield>y</> is located in bits 23-12 of
+	<structfield>pgresponse_event.param</> and represents the
+	absolute y coordinate of the new pointer location.
+   </para>
+   <para>
+	The <structfield>btn</> is the bitmask of the currently
+	pressed buttons and is located in bits 27-24 of
+	<structfield>pgresponse_event.param</>.
+   </para>
+   <para>
+	The <structfield>chbtn</> is the bitmaks of the buttons
+	which changed status since the last event and is located
+	in bits 31-28 of <structfield>pgresponse_event.param</>.
+   </para>
+   <programlisting>
+x = <structfield>pgresponse_event.param</> &amp; 0xFFF;
+y = (<structfield>pgresponse_event.param</> &gt;&gt; 12) &amp; 0xFFF;
+btn = (<structfield>pgresponse_event.param</> &gt;&gt; 24) &amp; 0xF;
+chbtn = (<structfield>pgresponse_event.param</> &gt;&gt; 28) &amp; 0xF;
+   </programlisting>
+  </sect1>
+
+  <sect1 id="pgeventcodingdata">
+   <title>PG_EVENTCODING_DATA - Arbitrary data block</>
+   <para>
+	Used to return data of variable length.  The
+	<structfield>pgresponse_event.param</> represents the
+	number of bytes of data located after the
+	<structname>pgresponse_event</> structure.
+   </para>
+  </sect1>
+
+  <sect1 id="pgeventcodingkbd">
+   <title>PG_EVENTCODING_KBD - Keyboard Parameters</>
+   <para>
+	Used to return pressed/released keys and the current status
+	of the keyboard modifiers.
+   </para>
+   <para>
+	The <structfield>keys</> is located in the lowest 16bits of
+	<structfield>pgresponse_event.param</>.  For
+	<constant>PG_WE_KBD_CHAR</>, the value is an ASCII/Unicode
+	character. For <constant>PG_WE_KBD_KEYUP</>
+	and <constant>PG_WE_KBD_KEYDOWN</>, it is a
+	<constant>PGKEY_*</> constant
+   </para>
+  </sect1>
+ </chapter>
+
+ <appendix id="gropnodetypes">
+  <title>Gropnode Types</title>
+  <table id="groptypes" frame=none pgwide=1>
+  <title>PG_GROP values</title>
+  <tgroup cols=3 align=left>
+  <colspec colwidth="45*">
+  <colspec colwidth="10*">
+  <colspec colwidth="45*">
+  <tbody>
+  <row><entry>PG_GROP_RECT</><entry>0x00</><entry></></>
+  <row><entry>PG_GROP_FRAME</><entry>0x10</><entry></></>
+  <row><entry>PG_GROP_SLAB</><entry>0x20</><entry></></>
+  <row><entry>PG_GROP_BAR</><entry>0x30</><entry></></>
+  <row><entry>PG_GROP_PIXEL</><entry>0x40</><entry></></>
+  <row><entry>PG_GROP_LINE</><entry>0x50</><entry></></>
+  <row><entry>PG_GROP_ELLIPSE</><entry>0x60</><entry></></>
+  <row><entry>PG_GROP_FELLIPSE</><entry>0x70</><entry></></>
+  <row><entry>PG_GROP_TEXT</><entry>0x04</><entry>Param: string</></>
+  <row><entry>PG_GROP_BITMAP</><entry>0x14</><entry>Param: bitmap</></>
+  <row><entry>PG_GROP_TILEBITMAP</><entry>0x24</><entry>Param: bitmap</></>
+  <row><entry>PG_GROP_FPOLYGON</><entry>0x34</><entry>Param: array</></>
+  <row><entry>PG_GROP_GRADIENT</><entry>0x0C</><entry>Param: angle, c1, c2 </></>
+  <row><entry>PG_GROP_TEXTGRID</><entry>0x1C</><entry>Param: string, bufferw, offset</></>
+  <row><entry>PG_GROP_NOP</><entry>0x03</><entry></></>
+  <row><entry>PG_GROP_RESETCLIP</><entry>0x13</><entry>Reset clip to whole divnode</></>
+  <row><entry>PG_GROP_SETOFFSET</><entry>0x01</><entry>this grop's rect sets offset</></>
+  <row><entry>PG_GROP_SETCLIP</><entry>0x11</><entry>this grop's rect sets clipping</></>
+  <row><entry>PG_GROP_SETSRC</><entry>0x21</><entry>this grop's rect sets src_*</></>
+  <row><entry>PG_GROP_SETMAPPING</><entry>0x05</><entry>Param: PG_MAP_* const</></>
+  <row><entry>PG_GROP_SETCOLOR</><entry>0x07</><entry>Param: pgcolor</></>
+  <row><entry>PG_GROP_SETFONT</><entry>0x17</><entry>Param: font</></>
+  <row><entry>PG_GROP_SETLGOP</><entry>0x27</><entry>Param: lgop</></>
+  <row><entry>PG_GROP_SETANGLE</><entry>0x37</><entry>Param: angle in degrees</></>
+  <row><entry>PG_GROP_VIDUPDATE</><entry>0x800</><entry>Forces a video update</></>
+  </tbody>
+  </tgroup>
+  </table>
+ </appendix>
+
+ <appendix id="propertytypes"><title>Property Types</title>
+  <para>
+	Latest values may be found in
+	<filename class=headerfile>picogui/constants.h</filename> or on cvs in
+	<filename class=headerfile>pgserver/include/picogui/constants.h</filename>
+  </para>
+  <table frame=none pgwide=1><title>PG_WP values</title>
+  <tgroup cols=3 align=left>
+  <colspec colwidth="45*">
+  <colspec colwidth="10*">
+  <colspec colwidth="45*">
+  <tbody>
+  <row><entry>PG_WP_SIZE</><entry>1</><entry></></>
+  <row><entry>PG_WP_SIDE</><entry>2</><entry></></>
+  <row><entry>PG_WP_ALIGN</><entry>3</><entry></></>
+  <row><entry>PG_WP_BGCOLOR</><entry>4</><entry></></>
+  <row><entry>PG_WP_COLOR</><entry>5</><entry></></>
+  <row><entry>PG_WP_SIZEMODE</><entry>6</><entry></></>
+  <row><entry>PG_WP_TEXT</><entry>7</><entry></></>
+  <row><entry>PG_WP_FONT</><entry>8</><entry></></>
+  <row><entry>PG_WP_TRANSPARENT</><entry>9</><entry></></>
+  <row><entry>PG_WP_BORDERCOLOR</><entry>10</><entry></></>
+  <row><entry>PG_WP_BITMAP</><entry>12</><entry></></>
+  <row><entry>PG_WP_LGOP</><entry>13</><entry></></>
+  <row><entry>PG_WP_VALUE</><entry>14</><entry></></>
+  <row><entry>PG_WP_BITMASK</><entry>15</><entry></></>
+  <row><entry>PG_WP_BIND</><entry>16</><entry></></>
+  <row><entry>PG_WP_SCROLL_X</><entry>17</><entry>Horizontal and vertical scrolling amount</></>
+  <row><entry>PG_WP_SCROLL_Y</><entry>18</><entry></></>
+  <row><entry>PG_WP_HOTKEY</><entry>19</><entry></></>
+  <row><entry>PG_WP_EXTDEVENTS</><entry>20</><entry>For buttons, a mask of extra events to send</></>
+  <row><entry>PG_WP_DIRECTION</><entry>21</><entry></></>
+  <row><entry>PG_WP_ABSOLUTEX</><entry>22</><entry>read-only, relative to screen</></>
+  <row><entry>PG_WP_ABSOLUTEY</><entry>23</><entry></></>
+  <row><entry>PG_WP_ON</><entry>24</><entry>on-off state of button/checkbox/etc</></>
+  <row><entry>PG_WP_STATE</><entry>25</><entry>Deprecated! Use PG_WP_THOBJ instead</></>
+  <row><entry>PG_WP_THOBJ</><entry>25</><entry>Set a widget's theme object</></>
+  <row><entry>PG_WP_NAME</><entry>26</><entry>A widget's name (for named containers, etc)</></>
+  <row><entry>PG_WP_PUBLICBOX</><entry>27</><entry>Set to 1 to allow other apps to make widgets in this container</></>
+  <row><entry>PG_WP_DISABLED</><entry>28</><entry>For buttons, grays out text and prevents clicking</></>
+  <row><entry>PG_WP_MARGIN</><entry>29</><entry>For boxes, overrides the default margin</></>
+  <row><entry>PG_WP_TEXTFORMAT</><entry>30</><entry>For the textbox, defines a format for  PG_WP_TEXT. fourCC format, with optional preceeding '+' to prevent erasing existing data, just append at the cursor position</></>
+  <row><entry>PG_WP_TRIGGERMASK</><entry>31</><entry>Mask of extra triggers accepted (self->trigger_mask)</></>
+  <row><entry>PG_WP_HILIGHTED</><entry>32</><entry>Widget property to hilight a widget and all it's children</></>
+  <row><entry>PG_WP_SELECTED</><entry>33</><entry>List property to select a row.</></>
+  <row><entry>PG_WP_SELECTED_HANDLE</><entry>34</><entry>List property to return a handle to the selected row</></>
+  <row><entry>PG_WP_AUTOSCROLL</><entry>35</><entry>For the textbox or terminal, scroll to any new text that's inserted</></>
+  <row><entry>PG_WP_LINES</><entry>36</><entry>Height, in lines</></>
+  <row><entry>PG_WP_PREFERRED_W</><entry>37</><entry>Read only (for now) properties to get any widget's preferred size</></>
+  <row><entry>PG_WP_PREFERRED_H</><entry>38</><entry></></>
+  <row><entry>PG_WP_PANELBAR</><entry>39</><entry>Read-only property for panels returns a handle to its embedded panelbar widget</></>
+  <row><entry>PG_WP_AUTO_ORIENTATION</><entry>40</><entry>Automatically reorient child widgets when PG_WP_SIDE changes</></>
+  <row><entry>PG_WP_THOBJ_BUTTON</><entry>41</><entry>These four theme properties set the theme objects used for the</></>
+  <row><entry>PG_WP_THOBJ_BUTTON_HILIGHT</><entry>42</><entry>three possible states of the button widget.</></>
+  <row><entry>PG_WP_THOBJ_BUTTON_ON</><entry>43</><entry></></>
+  <row><entry>PG_WP_THOBJ_BUTTON_ON_NOHILIGHT</><entry>44</><entry></></>
+  <row><entry>PG_WP_PANELBAR_LABEL</><entry>45</><entry>More read-only panelbar properties to get the built-in panelbar widgets</></>
+  <row><entry>PG_WP_PANELBAR_CLOSE</><entry>46</><entry></></>
+  <row><entry>PG_WP_PANELBAR_ROTATE</><entry>47</><entry></></>
+  <row><entry>PG_WP_PANELBAR_ZOOM</><entry>48</><entry></></>
+  <row><entry>PG_WP_BITMAPSIDE</><entry>49</><entry></></>
+  <row><entry>PG_WP_PASSWORD</><entry>50</><entry></></>
+  <row><entry>PG_WP_HOTKEY_FLAGS</><entry>51</><entry>Keyboard event flags for the hotkey (PG_KF_*)</></>
+  <row><entry>PG_WP_HOTKEY_CONSUME</><entry>52</><entry>Flag indicating whether to consume the key event when a hotkey comes in</></>
+  <row><entry>PG_WP_WIDTH</><entry>53</><entry>A read only property for all widgets (use PG_WP_SIZE to change the size). Always in pixels</></>
+  <row><entry>PG_WP_HEIGHT</><entry>54</><entry>A read only property for all widgets (use PG_WP_SIZE to change the size). Always in pixels</></>
+  <row><entry>PG_WP_SPACING</><entry>55</><entry>Override the normal spacing between buttons</></>
+  <row><entry>PG_WP_MINIMUM</><entry>56</><entry>Used by the panelbar widget to set minimum size</></>
+  <row><entry>PG_WP_MULTILINE</><entry>57</><entry>Turn this off on the textbox widget to get a single line textbox</></>
+  <row><entry>PG_WP_SELECTION</><entry>58</><entry>Selected text in the textedit widget</></>
+  <row><entry>PG_WP_READONLY</><entry>59</><entry></></>
+  <row><entry>PG_WP_INSERTMODE</><entry>60</><entry>Set to a PG_INSERT_* constant, for textbox widget</></>
+  <row><entry>PG_WP_TYPE</><entry>61</><entry>Return the type of the widget (PG_WIDGET_*)</></>
+  <row><entry>PG_WP_TAB</><entry>62</><entry>The tab associated with a tabpage widget</></>
+  <row><entry>PG_WP_TAB_BAR</><entry>63</><entry>The tab bar associated with a tabpage widget</></>
+  <row><entry>PG_WP_POPUP_IS_MENU</><entry>64</><entry>Popup is menu flag</></>
+  <row><entry>PG_WP_POPUP_IS_SUBMENU</><entry>65</><entry>Popup is submenu flag</></>
+  <row><entry>PG_WP_CURSOR_POSITION</><entry>66</><entry>Textbox cursor position</></>
+  </tbody></tgroup></table>
+ </appendix>
+
+ <appendix id="requesttypes">
+  <title>Request Types</title>
+  <para>
+	Request types are used by the client to ask the server to perform an
+	action, and used by the server to determine which action to perform.
+  </para>
+  <para>
+	Latest values may be found in
+	<filename class=headerfile>picogui/network.h</filename> or on cvs in
+	<filename class=headerfile>pgserver/include/picogui/network.h</filename>
+  </para>
+  <table frame=none pgwide=1><title>PGREQ values</title>
+  <tgroup cols=3 align=left>
+  <colspec colwidth="45*">
+  <colspec colwidth="10*">
+  <colspec colwidth="45*">
+  <tbody>
+  <row><entry>PGREQ_PING</><entry>0</><entry>Simply return if server is ok</></>
+  <row><entry>PGREQ_UPDATE</><entry>1</><entry>Call update()</></>
+  <row><entry>PGREQ_MKWIDGET</><entry>2</><entry>Make a widget, return handle</></>
+  <row><entry>PGREQ_MKBITMAP</><entry>3</><entry>Make a bitmap, return handle</></>
+  <row><entry>PGREQ_MKFONT</><entry>4</><entry>Make a fontdesc, return handle</></>
+  <row><entry>PGREQ_MKSTRING</><entry>5</><entry>Make a string, return handle</></>
+  <row><entry>PGREQ_FREE</><entry>6</><entry>Free a handle</></>
+  <row><entry>PGREQ_SET</><entry>7</><entry>Set a widget param</></>
+  <row><entry>PGREQ_GET</><entry>8</><entry>Get a widget param, return it</></>
+  <row><entry>PGREQ_MKTHEME</><entry>9</><entry>Load a compiled theme</></>
+  <row><entry>PGREQ_MKCURSOR</><entry>10</><entry>Make a cursor, return handle</></>
+  <row><entry>PGREQ_MKINFILTER</><entry>11</><entry>Make an input filter, return handle</></>
+  <row><entry>PGREQ_GETRESOURCE</><entry>12</><entry>Get a handle to a server-owned resource</></>
+  <row><entry>PGREQ_WAIT</><entry>13</><entry>Wait for an event</></>
+  <row><entry>PGREQ_MKFILLSTYLE</><entry>14</><entry>Load a fill style, return handle</></>
+  <row><entry>PGREQ_REGISTER</><entry>15</><entry>Register a new application</></>
+  <row><entry>PGREQ_MKPOPUP</><entry>16</><entry>Create a popup root widget</></>
+  <row><entry>PGREQ_SIZETEXT</><entry>17</><entry>Find the size of text</></>
+  <row><entry>PGREQ_BATCH</><entry>18</><entry>Execute many requests</></>
+  <row><entry>PGREQ_REGOWNER</><entry>19</><entry>Get exclusive privileges</></>
+  <row><entry>PGREQ_UNREGOWNER</><entry>20</><entry>Give up exclusive privileges</></>
+  <row><entry>PGREQ_SETMODE</><entry>21</><entry>Set video mode/depth/rotation</></>
+  <row><entry>PGREQ_GETMODE</><entry>22</><entry>Return a modeinfo struct</></>
+  <row><entry>PGREQ_MKCONTEXT</><entry>23</><entry>Enter a new context</></>
+  <row><entry>PGREQ_RMCONTEXT</><entry>24</><entry>Clean up and kills the context</></>
+  <row><entry>PGREQ_FOCUS</><entry>25</><entry>Force focus to specified widget</></>
+  <row><entry>PGREQ_GETSTRING</><entry>26</><entry>Return a RESPONSE_DATA</></>
+  <row><entry>PGREQ_DUP</><entry>27</><entry>Duplicate an object</></>
+  <row><entry>PGREQ_SETPAYLOAD</><entry>28</><entry>Set an object's payload</></>
+  <row><entry>PGREQ_GETPAYLOAD</><entry>29</><entry>Get an object's payload</></>
+  <row><entry>PGREQ_CHCONTEXT</><entry>30</><entry>Change a handle's context</></>
+  <row><entry>PGREQ_WRITECMD</><entry>31</><entry>Send a command to a widget</></>
+  <row><entry>PGREQ_UPDATEPART</><entry>32</><entry>Update subtree defined by wgt</></>
+  <row><entry>PGREQ_MKARRAY</><entry>33</><entry>Make a array, return handle</></>  
+  <row><entry>PGREQ_RENDER</><entry>34</><entry>Render gropnode(s) to a bitmap</></>
+  <row><entry>PGREQ_NEWBITMAP</><entry>35</><entry>Create a blank bitmap</></>
+  <row><entry>PGREQ_THLOOKUP</><entry>36</><entry>Perform a theme lookup</></>
+  <row><entry>PGREQ_GETINACTIVE</><entry>37</><entry>Get milliseconds of inactivity</></>
+  <row><entry>PGREQ_SETINACTIVE</><entry>38</><entry>Set milliseconds of inactivity</></>
+  <row><entry>PGREQ_DRIVERMSG</><entry>39</><entry>Send a message to all drivers</></>
+  <row><entry>PGREQ_LOADDRIVER</><entry>40</><entry>Load input/misc (not video)</></>
+  <row><entry>PGREQ_GETFSTYLE</><entry>41</><entry>Get info on a font style</></>
+  <row><entry>PGREQ_FINDWIDGET</><entry>42</><entry>Get widget handle by name</></>
+  <row><entry>PGREQ_CHECKEVENT</><entry>43</><entry>Return number of queued events</></>
+  <row><entry>PGREQ_SIZEBITMAP</><entry>44</><entry>Find the size of a bitmap</></>
+  <row><entry>PGREQ_APPMSG</><entry>45</><entry>Send PG_WE_APPMSG to any widget</></>
+  <row><entry>PGREQ_CREATEWIDGET</><entry>46</><entry>Create widget</></>
+  <row><entry>PGREQ_ATTACHWIDGET</><entry>47</><entry>Attach widget</></>
+  <row><entry>PGREQ_FINDTHOBJ</><entry>48</><entry>Find theme object by name</></>
+  <row><entry>PGREQ_TRAVERSEWGT</><entry>49</><entry>Find widgets relative to a specified widget</></>
+  <row><entry>PGREQ_MKTEMPLATE</><entry>50</><entry>Load a widget template, return the handle</></>
+  <row><entry>PGREQ_SETCONTEXT</><entry>51</><entry>Set the app's current handle context</></>
+  <row><entry>PGREQ_GETCONTEXT</><entry>52</><entry>Get the app's current handle context</></>
+  <row><entry>PGREQ_INFILTERSEND</><entry>53</><entry>Send a trigger to an input filter</></>
+  <row><entry>PGREQ_MKSHMBITMAP</><entry>54</><entry>Convert a picogui bitmap to a shared memory segment</></>
+  <row><entry>PGREQ_WRITEDATA</><entry>55</><entry>Stream data to a widget</></>
+  </tbody></tgroup></table>
+ </appendix>
+
+ <appendix id="triggertypes"><title>Trigger Types</title>
+  <para>
+	(soon)
+  </para>
+ </appendix>
+
+ <appendix id="widgetconstants"><title>Widget Types</title>
+  <para>
+	(soon)
+  </para>
+  <table pgwide=1 frame=none id="widgettypes"><title>PG_WIDGET values</title>
+  <tgroup cols=3 align=left>
+  <colspec colwidth="45*">
+  <colspec colwidth="10*">
+  <colspec colwidth="45*">
+  <tbody>
+  <row><entry>PG_WIDGET_TOOLBAR</><entry>0</><entry></></>
+  <row><entry>PG_WIDGET_LABEL</><entry>1</><entry></></>
+  <row><entry>PG_WIDGET_SCROLL</><entry>2</><entry></></>
+  <row><entry>PG_WIDGET_INDICATOR</><entry>3</><entry></></>
+  <row><entry>PG_WIDGET_BUTTON</><entry>5</><entry></></>
+  <row><entry>PG_WIDGET_PANEL</><entry>6</><entry></></>
+  <row><entry>PG_WIDGET_POPUP</><entry>7</><entry></></>
+  <row><entry>PG_WIDGET_BOX</><entry>8</><entry></></>
+  <row><entry>PG_WIDGET_FIELD</><entry>9</><entry></></>
+  <row><entry>PG_WIDGET_BACKGROUND</><entry>10</><entry></></>
+  <row><entry>PG_WIDGET_MENUITEM</><entry>11</><entry>A variation on button</></>
+  <row><entry>PG_WIDGET_TERMINAL</><entry>12</><entry>A full terminal emulator</></>
+  <row><entry>PG_WIDGET_CANVAS</><entry>13</><entry></></>
+  <row><entry>PG_WIDGET_CHECKBOX</><entry>14</><entry>Another variation of button</></>
+  <row><entry>PG_WIDGET_FLATBUTTON</><entry>15</><entry>Yet another customized button</></>
+  <row><entry>PG_WIDGET_LISTITEM</><entry>16</><entry>Still yet another...</></>
+  <row><entry>PG_WIDGET_SUBMENUITEM</><entry>17</><entry>Menuitem with a submenu arrow</></>
+  <row><entry>PG_WIDGET_RADIOBUTTON</><entry>18</><entry>Like a check box, but exclusive</></>
+  <row><entry>PG_WIDGET_TEXTBOX</><entry>19</><entry>Client-side text layout</></>
+  <row><entry>PG_WIDGET_PANELBAR</><entry>20</><entry>Draggable bar and container</></>
+  <row><entry>PG_WIDGET_SIMPLEMENU</><entry>21</><entry>Popup-menu with only text items in it</></>
+  <row><entry>PG_WIDGET_DIALOGBOX</><entry>22</><entry>Popup box with standard dialog titlebar</></>
+  <row><entry>PG_WIDGET_MESSAGEDIALOG</><entry>23</><entry>Dialogbox that displays a message to the user</></>
+  <row><entry>PG_WIDGET_SCROLLBOX</><entry>24</><entry>Container with built-in horizontal and vertical scrolling</></>
+  </tbody>
+  </tgroup>
+  </table>
+  <para>
+  </para>
+  <table frame=none pgwide=1 id="derivetypes"><title>PG_DERIVE values</title>
+  <tgroup cols=3 align=left>
+  <colspec colwidth="45*">
+  <colspec colwidth="10*">
+  <colspec colwidth="45*">
+  <tbody>
+  <row><entry>PG_DERIVE_AFTER</><entry>1</><entry></></>
+  <row><entry>PG_DERIVE_INSIDE</><entry>2</><entry></></>
+  <row><entry>PG_DERIVE_BEFORE</><entry>3</><entry></></>
+  </tbody>
+  </tgroup>
+  </table>
+ </appendix>
+
+ <appendix id="fontconstants"><title>Font Constants</title>
+  <sect1 id="fontstyles"><title>Font Styles</title>
+  <para>
+	These font style constants can be used as the property flags parameter
+	of a PGREQ_FINDFONT and PGREQ_MKFONT request
+  </para>
+  <table pgwide=1 frame=none><title>PG_FSTYLE values</title>
+  <tgroup cols=3 align=left>
+  <colspec colwidth="45*">
+  <colspec colwidth="10*">
+  <colspec colwidth="45*">
+  <tbody>
+  <row><entry>PG_FSTYLE_FIXED</><entry>(1&lt;&lt;0)</><entry>Fixed width</></>
+  <row><entry>PG_FSTYLE_DEFAULT</><entry>(1&lt;&lt;1)</><entry>The default font in its category, fixed or proportional.</></>
+  <row><entry>PG_FSTYLE_SYMBOL</><entry>(1&lt;&lt;2)</><entry>Font contains nonstandard chars and will not be chosen unless specifically requested</></>
+  <row><entry>PG_FSTYLE_SUBSET</><entry>(1&lt;&lt;3)</><entry>Font does not contain all the ASCII chars before 127, and shouldn't be used unless requested</></>
+  <row><entry>PG_FSTYLE_EXTENDED</><entry>(1&lt;&lt;4)</><entry>(deprecated) Contains international characters above 127 </></>
+  <row><entry>PG_FSTYLE_IBMEXTEND</><entry>(1&lt;&lt;5)</><entry>(deprecated) Has IBM-PC extended characters</></>
+  <row><entry>PG_FSTYLE_DOUBLESPACE</><entry>(1&lt;&lt;7)</><entry>Add extra space between lines</></>
+  <row><entry>PG_FSTYLE_BOLD</><entry>(1&lt;&lt;8)</><entry>Use or simulate a bold version of the font</></>
+  <row><entry>PG_FSTYLE_ITALIC</><entry>(1&lt;&lt;9)</><entry>Use or simulate an italic version of the font</></>
+  <row><entry>PG_FSTYLE_UNDERLINE</><entry>(1&lt;&lt;10)</><entry>Underlined text</></>
+  <row><entry>PG_FSTYLE_STRIKEOUT</><entry>(1&lt;&lt;11)</><entry>Strikeout, a line through the middle of the text</></>
+  <row><entry>PG_FSTYLE_GRAYLINE</><entry>(1&lt;&lt;12)</><entry>deprecated</></>
+  <row><entry>PG_FSTYLE_FLUSH</><entry>(1&lt;&lt;14)</><entry>Disable the margin that PicoGUI puts around text</></>
+  <row><entry>PG_FSTYLE_DOUBLEWIDTH</><entry>(1&lt;&lt;15)</><entry>Add extra space between characters</></>
+  <row><entry>PG_FSTYLE_ITALIC2</><entry>(1&lt;&lt;16)</><entry>Twice the slant of the default italic</></>
+  <row><entry>PG_FSTYLE_ENCODING_ISOLATIN1</><entry>(1&lt;&lt;4)</><entry>ISO Latin-1 encoding</></>
+  <row><entry>PG_FSTYLE_ENCODING_IBM</><entry>(1&lt;&lt;5)</><entry>IBM-PC extended characters</></>
+  <row><entry>PG_FSTYLE_ENCODING_UNICODE</><entry>(1&lt;&lt;17)</><entry>Unicode encoding</></>
+  </tbody>
+  </tgroup>
+  </table>
+  </sect1>
+  <sect1 id="fontreps"><title>Font Representations</title>
+  <para>
+	These flags can be returned in a response to a PGREQ_GETFSTYLE,
+	indicating supported methods of graphically representing a font.
+  </para>
+  <para>
+	Currently this can only indicate whether a font has built-in bold,
+	italic, or bolditalic bitmaps, but in the future could be used to
+	indicate whether a style is bitmapped or scalable.
+  </para>
+  <table pgwide=1 frame=none><title>PG_FR values</title>
+  <tgroup cols=3 align=left>
+  <colspec colwidth="45*">
+  <colspec colwidth="10*">
+  <colspec colwidth="45*">
+  <tbody>
+  <row><entry>PG_FR_BITMAP_NORMAL</><entry>(1&lt;&lt;0)</><entry>Normal bitmapped font</></>
+  <row><entry>PG_FR_BITMAP_BOLD</><entry>(1&lt;&lt;1)</><entry>Bitmapped font with bold</></>
+  <row><entry>PG_FR_BITMAP_ITALIC</><entry>(1&lt;&lt;2)</><entry>Bitmapped font with italic</></>
+  <row><entry>PG_FR_BITMAP_BOLDITALIC</><entry>(1&lt;&lt;3)</><entry>Bitmapped font with bold and italic</></>
+  <row><entry>PG_FR_SCALABLE</><entry>(1&lt;&lt;4)</><entry>Wishful thinking :)</></>
+  </tbody>
+  </tgroup>
+  </table>
+  </sect1>
+ </appendix>
+
+ <appendix id="keyboardtypes"><title>Keyboard Constants</title>
+  <table pgwide=1 frame=none id="pgkeys"><title>PGKEY values</title>
+  <tgroup cols=3 align=left>
+  <colspec colwidth="45*">
+  <colspec colwidth="10*">
+  <colspec colwidth="45*">
+  <tbody>
+  <row><entry>PGKEY_BACKSPACE</><entry>8</><entry></></>
+  <row><entry>PGKEY_TAB</><entry>9</><entry></></>
+  <row><entry>PGKEY_CLEAR</><entry>12</><entry></></>
+  <row><entry>PGKEY_RETURN</><entry>13</><entry></></>
+  <row><entry>PGKEY_PAUSE</><entry>19</><entry></></>
+  <row><entry>PGKEY_ESCAPE</><entry>27</><entry></></>
+  <row><entry>PGKEY_SPACE</><entry>32</><entry></></>
+  <row><entry>PGKEY_EXCLAIM</><entry>33</><entry></></>
+  <row><entry>PGKEY_QUOTEDBL</><entry>34</><entry></></>
+  <row><entry>PGKEY_HASH</><entry>35</><entry></></>
+  <row><entry>PGKEY_DOLLAR</><entry>36</><entry></></>
+  <row><entry>PGKEY_PERCENT</><entry>37</><entry></></>
+  <row><entry>PGKEY_AMPERSAND</><entry>38</><entry></></>
+  <row><entry>PGKEY_QUOTE</><entry>39</><entry></></>
+  <row><entry>PGKEY_LEFTPAREN</><entry>40</><entry></></>
+  <row><entry>PGKEY_RIGHTPAREN</><entry>41</><entry></></>
+  <row><entry>PGKEY_ASTERISK</><entry>42</><entry></></>
+  <row><entry>PGKEY_PLUS</><entry>43</><entry></></>
+  <row><entry>PGKEY_COMMA</><entry>44</><entry></></>
+  <row><entry>PGKEY_MINUS</><entry>45</><entry></></>
+  <row><entry>PGKEY_PERIOD</><entry>46</><entry></></>
+  <row><entry>PGKEY_SLASH</><entry>47</><entry></></>
+  <row><entry>PGKEY_0</><entry>48</><entry></></>
+  <row><entry>PGKEY_1</><entry>49</><entry></></>
+  <row><entry>PGKEY_2</><entry>50</><entry></></>
+  <row><entry>PGKEY_3</><entry>51</><entry></></>
+  <row><entry>PGKEY_4</><entry>52</><entry></></>
+  <row><entry>PGKEY_5</><entry>53</><entry></></>
+  <row><entry>PGKEY_6</><entry>54</><entry></></>
+  <row><entry>PGKEY_7</><entry>55</><entry></></>
+  <row><entry>PGKEY_8</><entry>56</><entry></></>
+  <row><entry>PGKEY_9</><entry>57</><entry></></>
+  <row><entry>PGKEY_COLON</><entry>58</><entry></></>
+  <row><entry>PGKEY_SEMICOLON</><entry>59</><entry></></>
+  <row><entry>PGKEY_LESS</><entry>60</><entry></></>
+  <row><entry>PGKEY_EQUALS</><entry>61</><entry></></>
+  <row><entry>PGKEY_GREATER</><entry>62</><entry></></>
+  <row><entry>PGKEY_QUESTION</><entry>63</><entry></></>
+  <row><entry>PGKEY_AT</><entry>64</><entry></></>
+  <row><entry>PGKEY_LEFTBRACKET</><entry>91</><entry></></>
+  <row><entry>PGKEY_BACKSLASH</><entry>92</><entry></></>
+  <row><entry>PGKEY_RIGHTBRACKET</><entry>93</><entry></></>
+  <row><entry>PGKEY_CARET</><entry>94</><entry></></>
+  <row><entry>PGKEY_UNDERSCORE</><entry>95</><entry></></>
+  <row><entry>PGKEY_BACKQUOTE</><entry>96</><entry></></>
+  <row><entry>PGKEY_a</><entry>97</><entry></></>
+  <row><entry>PGKEY_b</><entry>98</><entry></></>
+  <row><entry>PGKEY_c</><entry>99</><entry></></>
+  <row><entry>PGKEY_d</><entry>100</><entry></></>
+  <row><entry>PGKEY_e</><entry>101</><entry></></>
+  <row><entry>PGKEY_f</><entry>102</><entry></></>
+  <row><entry>PGKEY_g</><entry>103</><entry></></>
+  <row><entry>PGKEY_h</><entry>104</><entry></></>
+  <row><entry>PGKEY_i</><entry>105</><entry></></>
+  <row><entry>PGKEY_j</><entry>106</><entry></></>
+  <row><entry>PGKEY_k</><entry>107</><entry></></>
+  <row><entry>PGKEY_l</><entry>108</><entry></></>
+  <row><entry>PGKEY_m</><entry>109</><entry></></>
+  <row><entry>PGKEY_n</><entry>110</><entry></></>
+  <row><entry>PGKEY_o</><entry>111</><entry></></>
+  <row><entry>PGKEY_p</><entry>112</><entry></></>
+  <row><entry>PGKEY_q</><entry>113</><entry></></>
+  <row><entry>PGKEY_r</><entry>114</><entry></></>
+  <row><entry>PGKEY_s</><entry>115</><entry></></>
+  <row><entry>PGKEY_t</><entry>116</><entry></></>
+  <row><entry>PGKEY_u</><entry>117</><entry></></>
+  <row><entry>PGKEY_v</><entry>118</><entry></></>
+  <row><entry>PGKEY_w</><entry>119</><entry></></>
+  <row><entry>PGKEY_x</><entry>120</><entry></></>
+  <row><entry>PGKEY_y</><entry>121</><entry></></>
+  <row><entry>PGKEY_z</><entry>122</><entry></></>
+  <row><entry>PGKEY_LEFTBRACE</><entry>123</><entry></></>
+  <row><entry>PGKEY_PIPE</><entry>124</><entry></></>
+  <row><entry>PGKEY_RIGHTBRACE</><entry>125</><entry></></>
+  <row><entry>PGKEY_TILDE</><entry>126</><entry></></>
+  <row><entry>PGKEY_DELETE</><entry>127</><entry></></>
+  <row><entry>PGKEY_WORLD_0</><entry>160</><entry>0xA0</></>
+  <row><entry>PGKEY_WORLD_1</><entry>161</><entry></></>
+  <row><entry>PGKEY_WORLD_2</><entry>162</><entry></></>
+  <row><entry>PGKEY_WORLD_3</><entry>163</><entry></></>
+  <row><entry>PGKEY_WORLD_4</><entry>164</><entry></></>
+  <row><entry>PGKEY_WORLD_5</><entry>165</><entry></></>
+  <row><entry>PGKEY_WORLD_6</><entry>166</><entry></></>
+  <row><entry>PGKEY_WORLD_7</><entry>167</><entry></></>
+  <row><entry>PGKEY_WORLD_8</><entry>168</><entry></></>
+  <row><entry>PGKEY_WORLD_9</><entry>169</><entry></></>
+  <row><entry>PGKEY_WORLD_10</><entry>170</><entry></></>
+  <row><entry>PGKEY_WORLD_11</><entry>171</><entry></></>
+  <row><entry>PGKEY_WORLD_12</><entry>172</><entry></></>
+  <row><entry>PGKEY_WORLD_13</><entry>173</><entry></></>
+  <row><entry>PGKEY_WORLD_14</><entry>174</><entry></></>
+  <row><entry>PGKEY_WORLD_15</><entry>175</><entry></></>
+  <row><entry>PGKEY_WORLD_16</><entry>176</><entry></></>
+  <row><entry>PGKEY_WORLD_17</><entry>177</><entry></></>
+  <row><entry>PGKEY_WORLD_18</><entry>178</><entry></></>
+  <row><entry>PGKEY_WORLD_19</><entry>179</><entry></></>
+  <row><entry>PGKEY_WORLD_20</><entry>180</><entry></></>
+  <row><entry>PGKEY_WORLD_21</><entry>181</><entry></></>
+  <row><entry>PGKEY_WORLD_22</><entry>182</><entry></></>
+  <row><entry>PGKEY_WORLD_23</><entry>183</><entry></></>
+  <row><entry>PGKEY_WORLD_24</><entry>184</><entry></></>
+  <row><entry>PGKEY_WORLD_25</><entry>185</><entry></></>
+  <row><entry>PGKEY_WORLD_26</><entry>186</><entry></></>
+  <row><entry>PGKEY_WORLD_27</><entry>187</><entry></></>
+  <row><entry>PGKEY_WORLD_28</><entry>188</><entry></></>
+  <row><entry>PGKEY_WORLD_29</><entry>189</><entry></></>
+  <row><entry>PGKEY_WORLD_30</><entry>190</><entry></></>
+  <row><entry>PGKEY_WORLD_31</><entry>191</><entry></></>
+  <row><entry>PGKEY_WORLD_32</><entry>192</><entry></></>
+  <row><entry>PGKEY_WORLD_33</><entry>193</><entry></></>
+  <row><entry>PGKEY_WORLD_34</><entry>194</><entry></></>
+  <row><entry>PGKEY_WORLD_35</><entry>195</><entry></></>
+  <row><entry>PGKEY_WORLD_36</><entry>196</><entry></></>
+  <row><entry>PGKEY_WORLD_37</><entry>197</><entry></></>
+  <row><entry>PGKEY_WORLD_38</><entry>198</><entry></></>
+  <row><entry>PGKEY_WORLD_39</><entry>199</><entry></></>
+  <row><entry>PGKEY_WORLD_40</><entry>200</><entry></></>
+  <row><entry>PGKEY_WORLD_41</><entry>201</><entry></></>
+  <row><entry>PGKEY_WORLD_42</><entry>202</><entry></></>
+  <row><entry>PGKEY_WORLD_43</><entry>203</><entry></></>
+  <row><entry>PGKEY_WORLD_44</><entry>204</><entry></></>
+  <row><entry>PGKEY_WORLD_45</><entry>205</><entry></></>
+  <row><entry>PGKEY_WORLD_46</><entry>206</><entry></></>
+  <row><entry>PGKEY_WORLD_47</><entry>207</><entry></></>
+  <row><entry>PGKEY_WORLD_48</><entry>208</><entry></></>
+  <row><entry>PGKEY_WORLD_49</><entry>209</><entry></></>
+  <row><entry>PGKEY_WORLD_50</><entry>210</><entry></></>
+  <row><entry>PGKEY_WORLD_51</><entry>211</><entry></></>
+  <row><entry>PGKEY_WORLD_52</><entry>212</><entry></></>
+  <row><entry>PGKEY_WORLD_53</><entry>213</><entry></></>
+  <row><entry>PGKEY_WORLD_54</><entry>214</><entry></></>
+  <row><entry>PGKEY_WORLD_55</><entry>215</><entry></></>
+  <row><entry>PGKEY_WORLD_56</><entry>216</><entry></></>
+  <row><entry>PGKEY_WORLD_57</><entry>217</><entry></></>
+  <row><entry>PGKEY_WORLD_58</><entry>218</><entry></></>
+  <row><entry>PGKEY_WORLD_59</><entry>219</><entry></></>
+  <row><entry>PGKEY_WORLD_60</><entry>220</><entry></></>
+  <row><entry>PGKEY_WORLD_61</><entry>221</><entry></></>
+  <row><entry>PGKEY_WORLD_62</><entry>222</><entry></></>
+  <row><entry>PGKEY_WORLD_63</><entry>223</><entry></></>
+  <row><entry>PGKEY_WORLD_64</><entry>224</><entry></></>
+  <row><entry>PGKEY_WORLD_65</><entry>225</><entry></></>
+  <row><entry>PGKEY_WORLD_66</><entry>226</><entry></></>
+  <row><entry>PGKEY_WORLD_67</><entry>227</><entry></></>
+  <row><entry>PGKEY_WORLD_68</><entry>228</><entry></></>
+  <row><entry>PGKEY_WORLD_69</><entry>229</><entry></></>
+  <row><entry>PGKEY_WORLD_70</><entry>230</><entry></></>
+  <row><entry>PGKEY_WORLD_71</><entry>231</><entry></></>
+  <row><entry>PGKEY_WORLD_72</><entry>232</><entry></></>
+  <row><entry>PGKEY_WORLD_73</><entry>233</><entry></></>
+  <row><entry>PGKEY_WORLD_74</><entry>234</><entry></></>
+  <row><entry>PGKEY_WORLD_75</><entry>235</><entry></></>
+  <row><entry>PGKEY_WORLD_76</><entry>236</><entry></></>
+  <row><entry>PGKEY_WORLD_77</><entry>237</><entry></></>
+  <row><entry>PGKEY_WORLD_78</><entry>238</><entry></></>
+  <row><entry>PGKEY_WORLD_79</><entry>239</><entry></></>
+  <row><entry>PGKEY_WORLD_80</><entry>240</><entry></></>
+  <row><entry>PGKEY_WORLD_81</><entry>241</><entry></></>
+  <row><entry>PGKEY_WORLD_82</><entry>242</><entry></></>
+  <row><entry>PGKEY_WORLD_83</><entry>243</><entry></></>
+  <row><entry>PGKEY_WORLD_84</><entry>244</><entry></></>
+  <row><entry>PGKEY_WORLD_85</><entry>245</><entry></></>
+  <row><entry>PGKEY_WORLD_86</><entry>246</><entry></></>
+  <row><entry>PGKEY_WORLD_87</><entry>247</><entry></></>
+  <row><entry>PGKEY_WORLD_88</><entry>248</><entry></></>
+  <row><entry>PGKEY_WORLD_89</><entry>249</><entry></></>
+  <row><entry>PGKEY_WORLD_90</><entry>250</><entry></></>
+  <row><entry>PGKEY_WORLD_91</><entry>251</><entry></></>
+  <row><entry>PGKEY_WORLD_92</><entry>252</><entry></></>
+  <row><entry>PGKEY_WORLD_93</><entry>253</><entry></></>
+  <row><entry>PGKEY_WORLD_94</><entry>254</><entry></></>
+  <row><entry>PGKEY_WORLD_95</><entry>255</><entry>0xFF</></>
+  <row><entry>PGKEY_KP0</><entry>256</><entry></></>
+  <row><entry>PGKEY_KP1</><entry>257</><entry></></>
+  <row><entry>PGKEY_KP2</><entry>258</><entry></></>
+  <row><entry>PGKEY_KP3</><entry>259</><entry></></>
+  <row><entry>PGKEY_KP4</><entry>260</><entry></></>
+  <row><entry>PGKEY_KP5</><entry>261</><entry></></>
+  <row><entry>PGKEY_KP6</><entry>262</><entry></></>
+  <row><entry>PGKEY_KP7</><entry>263</><entry></></>
+  <row><entry>PGKEY_KP8</><entry>264</><entry></></>
+  <row><entry>PGKEY_KP9</><entry>265</><entry></></>
+  <row><entry>PGKEY_KP_PERIOD</><entry>266</><entry></></>
+  <row><entry>PGKEY_KP_DIVIDE</><entry>267</><entry></></>
+  <row><entry>PGKEY_KP_MULTIPLY</><entry>268</><entry></></>
+  <row><entry>PGKEY_KP_MINUS</><entry>269</><entry></></>
+  <row><entry>PGKEY_KP_PLUS</><entry>270</><entry></></>
+  <row><entry>PGKEY_KP_ENTER</><entry>271</><entry></></>
+  <row><entry>PGKEY_KP_EQUALS</><entry>272</><entry></></>
+  <row><entry>PGKEY_UP</><entry>273</><entry></></>
+  <row><entry>PGKEY_DOWN</><entry>274</><entry></></>
+  <row><entry>PGKEY_RIGHT</><entry>275</><entry></></>
+  <row><entry>PGKEY_LEFT</><entry>276</><entry></></>
+  <row><entry>PGKEY_INSERT</><entry>277</><entry></></>
+  <row><entry>PGKEY_HOME</><entry>278</><entry></></>
+  <row><entry>PGKEY_END</><entry>279</><entry></></>
+  <row><entry>PGKEY_PAGEUP</><entry>280</><entry></></>
+  <row><entry>PGKEY_PAGEDOWN</><entry>281</><entry></></>
+  <row><entry>PGKEY_F1</><entry>282</><entry></></>
+  <row><entry>PGKEY_F2</><entry>283</><entry></></>
+  <row><entry>PGKEY_F3</><entry>284</><entry></></>
+  <row><entry>PGKEY_F4</><entry>285</><entry></></>
+  <row><entry>PGKEY_F5</><entry>286</><entry></></>
+  <row><entry>PGKEY_F6</><entry>287</><entry></></>
+  <row><entry>PGKEY_F7</><entry>288</><entry></></>
+  <row><entry>PGKEY_F8</><entry>289</><entry></></>
+  <row><entry>PGKEY_F9</><entry>290</><entry></></>
+  <row><entry>PGKEY_F10</><entry>291</><entry></></>
+  <row><entry>PGKEY_F11</><entry>292</><entry></></>
+  <row><entry>PGKEY_F12</><entry>293</><entry></></>
+  <row><entry>PGKEY_F13</><entry>294</><entry></></>
+  <row><entry>PGKEY_F14</><entry>295</><entry></></>
+  <row><entry>PGKEY_F15</><entry>296</><entry></></>
+  <row><entry>PGKEY_NUMLOCK</><entry>300</><entry></></>
+  <row><entry>PGKEY_CAPSLOCK</><entry>301</><entry></></>
+  <row><entry>PGKEY_SCROLLOCK</><entry>302</><entry></></>
+  <row><entry>PGKEY_RSHIFT</><entry>303</><entry></></>
+  <row><entry>PGKEY_LSHIFT</><entry>304</><entry></></>
+  <row><entry>PGKEY_RCTRL</><entry>305</><entry></></>
+  <row><entry>PGKEY_LCTRL</><entry>306</><entry></></>
+  <row><entry>PGKEY_RALT</><entry>307</><entry></></>
+  <row><entry>PGKEY_LALT</><entry>308</><entry></></>
+  <row><entry>PGKEY_RMETA</><entry>309</><entry></></>
+  <row><entry>PGKEY_LMETA</><entry>310</><entry></></>
+  <row><entry>PGKEY_LSUPER</><entry>311</><entry>Left "Windows" key</></>
+  <row><entry>PGKEY_RSUPER</><entry>312</><entry>Right "Windows" key</></>
+  <row><entry>PGKEY_MODE</><entry>313</><entry>"AltGr" key</></>
+  <row><entry>PGKEY_HELP</><entry>315</><entry></></>
+  <row><entry>PGKEY_PRINT</><entry>316</><entry></></>
+  <row><entry>PGKEY_SYSREQ</><entry>317</><entry></></>
+  <row><entry>PGKEY_BREAK</><entry>318</><entry></></>
+  <row><entry>PGKEY_MENU</><entry>319</><entry></></>
+  <row><entry>PGKEY_POWER</><entry>320</><entry>Power Macintosh powerkey</></>
+  <row><entry>PGKEY_EURO</><entry>321</><entry>Some european keyboards</></>
+  <row><entry>PGKEY_ALPHA</><entry>322</><entry>Selects letters on a numeric keypad (for celphones and similar devices)</></>
+  </tbody>
+  </tgroup>
+  </table>
+  <para>
+  </para>
+  <table pgwide=1 frame=none id="pgmod"><title>PGMOD values</title>
+  <tgroup cols=3 align=left>
+  <colspec colwidth="45*">
+  <colspec colwidth="10*">
+  <colspec colwidth="45*">
+  <tbody>
+  <row><entry>PGMOD_LSHIFT</><entry>0001</><entry></></>
+  <row><entry>PGMOD_RSHIFT</><entry>0002</><entry></></>
+  <row><entry>PGMOD_SHIFT</><entry>0003</><entry></></>
+  <row><entry>PGMOD_LCTRL</><entry>0040</><entry></></>
+  <row><entry>PGMOD_RCTRL</><entry>0080</><entry></></>
+  <row><entry>PGMOD_CTRL</><entry>00C0</><entry></></>
+  <row><entry>PGMOD_LALT</><entry>0100</><entry></></>
+  <row><entry>PGMOD_RALT</><entry>0200</><entry></></>
+  <row><entry>PGMOD_ALT</><entry>0300</><entry></></>
+  <row><entry>PGMOD_LMETA</><entry>0400</><entry></></>
+  <row><entry>PGMOD_RMETA</><entry>0800</><entry></></>
+  <row><entry>PGMOD_META</><entry>0C00</><entry></></>
+  <row><entry>PGMOD_NUM</><entry>1000</><entry></></>
+  <row><entry>PGMOD_CAPS</><entry>2000</><entry></></>
+  <row><entry>PGMOD_MODE</><entry>4000</><entry></></>
+  </tbody>
+  </tgroup>
+  </table>
+ </appendix>
+ 
+ <appendix>
+  <title>Theme Constants</title>
+  <sect1 id="pgthotypes"><title>Theme Object Types</>
+  <table pgwide=1 frame=none><title>PGTH_O values</>
+  <tgroup cols=3 align=left>
+  <colspec colwidth="45*">
+  <colspec colwidth="10*">
+  <colspec colwidth="45*">
+  <tbody>
+  <row><entry>PGTH_O_DEFAULT</><entry>0</><entry>Every theme object inherits this</></>
+  <row><entry>PGTH_O_BASE_INTERACTIVE</><entry>1</><entry>Base for interactive widgets</></>
+  <row><entry>PGTH_O_BASE_CONTAINER</><entry>2</><entry>Base for containers like toolbars</></>
+  <row><entry>PGTH_O_BUTTON</><entry>3</><entry>The button widget</></>
+  <row><entry>PGTH_O_BUTTON_HILIGHT</><entry>4</><entry>Button, hilighted when mouse is over</></>
+  <row><entry>PGTH_O_BUTTON_ON</><entry>5</><entry>Button, mouse is pressed</></>
+  <row><entry>PGTH_O_TOOLBAR</><entry>6</><entry>The toolbar widget</></>
+  <row><entry>PGTH_O_SCROLL</><entry>7</><entry>The scrollbar widget</></>
+  <row><entry>PGTH_O_SCROLL_HILIGHT</><entry>8</><entry>Scroll, when mouse is over it</></>
+  <row><entry>PGTH_O_INDICATOR</><entry>9</><entry>The indicator widget</></>
+  <row><entry>PGTH_O_PANEL</><entry>10</><entry>The background portion of a panel</></>
+  <row><entry>PGTH_O_PANELBAR</><entry>11</><entry>The draggable titlebar of a panel</></>
+  <row><entry>PGTH_O_POPUP</><entry>12</><entry>Popup window</></>
+  <row><entry>PGTH_O_BACKGROUND</><entry>13</><entry>Background widget bitmap</></>
+  <row><entry>PGTH_O_BASE_DISPLAY</><entry>14</><entry>Base for widgets that mostly display stuff</></>
+  <row><entry>PGTH_O_BASE_TLCONTAINER</><entry>15</><entry>Top-level containers like popups, panels</></>
+  <row><entry>PGTH_O_THEMEINFO</><entry>16</><entry>Information about the theme that should be loaded into memory, like the name</></>
+  <row><entry>PGTH_O_LABEL</><entry>17</><entry>The label widget</></>
+  <row><entry>PGTH_O_FIELD</><entry>18</><entry>The field widget</></>
+  <row><entry>PGTH_O_BITMAP</><entry>19</><entry>The bitmap widget</></>
+  <row><entry>PGTH_O_SCROLL_ON</><entry>20</><entry>Scroll, when mouse is down</></>
+  <row><entry>PGTH_O_LABEL_SCROLL</><entry>21</><entry>A label, when bound to a scrollbar</></>
+  <row><entry>PGTH_O_PANELBAR_HILIGHT</><entry>22</><entry>A panelbar, when mouse is inside it</></>
+  <row><entry>PGTH_O_PANELBAR_ON</><entry>23</><entry>A panelbar, when mouse is down</></>
+  <row><entry>PGTH_O_BOX</><entry>24</><entry>The box widget</></>
+  <row><entry>PGTH_O_LABEL_DLGTITLE</><entry>25</><entry>A label, used for a dialog box title</></>
+  <row><entry>PGTH_O_LABEL_DLGTEXT</><entry>26</><entry>A label, used for the body of a dialog</></>
+  <row><entry>PGTH_O_CLOSEBTN</><entry>27</><entry>A panelbar close button</></>
+  <row><entry>PGTH_O_CLOSEBTN_ON</><entry>28</><entry>A panelbar close button, mouse down</></>
+  <row><entry>PGTH_O_CLOSEBTN_HILIGHT</><entry>29</><entry>A panelbar close button, mouse over</></>
+  <row><entry>PGTH_O_BASE_PANELBTN</><entry>30</><entry>Base for a panelbar button</></>
+  <row><entry>PGTH_O_ROTATEBTN</><entry>31</><entry>A panelbar rotate button</></>
+  <row><entry>PGTH_O_ROTATEBTN_ON</><entry>32</><entry>A panelbar rotate button, mouse down</></>
+  <row><entry>PGTH_O_ROTATEBTN_HILIGHT</><entry>33</><entry>A panelbar rotate button, mouse over</></>
+  <row><entry>PGTH_O_ZOOMBTN</><entry>34</><entry>A panelbar zoom button</></>
+  <row><entry>PGTH_O_ZOOMBTN_ON</><entry>35</><entry>A panelbar zoom button, mouse down</></>
+  <row><entry>PGTH_O_ZOOMBTN_HILIGHT</><entry>36</><entry>A panelbar zoom button, mouse over</></>
+  <row><entry>PGTH_O_POPUP_MENU</><entry>37</><entry>A popup menu</></>
+  <row><entry>PGTH_O_POPUP_MESSAGEDLG</><entry>38</><entry>A message dialog</></>
+  <row><entry>PGTH_O_MENUITEM</><entry>39</><entry>Item in a popup menu (customized button)</></>
+  <row><entry>PGTH_O_MENUITEM_HILIGHT</><entry>40</><entry>menuitem with the mouse over it</></>
+  <row><entry>PGTH_O_CHECKBOX</><entry>41</><entry>Check box (customized button)</></>
+  <row><entry>PGTH_O_CHECKBOX_HILIGHT</><entry>42</><entry>checkbox with mouse over it</></>
+  <row><entry>PGTH_O_CHECKBOX_ON</><entry>43</><entry>checkbox when on</></>
+  <row><entry>PGTH_O_FLATBUTTON</><entry>44</><entry>Flat button (customized button)</></>
+  <row><entry>PGTH_O_FLATBUTTON_HILIGHT</><entry>45</><entry>flatbutton with mouse over it</></>
+  <row><entry>PGTH_O_FLATBUTTON_ON</><entry>46</><entry>flatbutton with mouse down</></>
+  <row><entry>PGTH_O_LISTITEM</><entry>47</><entry>Listitem (customized button)</></>
+  <row><entry>PGTH_O_LISTITEM_HILIGHT</><entry>48</><entry>Listitem with mouse over it</></>
+  <row><entry>PGTH_O_LISTITEM_ON</><entry>49</><entry>Selected listitem</></>
+  <row><entry>PGTH_O_CHECKBOX_ON_NOHILIGHT</><entry>50</><entry>checkbox when on but not hilighted</></>
+  <row><entry>PGTH_O_SUBMENUITEM</><entry>51</><entry>Submenuitem</></>
+  <row><entry>PGTH_O_SUBMENUITEM_HILIGHT</><entry>52</><entry>Hilighted submenuitem</></>
+  <row><entry>PGTH_O_RADIOBUTTON</><entry>53</><entry>Radio button (cust. button)</></>
+  <row><entry>PGTH_O_RADIOBUTTON_HILIGHT</><entry>54</><entry>Radio button (cust. button)</></>
+  <row><entry>PGTH_O_RADIOBUTTON_ON</><entry>55</><entry>Radio button (cust. button)</></>
+  <row><entry>PGTH_O_RADIOBUTTON_ON_NOHILIGHT</><entry>56</><entry>Radio button (cust. button)</></>
+  <row><entry>PGTH_O_TEXTBOX</><entry>57</><entry>Textbox widget</></>
+  <row><entry>PGTH_O_TERMINAL</><entry>58</><entry>Terminal widget</></>
+  <row><entry>PGTH_O_MENUBUTTON</><entry>60</><entry>DSPLinux Application Menu</></>
+  <row><entry>PGTH_O_MENUBUTTON_ON</><entry>61</><entry>DSPLinux Application Menu</></>
+  <row><entry>PGTH_O_MENUBUTTON_HILIGHT</><entry>62</><entry>DSPLinux Application Menu</></>
+  <row><entry>PGTH_O_LABEL_HILIGHT</><entry>63</><entry>Label hilight or select - See PG_WP_HILIGHTED</></>
+  <row><entry>PGTH_O_BOX_HILIGHT</><entry>64</><entry>Box hilight or select - See PG_WP_HILIGHTED</></>
+  <row><entry>PGTH_O_INDICATOR_H</><entry>65</><entry>Horizontal indicator</></>
+  <row><entry>PGTH_O_INDICATOR_V</><entry>66</><entry>Vertical indicator</></>
+  </tbody>
+  </tgroup>
+  </table>
+  </sect1>
+  <sect1 id="pgthptypes"><title>Theme Property Types</>
+  <table pgwide=1 frame=none><title>PGTH_P values</>
+  <tgroup cols=3 align=left>
+  <colspec colwidth="45*">
+  <colspec colwidth="10*">
+  <colspec colwidth="45*">
+  <tbody>
+  <row><entry>PGTH_P_BGCOLOR</><entry>1</><entry>Default background color</></>
+  <row><entry>PGTH_P_FGCOLOR</><entry>2</><entry>Default foreground color</></>
+  <row><entry>PGTH_P_BGFILL</><entry>3</><entry>Background fillstyle</></>
+  <row><entry>PGTH_P_OVERLAY</><entry>4</><entry>Fillstyle for scroll thumbs, the filled portion of an indicator</></>
+  <row><entry>PGTH_P_FONT</><entry>5</><entry>A widget's main font</></>
+  <row><entry>PGTH_P_NAME</><entry>6</><entry>Name of the theme object, themes can be searched by this</></>
+  <row><entry>PGTH_P_WIDTH</><entry>7</><entry>Reccomended width</></>
+  <row><entry>PGTH_P_HEIGHT</><entry>8</><entry>Reccomended height</></>
+  <row><entry>PGTH_P_MARGIN</><entry>9</><entry>The border in some objects</></>
+  <row><entry>PGTH_P_HILIGHTCOLOR</><entry>10</><entry>Color for hilighting an object</></>
+  <row><entry>PGTH_P_SHADOWCOLOR</><entry>11</><entry>Color for shading an object</></>
+  <row><entry>PGTH_P_OFFSET</><entry>12</><entry>An amount to displace something by</></>
+  <row><entry>PGTH_P_ALIGN</><entry>13</><entry>How to position an object's contents</></>
+  <row><entry>PGTH_P_BITMAPSIDE</><entry>14</><entry>Bitmap side relative to text (button)</></>
+  <row><entry>PGTH_P_BITMAPMARGIN</><entry>15</><entry>Spacing between bitmap and text</></>
+  <row><entry>PGTH_P_BITMAP1</><entry>16</><entry>Generic bitmap property for theme use</></>
+  <row><entry>PGTH_P_BITMAP2</><entry>17</><entry>Generic bitmap property for theme use</></>
+  <row><entry>PGTH_P_BITMAP3</><entry>18</><entry>Generic bitmap property for theme use</></>
+  <row><entry>PGTH_P_BITMAP4</><entry>19</><entry>Generic bitmap property for theme use</></>
+  <row><entry>PGTH_P_SPACING</><entry>20</><entry>Distance between similar widgets</></>
+  <row><entry>PGTH_P_TEXT</><entry>21</><entry>Text caption for something like a button</></>
+  <row><entry>PGTH_P_SIDE</><entry>22</><entry>Side for a widget or subwidget</></>
+  <row><entry>PGTH_P_BACKDROP</><entry>23</><entry>Fillstyle on the screen behind a popup</></>
+  <row><entry>PGTH_P_WIDGETBITMAP</><entry>24</><entry>Bitmap for something like a button</></>
+  <row><entry>PGTH_P_WIDGETBITMASK</><entry>25</><entry>Bitmask for something like a button</></>
+  <row><entry>PGTH_P_CURSORBITMAP</><entry>26</><entry>Bitmap for the (mouse) pointer</></>
+  <row><entry>PGTH_P_CURSORBITMASK</><entry>27</><entry>Bitmask for the (mouse) pointer</></>
+  <row><entry>PGTH_P_HIDEHOTKEYS</><entry>28</><entry>Set to a PG_HHK_* constant</></>
+  <row><entry>PGTH_P_ATTR_DEFAULT</><entry>29</><entry>Default attribute for the terminal</></>
+  <row><entry>PGTH_P_ATTR_CURSOR</><entry>30</><entry>Default attribute for the terminal</></>
+  <row><entry>PGTH_P_TEXTCOLORS</><entry>31</><entry>Text color pallete for the terminal</></>
+  <row><entry>PGTH_P_TIME_ON</><entry>32</><entry>Milliseconds on for flashing cursor</></>
+  <row><entry>PGTH_P_TIME_OFF</><entry>33</><entry>Milliseconds off for flashing cursor</></>
+  <row><entry>PGTH_P_TIME_DELAY</><entry>34</><entry>Milliseconds to wait before flashing</></>
+  <row><entry>PGTH_P_PARENT</><entry>35</><entry>Overrides the default theme inheritance</></>
+
+  <row><entry>PGTH_P_ICON_OK</><entry>1000</><entry>Icon property (usually in PGTH_O_DEFAULT)</></>
+  <row><entry>PGTH_P_ICON_OK_MASK</><entry>1001</><entry>Icon property (usually in PGTH_O_DEFAULT)</></>
+  <row><entry>PGTH_P_ICON_CANCEL</><entry>1002</><entry>Icon property (usually in PGTH_O_DEFAULT)</></>
+  <row><entry>PGTH_P_ICON_CANCEL_MASK</><entry>1003</><entry>Icon property (usually in PGTH_O_DEFAULT)</></>
+  <row><entry>PGTH_P_ICON_YES</><entry>1004</><entry>Icon property (usually in PGTH_O_DEFAULT)</></>
+  <row><entry>PGTH_P_ICON_YES_MASK</><entry>1005</><entry>Icon property (usually in PGTH_O_DEFAULT)</></>
+  <row><entry>PGTH_P_ICON_NO</><entry>1006</><entry>Icon property (usually in PGTH_O_DEFAULT)</></>
+  <row><entry>PGTH_P_ICON_NO_MASK</><entry>1007</><entry>Icon property (usually in PGTH_O_DEFAULT)</></>
+  <row><entry>PGTH_P_ICON_ERROR</><entry>1008</><entry>Icon property (usually in PGTH_O_DEFAULT)</></>
+  <row><entry>PGTH_P_ICON_ERROR_MASK</><entry>1009</><entry>Icon property (usually in PGTH_O_DEFAULT)</></>
+  <row><entry>PGTH_P_ICON_MESSAGE</><entry>1010</><entry>Icon property (usually in PGTH_O_DEFAULT)</></>
+  <row><entry>PGTH_P_ICON_MESSAGE_MASK</><entry>1011</><entry>Icon property (usually in PGTH_O_DEFAULT)</></>
+  <row><entry>PGTH_P_ICON_QUESTION</><entry>1012</><entry>Icon property (usually in PGTH_O_DEFAULT)</></>
+  <row><entry>PGTH_P_ICON_QUESTION_MASK</><entry>1013</><entry>Icon property (usually in PGTH_O_DEFAULT)</></>
+  <row><entry>PGTH_P_ICON_WARNING</><entry>1014</><entry>Icon property (usually in PGTH_O_DEFAULT)</></>
+  <row><entry>PGTH_P_ICON_WARNING_MASK</><entry>1015</><entry>Icon property (usually in PGTH_O_DEFAULT)</></>
+  <row><entry>PGTH_P_HOTKEY_OK</><entry>1501</><entry>Hotkey property (usually in PGTH_O_DEFAULT)</></>
+  <row><entry>PGTH_P_HOTKEY_CANCEL</><entry>1502</><entry>Hotkey property (usually in PGTH_O_DEFAULT)</></>
+  <row><entry>PGTH_P_HOTKEY_YES</><entry>1503</><entry>Hotkey property (usually in PGTH_O_DEFAULT)</></>
+  <row><entry>PGTH_P_HOTKEY_NO</><entry>1504</><entry>Hotkey property (usually in PGTH_O_DEFAULT)</></>
+  <row><entry>PGTH_P_HOTKEY_UP</><entry>1505</><entry>Hotkey property (usually in PGTH_O_DEFAULT)</></>
+  <row><entry>PGTH_P_HOTKEY_DOWN</><entry>1506</><entry>Hotkey property (usually in PGTH_O_DEFAULT)</></>
+  <row><entry>PGTH_P_HOTKEY_LEFT</><entry>1507</><entry>Hotkey property (usually in PGTH_O_DEFAULT)</></>
+  <row><entry>PGTH_P_HOTKEY_RIGHT</><entry>1508</><entry>Hotkey property (usually in PGTH_O_DEFAULT)</></>
+  <row><entry>PGTH_P_HOTKEY_ACTIVATE</><entry>1509</><entry>Hotkey property (usually in PGTH_O_DEFAULT)</></>
+  <row><entry>PGTH_P_HOTKEY_NEXT</><entry>1510</><entry>Hotkey property (usually in PGTH_O_DEFAULT)</></>
+  <row><entry>PGTH_P_USER</><entry>10000</><entry>Application-defined theme property start range</></>
+  <row><entry>PGTH_P_THEMEAUTO</><entry>20000</><entry>Automatically allocated properties used only by the theme start range</></>
+  </tbody>
+  </tgroup>
+  </table>
+  </sect1>
+ </appendix>
+
+ <appendix>
+  <title>Driver Messages Constants</title>
+  <sect1 id="pgdmtypes"><title>Generic Driver Message Types</>
+   <table pgwide=1 frame=none><title>PGDM values</>
+   <tgroup cols=3 align=left>
+   <colspec colwidth="45*">
+   <colspec colwidth="10*">
+   <colspec colwidth="45*">
+   <tbody>
+   <row><entry>PGDM_BACKLIGHT</><entry>2</><entry>Turn the backlight on/off</></>
+   <row><entry>PGDM_SOUNDFX</><entry>3</><entry>Parameter is a PG_SND_* constant</></>
+   <row><entry>PGDM_POWER</><entry>4</><entry>Enter the power mode, PG_POWER_*</></>
+   <row><entry>PGDM_SDC_CHAR</><entry>5</><entry>Send a character to the secondary display channel</></>
+   <row><entry>PGDM_BRIGHTNESS</><entry>6</><entry>Set display brightness, 0x00-0xFF</></>
+   <row><entry>PGDM_CONTRAST</><entry>7</><entry>Set display contrast, 0x00-0xFF</></>
+   <row><entry>PGDM_SIGNAL</><entry>13</><entry>Internal message, sends SIGUSR1/2 to drivers (param is signal)</></>
+   <row><entry>PGDM_READY</><entry>14</><entry>Notify the drivers that the server is completely up</></>
+   </tbody>
+   </tgroup>
+   </table>
+  </sect1>
+ </appendix>
+
+ <appendix>
+  <title>Event Constants</>
+  <sect1 id="pgwetypes"><title>Widget Events</>
+   <table pgwide=1 frame=none><title>PG_WE values</>
+   <tgroup cols=3 align=left>
+   <colspec colwidth="45*">
+   <colspec colwidth="10*">
+   <colspec colwidth="45*">
+   <tbody>
+   <row><entry>PG_WE_ACTIVATE</><entry>0x001</><entry>Button has been clicked/selected</></>
+   <row><entry>PG_WE_DEACTIVATE</><entry>0x002</><entry>Sent when the user clicks outside the active popup</></>
+   <row><entry>PG_WE_CLOSE</><entry>0x003</><entry>A top-level widget has closed</></>
+   <row><entry>PG_WE_FOCUS</><entry>0x004</><entry>Sent when a button is focused, only if it has PG_EXEV_FOCUS. The field widget always sends this.</></>
+  <row><entry>PG_WE_CHANGED</><entry>0x005</><entry>Sent by the textbox when its contents change (but only after a delay)</></>
+   <row><entry>PG_WE_PNTR_DOWN</><entry>0x204</><entry>The "mouse" button is now down</></>
+   <row><entry>PG_WE_PNTR_UP</><entry>0x205</><entry>The "mouse" button is now up</></>
+   <row><entry>PG_WE_PNTR_RELEASE</><entry>0x206</><entry>The "mouse" button was released outside the widget</></>
+   <row><entry>PG_WE_DATA</><entry>0x306</><entry>Widget is streaming data to the app</></>
+   <row><entry>PG_WE_RESIZE</><entry>0x107</><entry>For terminal widgets</></>
+   <row><entry>PG_WE_BUILD</><entry>0x108</><entry>Sent from a canvas, clients can rebuild groplist</></>
+   <row><entry>PG_WE_PNTR_MOVE</><entry>0x209</><entry>The "mouse" moved</></>
+   <row><entry>PG_WE_KBD_CHAR</><entry>0x40A</><entry>A focused keyboard character recieved</></>
+   <row><entry>PG_WE_KBD_KEYUP</><entry>0x40B</><entry>A focused raw keyup event</></>
+   <row><entry>PG_WE_KBD_KEYDOWN</><entry>0x40C</><entry>A focused raw keydown event</></>
+   <row><entry>PG_WE_APPMSG</><entry>0x301</><entry>Messages from another application</></>
+   </tbody>
+   </tgroup>
+   </table>
+  </sect1>
+  <sect1 id="pgnwetypes"><title>Non-Widget Events</>
+   <table pgwide=1 frame=none><title>PG_NWE values</>
+   <tgroup cols=3 align=left>
+   <colspec colwidth="45*">
+   <colspec colwidth="10*">
+   <colspec colwidth="45*">
+   <tbody>
+   <row><entry>PG_NWE_THEME_INSERTED</><entry>0x1001</><entry>This notifies all clients when a theme is inserted, so they can reevaluate theme properties they're using. The parameter passed with this event is a handle to the theme.</></>
+   <row><entry>PG_NWE_THEME_REMOVED</><entry>0x1002</><entry>This notifies all clients when a theme is removed, so they can reevaluate theme properties they're using. The parameter passed with this event is a handle to the theme. Note that at the time this event is sent, the handle will be invalid, but it is provided for comparison purposes if needed.</></>
+   <row><entry>PG_NWE_INFILTER</><entry>0x1302</><entry>Carries an event from pgserver to a client-side input filter. The data along with this event is a <link linkend="pgclienttrigger">union pg_client_trigger</></></>
+   </tbody>
+   </tgroup>
+   </table>
+  </sect1>
+ </appendix>
+
+ <appendix>
+  <title>Server Resource Constants</>
+  <sect1 id="pgres"><title>Server Resources</>
+   <table pgwide=1 frame=none><title>PGRES values</>
+   <tgroup cols=3 align=left>
+   <colspec colwidth="45*">
+   <colspec colwidth="10*">
+   <colspec colwidth="45*">
+   <tbody>
+   <row><entry>PGRES_DEFAULT_FONT</><entry>0</><entry>The server's default font handle</></>
+   <row><entry>PGRES_STRING_OK</><entry>1</><entry>"Ok"</></>
+   <row><entry>PGRES_STRING_CANCEL</><entry>2</><entry>"Cancel"</></>
+   <row><entry>PGRES_STRING_YES</><entry>3</><entry>"Yes"</></>
+   <row><entry>PGRES_STRING_NO</><entry>4</><entry>"No"</></>
+   <row><entry>PGRES_STRING_SEGFAULT</><entry>5</><entry>"Segmentation Fault"</></>
+   <row><entry>PGRES_STRING_MATHERR</><entry>6</><entry>"Floating Point Exception or Divide by Zero"</></>
+   <row><entry>PGRES_STRING_PGUIERR</><entry>7</><entry>"PicoGUI Error"</></>
+   <row><entry>PGRES_STRING_PGUIWARN</><entry>8</><entry>"PicoGUI Warning"</></>
+   <row><entry>PGRES_STRING_PGUIERRDLG</><entry>9</><entry>"An error of type %s occurred in %s:\n\n%s\n\nTerminate the application?"</></>
+   <row><entry>PGRES_STRING_PGUICOMPAT</><entry>10</><entry>"This PicoGUI application uses a newer protocol than the server.You may experience compatibility problems."</></>
+   <row><entry>PGRES_DEFAULT_TEXTCOLORS</><entry>11</><entry>The server's default terminal palette</></>
+   <row><entry>PGRES_INFILTER_TOUCHSCREEN</><entry>12</><entry>Input filter for touchscreen calibration and filtering</></>
+   <row><entry>PGRES_INFILTER_KEY_PREPROCESS</><entry>13</><entry>Input filter for performing extra processing on keys before dispatching them</></>
+   <row><entry>PGRES_INFILTER_PNTR_PREPROCESS</><entry>14</><entry>Input filter to do coordinate conversion on pointing events, and other processing if applicable</></>
+   <row><entry>PGRES_INFILTER_MAGIC</><entry>15</><entry>Input filter for handling CTRL-ALT-* debug keys</></>
+   <row><entry>PGRES_INFILTER_KEY_DISPATCH</><entry>16</><entry>Input filter for dispatching key events</></>
+   <row><entry>PGRES_INFILTER_PNTR_DISPATCH</><entry>17</><entry>Input filter for dispatching pointing events</></>
+   <row><entry>PGRES_DEFAULT_CURSORBITMAP</><entry>18</><entry>The bitmap for the default cursor</></>
+   <row><entry>PGRES_DEFAULT_CURSORBITMASK</><entry>19</><entry>The bitmask for the default cursor</></>
+   <row><entry>PGRES_BACKGROUND_WIDGET</><entry>20</><entry>The server-owned widget that takes up leftover space</></>
+   <row><entry>PGRES_INFILTER_HOTSPOT</><entry>21</><entry>Input filter to manage global hotspot-navigation keys</></>
+   <row><entry>PGRES_INFILTER_KEY_ALPHA</><entry>22</><entry>Input filter that manages PGKEY_ALPHA</></>
+   <row><entry>PGRES_INFILTER_PNTR_NORMALIZE</><entry>23</><entry>Input filter to convert all pointing events to a standard form</></>
+   </tbody>
+   </tgroup>
+   </table>
+  </sect1>
+ </appendix>
+</book>

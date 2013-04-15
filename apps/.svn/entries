@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4573"
+   name=""
+   committed-date="2003-11-19T00:45:34.491413Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps"
+   last-author="lalo"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:08:45.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3978"
+   name="acconfig.h"
+   text-time="2003-11-18T01:19:22.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="68fe036ed546bff53d9ea320afb5e79c"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:19:22.000000Z"/>
+<entry
+   name="test"
+   kind="dir"/>
+<entry
+   name="working"
+   kind="dir"/>
+<entry
+   name="macros"
+   kind="dir"/>
+<entry
+   committed-rev="3831"
+   name="AUTHORS"
+   text-time="2003-11-18T14:58:14.000000Z"
+   committed-date="2003-05-05T09:30:28.726185Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T14:58:14.000000Z"/>
+<entry
+   committed-rev="4563"
+   name="configure.in"
+   text-time="2003-11-18T14:58:17.000000Z"
+   committed-date="2003-11-17T03:51:03.133070Z"
+   checksum="38573ea1b126911bc6010acc00af3ffa"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T14:58:17.000000Z"/>
+<entry
+   committed-rev="3831"
+   name="Makefile.rules"
+   text-time="2003-11-18T14:58:20.000000Z"
+   committed-date="2003-05-05T09:30:28.726185Z"
+   checksum="f7a275c0ed01da9b9b788b7e41b06c64"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T14:58:20.000000Z"/>
+<entry
+   committed-rev="3831"
+   name="COPYING"
+   text-time="2003-11-18T14:58:29.000000Z"
+   committed-date="2003-05-05T09:30:28.726185Z"
+   checksum="8ca43cbc842c2336e835926c2166c28b"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T14:58:29.000000Z"/>
+<entry
+   committed-rev="4563"
+   name="Makefile.am"
+   text-time="2003-11-18T14:58:32.000000Z"
+   committed-date="2003-11-17T03:51:03.133070Z"
+   checksum="4f521ced42dc180ab2b83ffb92de09d0"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T14:58:32.000000Z"/>
+<entry
+   committed-rev="3831"
+   name="autogen.sh"
+   text-time="2003-11-18T14:58:35.000000Z"
+   committed-date="2003-05-05T09:30:28.726185Z"
+   checksum="38a3163c9e7b10dd77ebca6ed5ea6c5a"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T14:58:35.000000Z"/>
+<entry
+   name="dev"
+   kind="dir"/>
+<entry
+   committed-rev="3831"
+   name="PicoGUIApps.mdl"
+   text-time="2003-11-18T15:08:44.000000Z"
+   committed-date="2003-05-05T09:30:28.726185Z"
+   checksum="33dd4c0dc9a3252c59effd3ecdf715af"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T15:08:44.000000Z"/>
+</wc-entries>

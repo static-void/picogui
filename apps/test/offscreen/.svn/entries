@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3835"
+   name=""
+   committed-date="2003-05-05T10:02:55.352841Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/test/offscreen"
+   last-author="bornet"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:23:12.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3806"
+   name="offscreen.c"
+   text-time="2003-11-18T01:23:12.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="73e9c7a6aa4c5f1466782a53f4f25835"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:23:12.000000Z"/>
+<entry
+   committed-rev="1371"
+   name="Makefile"
+   text-time="2003-11-18T01:23:12.000000Z"
+   committed-date="2001-10-11T05:37:25.000000Z"
+   checksum="4c54e7e8e69f5189b774c5cc94d14c65"
+   last-author="gork"
+   kind="file"
+   prop-time="2003-11-18T01:23:12.000000Z"/>
+</wc-entries>

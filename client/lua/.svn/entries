@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3841"
+   name=""
+   committed-date="2003-05-05T18:45:20.897937Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/client/lua"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T16:49:10.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3183"
+   name="hello.lua"
+   text-time="2003-11-18T16:48:33.000000Z"
+   committed-date="2002-11-03T13:18:43.000000Z"
+   checksum="689cf9acaad0da445288249b6304444c"
+   last-author="fanhow"
+   kind="file"
+   prop-time="2003-11-18T16:48:33.000000Z"/>
+<entry
+   committed-rev="3184"
+   name="shadetest.lua"
+   text-time="2003-11-18T16:48:34.000000Z"
+   committed-date="2002-11-03T13:26:18.000000Z"
+   checksum="f7e815bc3910baa2fabaa092fc81a1e6"
+   last-author="fanhow"
+   kind="file"
+   prop-time="2003-11-18T16:48:34.000000Z"/>
+<entry
+   committed-rev="3183"
+   name="demo.lua"
+   text-time="2003-11-18T16:48:35.000000Z"
+   committed-date="2002-11-03T13:18:43.000000Z"
+   checksum="0df3744cdbd2a54b16f66bc667dad16d"
+   last-author="fanhow"
+   kind="file"
+   prop-time="2003-11-18T16:48:35.000000Z"/>
+<entry
+   committed-rev="3183"
+   name="conv.lua"
+   text-time="2003-11-18T16:48:36.000000Z"
+   committed-date="2002-11-03T13:18:43.000000Z"
+   checksum="0eb8570b08230d79fb8414d858ec7e49"
+   last-author="fanhow"
+   kind="file"
+   prop-time="2003-11-18T16:48:36.000000Z"/>
+<entry
+   committed-rev="3183"
+   name="const.lua"
+   text-time="2003-11-18T16:48:42.000000Z"
+   committed-date="2002-11-03T13:18:43.000000Z"
+   checksum="f6f5f320e104c8358df09e0cd32db2de"
+   last-author="fanhow"
+   kind="file"
+   prop-time="2003-11-18T16:48:42.000000Z"/>
+<entry
+   name="data"
+   kind="dir"/>
+<entry
+   committed-rev="3183"
+   name="pico.lua"
+   text-time="2003-11-18T16:48:50.000000Z"
+   committed-date="2002-11-03T13:18:43.000000Z"
+   checksum="cc1415a15a5194b428356e3ddac75f7f"
+   last-author="fanhow"
+   kind="file"
+   prop-time="2003-11-18T16:48:50.000000Z"/>
+<entry
+   committed-rev="3182"
+   name="README"
+   text-time="2003-11-18T16:48:50.000000Z"
+   committed-date="2002-11-03T10:24:55.000000Z"
+   checksum="1f9eb5839b97af14816ceefbd7eb5da1"
+   last-author="fanhow"
+   kind="file"
+   prop-time="2003-11-18T16:48:50.000000Z"/>
+<entry
+   committed-rev="3158"
+   name="sol"
+   text-time="2003-11-18T16:49:10.000000Z"
+   committed-date="2002-10-31T02:39:54.000000Z"
+   checksum="422a7569ff61a15cabbdc639bb962e7f"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:49:10.000000Z"/>
+</wc-entries>

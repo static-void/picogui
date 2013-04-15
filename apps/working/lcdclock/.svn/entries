@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3978"
+   name=""
+   committed-date="2003-05-23T10:19:38.050153Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/working/lcdclock"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:50:20.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3978"
+   name="lcdclock.c"
+   text-time="2003-11-18T01:50:14.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="a5cee9bf56c27c358c641c8e748d3cd3"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:50:14.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="lcdnet.c"
+   text-time="2003-11-18T01:50:16.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="de57f75643bd246e6c76ed0eefa94afe"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:50:16.000000Z"/>
+<entry
+   committed-rev="1974"
+   name="Makefile"
+   text-time="2003-11-18T01:50:18.000000Z"
+   committed-date="2002-01-30T04:43:27.000000Z"
+   checksum="bc305ccdea6a9f566d95a5c1c9f723cc"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:50:18.000000Z"/>
+<entry
+   committed-rev="919"
+   name="README"
+   text-time="2003-11-18T01:50:20.000000Z"
+   committed-date="2001-05-13T07:05:16.000000Z"
+   checksum="0bcc5c554a3745cbef62cf075949c185"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:50:20.000000Z"/>
+</wc-entries>

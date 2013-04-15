@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3835"
+   name=""
+   committed-date="2003-05-05T10:02:55.352841Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/working/connectfour"
+   last-author="bornet"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:25:46.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3806"
+   name="ai.h"
+   text-time="2003-11-18T01:25:28.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="b4883c428c7785aec22cf2538003dc58"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:25:28.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="rules.h"
+   text-time="2003-11-18T01:25:28.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="a2133030fec3db8d6a1e357b33341bea"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:25:28.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="ai10.h"
+   text-time="2003-11-18T01:25:29.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="8e10383f0c459924e4403518d0f03f83"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:25:29.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="ai1.c"
+   text-time="2003-11-18T01:25:30.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="dffcce1aa5bf2e039dd465278179da98"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:25:30.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="ai2.c"
+   text-time="2003-11-18T01:25:31.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="a3c6806f2f5ed414143480072d297c79"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:25:31.000000Z"/>
+<entry
+   committed-rev="3523"
+   name="README"
+   text-time="2003-11-18T01:25:31.000000Z"
+   committed-date="2003-01-09T00:31:09.000000Z"
+   checksum="dc33b89858f4216addad02f0840f03d7"
+   last-author="brandon_smith"
+   kind="file"
+   prop-time="2003-11-18T01:25:31.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="ai3.c"
+   text-time="2003-11-18T01:25:33.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="8f3ed9619a494968836716abe2a59929"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:25:33.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="ai4.c"
+   text-time="2003-11-18T01:25:34.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="9a528a0de6c5deb9619d076703302a43"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:25:34.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="ai5.c"
+   text-time="2003-11-18T01:25:35.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="e6c795929bc3f97b9372ccc1ad694417"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:25:35.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="ai6.c"
+   text-time="2003-11-18T01:25:36.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="b8e6e66afd40454f4a93dfb63e3233c4"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:25:36.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="ai1.h"
+   text-time="2003-11-18T01:25:37.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="a1fdc1e2d0dd46b1e15a1c4bc0752afa"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:25:37.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="ai2.h"
+   text-time="2003-11-18T01:25:38.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="5054c42497985654dfc8a6ebf18177e7"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:25:38.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="ai3.h"
+   text-time="2003-11-18T01:25:38.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="3fc1b004cde7aae095820a24089ca973"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:25:38.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="ai4.h"
+   text-time="2003-11-18T01:25:39.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="f098143143c7ad8a52e30a0eb90461d9"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:25:39.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="ai5.h"
+   text-time="2003-11-18T01:25:40.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="1f0ed27d25597e04f712183ee7eb3680"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:25:40.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="ai6.h"
+   text-time="2003-11-18T01:25:40.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="3393feb7b9ab2fa1c32aab1082a52d84"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:25:40.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="connectfour.c"
+   text-time="2003-11-18T01:25:42.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="0e8b01c704263c900e9043e999447dab"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:25:42.000000Z"/>
+<entry
+   committed-rev="3523"
+   name="Makefile.am"
+   text-time="2003-11-18T01:25:43.000000Z"
+   committed-date="2003-01-09T00:31:09.000000Z"
+   checksum="c42d503389b0e7a33ba63e4eb6212ffe"
+   last-author="brandon_smith"
+   kind="file"
+   prop-time="2003-11-18T01:25:43.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="ai.c"
+   text-time="2003-11-18T01:25:44.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="2fe5638035bad7e477f9d38a43ad6632"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:25:44.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="rules.c"
+   text-time="2003-11-18T01:25:45.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="01317683cbe2572271f0fc1a1b9b8f1e"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:25:45.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="connectfour.h"
+   text-time="2003-11-18T01:25:45.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="a34f900f6656c7cac664147823a13128"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:25:45.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="ai10.c"
+   text-time="2003-11-18T01:25:46.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="bf2c369c4ca77ff7701e23299c48d149"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:25:46.000000Z"/>
+</wc-entries>

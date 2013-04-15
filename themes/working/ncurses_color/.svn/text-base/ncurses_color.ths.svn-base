@@ -1,0 +1,129 @@
+/* $Id$
+ *
+ * PicoGUI theme for the ncurses video driver.
+ * Nice colorful buttons and things, as provided by programs like dialog
+ *
+ * Version 1.0
+ *
+ * Micah Dowty
+ */
+
+object default {
+   name = "Color ncurses (Text mode)";
+
+   bgfill = fillstyle {
+      SetColor(bgcolor);
+      Rect(x,y,w,h);
+   };
+   bgcolor = 0x20000F20;   /* ACS code, white on black */
+   fgcolor = 0x808080;
+   
+   width = 1;
+   height = 1;
+   margin = 0;
+   spacing = 0;
+
+   cursorbitmap = LoadBitmap("data/white_pixel.pnm");
+   cursorbitmask = LoadBitmap("data/black_pixel.pnm");
+}
+
+object panelbar {
+   bgcolor = 0x000080;
+   fgcolor = 0xFFFFFF;
+}
+
+object field bgcolor = 0x20000300 | '_';
+
+object background bgcolor = 0x40000300 | 'a';
+
+object popup {
+   height = 4;
+   width  = 2;
+   margin = 1;
+   bgcolor = 0x20010720;   /* ACS code, grey on blue */
+   bgfill = fillstyle {
+      var bc;
+      bc = (bgcolor & 0x00FFFF00) | 0x40000000;
+      
+      /* Rectangle with a good border */
+     
+      SetColor(bc | 'q');
+      Slab(x+1,y,w-2,1);
+      Slab(x+1,y+h-1,w-2,1);
+      SetColor(bc | 'x');
+      Bar(x,y+1,1,h-2);
+      Bar(x+w-1,y+1,1,h-2);
+      SetColor(bc | 'l');
+      Pixel(x,y,1,1);
+      SetColor(bc | 'k');
+      Pixel(x+w-1,y,1,1);
+      SetColor(bc | 'm');
+      Pixel(x,y+h-1,1,1);
+      SetColor(bc | 'j');
+      Pixel(x+w-1,y+h-1,1,1);
+      SetColor(bgcolor);
+      Rect(x+1,y+1,w-2,h-2);
+   };
+}
+
+object label.dlgtitle {
+   bgcolor = 0x000080;
+   fgcolor = 0xFFFF00;
+}
+
+object toolbar {
+   margin = 1;
+   /* Same framed fillstyle */
+   bgfill = Copy(popup::bgfill);
+}
+
+object button {
+   width = 1;
+   height = 1;
+   margin = 2;
+   fgcolor = 0x00FF00;
+}
+
+obj button.hilight fgcolor = 0xFFFFFF;
+obj button.on fgcolor = 0xFFFF00;
+
+object menuitem bgcolor = Copy(popup::bgcolor);
+object menuitem.hilight fgcolor = Copy(button.hilight::fgcolor);
+
+object scroll {
+   overlay = fillstyle {
+      SetColor(0x008000);
+      Rect(x,y,w,h);
+   };
+   bgcolor = 0x808080;
+}
+
+/* Special overlay for indicators */
+object indicator {
+  overlay = fillstyle {
+    SetColor(widget::PG_WP_COLOR);
+    Rect(x,y,w,h);
+  };
+  bgcolor = 0x40000700 | 'a';
+  fgcolor = 0xffffff;
+}
+
+object base.panelbtn {
+   width = 3;
+   height = 3;
+   fgcolor = 0xFFFFFF;
+}
+object closebtn {
+   bgcolor = 0x800000;
+   text = "X";
+}
+object rotatebtn {
+   bgcolor = 0x808000;
+   text = "/";
+}
+object zoombtn {
+   bgcolor = 0x008000;
+   text = "+";
+}
+   
+/* The End */

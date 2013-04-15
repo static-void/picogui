@@ -1,0 +1,332 @@
+mainmenu_name "PicoGUI Configuration"
+
+mainmenu_option next_comment
+comment 'Target System'
+
+choice 'Platform' \
+	"POSIX_compatible               CONFIG_OS_POSIX \
+	WIN32_compatible               CONFIG_OS_WIN32" POSIX_compatible
+if [ "$CONFIG_OS_POSIX" = "y" ]; then
+    bool '  uClinux'           		CONFIG_OS_UCLINUX
+fi
+
+bool 'Use UNIX sockets instead of TCP/IP'   CONFIG_UNIX_SOCKET
+bool 'Optimize for size (-Os)'              CONFIG_OPTIMIZE_SIZE
+bool 'Optimize for speed (-O2)'             CONFIG_OPTIMIZE_SPEED
+bool 'Maximum speed optimization (-O3, Breaks on some architectures!)'   CONFIG_MAX_OPTIMIZE
+bool 'Statically link'      CONFIG_LINK_STATIC
+int  'Maximum number of zombie gropnodes'     CONFIG_MAX_ZOMBIEGROPS
+endmenu
+
+mainmenu_option next_comment
+comment 'Debugging'
+
+comment 'Unintrusive debugging'
+bool 'Enable text messages'             CONFIG_TEXT
+bool 'Magic debugging keys'             DEBUG_KEYS
+bool 'Video test modes'                 CONFIG_VIDEOTEST
+bool 'Trace location of fatal signals (LINUX ONLY!)'  DEBUG_SIGTRACE
+if [ "$UCLINUX" != "y" ]; then
+    bool 'Debugging symbols in binary'  CONFIG_NOSTRIP
+fi
+
+comment 'Debuggative spew'
+bool 'Terminal widget VT102 debugging'    DEBUG_TERMINAL_VT102
+bool 'Terminal widget textgrid debugging' DEBUG_TERMINAL_TEXTGRID
+bool 'Widget debugging'                 DEBUG_WIDGET
+bool 'Event debugging'                  DEBUG_EVENT
+if [ "$DEBUG_EVENT" = "y" ]; then
+    bool '  Super-mega-verbose input filter debug' DEBUG_INFILTER_CHAIN
+fi
+bool 'Video debugging'                  DEBUG_VIDEO
+bool 'Theme debugging'                  DEBUG_THEME
+bool 'Client/server debugging'          DEBUG_NET
+bool 'Initialization debugging'         DEBUG_INIT
+bool 'Memory debugging'                 DEBUG_MEMORY
+bool 'Mirror guru() output on stderr'   CONFIG_STDERR_GURU
+bool 'HTML parser debugging'            DEBUG_HTML
+bool 'PicoGUI error tracing'            CONFIG_ERROR_TRACE
+bool 'Virtual terminal debugging'       DEBUG_VT
+bool 'Video driver debugging'           DEBUG_VIDEODRIVER
+bool 'Trace pgstring memory management' DEBUG_PGSTRING_MEM
+bool 'Textbox widget debugging'         DEBUG_TEXTBOX
+bool 'Canvas widget debugging'          DEBUG_CANVAS
+bool 'Textedit widget debugging'        DEBUG_TEXTEDIT
+bool 'Profile X11 SHM synchronization'  CONFIG_X11_SHM_PROFILE
+
+comment 'Other options'
+bool 'Electric Fence malloc debugging'  CONFIG_EFENCE
+bool 'gcov coverage analysis'           CONFIG_GCOV
+bool 'gprof profiling'                  CONFIG_GPROF
+bool 'Dont catch fatal signals'         DEBUG_FATALSIGNALS
+bool 'Update the entire surface in sdlfb' CONFIG_SDL_FULLUPDATE
+endmenu
+
+mainmenu_option next_comment
+comment 'Fonts'
+bool 'Freetype2 font engine (freetype 2.1.3 or later)'  CONFIG_FONTENGINE_FREETYPE
+bool 'Xft font engine (EXPERIMENTAL)'            CONFIG_FONTENGINE_XFT
+bool 'Text mode font engine'                     CONFIG_FONTENGINE_TEXTMODE
+bool 'Freetype2 OpenGL texture font engine'      CONFIG_FONTENGINE_FTGL
+bool 'Internal BDF font engine'                  CONFIG_FONTENGINE_BDF
+if [ "$CONFIG_FONTENGINE_BDF" = "y" ]; then
+    bool '  Helvetica 10 (default font)'         FONT_HELVETICA10
+    bool '  Clean 12 (default fixed-width font)' FONT_CLEAN12
+    bool '  Lucida 10'                           FONT_LUCIDA10
+    bool '  Clean 6'                             FONT_CLEAN6
+    bool '  Clean 8'                             FONT_CLEAN8
+    bool '  Console 8'                           FONT_CONSOLE8
+    bool '  Courier 12, 12b'                     FONT_COURIER12
+    bool '  Gelly 10'                            FONT_GELLY10
+    bool '  Helvetica 8'                         FONT_HELVETICA8
+    bool '  Helvetica 12, 12b'                   FONT_HELVETICA12
+    bool '  Helvetica 14, 14b'                   FONT_HELVETICA14
+    bool '  Helvetica 14 unicode'                FONT_HELVETICA14UNICODE
+    bool '  Helvetica 18, 18b'                   FONT_HELVETICA18
+    bool '  Helvetica 24, 24b'                   FONT_HELVETICA24
+    bool '  Times 10, 10b'                       FONT_TIMES10
+    bool '  Utopia 25'                           FONT_UTOPIA25
+    bool '  Fixed 13 ja (Japanese Unicode)'      FONT_FIXED13JA
+    bool '  YoungAtHeart 18'                     FONT_YOUNGATHEART18
+fi
+endmenu
+
+mainmenu_option next_comment
+comment 'Video Drivers'
+bool 'Linux framebuffer device'            DRIVER_FBDEV
+if [ "$DRIVER_FBDEV" = "y" ]; then
+   bool '  VR3 framebuffer palette fix'    CONFIG_FIX_VR3
+   bool '  Dont enable graphics-only mode' CONFIG_FB_NOGRAPHICS
+   bool '  Virtual Terminal switching'     CONFIG_FB_VT
+   bool '  Psion framebuffer hack'         CONFIG_FB_PSION
+   bool '  YUV16'                          CONFIG_FB_YUV16_422_PLANAR
+   bool '  Sync double-buffered updates'   CONFIG_FB_SYNC
+   bool '  Use page flipping for double-buffered updates' CONFIG_FB_PAGEFLIP
+fi
+bool 'SDL framebuffer driver'              DRIVER_SDLFB
+if [ "$DRIVER_SDLFB" = "y" ]; then
+   bool '  Skin support'          CONFIG_SDLSKIN
+   bool '  Secondary display channel'      CONFIG_SDLSDC
+   choice '  SDL framebuffer low-bpp emulation' \
+   	"None                   CONFIG_SDLEMU_NONE \
+	 Blit	       		CONFIG_SDLEMU_BLIT \
+	 Color			CONFIG_SDLEMU_COLOR" None
+fi
+bool 'X Window System driver'              DRIVER_X11
+bool 'DirectFB driver (INCOMPLETE)'        DRIVER_DIRECTFB
+bool 'SDL OpenGL driver'                   DRIVER_SDLGL
+bool 'Embedded OpenGL context driver'      DRIVER_GLCONTEXT
+bool 'VNC Remote Framebuffer server (GPL)' DRIVER_VNCSERVER
+bool 'SVGAlib framebuffer driver'          DRIVER_SVGAFB
+bool 'Motorola 68EZ328 LCD driver'         DRIVER_EZ328
+bool 'Motorola 68EZ328 VGA monitor driver' DRIVER_EZ328VGA
+bool 'Ncurses driver'                      DRIVER_NCURSES
+bool '40x4 character serial LCD'           DRIVER_SERIAL40X4
+bool 'Screen shot driver'                  DRIVER_SCRSHOT
+bool 'Null driver'                         DRIVER_NULL
+bool 'Null framebuffer driver'             DRIVER_NULLFB
+bool 'Zukero EPSON S1D13806 driver'        DRIVER_S1D13806
+bool 'EPSON SED133x driver'                DRIVER_SED133X
+bool 'MGL2 driver'                         DRIVER_MGL2FB
+endmenu
+
+mainmenu_option next_comment
+comment 'Input Drivers'
+bool 'Automatically attempt to load all input drivers'  CONFIG_INPUT_AUTOLOAD
+bool 'Unified touchscreen support'	                 CONFIG_TOUCHSCREEN
+if [ "$CONFIG_TOUCHSCREEN" = "y" ]; then
+   bool '  Palmax touchscreen driver'	                 DRIVER_PALMAXTS
+   bool '  SC3 compatible touchscreen input driver'	 DRIVER_SC3TS
+   bool '  R3912 (VTech Helio) touchscreen input driver' DRIVER_R3912TS
+   bool '  Sharp Zaurus input driver'                    DRIVER_ZAURUS
+   bool '  New-Style TuxScreen touchscreen input driver' DRIVER_UCB1X00
+   bool '  Agenda VR3 touchscreen input driver'          DRIVER_VR3TS
+fi
+bool 'Compaq iPAQ H3600 touchscreen input driver'	 DRIVER_H3600TS
+bool 'Psion touchscreen (adc7843) driver'               DRIVER_ADC7843
+bool 'SDL input driver'                                 DRIVER_SDLINPUT
+bool 'X Window System input driver'                     DRIVER_X11INPUT
+bool 'DirectFB input driver'                            DRIVER_DIRECTFBINPUT
+bool 'VNC Remote Framebuffer input driver'              DRIVER_VNCINPUT
+bool 'SVGAlib input driver'                             DRIVER_SVGAINPUT
+bool 'Ncurses input driver'                             DRIVER_NCURSESINPUT
+bool 'GPM input driver'			                DRIVER_GPM
+bool 'ChipSlice touchscreen input driver'               DRIVER_CHIPSLICETS
+bool 'RidgeRun Touchscreen input driver'                DRIVER_RRTS
+bool 'Event broker driver'                              DRIVER_EVENTBROKER
+bool 'Old-Style TuxScreen touchscreen input driver'     DRIVER_TUXTS
+if [ "$DRIVER_TUXTS" = "y" ]; then
+   bool '  Sound FX support via /dev/wheaties (EXPERIMENTAL)'  DRIVER_TUXTS_WHEATIES
+fi
+bool 'TTY keyboard driver (framebuffer, other terminals)'  DRIVER_TTYKB
+bool 'Rawmode TTY keyboard driver (linux console)'      DRIVER_RAWTTYKB
+bool 'Remora keyboard (Chipslice)'                      DRIVER_REMORAKB
+bool 'Serial mouse input driver'                        DRIVER_SERIALMOUSE
+bool 'MGL2 input driver'                                DRIVER_MGL2INPUT
+bool 'Ericsson chatboard driver (see input/README.ericsson_cb)' DRIVER_ERICSSON_CHATBOARD
+bool 'PS/2 mouse driver (Also works with USB and Maple) (GPL)' DRIVER_PS2MOUSE
+bool 'Joystick driver'                                  DRIVER_JSDEV
+bool 'Alpha key support (for text entry on numeric keypads)' CONFIG_KEY_ALPHA
+bool 'Bluetooth key reporting'                          DRIVER_BTKEY
+endmenu
+
+mainmenu_option next_comment
+comment 'Video Base Libraries'
+comment 'Color depth support'
+bool 'Linear framebuffer @ 1bpp'  CONFIG_VBL_LINEAR1
+bool 'Linear framebuffer @ 2bpp'  CONFIG_VBL_LINEAR2
+bool 'Linear framebuffer @ 4bpp'  CONFIG_VBL_LINEAR4
+bool 'Linear framebuffer @ 8bpp'  CONFIG_VBL_LINEAR8
+bool 'Linear framebuffer @ 16bpp' CONFIG_VBL_LINEAR16
+bool 'Linear framebuffer @ 24bpp' CONFIG_VBL_LINEAR24
+bool 'Linear framebuffer @ 32bpp' CONFIG_VBL_LINEAR32
+bool 'Planar VGA framebuffer @ 4bpp'                     CONFIG_VBL_VGAPLAN4
+bool 'OpenGL support'             CONFIG_VBL_GL
+if [ "$CONFIG_VBL_GL" = "y" ]; then
+   bool '  Animation support'     CONFIG_ANIMATION
+fi
+
+comment 'Depth-specific options'
+if [ "$CONFIG_VBL_LINEAR16" = "y" ]; then
+  bool 'Fast blurring (16bpp 5-6-5 only)'                  CONFIG_FAST_BLUR
+  bool 'Faster blurring (16bpp 5-6-5 only, lower quality)' CONFIG_FASTER_BLUR
+  bool 'Dont write to VRAM with memcpy (16bpp only)'       CONFIG_NO_VRAM_MEMCPY
+fi
+if [ "$CONFIG_VBL_LINEAR16" = "y" -o "$CONFIG_VBL_LINEAR32" = "y" ]; then
+  bool 'Fast alpha blending (+ 32K, 16bpp and 32bpp only)' CONFIG_FAST_ALPHA
+  if [ "$CONFIG_FAST_ALPHA" = "y" ]; then
+    choice '16bpp fast alpha color conversion mode' \
+  	   "5-6-5       CONFIG_FAST_ALPHA_565 \
+            5-5-5       CONFIG_FAST_ALPHA_555 \
+            4-4-4       CONFIG_FAST_ALPHA_444" 5-6-5
+  fi  
+fi
+if [ "$CONFIG_VBL_LINEAR8" = "y" ]; then
+  choice 'Palette for 8bpp modes' \
+         "2-2-2       CONFIG_PAL8_222 \
+	  2-3-3       CONFIG_PAL8_233 \
+          Custom      CONFIG_PAL8_CUSTOM" 2-3-3
+  if [ "$CONFIG_PAL8_CUSTOM" = "y" ]; then
+    bool 'Include Visibone2 as default custom palette'   CONFIG_PAL8_VISIBONE2
+    choice 'Palette lookup method' \
+           "Exact           CONFIG_PAL8_LOOKUP_EXACT \
+	    32k_Hash        CONFIG_PAL8_LOOKUP_32K \
+            256k_Hash       CONFIG_PAL8_LOOKUP_256K" 32k_Hash
+  fi  
+fi
+
+comment 'Other options'
+bool 'Floyd-steinberg image dithering'                   CONFIG_DITHER
+if [ "$CONFIG_DITHER" = "y" ]; then
+  bool '  Also dither gradients (slow)'                  CONFIG_DITHER_GRADIENTS
+fi
+bool 'Use anti-aliasing when available (EXPERIMENTAL)'   CONFIG_ANTIALIAS
+bool 'Very slow VBL (for debugging)'                     CONFIG_VBL_SLOWVBL
+bool '90 degree video rotation'                          CONFIG_ROTATE
+bool '180 degree video rotation'                         CONFIG_ROTATE180
+bool '270 degree video rotation'                         CONFIG_ROTATE270
+choice 'Base rotation angle' \
+   	"0                      CONFIG_ROTATIONBASE_0 \
+	 90	       		CONFIG_ROTATIONBASE_90 \
+	 180	       		CONFIG_ROTATIONBASE_180 \
+	 270			CONFIG_ROTATIONBASE_270" 0
+bool 'Base rotation doesnt affect arrow keys'      CONFIG_ROTATIONBASE_NOKEYS
+bool 'Base rotation doesnt affect pointing device' CONFIG_ROTATIONBASE_NOPOINTING
+endmenu
+
+mainmenu_option next_comment
+comment 'Widgets'
+bool 'Background'                             CONFIG_WIDGET_BACKGROUND
+bool 'Box'                                    CONFIG_WIDGET_BOX     
+bool 'Button'                                 CONFIG_WIDGET_BUTTON  
+if [ "$CONFIG_WIDGET_BUTTON" = "y" ]; then
+  bool '  Checkbox'                           CONFIG_WIDGET_CHECKBOX
+  bool '  Flatbutton'                         CONFIG_WIDGET_FLATBUTTON
+  bool '  Label'                              CONFIG_WIDGET_LABEL
+  bool '  Listitem'                           CONFIG_WIDGET_LISTITEM
+  bool '  Menuitem'                           CONFIG_WIDGET_MENUITEM 
+  bool '  Radiobutton'                        CONFIG_WIDGET_RADIOBUTTON
+  bool '  Submenuitem'                        CONFIG_WIDGET_SUBMENUITEM
+  if [ "$CONFIG_WIDGET_SUBMENUITEM" = "y" ]; then
+    bool '    Left/Right Navigation Support'  CONFIG_SUBMENU_NAVIGATION
+  fi
+fi
+bool 'Canvas'                                 CONFIG_WIDGET_CANVAS
+bool 'Dialogbox'                              CONFIG_WIDGET_DIALOGBOX
+if [ "$CONFIG_WIDGET_DIALOGBOX" = "y" ]; then
+  bool '  Messagedialog'                      CONFIG_WIDGET_MESSAGEDIALOG
+fi
+bool 'Indicator'                              CONFIG_WIDGET_INDICATOR
+bool 'Managedwindow'                          CONFIG_WIDGET_MANAGEDWINDOW
+bool 'Panelbar'                               CONFIG_WIDGET_PANELBAR
+if [ "$CONFIG_WIDGET_PANELBAR" = "y" ]; then
+  bool '  Panel'                              CONFIG_WIDGET_PANEL
+fi
+bool 'Popup'                                  CONFIG_WIDGET_POPUP   
+bool 'Scroll'                                 CONFIG_WIDGET_SCROLL  
+if [ "$CONFIG_WIDGET_SCROLL" = "y" ]; then
+  bool '  Scrollbox'                          CONFIG_WIDGET_SCROLLBOX
+fi
+bool 'Simplemenu'                             CONFIG_WIDGET_SIMPLEMENU
+bool 'Tabpage'                                CONFIG_WIDGET_TABPAGE
+bool 'Terminal'                               CONFIG_WIDGET_TERMINAL
+bool 'Textbox (text editing with formatting)' CONFIG_WIDGET_TEXTBOX
+if [ "$CONFIG_WIDGET_TEXTBOX" = "y" ]; then
+  bool '  Field'                              CONFIG_WIDGET_FIELD
+fi
+bool 'Textedit (simple text editor)'          CONFIG_WIDGET_TEXTEDIT
+if [ "$CONFIG_WIDGET_TEXTEDIT" = "y" ]; then
+  bool '  Unicode support (using wchar_t format)' CONFIG_TEXTEDIT_WCHART
+fi
+bool 'Toolbar'                                CONFIG_WIDGET_TOOLBAR 
+endmenu
+
+mainmenu_option next_comment
+comment 'Application Management'
+bool 'Managed Rootless app manager'           CONFIG_APPMGR_MANAGED_ROOTLESS
+bool 'Panel app manager'                      CONFIG_APPMGR_PANEL
+if [ "$CONFIG_APPMGR_PANEL" = "y" ]; then
+  bool '  Support for solid panel dragging'   CONFIG_DRAGSOLID
+fi
+bool 'Null app manager'                       CONFIG_APPMGR_NULL
+endmenu
+
+mainmenu_option next_comment
+comment 'Client/Server Networking'
+bool 'TCP/IP sockets'                         CONFIG_NET_TCPIP
+bool 'libpgserver'                            CONFIG_NET_LIBPGSERVER
+endmenu
+
+mainmenu_option next_comment
+comment 'File Formats'
+comment 'Graphics - self contained'
+bool 'Internal XBM loader'                               CONFIG_FORMAT_XBM
+bool 'PNM: portable anymap'                              CONFIG_FORMAT_PNM
+bool 'BMP: windows bitmap'                               CONFIG_FORMAT_BMP
+bool 'GIF: graphics interchange format'                  CONFIG_FORMAT_GIF
+comment 'Graphics - libraries'
+bool 'JPEG: lossy compression (needs libjpeg)'           CONFIG_FORMAT_JPEG
+bool 'PNG: portable network graphic (needs libpng)'      CONFIG_FORMAT_PNG
+if [ "$CONFIG_FORMAT_PNG" = "y" ]; then
+  bool '  Use low-level loading logic (incomplete)'      CONFIG_PNG_LOWLEVEL
+fi
+comment 'Text'
+bool 'HTML: hypertext markup'                            CONFIG_FORMAT_HTML 
+endmenu
+
+mainmenu_option next_comment
+comment 'Security'
+bool 'Disable client-side input filters'      CONFIG_NOREMOTEINPUT
+bool 'Disable exclusive resource access'      CONFIG_NOEXCLUSIVE
+bool 'Ignore driver messages from clients'    CONFIG_NOCLIENTDRIVERMSG 
+int  'Client packet size limit in bytes'      CONFIG_MAXPACKETSZ
+bool 'Client quotas (not implemented)'        CONFIG_QUOTA
+if [ "$CONFIG_QUOTA" = "y" ]; then
+    int '  Number of clients'                 CONFIG_MAXCLIENTS
+    int '  Total memory per client in bytes'  CONFIG_MAXCLIENTMEM 
+    int '  Handles per client'                CONFIG_MAXCLIENTHANDLES 
+fi
+endmenu
+
+string 'Profile for pgserver.conf'                CONFIG_PGSERVER_CONF
+

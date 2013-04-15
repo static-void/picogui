@@ -1,0 +1,5 @@
+NAME = Courier
+SIZE = 12
+STYLE = fixed encoding_isolatin1
+NORMAL = courier12
+BOLD = courier12b

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3978"
+   name=""
+   committed-date="2003-05-23T10:19:38.050153Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/tools/themec"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:18:45.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3978"
+   name="pgtheme.y"
+   text-time="2003-11-18T01:18:39.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="0ef55abb9305765ce48a2c5fea22a74b"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:18:39.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="mksymtab.pl"
+   text-time="2003-11-18T01:18:39.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="4718b7b8d48266839999509fbb5e7a2c"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:18:39.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="main.c"
+   text-time="2003-11-18T01:18:41.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="d816f2bd2d507155148b980b591d6843"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:18:41.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="backend.c"
+   text-time="2003-11-18T01:18:42.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="b371e09ae6bcefe4f6b1a7fdf4a4a598"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:18:42.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="pglex.l"
+   text-time="2003-11-18T01:18:44.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="6d97fe3f83bc6a8f3a4d6825d3f86ed3"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:18:44.000000Z"/>
+<entry
+   committed-rev="2406"
+   name="Makefile.am"
+   text-time="2003-11-18T01:18:44.000000Z"
+   committed-date="2002-04-12T09:14:37.000000Z"
+   checksum="aa5e9e2a2b13797c0888118a1adb6f21"
+   last-author="lonetech"
+   kind="file"
+   prop-time="2003-11-18T01:18:44.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="themec.h"
+   text-time="2003-11-18T01:18:45.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="419860f0ccfc7cf1e4274a2c0c789a87"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:18:45.000000Z"/>
+</wc-entries>

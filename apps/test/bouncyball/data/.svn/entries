@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3840"
+   name=""
+   committed-date="2003-05-05T18:42:26.188241Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/test/bouncyball/data"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:21:11.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3840"
+   name="ball10.jpeg"
+   text-time="2003-11-18T01:20:59.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="e6e335c3b0deda7712f2f501fef7a1f4"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:20:59.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="ball01.jpeg"
+   text-time="2003-11-18T01:21:00.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="3ccd3d7a8a550b36e7eb23d011306374"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:21:00.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="ball02.jpeg"
+   text-time="2003-11-18T01:21:02.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="4a51040a211a1d096dacaec997cf9a56"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:21:02.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="ball11.jpeg"
+   text-time="2003-11-18T01:21:03.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="4560f38b5a806bc3266b78cbc453d153"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:21:03.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="ball12.jpeg"
+   text-time="2003-11-18T01:21:04.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="1e0b2d02b45da7a03f10bed86d793a27"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:21:04.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="ball03.jpeg"
+   text-time="2003-11-18T01:21:04.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="a203e25becd3084923ec5f5d98f1c688"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:21:04.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="ball04.jpeg"
+   text-time="2003-11-18T01:21:05.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="72e6b893d4102d336107c573aff5b8e5"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:21:05.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="ball05.jpeg"
+   text-time="2003-11-18T01:21:06.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="71627246d8be736e2dce6e93921254bb"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:21:06.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="ball06.jpeg"
+   text-time="2003-11-18T01:21:06.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="a71e77613ca4ec549d7b7bbe6eaa2691"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:21:06.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="ball07.jpeg"
+   text-time="2003-11-18T01:21:07.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="a7ca18377c498008aa9e658fc23ac1a3"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:21:07.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="ball08.jpeg"
+   text-time="2003-11-18T01:21:08.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="13d5fde20170b7bbfc853998b5169537"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:21:08.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="ball09.jpeg"
+   text-time="2003-11-18T01:21:09.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="bf2ca2037ebf6b9a7521bbf11afa0487"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:21:09.000000Z"/>
+<entry
+   committed-rev="1759"
+   name="Makefile.am"
+   text-time="2003-11-18T01:21:10.000000Z"
+   committed-date="2001-12-21T18:00:15.000000Z"
+   checksum="5165ba7998e1680e385a6c5212f37d35"
+   last-author="cgrigis"
+   kind="file"
+   prop-time="2003-11-18T01:21:10.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="ball00.jpeg"
+   text-time="2003-11-18T01:21:11.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="8a7b8f8940ea2d1b12724c67e9855dbb"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:21:11.000000Z"/>
+</wc-entries>

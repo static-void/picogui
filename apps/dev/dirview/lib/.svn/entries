@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3978"
+   name=""
+   committed-date="2003-05-23T10:19:38.050153Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/dev/dirview/lib"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:08:38.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3978"
+   name="test.c"
+   text-time="2003-11-18T15:07:59.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="a3b0c33921e01ba2c5da7f64d5c51cb3"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:07:59.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="protocol.c"
+   text-time="2003-11-18T15:08:01.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="ee9fc34948cdb83349281ba6daaed0d4"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:08:01.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="properties.h"
+   text-time="2003-11-18T15:08:02.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="52ebe6ec3ebac7bf5591d7b269b99ca0"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:08:02.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="proto_file.c"
+   text-time="2003-11-18T15:08:05.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="199f771cf2dde2045adbdac52816baef"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:08:05.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="libpg_dirview.c"
+   text-time="2003-11-18T15:08:23.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="eb4e1cd41f847f3ac2e5f2ea313052d7"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:08:23.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="protocol.h"
+   text-time="2003-11-18T15:08:24.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="4b90fbc8829301c90e6a2c020010ccea"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:08:24.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="mime.c"
+   text-time="2003-11-18T15:08:26.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="091670d5921c0e36c72756b248672c5a"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:08:26.000000Z"/>
+<entry
+   committed-rev="2591"
+   name="Makefile.am"
+   text-time="2003-11-18T15:08:26.000000Z"
+   committed-date="2002-07-08T04:55:21.000000Z"
+   checksum="4968121fd87e7d0703f4f02d9df4e97d"
+   last-author="bauermeister"
+   kind="file"
+   prop-time="2003-11-18T15:08:26.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="displet.h"
+   text-time="2003-11-18T15:08:27.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="ffe2ae91c2b8d1ee94ed713bd9039aac"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:08:27.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="debug.h"
+   text-time="2003-11-18T15:08:28.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="bb59e2980c5fb4efcf80f2f6f0e73c93"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:08:28.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="libpg_dirview.h"
+   text-time="2003-11-18T15:08:30.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="78082ead2a3e8f6410bf847aee52850c"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:08:30.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="mime.h"
+   text-time="2003-11-18T15:08:38.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="c14e4e64c47db4e36e891a13ae4066b4"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:08:38.000000Z"/>
+</wc-entries>

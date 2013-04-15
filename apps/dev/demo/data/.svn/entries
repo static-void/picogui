@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3840"
+   name=""
+   committed-date="2003-05-05T18:42:26.188241Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/dev/demo/data"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:00:58.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3840"
+   name="crystal-128-network.png"
+   text-time="2003-11-18T15:00:57.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="5fb2c99a1dfaeb471687c4f16de4c23a"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:00:57.000000Z"/>
+<entry
+   committed-rev="3560"
+   name="intro.text"
+   text-time="2003-11-18T15:00:58.000000Z"
+   committed-date="2003-01-20T02:47:55.000000Z"
+   checksum="9273555b9de9ba59641ab0a68707bb71"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T15:00:58.000000Z"/>
+</wc-entries>

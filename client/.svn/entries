@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4572"
+   name=""
+   committed-date="2003-11-18T01:08:04.008513Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/client"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T16:54:43.000000Z"
+   revision="4573"/>
+<entry
+   name="python"
+   kind="dir"/>
+<entry
+   name="lua"
+   kind="dir"/>
+<entry
+   name="c"
+   kind="dir"/>
+<entry
+   name="perl"
+   kind="dir"/>
+<entry
+   name="tcl"
+   kind="dir"/>
+<entry
+   name="waba"
+   kind="dir"/>
+</wc-entries>

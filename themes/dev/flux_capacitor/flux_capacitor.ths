@@ -1,0 +1,189 @@
+/* $Id: flux_capacitor.ths 3978 2003-05-23 10:19:38Z micah $
+ *
+ * Flux Capacitor - This is a nice small theme inspired by Fluxbox,
+ *                  with ideas taken from the Cthulhain and Chaos themes.
+ *
+ * The innards of this theme are also fairly nifty, using a lot of fillstyle
+ * calling, clipping, and widget tricks.
+ *
+ * WARNING: This theme is still incomplete!
+ *
+ * Micah Dowty
+ */
+
+/* Fillstyles */
+property fBeveled, fInvertedBeveled, fFramedBeveled;
+property fBackground, fSolid, fHilight;
+
+/* Colors for fBeveled */
+property bgcolor2, bodyAngle;
+property bevelLeftTop, bevelLeftBottom;
+property bevelRightTop, bevelRightBottom;
+property bevelTopLeft, bevelTopRight;
+property bevelBottomLeft, bevelBottomRight;
+property frameColor;
+
+object default {
+  name = "Flux Capacitor (incomplete)";
+
+  bgfill = Copy(default::fBeveled);
+
+  fBeveled = fillstyle {
+    Gradient(x,y,w,1,0,bevelTopLeft,bevelTopRight);
+    Gradient(x,y+1,1,h-1,90,bevelLeftTop,bevelLeftBottom);
+    Gradient(x+1,y+h-1,w-1,1,0,bevelBottomLeft,bevelBottomRight);
+    Gradient(x+w-1,y+1,1,h-2,90,bevelRightTop,bevelRightBottom);
+    Gradient(x+1,y+1,w-2,h-2,bodyAngle,bgcolor,bgcolor2);
+  };
+
+  fInvertedBeveled = fillstyle {
+    Gradient(x,y,w,1,0,bevelBottomRight,bevelBottomLeft);
+    Gradient(x,y+1,1,h-1,90,bevelRightBottom,bevelRightTop);
+    Gradient(x+1,y+h-1,w-1,1,0,bevelTopRight,bevelTopLeft);
+    Gradient(x+w-1,y+1,1,h-2,90,bevelLeftBottom,bevelLeftTop);
+    Gradient(x+1,y+1,w-2,h-2,bodyAngle,bgcolor2,bgcolor);
+  };
+
+  fSolid = fillstyle {
+    SetColor(bgcolor);
+    Rect(x,y,w,h);
+  };
+
+  fHilight = fillstyle {
+    SetLgop(PG_LGOP_ADD);
+    Gradient(x,y,w,h,100,0x000000,0x181800);
+    SetLgop(PG_LGOP_NONE);
+  };
+
+  fFramedBeveled = fillstyle {
+    SetColor(0x202020);
+    Frame(x,y,w,h);
+    fBeveled(x+1,y+1,w-2,h-2);
+  };
+
+  fBackground = fillstyle {
+    SetClip(x,y,w,h);
+    background::bgfill(-widget::PG_WP_ABSOLUTEX,
+		       -widget::PG_WP_ABSOLUTEY,
+		       0x7FFF,0x7FFF);
+  };
+
+  bevelTopLeft     = 0xb0c0cf;
+  bevelTopRight    = 0x455565;
+  bevelLeftTop     = 0xb0c0cf;
+  bevelLeftBottom  = 0x6e798c;
+  bevelRightTop    = 0x394959;
+  bevelRightBottom = 0x050f1b;
+  bevelBottomLeft  = 0x3d4c63;
+  bevelBottomRight = 0x050f1b;
+  fgcolor          = 0xFFFFFF;
+  bgcolor          = 0x7e8fa8;
+  bgcolor2         = 0x0e1927;
+  bodyAngle        = 80;
+  frameColor       = 0x202020;
+
+  margin  = 5;
+  spacing = 5;
+  width   = 20;
+  height  = 20;
+}
+
+object background {
+  bgfill = Copy(default::fSolid);
+  bgcolor = 0x4a505b;
+}
+
+object button bgfill = fillstyle {
+  fFramedBeveled(x,y,w,h);
+};
+
+object button.hilight bgfill = fillstyle {
+  fFramedBeveled(x,y,w,h);
+  fHilight(x+2,y+2,w-4,h-4);
+};	
+
+object button.on {
+  bgfill = fillstyle {
+    fFramedBeveled(x,y,w,h);
+    fHilight(x+2,y+2,w-4,h-4);
+    x = x+1;
+    y = y+1;
+  };	
+  bevelTopLeft     = Copy(button.hilight::bevelBottomRight);
+  bevelTopRight    = Copy(button.hilight::bevelBottomLeft);
+  bevelLeftTop     = Copy(button.hilight::bevelRightBottom);
+  bevelLeftBottom  = Copy(button.hilight::bevelRightTop);
+  bevelRightTop    = Copy(button.hilight::bevelLeftBottom);
+  bevelRightBottom = Copy(button.hilight::bevelLeftTop);
+  bevelBottomLeft  = Copy(button.hilight::bevelTopRight);
+  bevelBottomRight = Copy(button.hilight::bevelTopLeft);
+}
+
+object toolbar bgfill = Copy(default::fInvertedBeveled);
+
+object box margin = 2;
+
+object panel {
+  border.size = 4;
+  border.fill = fillstyle {
+    SetColor(0x202020);
+    Frame(x+border.size-1,y+border.size-1,
+	  w-border.size*2+2,h-border.size*2+2);
+
+    fBackground(x,y,border.size-1,h);
+    fBackground(x,y,w,border.size-1);
+    fBackground(x+w-border.size+1,y,border.size-1,h);
+    fBackground(x,y+h-border.size+1,w,border.size-1);
+  };
+}
+
+object panelbar {
+  margin = 2;
+  font = Font(NULL,10,0);
+  bgfill = fillstyle {
+    toolbar::bgfill(x,y,w,h);
+    fBeveled(x+2,y+2,w-4,h-4);
+  };
+  bevelTopLeft     = 0x2a2d34;
+  bevelTopRight    = 0x1b212a;
+  bevelLeftTop     = 0x2a2d34;
+  bevelLeftBottom  = 0x5a5e69;
+  bevelRightTop    = 0x1b212a;
+  bevelRightBottom = 0x6a7585;
+  bevelBottomLeft  = 0xb7c4d9;
+  bevelBottomRight = 0x6a7585;
+  bgcolor          = 0x1d232b;
+  bgcolor2         = 0x757e8c;
+  bodyAngle        = 91;
+}
+
+object label.dlgtitle parent = PGTH_O_PANELBAR;
+
+object base.panelbtn {
+  side = PG_S_RIGHT;
+  spacing = 0;
+  width = 15;
+  height = 15;
+}
+
+object scroll {
+  width = 17;
+  bodyAngle = 2;
+
+  bgfill = fillstyle {
+    var fillHeight;
+
+    fFramedBeveled(x,y,w,h);
+    fInvertedBeveled(x+2,y+2,w-4,h-4);
+
+    fillHeight = widget::PG_WP_VALUE * h / widget::PG_WP_SIZE;
+    Gradient(x+2,y+h-2-fillHeight,w-4,fillHeight);
+  };
+  overlay = fillstyle {
+    w = w<width ? width : w;
+    h = h<width ? width : h;
+    button::bgfill(x+3,y+3,w-6,h-6);
+  };
+}
+
+/* The End */

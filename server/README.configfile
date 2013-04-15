@@ -1,0 +1,678 @@
+--------------------- Config file format --------
+
+In addition to the compile-time options that can be browsed and selected
+using 'make menuconfig', pgserver has runtime options that can be selected
+using the command line or a configuration file.
+
+Configuration settings are loaded and processed in this order:
+ - /etc/pgserver.conf
+ - ~/.pgserverrc
+ - Command line options
+
+In the etc/ directory, a base script called configurator.mk.in
+contains code that can generate a pgserver.conf file with sensible
+values.
+
+The settings are key-value pairs organized into sections. In the
+configuration files, this is represented by the following format
+ - Blank lines are ignored
+ - Leading and trailing whitespace on comments, keys, or values are ignored
+ - Comment lines begin with '#'
+ - The current section is set with a "[section]" line
+ - Key-value pair lines are in the format "key = value"
+ - Set an key to 1 with "key", for boolean values
+ - A dash, whitespace(s) and a file name instruct to source the given file
+ 
+For example:
+-----------------------8<------------------------
+# Sample config file
+
+[pgserver]
+xres = 640
+yres = 480
+fullscreen
+
+. /tmp/more-config-in-this-file
+
+[video-sdl]
+caption = Welcome to PicoGUI!
+
+----------------------->8------------------------
+
+Config options can be specified on the command line using the format:
+  --section.key=value
+If the section is omitted, 'pgserver' is assumed. If the value contains
+spaces or other 'strange' characters the whole command line option must be
+quoted appropriately. For example:
+  pgserver --xres=640 --yres=480 '--video-sdl.caption=Welcome to PicoGUI!'
+
+--------------------- Reference -----------------
+
+[pgserver]
+- width
+  Default display width in pixels
+
+- height
+  Default display height in pixels
+
+- depth
+  Default display depth in bits per pixel
+
+- vidflags
+  Default video flags (integer)
+
+- mode
+  Video mode in the format WxH or WxHxD
+
+- videotest
+  If this is set, display the specified video test pattern.
+  Set it to "help" to list the possible settings.
+
+- benchmark
+  Set this to enable benchmarking mode
+
+- messagefile
+  The name of a file to load internationalized messages/errors from
+
+- themes
+  Whitespace-separated list of theme files to load
+
+- themedir
+  Directory to prefix each theme with. Makes typing in the 'themes' line a lot less tedious
+
+- input
+  Whitespace-separated list of input drivers to load. If
+  CONFIG_INPUT_AUTOLOAD is turned on, instead of scanning this list
+  pgserver will attempt to load all installed drivers.
+
+- rotate
+  Number of degrees to rotate the screen. The proper video wrappers must be
+  compiled in for this to have any effect.
+
+- session
+  A program or shell command to run whenever pgserver starts up. pgserver
+  will exit when the last client disconnects
+
+- display
+  By giving each PicoGUI server a different display number, you can run
+  multiple PicoGUI servers on one computer. The display number should be a
+  small nonzero integer. In the current implementation, this is used to
+  select a TCP/IP port.
+
+- dragsolid
+  Set to nonzero to use solid panel dragging, which is cool but very CPU heavy
+  Requires the CONFIG_DRAGSOLID compile-time option
+
+- palette
+  If the the 8bpp palette mode is set to "Custom" at compile time, this option
+  may be used to load a new palette. The argument should be the path to a palette
+  in Gimp's palette format (3 integers values per line between 0 and 255, comments
+  begin with #, blank lines ignored)
+
+- video
+  Force the video driver pgserver should load. The default is to try each driver
+  in a predefined order until one loads successfully.
+
+- font_engine
+  Force the default font engine for the server to use
+
+- appmgr
+  Force the application manager to use
+
+[sound]
+
+- click
+  Make a click sound whenever the pointing device is clicked
+  (If a loaded driver supports PG_SND_KEYCLICK)
+  
+- keyclick
+  Make a click whenever a key is pressed
+  (Also uses PG_SND_KEYCLICK)
+
+[timers]
+
+- cursorhide
+  Inactivity time before hiding the cursor for hotkey navigation, in 1/1000 seconds
+  Set this to 0 for "infinite"
+  Default is 5000 (5 seconds)
+
+- backlightoff
+  Inactivity time before turning off the backlight, in 1/1000 seconds
+  Set this to 0 for "infinite"
+  Default is infinite  
+
+- sleep
+  Inactivity time before sleep mode, in 1/1000 seconds
+  Set this to 0 for "infinite"
+  Default is infinite
+
+- vidblank
+  Inactivity time before blanking the display, in 1/1000 seconds
+  Set this to 0 for "infinite"
+  Default is infinite
+
+[video-x11]
+
+- caption
+  Set the window caption when PicoGUI is run in a window. This is a printf
+  format string with 3 integer parameters: width, height, and color depth.
+
+- doublebuffer
+  Boolean value indicating whether to double-buffer bitmaps used as windows
+  This is on by default
+
+- sound
+  Use XBell to handle PGDM_SOUNDFX events.
+  This is off by default
+
+- shm
+  Boolean value indicating whether to use shared memory pixmaps
+  By default it will use SHM if it is available.
+
+[input-x11]
+
+- scrolldistance
+  Magnitude of movement, in pixels, for the scroll wheel
+
+[input-vnc]
+
+- scrolldistance
+  Magnitude of movement, in pixels, for the scroll wheel
+
+[video-sdlgl]
+
+- caption
+  Set the window caption when PicoGUI is run in a window. This is a printf
+  format string with 3 integer parameters: width, height, and color depth.
+
+- fullscreen
+  Set to 1 to enable fullscreen mode
+
+
+[video-sdlfb]
+
+- caption
+  Set the window caption when PicoGUI is run in a window. This is a printf
+  format string with 3 integer parameters: width, height, and color depth.
+
+- fullscreen
+  Set to 1 to enable fullscreen mode
+
+- scale
+  (requires 'Skin support' config option)
+  Set to a number greater than 1 to magnify the video
+
+- background
+  (requires 'Skin support' config option)
+  Load a bitmap into the framebuffer
+
+- width
+  (requires 'Skin support' config option)
+  Overrides the framebuffer width. The window is no longer resizeable.
+
+- height
+  (requires 'Skin support' config option)
+  Overrides the framebuffer height. The window is no longer resizeable.
+
+- display_x
+  (requires 'Skin support' config option)
+  Offset the display right by this amount within the framebuffer.
+
+- display_y
+  (requires 'Skin support' config option)
+  Offset the display down by this amount within the framebuffer.
+
+- tint
+  (requires 'Skin support' config option)
+  Multiply all colors by this color. This can be used to add a green or gray
+  tint to LCD screens.
+
+- backlight_tint
+  (requires 'Skin support' config option)
+  This is used instead of 'tint' when the backlight is turned on.
+
+- simbits
+  (requires 'Skin support' config option)
+  Set to a nonzero number to force all new colors to this simulated color
+  depth. Does not affect the actual framebuffer depth or the background
+  or tint color.
+
+- sdc_fg, sdc_bg
+  (requires 'secondary display channel' config option)
+  Sets the foreground and background colors for SDC output.
+  Each of these should be a 6-digit hex number
+
+- sdc_x, sdc_y, sdc_w, sdc_h
+  (requires 'secondary display channel' config option)
+  Position and size (skin-relative coordinates) to display SDC output.
+
+- sdc_font_name, sdc_font_size, sdc_font_style
+  (requires 'secondary display channel' config option)
+  Font specification for the SDC output. The style parameter must be the
+  decimal equivalent of the PG_FSTYLE flags. Any or all of these parameters
+  are optional.
+
+- slowvbl
+  (requires the slowvbl to be compiled in)
+  Set to nonzero to use the very slow VBL
+
+[video-scrshot]
+
+- file
+  A printf format string for generating the screenshot file name.
+  Defaults to "pgshot%04d.ppm"
+
+- skip
+  The number of frames to skip before recording the first screenshot
+
+- total
+  The total number of screenshots to take
+
+[input-sdlinput]
+
+- sdlcursor
+  Display the cursor provided by SDL
+
+- pgcursor
+  If this is nonzero, the PicoGUI cursor is shown whenever the mouse is moved.
+  This is on by default.
+
+- upmove
+  If nonzero, send 'move' events when the mouse button is up
+  This is on by default.
+
+- foldbuttons
+  Convert all mouse button clicks to button 1, to simulate a one-button
+  mouse or touchpad
+
+- nomouse
+  Disable normal mouse input. This does not interfere with silkscreen/hardware
+  buttons defined by 'map'
+
+- nokeyboard
+  Disable normal keyboard input
+
+- map
+  (requires 'Skin support' config option)
+  This is the filename of an  imagemap defining hotspots on the skin.
+  Only rectangles are supported, no polygons or circles. The URL for each
+  rectangle is the key number, found in pgkeys.h. I have only tested this
+  with maps produced by Gimp's image map plugin. The parser is awfully dumb,
+  so don't expect it to work with anything other than Gimp at this time.
+
+- mapscale
+  Scale the map by this fraction. (space-separated numerator and denominator)
+
+- scrolldistance
+  Magnitude of movement, in pixels, for the scroll wheel
+
+[video-serial40x4]
+
+- device
+  This is the name of the LCD device. LCD commands are sent to this device,
+  no ioctl()s are used, and it is never read from. This will usually be a
+  symlink to a serial port, but it could theoretically be anything you can
+  write to.
+
+[video-fbdev]
+
+- device
+  The framebuffer device, defaults to /dev/fb0
+
+- ttydev
+  The tty device (for setting graphics mode) defaults to /dev/tty0
+  Note: This only works if you're _not_ using VT switching. If you have
+        vt switching compiled in, this is determined by the VT pgserver
+        should be running on.
+
+- vt
+  This can be:
+   - "auto", to automatically allocate an available virtual terminal
+   - "current", to use the same VT we were started from
+   - An integer, to use that VT
+  Defaults to "current"
+
+- slowvbl
+  Use the slowvbl layer for video debugging if nonzero
+
+- doublebuffer
+  If nonzero, doublebuffer the frame-buffer
+
+[input-serialmouse]
+
+- device
+  The name of serial port device. Defaults to /dev/ttyS0.
+
+- multiplier
+  A value to multiply delta movement by. Defaults to 2.
+
+[input-ucb1x00]
+
+- pressure
+  The minimum pen pressure to detect a tap
+
+[eventbroker]
+
+- shortbeep_freq
+- shortbeep_len
+  Frequency and duration of short beep events
+
+- keyclick_freq
+- keyclick_len
+  Frequency and duration of key click events
+
+[slowvbl]
+
+- delay
+  -- BIG FAT HACK ALERT --
+  I tried using usleep() to get a very tiny per-pixel delay,
+  but even that was too much. This enters a busy loop (ick!)
+  for the specified number of iterations. Thankfully, this
+  usually isn't necessary because the update() function is
+  slow enough.
+  Default: 0
+
+- updatefreq
+  Only immediately updates every X pixels. If this is an odd
+  number and you set updatetype to zero, you get a good stipple
+  effect with the hilight color and the actual pixels.
+  Default: 3
+
+- updatetype
+  If this is:
+   0 - only update the pixel itself
+   1 - update the line
+   2 - update the frame
+  Default: 0
+
+- hilight
+  Hilight redrawn areas of the screen so you can see when
+  something is redrawn multiple times when it hasn't changed
+  Default: 1
+
+- hilightcolor
+  Hexadecimal color to use for hilighting
+  Default: FFFF00
+
+- fastsprites
+  When this option is on, the extra hilighting and updating
+  is disabled while drawing sprites. This makes the mouse cursor
+  much less annoying, but if you're debugging something sprite-
+  related, you can turn this off.
+  Default: 1
+
+[opengl]
+
+- texture_filtering
+  This may be "linear" or "nearest". Defaults to "linear". Note that font textures
+  always use linear filtering and mipmapping.
+
+- continuous
+  Normally the driver tries to determine when it's needed and only update the screen then.
+  This forces it to continually update.
+
+- fps_interval
+  Floating point number indicating how many seconds between frames per second calculations.
+  Larger values give more accurate results, smaller values update the FPS display faster.
+  Defaults to 0.25
+
+- osd_fontsize
+  Font size to render the onscreen display in
+
+- antialias
+  With this option on, all lines and polygons in picogui are antialiased. It makes things
+  look a LOT better when the camera controls are used or when anything has a scale or rotation
+  applied. This option is recommended for any sort of real 3D work, but since
+  under normal use it just slows things down it's disabled by default.
+
+- keys
+  If nonzer, the driver will load an input filter to provide extra magic keys for camera
+  control and other debuggative features. See README.opengl
+  This is on by default
+
+
+[input-jsdev]
+
+- polltime
+  This is the interval, in microseconds, to set pgserver's polling to. The mouse
+  velocity is integrated at each polling. So smaller values here make the cursor
+  move faster for the same joystick position, multiplier, and divisor.
+  Defaults to 300.
+
+- axisN-type
+  N is the axis number, and this specifies the type of mapping associated with the
+  joystick axis:
+    - ignore
+      This is the default value
+    - pointer
+      This axis controls the velocity of the mouse pointer. It uses the parameters
+      pointer-axis, deadzone, multiplier, and divisor
+    - keys
+      This definestwo ranges of values that are mapped to keys. Useful for joysticks
+      that map buttons or D-pads to axes. Uses the parameters key0, min0, max0, key1, min1,
+      and max1.
+
+- axisN-pointer-axis
+  Define the pointer axis associated with joystick axis N. Should be "x" or "y"
+
+- axisN-deadzone
+  If the absolute value of the axis is less than this, it is treated as zero. Defaults to zero.
+
+- axisN-multiplier
+  Axis is multiplied by this before becoming the pointer velocity, defaults to 1
+
+- axisN-divisor
+  Axis is divided by this before becoming the pointer velocity, defaults to 5000
+
+- buttonN-type
+  N is the button number, and this specifies the mapping associated with the button:
+    - ignore
+      This is the default value
+    - key
+      Maps the button to one keyboard key. Uses the key parameter.
+    - click
+      Maps the button to one mouse button, Uses the mousebutton parameter.
+
+- buttonN-key
+  Decimal PGKEY value of the key to map the button to, see pgserver/pgkeys.h
+
+- buttonN-mousebutton
+  Mouse button mask to map the button to. Left button is 1, Middle is 2, Right is 4, etc.
+
+[input-ttykb]
+
+- device
+  The name of the device for the keyboard. Defaults to /dev/tty.
+
+[input-rawttykb]
+
+- device
+  The name of the device for the keyboard. Defaults to /dev/tty.
+
+[font-freetype]
+
+- path
+  Path to a directory to search recursively for fonts. Note that
+  this will be scanned at startup, so a large number of files
+  here will increase load time substantially.
+  Defaults to /usr/share/fonts
+
+- no_hinting
+  Disables font hinting, usually makes small fonts look fuzzy
+  Defaults off
+
+- no_bitmap
+  Disables bitmapped representations stored in a font. These are
+  often not antialiased and look worse than freetype's usual output.
+  Defaults on
+
+- force_autohint
+  Forces the use of the freetype autohinter instead of the font's
+  builtin hinting. On most fonts this is a dramatic improvement
+  at small sizes, but for fonts with proper hinting this will
+  make them look worse.
+  Defaults on
+
+- default
+  Style for the default font. The style format used is name:size:flags, with
+  all sections optional, same as cli_python.
+  Defaults to "Bitstream Vera Sans:10" (included in the PicoGUI font distrobution)
+
+- default_fixed
+  Style for the default fixed width font.
+  Defaults to "Bitstream Vera Sans Mono:10" (included in the PicoGUI font distrobution)
+
+- minimum_size
+  Force all fonts to be at least this big
+  Defaults to 5
+
+- dump_list
+  If nonzero, list all the fonts found at startup then exit. The font filename
+  relative to the 'path', followed by the style descriptor (see above)
+  is output on one line.
+
+- scan_list
+  If a filename is specified for this property and the file exists, that file
+  is scanned for font styles instead of manually scanning 'path'. The format
+  is the same as used in dump_list above, so you can redirect pgserver's output
+  from dump_list into a file for use with scan_list.
+  Note that you can specify dump_list and scan_list at the same time, and you
+  should get the same list back as output, though probably in a different order.
+
+- light_gamma
+  Set the gamma correction for antialiased rendering,
+  used on fonts with light foreground colors.
+  Requires gamma correction support compiled in
+  Defaults to 1.5
+
+- dark_gamma
+  Set the gamma correction for antialiased rendering,
+  used on fonts with dark foreground colors.
+  Requires gamma correction support compiled in
+  Defaults to 0.75
+
+- gamma_light_dark_threshold
+  The threshold used to decide between light_gamma and dark_gamma.
+  This is a hack so we can do gamma correction on the glyph rather than
+  on the output, but it seems to work just fine :)
+  This value should be between 0 and 255.
+  Defaults to 128
+
+- max_faces
+  Maximum number of font faces to keep in memory at once
+  Defaults to the Freetype default
+
+- max_sizes
+  Maximum number of font sizes to keep in memory at once
+  Defaults to the Freetype default
+
+- max_bytes
+  Maximum number of bytes to use for cached data
+  Defaults to the Freetype default
+
+[benchmark]
+
+- iterations
+  Number of times to run each test. The more iterations,
+  the more accurate the results will be.
+  Default is 1000
+
+- test
+  Run only tests whose names contain this string
+
+- use_sizes
+  If this is nonzero, run some tests at multiple sizes
+  Default is off
+
+- use_lgops
+  If this is nonzero, run tests with every lgop
+  Default is off
+
+[appmgr-managed-rootless]
+
+- background
+  If this is nonzero, create a background window to hold a
+  background widget and toolbar apps.
+  Default is off
+
+[font-ftgl]
+
+- default_size
+  Height in pixels used for the default fonts
+
+- path
+  Path to recursively search for fonts to load.
+  WARNING: These fonts are not loaded on demand like in the freetype
+           engine, they are loaded into your video card right away.
+           Don't give this a huge directory full of fonts.
+  Defaults to /usr/share/fonts
+
+- default_fixed_face
+  Face name to use for the default fixed-width font
+  Defaults to "Bitstream Vera Sans Mono" (included in the picogui fonts package)
+
+- default_face
+  Face name to use for the default variable-width font
+  Defaults to "Bitstream Vera Sans" (included in the picogui fonts package)
+
+- no_hinting
+  Disables font hinting, usually makes small fonts look fuzzy
+  Defaults off
+
+- no_bitmap
+  Disables bitmapped representations stored in a font. These are
+  often not antialiased and look worse than freetype's usual output.
+  Defaults on
+
+- force_autohint
+  Forces the use of the freetype autohinter instead of the font's
+  builtin hinting. On most fonts this is a dramatic improvement
+  at small sizes, but for fonts with proper hinting this will
+  make them look worse.
+  Defaults on
+
+- sizes
+  Whitespace-separated list of sizes, in pixels, to generate fonts
+  at, in addition to the default size.
+  Defaults to "32"
+
+[video-vncserver]
+
+- port
+  TCP port number to run the VNC server on
+  Defaults to 5900
+
+- wait
+  Maximum number of milliseconds to wait for a client
+  Defaults to 20000
+
+- password-file
+  Filename to read an encrypted password from
+  Defaults to no password
+
+- defer-update
+  Maximum number of milliseconds to defer updates
+  Defaults to 1
+
+- name
+  Desktop name that will usually appear in a client's window title
+  Defaults to "PicoGUI VNC Server"
+
+- always-shared
+  Boolean, forces all clients to be shared
+  Defaults off
+
+- never-shared
+  Boolean, forces no clients to be shared
+  Defaults off
+
+- dont-disconnect
+  Boolean, don't disconnect existing shared clients if a nonshared client connects
+  Defaults off
+
+- verbose
+  Boolean, log connection statistics to stderr
+  Defaults off
+
+--- The End ---
+

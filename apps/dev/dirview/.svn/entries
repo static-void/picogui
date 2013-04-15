@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3978"
+   name=""
+   committed-date="2003-05-23T10:19:38.050153Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/dev/dirview"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:08:39.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="2590"
+   name="TODO"
+   text-time="2003-11-18T15:07:49.000000Z"
+   committed-date="2002-07-08T04:29:43.000000Z"
+   checksum="5d3350f7fa3a05830f88d48243b6a371"
+   last-author="bauermeister"
+   kind="file"
+   prop-time="2003-11-18T15:07:49.000000Z"/>
+<entry
+   name="lib"
+   kind="dir"/>
+<entry
+   committed-rev="2590"
+   name="Makefile.am"
+   text-time="2003-11-18T15:08:39.000000Z"
+   committed-date="2002-07-08T04:29:43.000000Z"
+   checksum="943dedd2680cc905999de860377b0a16"
+   last-author="bauermeister"
+   kind="file"
+   prop-time="2003-11-18T15:08:39.000000Z"/>
+<entry
+   committed-rev="2590"
+   name="README"
+   text-time="2003-11-18T15:08:39.000000Z"
+   committed-date="2002-07-08T04:29:43.000000Z"
+   checksum="1181ab35fe1c62bd82c40489c87200e8"
+   last-author="bauermeister"
+   kind="file"
+   prop-time="2003-11-18T15:08:39.000000Z"/>
+</wc-entries>

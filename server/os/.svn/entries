@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4551"
+   name=""
+   committed-date="2003-09-03T18:22:27.534629Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/server/os"
+   last-author="Dentoid"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:41:22.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="4551"
+   name="msvc_commandline.c"
+   text-time="2003-11-18T15:40:52.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="9bc07eaf4296015e8dcea84db446934b"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T15:40:52.000000Z"/>
+<entry
+   committed-rev="4551"
+   name="mingw_signals.c"
+   text-time="2003-11-18T15:40:54.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="13f422707d70d40f57901f2bc5f1874e"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T15:40:54.000000Z"/>
+<entry
+   committed-rev="4551"
+   name="mingw.c"
+   text-time="2003-11-18T15:40:56.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="c916d5b065fe6eb628806d13b396972c"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T15:40:56.000000Z"/>
+<entry
+   committed-rev="3929"
+   name="posix.c"
+   text-time="2003-11-18T15:41:04.000000Z"
+   committed-date="2003-05-15T02:23:35.670873Z"
+   checksum="c35b42b7af9bce000cceadaf0f3b9c45"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:41:04.000000Z"/>
+<entry
+   committed-rev="4508"
+   name="posix_signals.c"
+   text-time="2003-11-18T15:41:06.000000Z"
+   committed-date="2003-07-11T14:24:01.742526Z"
+   checksum="5de946590fd3cc8685c3780046a258e7"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:41:06.000000Z"/>
+<entry
+   name="uclinux"
+   kind="dir"/>
+<entry
+   committed-rev="3978"
+   name="uclinux.c"
+   text-time="2003-11-18T15:41:09.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="67e3352f68237208b09eec14546e4269"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:41:09.000000Z"/>
+<entry
+   committed-rev="4551"
+   name="mingw_commandline.c"
+   text-time="2003-11-18T15:41:16.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="9bc07eaf4296015e8dcea84db446934b"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T15:41:16.000000Z"/>
+<entry
+   committed-rev="4508"
+   name="posix_commandline.c"
+   text-time="2003-11-18T15:41:19.000000Z"
+   committed-date="2003-07-11T14:24:01.742526Z"
+   checksum="4ebac2c5870cf9aa69eacfe3fd2e2da9"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:41:19.000000Z"/>
+<entry
+   committed-rev="3193"
+   name="Makefile.am"
+   text-time="2003-11-18T15:41:20.000000Z"
+   committed-date="2002-11-03T23:33:23.000000Z"
+   checksum="7ffc6bb6c309f58ab3673f5242867211"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T15:41:20.000000Z"/>
+<entry
+   committed-rev="4551"
+   name="msvc.c"
+   text-time="2003-11-18T15:41:22.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="f590a85a7a7b2f9e333f1c210106c2b0"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T15:41:22.000000Z"/>
+</wc-entries>

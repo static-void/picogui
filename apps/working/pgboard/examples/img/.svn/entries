@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3841"
+   name=""
+   committed-date="2003-05-05T18:45:20.897937Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/working/pgboard/examples/img"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T14:57:44.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3841"
+   name="fitaly_numbers.pbm"
+   text-time="2003-11-18T14:57:29.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="09fbec3f3c752be03bbad3369a162139"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:57:29.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="us_qwerty_240_shift.pbm"
+   text-time="2003-11-18T14:57:30.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="8b79a76a13e9d871ea5a969229acaca5"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:57:30.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="fitaly_shift.pbm"
+   text-time="2003-11-18T14:57:31.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="5d37adca69c8a3eaba44a8611e766741"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:57:31.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="us_qwerty_240_num.pbm"
+   text-time="2003-11-18T14:57:32.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="ccad8fb114aa18dc64f62084a87ac652"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:57:32.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="fitaly_control.pbm"
+   text-time="2003-11-18T14:57:32.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="3c93093fad501e2dadb2aa1de49cd608"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:57:32.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="us_qwerty_240_cap.pbm"
+   text-time="2003-11-18T14:57:34.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="bcb608afb4afedab26acaa0a2985387c"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:57:33.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="us_qwerty_240_ctrl.pbm"
+   text-time="2003-11-18T14:57:34.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="fc2900532e33e8e0a6ef9a1eb1835ebc"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:57:34.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="fitaly_default.pbm"
+   text-time="2003-11-18T14:57:35.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="c278e8e5b3ef71856a599313c10833bc"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:57:35.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="us_qwerty_240_alpha.pbm"
+   text-time="2003-11-18T14:57:37.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="2e978789b432fae69d3f9293ef1f4284"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:57:37.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="fitaly_caps.pbm"
+   text-time="2003-11-18T14:57:39.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="73c79cc9527d97b06ace36ff291915c4"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:57:39.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="us_qwerty_240_sym.pbm"
+   text-time="2003-11-18T14:57:40.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="abe39ec84c636e38eea7544455390675"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:57:40.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="us_qwerty_240_shiftint.pbm"
+   text-time="2003-11-18T14:57:41.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="b1d57950b22e19438aa12ea83d9588f7"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:57:41.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="fitaly_symbols.pbm"
+   text-time="2003-11-18T14:57:43.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="b2cb76c39694ff513034dac3bc9587ce"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:57:43.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="us_qwerty_240_int.pbm"
+   text-time="2003-11-18T14:57:44.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="bab87d7f321f0823a408ff406197ad8d"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T14:57:44.000000Z"/>
+</wc-entries>

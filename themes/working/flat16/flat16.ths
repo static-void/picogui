@@ -1,0 +1,115 @@
+/* $Id: flat16.ths 3978 2003-05-23 10:19:38Z micah $
+ *
+ * Mostly flat, but with a little hilight animation
+ *
+ * Version 1.0
+ *
+ * Micah Dowty
+ */
+
+object default {
+  name = "Flat Vector (16 color)";
+
+  /* Simple fill */
+  bgfill = fillstyle {
+    SetColor(bgcolor);
+    Rect(x,y,w,h);
+  };
+
+  bgcolor = 0xC0C0C0;
+  hilightcolor = 0xFFFFFF;
+  shadowcolor = 0x808080;
+
+  /* Some consistant spacings and margins */
+  spacing = 0;
+  margin = 1;
+  height = 13;
+  width = 13;
+}
+
+/* hilighting */
+object button.hilight fgcolor = 0x0000FF;
+
+/* Special overlay for indicators */
+object indicator overlay = fillstyle {
+  SetColor(0x000080);
+  Rect(x,y,w,h);
+};
+
+/* Check box things */
+object checkbox {
+   bgfill = fillstyle {
+      SetColor(bgcolor);
+      Rect(x,y,w,h);
+      x = x + 10;
+   };
+   margin = 5;
+   align = PG_A_LEFT;
+}
+object checkbox.hilight fgcolor = 0x0000FF;
+object checkbox.on bgfill = fillstyle {
+   var q;
+   SetColor(bgcolor);
+   Rect(x,y,w,h);
+   SetColor(fgcolor);
+   Line(x+8,0,-4,h);
+   Line(x+4,h,-4,0-(h/2));
+   x = x + 10;
+};
+
+/* Special stuff for panelbuttons */
+object closebtn bgfill = fillstyle {
+    var fg;
+    SetColor(bgcolor);
+    Rect(x,y,w,h);
+    SetColor(fgcolor);
+    Line(x+2,y+2,w-4,h-4);
+    Line(x+2+w-4,y+2,4-w,h-4);
+};
+object rotatebtn bgfill = fillstyle {
+    var fg;
+    SetColor(bgcolor);
+    Rect(x,y,w,h);
+    SetColor(fgcolor);
+    Slab(x+2,y+(h>>1),w-4,1);
+    Line(x+2+w-4,y+2,4-w,h-4);
+};  
+object zoombtn bgfill = fillstyle {
+    var fg;
+    SetColor(bgcolor);
+    Rect(x,y,w,h);
+    SetColor(fgcolor);
+    Slab(x+2,y+(h>>1),w-4,1);
+    Frame(x+3,y+3,w-6,h-6);
+};  
+
+object closebtn.hilight fgcolor = Copy(button.hilight::fgcolor);
+object rotatebtn.hilight fgcolor = Copy(button.hilight::fgcolor);
+object zoombtn.hilight fgcolor = Copy(button.hilight::fgcolor);
+object menuitem.hilight fgcolor = Copy(button.hilight::fgcolor);
+
+/* Panelbars */
+object panelbar {
+  fgcolor = 0xFFFFFF;
+  bgcolor = 0x000080;
+  margin = 1;
+}
+
+/* Dialog box title, just like a panelbar */
+object label.dlgtitle {
+  fgcolor = Copy(panelbar::fgcolor);
+  bgcolor = Copy(panelbar::bgcolor);
+}
+
+/* A "Dark Cyan" background */
+object background bgcolor = 0x008080;
+
+/* Size tweaks */
+object popup {
+  bgfill = 0;
+  width = 5;
+  height = 5;
+}
+object scroll width = 8;
+
+/* The End */

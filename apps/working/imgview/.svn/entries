@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3840"
+   name=""
+   committed-date="2003-05-05T18:42:26.188241Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/working/imgview"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:47:25.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="2815"
+   name="imgview.ths"
+   text-time="2003-11-18T01:47:17.000000Z"
+   committed-date="2002-09-28T04:06:56.000000Z"
+   checksum="a6b92f53bcb9edc4a9090ae64743a9da"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:47:17.000000Z"/>
+<entry
+   committed-rev="2085"
+   name="checkers.bmp"
+   text-time="2003-11-18T01:47:17.000000Z"
+   committed-date="2002-02-06T23:07:30.000000Z"
+   checksum="29ec9485355612a794fc7df596044eaf"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:47:17.000000Z"/>
+<entry
+   committed-rev="2085"
+   name="bin2c.pl"
+   text-time="2003-11-18T01:47:18.000000Z"
+   committed-date="2002-02-06T23:07:30.000000Z"
+   checksum="5972f11130b6265395769affee002a56"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:47:18.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="imgview.th.h"
+   text-time="2003-11-18T01:47:19.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="68ceb66165d1fa4ea47986547bbb7e81"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:47:19.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="imgview.c"
+   text-time="2003-11-18T01:47:20.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="669f457f34d14f293301060c2295ecfb"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:47:20.000000Z"/>
+<entry
+   name="data"
+   kind="dir"/>
+<entry
+   committed-rev="1653"
+   name="Makefile.am"
+   text-time="2003-11-18T01:47:25.000000Z"
+   committed-date="2001-12-01T01:37:09.000000Z"
+   checksum="e23d2eedbdde3d932cad08cf9ed9b3f7"
+   last-author="gork"
+   kind="file"
+   prop-time="2003-11-18T01:47:25.000000Z"/>
+</wc-entries>

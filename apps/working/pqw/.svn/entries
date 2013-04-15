@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3841"
+   name=""
+   committed-date="2003-05-05T18:45:20.897937Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/working/pqw"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:47:13.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3841"
+   name="ctl.pbm"
+   text-time="2003-11-18T01:46:32.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="5f9069f1f7351da038d97d1aeb7f6bd8"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:46:32.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="lower_case.pbm"
+   text-time="2003-11-18T01:46:34.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="168d56aaec39953c75c73c2e8caecdca"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:46:34.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="upper_case.pbm"
+   text-time="2003-11-18T01:46:35.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="228d5311146a7096e3386c3261dc7e50"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:46:35.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="pics.h"
+   text-time="2003-11-18T01:47:04.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="18b27171d7c9bc6e5529fdd80268796d"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:47:04.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="pbm_dump.c"
+   text-time="2003-11-18T01:47:04.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="9829bb7a012c60fa903b50a99fd897fa"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:47:04.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="symbols.pbm"
+   text-time="2003-11-18T01:47:06.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="289e728e99ba7d48e7a2fd7b5ad724b3"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:47:06.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="lock.pbm"
+   text-time="2003-11-18T01:47:06.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="878feb0b93f2d18572fb96c08fde98ea"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:47:06.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="numbers.pbm"
+   text-time="2003-11-18T01:47:07.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="73ab9cfb90f4e725d2923cf32bd59190"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:47:07.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="keys.pbm"
+   text-time="2003-11-18T01:47:08.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="89222915cf4f1473e3249d84a21be9f7"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:47:08.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="pqw.c"
+   text-time="2003-11-18T01:47:11.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="7e4683cd8d96e32b783b71ca3714e401"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:47:11.000000Z"/>
+<entry
+   committed-rev="2705"
+   name="Makefile.am"
+   text-time="2003-11-18T01:47:12.000000Z"
+   committed-date="2002-08-23T14:46:27.000000Z"
+   checksum="fa7e69c4f865e96da821d681a688b73a"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:47:12.000000Z"/>
+<entry
+   committed-rev="2485"
+   name="README.orig"
+   text-time="2003-11-18T01:47:12.000000Z"
+   committed-date="2002-05-08T21:36:07.000000Z"
+   checksum="b3c713e0cd1c6aba8a4989c3d2f92c18"
+   last-author="hollo"
+   kind="file"
+   prop-time="2003-11-18T01:47:12.000000Z"/>
+<entry
+   committed-rev="2485"
+   name="README"
+   text-time="2003-11-18T01:47:13.000000Z"
+   committed-date="2002-05-08T21:36:07.000000Z"
+   checksum="e787de5300a0afa72cb8b12ba2bfd99d"
+   last-author="hollo"
+   kind="file"
+   prop-time="2003-11-18T01:47:13.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="alt.pbm"
+   text-time="2003-11-18T01:47:13.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="4eecaf0a941bac1300c72e379a8e881a"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:47:13.000000Z"/>
+</wc-entries>

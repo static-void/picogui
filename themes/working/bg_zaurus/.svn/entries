@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3840"
+   name=""
+   committed-date="2003-05-05T18:42:26.188241Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/themes/working/bg_zaurus"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:23:45.000000Z"
+   revision="4573"/>
+<entry
+   name="data"
+   kind="dir"/>
+<entry
+   committed-rev="3795"
+   name="bg_zaurus.ths"
+   text-time="2003-11-18T15:23:45.000000Z"
+   committed-date="2003-05-03T10:31:45.699699Z"
+   checksum="c3720f4f478e7b5690732a05b8c8f78a"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:23:45.000000Z"/>
+</wc-entries>

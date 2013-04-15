@@ -1,0 +1,7 @@
+bin_PROGRAMS = canvastst
+canvastst_SOURCES = canvastst.c
+
+AM_LDFLAGS = @PICOGUI_LDFLAGS@
+LDADD = @PICOGUI_LIBS@ -lm
+
+AM_CFLAGS = @CFLAGS@ @PICOGUI_CFLAGS@

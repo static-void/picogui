@@ -1,0 +1,6 @@
+NAME = Utopia
+SIZE = 25
+STYLE = encoding_isolatin1
+NORMAL = utopia25
+BOLDW = 2
+

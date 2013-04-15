@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3835"
+   name=""
+   committed-date="2003-05-05T10:02:55.352841Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/test/pgfxcanvas"
+   last-author="bornet"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:22:24.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3806"
+   name="pgfx_canvas_persistent.c"
+   text-time="2003-11-18T01:22:23.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="c97e46c00e57a9617e4dc517d61ed4da"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:22:23.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="pgfx_canvas_immediate.c"
+   text-time="2003-11-18T01:22:24.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="195583b2716d97fb09c3492b7d7bbc00"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:22:24.000000Z"/>
+</wc-entries>

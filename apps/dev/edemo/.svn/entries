@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3978"
+   name=""
+   committed-date="2003-05-23T10:19:38.050153Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/dev/edemo"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:04:28.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3978"
+   name="edemo.h"
+   text-time="2003-11-18T15:02:42.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="3dc044cb83ae8b2e95698c922823e52e"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:02:42.000000Z"/>
+<entry
+   name="cursorthemes"
+   kind="dir"/>
+<entry
+   committed-rev="3978"
+   name="chaos_fire.c"
+   text-time="2003-11-18T15:02:45.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="6a31ce6f95d1f4299d55b9e98c74e206"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:02:45.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="dialogdemo.c"
+   text-time="2003-11-18T15:02:48.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="a2211e68b6a84330beff5e173e2324ed"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:02:48.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="menutest.c"
+   text-time="2003-11-18T15:02:50.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="876d921f7bad31e10bb6fa3355e6f25c"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:02:50.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="appbar.c"
+   text-time="2003-11-18T15:02:51.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="6b1ecaca3adde5ac1c9e7a3c384ff4b3"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:02:51.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="canvastst.c"
+   text-time="2003-11-18T15:02:56.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="31ce6fb1e89b51666b233d87f2c03cc1"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:02:56.000000Z"/>
+<entry
+   committed-rev="3583"
+   name="README"
+   text-time="2003-11-18T15:02:57.000000Z"
+   committed-date="2003-02-10T23:35:06.000000Z"
+   checksum="bbe19c8616faa1eecd7af85287230171"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T15:02:57.000000Z"/>
+<entry
+   name="bgthemes"
+   kind="dir"/>
+<entry
+   name="templates"
+   kind="dir"/>
+<entry
+   name="miscthemes"
+   kind="dir"/>
+<entry
+   committed-rev="3978"
+   name="special.c"
+   text-time="2003-11-18T15:03:40.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="43a2271b86b066297ec916920e94c01e"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:03:40.000000Z"/>
+<entry
+   name="apps"
+   kind="dir"/>
+<entry
+   committed-rev="3978"
+   name="special.h"
+   text-time="2003-11-18T15:03:46.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="489bdc6e63392f11d29fbff4f10f6a15"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:03:46.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="themebar.c"
+   text-time="2003-11-18T15:03:47.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="31f4d8d7cff8f9abb03dd3dd27bf0904"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:03:47.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="pterm.c"
+   text-time="2003-11-18T15:03:49.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="3f17c9c4369fdc4ded8d79c51398b7e7"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:03:49.000000Z"/>
+<entry
+   name="fullthemes"
+   kind="dir"/>
+<entry
+   committed-rev="3583"
+   name="Makefile.am"
+   text-time="2003-11-18T15:03:56.000000Z"
+   committed-date="2003-02-10T23:35:06.000000Z"
+   checksum="ca51b77fa96c9110b3658f8626a64254"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T15:03:56.000000Z"/>
+<entry
+   name="data"
+   kind="dir"/>
+<entry
+   committed-rev="3978"
+   name="edemo.c"
+   text-time="2003-11-18T15:04:27.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="8bcfaca88f43c29b5bfc2d52aa11b1a2"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:04:27.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="pterm.h"
+   text-time="2003-11-18T15:04:28.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="d0ba33228f588209af892eda7abc5da9"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:04:28.000000Z"/>
+</wc-entries>

@@ -1,0 +1,4 @@
+This is the third incarnation of a Perl client lib for picogui...
+This time it's designed more like Perl/Tk, and it is completely standalone.
+--Micah
+

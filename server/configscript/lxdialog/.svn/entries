@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4551"
+   name=""
+   committed-date="2003-09-03T18:22:27.534629Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/server/configscript/lxdialog"
+   last-author="Dentoid"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T16:23:38.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3806"
+   name="msgbox.c"
+   text-time="2003-11-18T16:23:02.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="52963bbcf369b023b61832f30f38fe5f"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:23:02.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="lxdialog.c"
+   text-time="2003-11-18T16:23:04.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="d40d972d91e4f603aac6a35d04a4a1dc"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:23:04.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="dialog.h"
+   text-time="2003-11-18T16:23:07.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="2c8bf653f51d895f65cfcbda353d1248"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:23:07.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="colors.h"
+   text-time="2003-11-18T16:23:10.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="a304272240937ccc86ff04b85e0d73f9"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:23:10.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="inputbox.c"
+   text-time="2003-11-18T16:23:13.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="2a0c80e9625fae5a7c898fdf731c965d"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:23:13.000000Z"/>
+<entry
+   committed-rev="4551"
+   name="Makefile.am"
+   text-time="2003-11-18T16:23:13.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="20e8cafec2722fb0574e444d86de2570"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T16:23:13.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="checklist.c"
+   text-time="2003-11-18T16:23:15.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="5cb06d18c7ad2ef32193b2beff1666b8"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:23:15.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="yesno.c"
+   text-time="2003-11-18T16:23:16.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="ea0c4d6b6623370d2c7ab87564dfcde4"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:23:16.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="textbox.c"
+   text-time="2003-11-18T16:23:27.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="f6d9b30f656b56af7c421e292f79c1c0"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:23:27.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="menubox.c"
+   text-time="2003-11-18T16:23:32.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="57ded630a715b329862c7d7b349d917b"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:23:32.000000Z"/>
+<entry
+   committed-rev="641"
+   name="BIG.FAT.WARNING"
+   text-time="2003-11-18T16:23:33.000000Z"
+   committed-date="2001-02-14T02:22:00.000000Z"
+   checksum="2e0bfdc0eb78ca744114b42489f077d3"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:23:33.000000Z"/>
+<entry
+   committed-rev="4551"
+   name="util.c"
+   text-time="2003-11-18T16:23:38.000000Z"
+   committed-date="2003-09-03T18:22:27.534629Z"
+   checksum="73152ede65f1e2bd2796bcd351b8fdfd"
+   last-author="Dentoid"
+   kind="file"
+   prop-time="2003-11-18T16:23:38.000000Z"/>
+</wc-entries>

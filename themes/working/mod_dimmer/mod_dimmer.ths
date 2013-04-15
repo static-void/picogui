@@ -1,0 +1,16 @@
+/* $Id: mod_dimmer.ths 3978 2003-05-23 10:19:38Z micah $
+ *
+ * Dim backgrounds behind popups
+ *
+ * -- Micah Dowty
+ */
+
+object default name = "Modifier: Popup background dimmer";
+
+object popup backdrop = fillstyle {
+  SetLgop(PG_LGOP_ALPHA);
+  SetColor(PGCF_ALPHA | PGC_WHITE | (70<<24));
+  Rect(0,0,0x7FFF,0x7FFF);
+};
+
+/* The End */

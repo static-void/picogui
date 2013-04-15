@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3840"
+   name=""
+   committed-date="2003-05-05T18:42:26.188241Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/working/picosm"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:26:06.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3806"
+   name="picosm.h"
+   text-time="2003-11-18T01:25:55.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="6eb82a4f608770089bebd8e27eced1b5"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:25:55.000000Z"/>
+<entry
+   committed-rev="2653"
+   name="Makefile.am"
+   text-time="2003-11-18T01:25:56.000000Z"
+   committed-date="2002-08-10T14:04:43.000000Z"
+   checksum="b2262e3d3ebe45381016a74f7fff4b80"
+   last-author="carpman"
+   kind="file"
+   prop-time="2003-11-18T01:25:56.000000Z"/>
+<entry
+   name="wt"
+   kind="dir"/>
+<entry
+   committed-rev="3806"
+   name="picosm.c"
+   text-time="2003-11-18T01:26:06.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="3b12afdf5bd7e9b811ce866366d4cfba"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:26:06.000000Z"/>
+</wc-entries>

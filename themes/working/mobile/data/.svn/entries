@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3841"
+   name=""
+   committed-date="2003-05-05T18:45:20.897937Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/themes/working/mobile/data"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:19:06.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3841"
+   name="icon_mono_32_error.pgm"
+   text-time="2003-11-18T15:18:55.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="ad4326e3ac35a12cd396c61344609fea"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:18:55.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="check9_off.pgm"
+   text-time="2003-11-18T15:18:56.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="7d922a788f6f9bf63a9ad5c3f367be70"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:18:56.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="r_arrow_mask.pbm"
+   text-time="2003-11-18T15:18:56.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="1f95c87696eb01669eaba2dd952d4858"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:18:56.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="radio9_off.pgm"
+   text-time="2003-11-18T15:18:57.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="6de15fb5a0c2245c934f6b105abf2908"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:18:57.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="check9_on.pgm"
+   text-time="2003-11-18T15:18:57.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="af0b45d5a58ac607ce499c22f85d1d99"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:18:57.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="radio9_on.pgm"
+   text-time="2003-11-18T15:18:58.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="2e94ee1b20d2c8ad31d47d5fb07207fc"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:18:58.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="thumb6x8.pgm"
+   text-time="2003-11-18T15:18:58.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="e5b60ad78a206be5aff018875d675e60"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:18:58.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="r_arrow.pbm"
+   text-time="2003-11-18T15:18:59.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="7ca0af9fb82fd47cedcc231f2f817121"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:18:59.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="line_gradients.pgm"
+   text-time="2003-11-18T15:18:59.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="699779eb6417653bb9c814f3c4c3c5eb"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:18:59.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="icon_mono_32_message.pgm"
+   text-time="2003-11-18T15:19:02.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="8c5f3d96466c5c9a3abc37874bca4b65"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:19:02.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="tiny_sphere.pgm"
+   text-time="2003-11-18T15:19:03.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="cac563b5568828c360c8aa0cf5abb2ac"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:19:03.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="icon_mono_32_warning.pgm"
+   text-time="2003-11-18T15:19:04.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="e672f8412f0685500f54ac0ef7e0484d"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:19:04.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="icon_mono_32_question.pgm"
+   text-time="2003-11-18T15:19:05.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="e3eb7586e726badaf8de166bfe892274"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:19:05.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="pglogo32.pgm"
+   text-time="2003-11-18T15:19:06.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="e9da8960356566bd411e058ad2560bb3"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:19:06.000000Z"/>
+</wc-entries>

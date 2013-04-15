@@ -1,0 +1,503 @@
+CONFIG_LINUX_GENERIC
+     Select the platform to compile PicoGUI for. Supported so far:
+     
+     Linux-generic:
+      This might work with other POSIX-ish OSes but it has only been
+      tested with Linux.
+      This has been tested with linux/i386 and linux/ppc.
+     
+     uClinux-m68k:
+      uClinux is a derivative of the standard Linux kernel, modified
+      to operate on CPUs without a memory management unit. So far
+      this port is specifically aimed at the Motorola 68k architecture.
+
+     Linux-mips:
+      Cross-compile for a mips CPU. (little endian)
+      Mips CPUs are used in many WinCE handhelds, and in the VTech
+      Helio. See linux-vr.org for information about running linux on
+      a mips handheld.
+
+     Windows:
+      This is for cross-compiling to Windows using the mingw32-gcc
+      compiler and SDL.
+
+
+CONFIG_NOSTRIP
+      This option makes it possible to run the resulting binary in
+      a debugger and get useful output. If this is off, the binary
+      is stripped and the stack frame is turned off.
+	     
+      
+ASM_INTEL
+      This enables intel-specific assembly language optimizations
+      where implemented. It will cause compile-time errors on
+      other architectures.
+
+CONFIG_UNIX_SOCKET
+      This option enables the use of unix domain sockets instead
+      of TCP/IP sockets.  The main difference is that unix domain
+      sockets are local only and the system doesn't need TCP/IP
+      framework in the kernel to operate.  Notice: You _must_
+      configure both pgserver and client library with same setting
+      or your clients will not be able to connect to one another.
+
+
+CONFIG_NO_OPTIMIZE
+      Turns off the compiler's optimization. This speeds up the
+      compilation a bit, and may make debugging easier. Do not use
+      for a final binary!
+
+
+CONFIG_EFENCE
+      Uses the Electric Fence malloc debugging library, which helps
+      detect buffer overflows by padding allocated memory with a
+      buffer zone that sets off a segfault.
+
+
+CONFIG_GCOV
+      Produces output that can be used by gcov to analyze how many
+      times each line of code is run
+      
+      
+CONFIG_GPROF
+      Produces output that can be used by gprof to profile the execution
+      time and other details of the code
+      
+      
+DEBUG_KEYS
+      This enables the CTRL-ALT-* debugging keys. Some important ones:
+      
+      CTRL-ALT-M : print memory information
+      CTRL-ALT-Y : Clear the screen, refresh the back-buffer
+      CTRL-ALT-B : Black screen
+      CTRL-ALT-U : Blue screen
+      CTRL-ALT-P : Display all loaded bitmaps
+      CTRL-ALT-S : Display all loaded strings
+      CTRL-ALT-H : Dump _complete_ handle tree to stdout
+      CTRL-ALT-N : Dump all gropnodes to stdout
+      CTRL_ALT-T : Dump all divnodes to stdout
+
+      With or without this option CTRL-ALT-/ exits the server
+      
+      
+BOTHERSOME_TERMINAL
+      This causes the terminal to print all unknown escape codes to
+      stdout
+
+
+DEBUG_WIDGET
+      Enables debuggative cruft in the widget subsystem
+      
+
+DEBUG_EVENT
+      Enables event-related debugging, good for testing input drivers
+      
+      
+DEBUG_VIDEO
+      Enables video-related debugging. (slow!)
+      In the null driver this turns on bounds-checking
+      for pixel accesses
+      
+      
+DEBUG_THEME
+      Theme subsystem debugging, including a trace of
+      fillstyle execution
+      
+      
+DEBUG_NET
+      Network-related debugging, including connections
+      and the waiting list
+
+
+DEBUG_INIT
+      Prints a marker at each stage in initialization and shows a guru
+      screen upon init completion
+      
+      
+FONT_HELVETICA10
+      A nice simple 10-pixel font. This is the default
+      variable-width font.
+      
+      
+FONT_CLEAN12
+      12-pixel high fixed-width font. Default fixed-width
+      
+      
+FONT_LUCIDA10
+      Similar to helvetica10, but there is more spacing between letters
+      
+      
+FONT_CLEAN6
+      Smaller version of CLEAN12, makes a good terminal font
+
+FONT_CLEAN8
+      A bit bigger than CLEAN6, better readable terminal font
+      
+      
+FONT_CONSOLE8
+      Thick 8x8 console font
+      
+      
+FONT_COURIER12
+      Another fixed width font, with bold
+      
+    
+FONT_HELVETICA8
+      A smaller version of Helvetica
+      
+FONT_HELVETICA14UNICODE
+      A unicode version of helvetica14 font
+
+      
+FONT_TIMES10
+      Characters are smaller than Helvetica, includes a bold version
+      
+      
+FONT_UTOPIA25
+      Huge font!
+      
+    
+DRIVER_FBDEV
+      A driver for the Linux framebuffer, /dev/fb0
+      This uses the linear VBL.
+      It does not by default load an input driver, but it is compatible
+      with ncursesinput.
+      
+      
+DRIVER_SDLFB
+      A driver for SDL based on the linear VBLs
+      Requires the sdlinput driver
+      
+      
+DRIVER_SDL
+      Old SDL driver based on defaultvbl. After linear* is done, this
+      will die
+      
+      
+DRIVER_SVGAFB
+      Linear framebuffer driver using svgalib and the linear VBLs.
+      On paged display hardware (Vesa 1.x) it forces double-
+      buffering and handles paging in the blit.
+      Requires the svgainput driver.
+      
+      
+DRIVER_SVGAGL
+      Vgagl-based driver for svgalib. Faster on paged hardware than
+      svgafb. Requires svgainput
+      
+      
+DRIVER_EZ328
+      Driver to directly control the LCD controller in the Motorola
+      68EZ328 "Dragonball EZ" CPU. Uses the linear VBLs <= 4bpp.
+      If no parameters are specified, uses what the LCD controller
+      is already initialized to.
+      
+      
+DRIVER_NCURSES
+      Crazy driver to use PicoGUI in text mode. Requires ncursesinput,
+      but needs no fonts.
+      
+    
+DRIVER_NULL
+      Produces no actual output, but if DEBUG_VIDEO is on it performs
+      bounds-checking on calls to pixel() and getpixel()
+      
+DRIVER_NULLFB
+      Sets up a virtual framebuffer, and uses linear* VBLs to render.
+      Produces no actual output. Good for benchmarking and profiling.
+      
+DRIVER_S1D13806
+      Driver to control the Epson S1D13806 video chip. It is used by
+      the Dragonball version of the Zukero platform (the internal
+      Dragonball video controller is not used and the EZ328 video
+      driver must be hence disabled)
+
+DRIVER_SDLINPUT
+      Input driver for the SDL event system
+      
+      
+DRIVER_SVGAINPUT
+      Driver for svgalib's mouse and raw keyboard
+      
+      
+DRIVER_NCURSESINPUT
+      Uses ncurses for keyboard input
+
+
+DRIVER_EZ328VGA
+      Strange driver to generate a VGA signal directly from the
+      68EZ328. The schematic for this is rendered in beautiful
+      ASCII art within ez328vga.c
+
+
+DRIVER_SCRSHOT
+      Writes the virtual framebuffer to a file on update.
+      See README.configfile for the options.
+
+
+DRIVER_BTKEY
+      Is used by SMARTDATA for incomming character from bluetooth
+      keyboards and phones. Please see pgserver/input/README.btkey
+      for more details. To use this input driver, you need to write
+      and extra definition file.
+      
+CONFIG_VIDEOTEST
+      This adds command line options to invoke a video driver test
+      mode, including a test pattern and a stress test.
+
+
+CONFIG_SDLEMU_NONE
+      None: SDL driver doesn't work with < 8bpp
+
+      Blit: Use the low-bpp VBLs (linear1, linear2, linear4) and convert to
+            8bpp in update()
+	     
+      Color: Simulate low bit depths in color conversion
+     
+     
+CONFIG_TEXT
+      This enables text error messages and verbose command line
+      messages. If it is off you will get cryptic messages, usually
+      in hexadecimal. Leave it on unless you really need a small
+      server. It saves around 6K.
+     
+
+CONFIG_HAIKU_BRANDON
+      Replaces the 'normal' errors with Brandon's cryptic but funny haikus
+
+
+CONFIG_NOPANELBAR
+      Disable the panelbar in the panel widget, making it impossible
+      for users to manually resize applications
+      
+     
+CONFIG_FORMAT_XBM
+      A loader for binary XBM images is included for internal use.
+      This is necessary to display the icon in guru() messages,
+      and most importantly the built-in mouse cursor.
+      
+      
+CONFIG_FORMAT_PNM
+      This is capable of loading any binary or ascii Portable
+      Anymap in black and white, grayscale, or true color.
+
+
+CONFIG_FORMAT_BMP
+      A loader for Windows(TM) bitmaps.
+
+
+CONFIG_FORMAT_GIF
+      A built-in loader for the ex-standard GIF format.
+
+
+CONFIG_FORMAT_JPEG
+      A loader for JPEG images, using libjpeg.
+
+
+CONFIG_FORMAT_PNG
+      A loader for the new standard PNG image format, using libpng.
+
+
+CONFIG_PNG_LOWLEVEL
+      When this option is unset, the PNG loader lets libpng handle
+      palette images (by translating them to RGB or RGBA).  When it is
+      set, the loader handles palettes itself (which sometimes yields
+      incorrect results).
+
+      Perhaps more importantly, when this is set images loaded from
+      PNGs will have an alpha channel if and only if the PNG has one;
+      therefore if you plan to blit it yourself to a canvas or another
+      bitmap, you must find out yourself whether it does have alpha,
+      and set the correct LGOP.  When this is unset, images loaded
+      from PNG will always have an alpha channel.
+
+      This setting may be removed in the future, if the alternative
+      proves stable enough and nobody comes up with an use for the
+      low-level version.
+
+
+CONFIG_FORMAT_HTML
+      A loader for HyperText Markup Language (currently unused).
+
+
+CONFIG_ROTATE
+      This adds extra "video wrapper" libraries that allow the entire
+      screen to be rotated into a portrait or landscape mode. Good for
+      small LCD devices.
+
+CONFIG_ROTATE180
+      Another "video wrapper" like CONFIG_ROTATE that adds 180 degree rotation
+      support at runtime
+
+CONFIG_ROTATE270
+      Another "video wrapper" like CONFIG_ROTATE that adds 270 degree rotation
+      support at runtime
+
+CONFIG_MAX_ZOMBIEGROPS
+      The server uses a list of 'zombie gropnodes' as a cache to
+      reduce memory allocation and deallocation during graphical
+      operations. Decreasing this will decrease memory usage, 
+      increasing it can potentially increase graphical speed. For
+      plain old buttons and toolbars and things with a relatively
+      sane theme a value of around 20 should be more than adequate.
+      For complicated themes or heavy canvas widget use, this should
+      be increased. In case you're wondering, each gropnode uses
+      (at this writing) 36 bytes of memory plus allocation overhead.
+
+CONFIG_TOUCHSCREEN
+      Shared code for touchscreen drivers. Takes care of calibration.
+      Eventually all touchscreens should be migrated to this.
+      Note that CONFIG_NOEXCLUSIVE must NOT be set for calibration
+      within PicoGUI to function.
+
+DRIVER_PALMAXTS
+      Touchscreen driver for Palmax mininotebooks
+
+DRIVER_GPM
+      Driver for reading mouse events from GPM
+
+DRIVER_CHIPSLICETS
+      Touch screen input driver for uClinux/m68k devices
+
+DRIVER_EVENTBROKER
+      Management driver for drivermessage
+
+DRIVER_CHIPSLICE_SND
+      Sound support for ChipSlice throught /dev/ttyX device
+      (kernel file: driver/char/vt.c)
+
+DRIVER_R3912TS
+      Touch screen driver for the r3912, used in the VTech Helio.
+      This reads from /dev/tpanel and uses calibration data from
+      /etc/pointercal. You must have the r3912 driver compiled
+      into the kernel.
+      More information on the Linux port to this device is at      
+      vhl-tools.sourceforge.net and ftp.pocketlinux.com
+      
+DRIVER_H3600TS
+      Touch screen driver for the Compaq iPAQ H3600 PDA. It might
+      work on other iPAQs, but that is not tested. If you want to
+      compile PicoGUI to include this driver, you should have the
+      header files for the official iPAQ kernel from www.handhelds.org.
+
+DRIVER_ERICSSON_CHATBOARD
+      Driver for the Ericsson Chatboard (a tiny keyboard designed for
+      cellular phones) connected to the serial port. This keyboard
+      sends AT commands simulating presses on the cell phone keypad.
+
+      For experimental purpose only.
+
+      Since the Chatboard tries to stay in sync whith the cell phone's
+      state, and sometimes looses the sync, the usage is not always
+      optimal. A better approach would be to remove the Chatboard
+      controller and directly read the matrix (but this requires more
+      GPIOs).
+
+CONFIG_SDLSKIN
+      Adds extra config file options to the SDL video and input
+      drivers for supporting 'skins' to make SDL look like a
+      handheld device emulator running on a PC. This also has
+      the practical application of supporting backlights and
+      hardware buttons on PCs.
+
+CONFIG_SDLSDC
+      The secondary display channel is a way to display extra
+      text data on a skin, to simulate a printer or text
+      LCD. Characters are sent with the PGDM_SDC_CHAR driver
+      message, and displayed according to configuration
+      file options.
+
+CONFIG_ROTATIONBASE_0
+      The base rotation angle is added to the rotation set by
+      the client or the config file. This is useful when the
+      display hardware must be rotated, but the user and
+      applications shouldn't be aware of it.
+
+CONFIG_SDL_FULLUPDATE
+      Instead of only updating the changed areas of the screen
+      this updates everything. It will slow things down
+      substantially, but could be helpful for tracking down
+      graphics primitives scribbling where they're not
+      supposed to on the screen.
+
+DRIVER_X11
+      Unlike the sdlfb driver, which was designed for compatibility
+      and correctly emulating embedded systems, the X11 driver
+      is designed for speed. It does _not_ require any VBLs.
+      (linear1, linear2, etc...) It offloads as much work
+      as possible to the X server, so that pgserver acts more
+      like a traditional widget set than a complete GUI server.
+
+DRIVER_X11INPUT
+      This input driver is required for the X Window System video driver
+
+CONFIG_X11_DOUBLEBUFFER
+      Normally the X driver only double-buffers sprite updates. This is
+      usually sufficient, but there will still be the occasional flicker
+      elsewhere. This option forces the driver to double-buffer everything.
+      This should eliminate all flicker, but it will slow down all
+      display updates.
+
+CONFIG_X11_NOPIXEL
+      Since the X Window System provides high-level primitives, the
+      pixel() and getpixel() operations are excruciatingly slow.
+      This replaces pixel() with a function that draws a red
+      pixel to the screen, and getpixel() with one that always returns
+      red. This helps debugging, making it easy to identify code that
+      still uses the slow primitives.
+
+CONFIG_X11_XFT
+      Replace PicoGUI's built-in font rendering system with XFreeType.
+      This is part of the XRender extension. You must have an X server
+      that supports this, and you need the libXft library and headers
+      installed. If you are using this option, there is no need to
+      compile any fonts into pgserver.
+
+CONFIG_X11_ICON
+      Sets the imagery of the icon associated to pgserver's X11 window.
+
+CONFIG_ROTATIONBASE_NOKEYS
+      This overrides rotating the coord_keyrotate function, so that even
+      when there's a base rotation the keyboard isn't affected.
+
+CONFIG_X11_NOSLOWLGOP
+      At least in the current implementation, addition subtraction and
+      multiplication LGOPs are very slow. Turning this on will make
+      themes like PicoAqua run at a reasonable speed.
+
+DRIVER_DIRECTFB
+      Video driver for DirectFB (see http://directfb.org/ for
+      info). This driver, like the X11 driver, is optimized for speed
+      and real-life usability.
+
+CONFIG_ERROR_TRACE
+      Any time a PicoGUI function reports an erorr, this reports it to
+      stderr. This could be very useful for debugging errors from
+      unknown locations.
+
+CONFIG_VBL_SLOWVBL
+      This VBL simulates a very slow output device for debugging purposes.
+      It will clearly show every pixel you draw :)
+      There are a couple important config file options that control this.
+      You need to enable the VBL with your video driver's config.
+      The VBL itself takes some options controlling the amount of delay.
+
+CONFIG_FAST_ALPHA
+      This puts the color conversion code directly into the blitter and uses
+      a look up table for the actual blending. The table takes 32k of RAM
+      while in use, and the color conversion ties the blitter to one color
+      representation, which you must select here.
+
+DRIVER_SDLGL
+      This is an experimental driver that is designed to merge PicoGUI and
+      OpenGL to give a partially 3D user interface with several opportunities
+      for cool special effects :)
+      To use this you'll need a hardware-accelerated OpenGL implementation,
+      SDL, the SDL_ttf library, and the sdlinput driver. See README.opengl
+      for more information.
+
+CONFIG_ROTATIONBASE_CLIENT
+      When this is set, the client could have access to the base rotation
+      of the server through the flags of the pgmodeinfo structure returned
+      by the client function:
+      struct pgmodeinfo *pgGetVideoMode(void);

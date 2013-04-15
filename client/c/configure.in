@@ -1,0 +1,103 @@
+dnl Process this file with autoconf to produce a configure script.
+AC_INIT(src/api.c)
+
+AM_INIT_AUTOMAKE(picogui-client, 0.0)
+
+AM_CONFIG_HEADER(config.h)
+
+AM_ACLOCAL_INCLUDE(macros)
+
+AM_PGUI_CROSSCOMPILE
+
+AM_PROG_LIBTOOL
+
+dnl Checks for programs.
+
+dnl Checks for libraries.
+
+PLATFORM=""
+
+case "$host" in
+  m68k-pic-*)
+	CFLAGS="-O2 -fPIC -DUCLINUX -DRUNTIME_FUNCPTR"
+	PLATFORM="platform.c"
+	;;
+esac
+
+AC_SUBST(PLATFORM)
+
+dnl Checks for header files.
+AC_HEADER_DIRENT
+AC_HEADER_STDC
+AC_CHECK_HEADERS(fcntl.h malloc.h sys/time.h)
+
+dnl Checks for typedefs, structures, and compiler characteristics.
+AC_C_CONST
+AC_TYPE_SIZE_T
+AC_HEADER_TIME
+AC_STRUCT_TM
+
+dnl Checks for library functions.
+AC_FUNC_ALLOCA
+AC_TYPE_SIGNAL
+AC_FUNC_VPRINTF
+AC_CHECK_FUNCS(socket strtol)
+
+dnl for integration in the bee compilation system
+AM_BEE_RPMPROFILE
+
+AC_ARG_ENABLE(bee, 
+[  --enable-bee     use the bee building system])
+
+AM_CONDITIONAL(ENABLE_BEE, test "${enable_bee}" = "yes")
+
+dnl Check for UNIX sockets
+unix_sockets_enabled="no"
+AC_ARG_ENABLE(unix-sockets,
+	[ --enable-unix-sockets         enable UNIX sockets (default: TCP/IP)],
+	if test "$enable_unix_sockets" = "yes"; then
+		unix_sockets_enabled="yes"
+	fi
+)
+if test "$unix_sockets_enabled" = "yes" ; then
+	CFLAGS="$CFLAGS -DCONFIG_UNIX_SOCKET"
+fi
+
+dnl Check for user-specified pgserver installation path
+PGSERVER_CFLAGS=""
+PGSERVER_LDFLAGS=""
+
+AC_ARG_WITH(pgserver,
+	[  --with-pgserver=...        prefix of the pgserver installation path],
+	[ PGSERVER_DIR=${withval}
+          PGSERVER_CFLAGS="-I${withval}/include"] )
+
+dnl Check that we can compile with the specified paths
+dnl 1.- save the old flags
+old_CFLAGS="${CFLAGS}"
+
+dnl 2.- set the flags for our tests
+CFLAGS="${PGSERVER_CFLAGS}"
+
+dnl 3.- try to compile some significant test
+AC_TRY_LINK(
+ 	[#include <picogui/network.h>], 
+	[ struct pgrequest dummy; ],, 
+	AC_MSG_ERROR([cannot link a test picogui program.])
+)
+
+dnl 4.- restore everything
+CFLAGS="${old_CFLAGS}"
+
+dnl 5.- ...and export our symbol
+AC_SUBST(PGSERVER_DIR)
+AC_SUBST(PGSERVER_CFLAGS)
+
+
+AC_OUTPUT(
+	Makefile
+	picogui-client.spec
+	src/Makefile
+	include/Makefile
+	include/picogui/Makefile
+)

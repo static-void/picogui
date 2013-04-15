@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3978"
+   name=""
+   committed-date="2003-05-23T10:19:38.050153Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/dev/picomail"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:05:20.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="2031"
+   name="picomail.conf"
+   text-time="2003-11-18T15:04:58.000000Z"
+   committed-date="2002-02-04T10:43:23.000000Z"
+   checksum="e14e81ca961982b13ac41f1056f2bb22"
+   last-author="tader"
+   kind="file"
+   prop-time="2003-11-18T15:04:58.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="picomail.h"
+   text-time="2003-11-18T15:04:59.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="b98f1c8a6e7361f3b62ea73e9afc1091"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:04:59.000000Z"/>
+<entry
+   committed-rev="2054"
+   name="INSTALL"
+   text-time="2003-11-18T15:04:59.000000Z"
+   committed-date="2002-02-05T13:02:29.000000Z"
+   checksum="f355f59906e36c160a20fecb8f7466d8"
+   last-author="tader"
+   kind="file"
+   prop-time="2003-11-18T15:04:59.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="tcpclient.c"
+   text-time="2003-11-18T15:05:01.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="ddc993a743a0d8599ac54d8ee25b210e"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:05:01.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="configfile.c"
+   text-time="2003-11-18T15:05:03.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="a611a1016ebad7f239aecafa7be00256"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:05:03.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="imap.c"
+   text-time="2003-11-18T15:05:10.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="1fa80c5c7d81d1143ce4eb7b460140ec"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:05:10.000000Z"/>
+<entry
+   committed-rev="2040"
+   name="Makefile.am"
+   text-time="2003-11-18T15:05:11.000000Z"
+   committed-date="2002-02-04T15:55:24.000000Z"
+   checksum="149a9ea763557e8a20f1499c58ea39ea"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T15:05:11.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="configfile.h"
+   text-time="2003-11-18T15:05:12.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="7695f2619cff81753ce3e1bc32dc816c"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:05:12.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="tcpclient.h"
+   text-time="2003-11-18T15:05:13.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="bc9fc6d1320b78b2a05fccf7bffd6451"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:05:13.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="imap.h"
+   text-time="2003-11-18T15:05:17.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="5437f2a21e53696e19e5bd6640bdecf8"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:05:17.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="picomail.c"
+   text-time="2003-11-18T15:05:20.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="ce0089855ed480720541abea0dde0c37"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:05:20.000000Z"/>
+</wc-entries>

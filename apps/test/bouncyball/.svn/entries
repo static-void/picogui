@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3840"
+   name=""
+   committed-date="2003-05-05T18:42:26.188241Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/test/bouncyball"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:21:13.000000Z"
+   revision="4573"/>
+<entry
+   name="data"
+   kind="dir"/>
+<entry
+   committed-rev="1759"
+   name="Makefile.am"
+   text-time="2003-11-18T01:21:11.000000Z"
+   committed-date="2001-12-21T18:00:15.000000Z"
+   checksum="6ed56a3d123be0a646dbe046c180aee3"
+   last-author="cgrigis"
+   kind="file"
+   prop-time="2003-11-18T01:21:11.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="bouncyball.c"
+   text-time="2003-11-18T01:21:13.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="2353328d3f92642701dc81b4af4356de"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:21:13.000000Z"/>
+</wc-entries>

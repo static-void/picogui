@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3835"
+   name=""
+   committed-date="2003-05-05T10:02:55.352841Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/working/xchat/scripts-perl"
+   last-author="bornet"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:46:01.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="1697"
+   name="sample_script.pl"
+   text-time="2003-11-18T01:45:55.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="3bb2ce171b8020e3c8bcf9b5f44fe405"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:45:55.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="xchatdox2.html"
+   text-time="2003-11-18T01:45:58.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="472f33ffb610d9f1d8d680b85c56d412"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:45:58.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="NOTES"
+   text-time="2003-11-18T01:45:59.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="ea400604068a6b37182a8b75cd37a259"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:45:59.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="dp_misc.pl"
+   text-time="2003-11-18T01:46:00.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="244d86889a447fdd40324f9be70482ba"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:46:00.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="ignore.pl"
+   text-time="2003-11-18T01:46:01.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="af867b48f1cff02ef4aeaa51cf51e65d"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:46:01.000000Z"/>
+</wc-entries>

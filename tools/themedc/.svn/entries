@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4522"
+   name=""
+   committed-date="2003-07-18T09:36:32.831932Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/tools/themedc"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:19:12.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="2223"
+   name="themefile.py"
+   text-time="2003-11-18T01:18:56.000000Z"
+   committed-date="2002-03-06T05:56:29.000000Z"
+   checksum="6bac8cfb08d33844d15b8ea08e7f790f"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:18:56.000000Z"/>
+<entry
+   committed-rev="1851"
+   name="themedc"
+   text-time="2003-11-18T01:18:58.000000Z"
+   committed-date="2002-01-09T02:27:47.000000Z"
+   checksum="7b06827642a0624049750cf6bac26657"
+   last-author="lonetech"
+   kind="file"
+   prop-time="2003-11-18T01:18:58.000000Z"/>
+<entry
+   committed-rev="4522"
+   name="README"
+   text-time="2003-11-18T01:18:59.000000Z"
+   committed-date="2003-07-18T09:36:32.831932Z"
+   checksum="a965b12ca4f275e615063e667fa57e9c"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:18:59.000000Z"/>
+<entry
+   committed-rev="2225"
+   name="pgsymtab.py"
+   text-time="2003-11-18T01:19:12.000000Z"
+   committed-date="2002-03-06T06:23:32.000000Z"
+   checksum="482bbf299d8c98eb5ae9206bcf807c69"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:19:12.000000Z"/>
+</wc-entries>

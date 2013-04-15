@@ -1,0 +1,70 @@
+dnl Process this file with autoconf to produce a configure script.
+AC_INIT(configure.in)
+
+dnl Checks for programs.
+AM_INIT_AUTOMAKE(pgui-themetools, 1.1.1)
+
+dnl Checks for libraries.
+AC_PROG_CC
+AM_PROG_LEX
+AC_PROG_YACC
+
+dnl Checks for header files.
+AC_HEADER_STDC
+AC_CHECK_HEADERS(malloc.h unistd.h)
+
+dnl Checks for typedefs, structures, and compiler characteristics.
+AC_C_CONST
+
+dnl Checks for library functions.
+AC_CHECK_FUNCS(strdup strstr strtol)
+
+dnl Check whether they want OpenGL constants
+AC_ARG_ENABLE(opengl,
+        [    --enable-opengl       Include OpenGL constants],
+        [case "${enableval}" in
+           yes)  opengl=true ;;
+            no)  opengl=false ;;
+             *) AC_MSG_ERROR(bad value ${enableval} for --enable-opengl) ;;
+        esac],[opengl=false])
+AM_CONDITIONAL(OPENGL, test x$opengl = xtrue)
+
+dnl Check for user-specified pgserver installation path
+PGSERVER_CFLAGS=""
+PGSERVER_INCLUDES="${includedir}"
+
+AC_ARG_WITH(pgserver,
+	[  --with-pgserver=...        prefix of the pgserver installation path],
+	PGSERVER_INCLUDES="${withval}/include")
+
+PGSERVER_CFLAGS="-I${PGSERVER_INCLUDES}"
+
+dnl Check that we can compile with the specified paths
+dnl 1.- save the old flags
+old_CFLAGS="${CFLAGS}"
+
+dnl 2.- set the flags for our tests
+CFLAGS="${PGSERVER_CFLAGS}"
+
+dnl 3.- try to compile some significant test
+AC_TRY_LINK(
+ 	[#include <picogui/network.h>], 
+	[ struct pgrequest dummy; ],, 
+	AC_MSG_ERROR([cannot link a test picogui program.])
+)
+
+dnl 4.- restore everything
+CFLAGS="${old_CFLAGS}"
+
+dnl 5.- ...and export our symbol
+AC_SUBST(PGSERVER_CFLAGS)
+AC_SUBST(PGSERVER_INCLUDES)
+
+
+AC_OUTPUT(
+	Makefile
+	thdump/Makefile
+	themec/Makefile
+	pgbg/Makefile
+	themetools.spec
+)

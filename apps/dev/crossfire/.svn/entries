@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4531"
+   name=""
+   committed-date="2003-08-09T18:00:24.240891Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/dev/crossfire"
+   last-author="lalo"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   revision="4573"/>
+<entry
+   committed-rev="4520"
+   name="crosshack.c"
+   text-time="2003-11-18T15:06:32.000000Z"
+   committed-date="2003-07-16T23:14:45.776684Z"
+   checksum="067cd0e5b3aba5f38c3473fb11b45085"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:06:32.000000Z"/>
+<entry
+   committed-rev="4531"
+   name="pg1.c"
+   text-time="2003-11-18T15:06:43.000000Z"
+   committed-date="2003-08-09T18:00:24.240891Z"
+   checksum="1b099599bed2a8a736d01aad577a276a"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:06:43.000000Z"/>
+<entry
+   committed-rev="4513"
+   name="Makefile"
+   text-time="2003-11-18T15:06:44.000000Z"
+   committed-date="2003-07-14T18:41:08.704565Z"
+   checksum="b9340b399b5656b9a157f3780c218967"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:06:44.000000Z"/>
+<entry
+   committed-rev="4462"
+   name="README"
+   text-time="2003-11-18T15:06:44.000000Z"
+   committed-date="2003-06-29T22:31:06.210567Z"
+   checksum="17652e9b8af04c3a3e1b7d82cd74f464"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:06:44.000000Z"/>
+</wc-entries>

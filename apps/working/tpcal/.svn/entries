@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3840"
+   name=""
+   committed-date="2003-05-05T18:42:26.188241Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/working/tpcal"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:26:48.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3806"
+   name="calth.h"
+   text-time="2003-11-18T01:26:21.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="cd1babbcdabd17e7d2e069e9cce54fa4"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:26:21.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="transform.h"
+   text-time="2003-11-18T01:26:22.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="2e8ecf1914c9893b97efd1e1a5daa75a"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:26:22.000000Z"/>
+<entry
+   committed-rev="1249"
+   name="Makefile.static"
+   text-time="2003-11-18T01:26:22.000000Z"
+   committed-date="2001-09-02T17:31:04.000000Z"
+   checksum="e704990f4f0aa7152caaf3aa6830ea52"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:26:22.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="tpcal.c"
+   text-time="2003-11-18T01:26:24.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="4182749626e9547fa68b9c6ed3ea35bd"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:26:24.000000Z"/>
+<entry
+   name="themes"
+   kind="dir"/>
+<entry
+   committed-rev="1959"
+   name="calth.thp"
+   text-time="2003-11-18T01:26:45.000000Z"
+   committed-date="2002-01-27T23:29:02.000000Z"
+   checksum="50678a7eebd2a067c144f6b77f87c8b4"
+   last-author="lonetech"
+   kind="file"
+   prop-time="2003-11-18T01:26:45.000000Z"/>
+<entry
+   committed-rev="1959"
+   name="Makefile.am"
+   text-time="2003-11-18T01:26:46.000000Z"
+   committed-date="2002-01-27T23:29:02.000000Z"
+   checksum="4a1bd8558918f18bc7228e3ad55401c9"
+   last-author="lonetech"
+   kind="file"
+   prop-time="2003-11-18T01:26:46.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="transform.c"
+   text-time="2003-11-18T01:26:48.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="de2f0484bfac9c54a1a2f60fba476868"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:26:48.000000Z"/>
+</wc-entries>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3978"
+   name=""
+   committed-date="2003-05-23T10:19:38.050153Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/dev/pgl/applets"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:00:16.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3806"
+   name="testapp.c"
+   text-time="2003-11-18T15:00:09.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="7061b61ddecb0f3b983139b09d10da63"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:00:09.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="pgl-cpu.c"
+   text-time="2003-11-18T15:00:10.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="918999f9e19135b5ddf7b503c589fbbe"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:00:10.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="pgl-battery-helio.c"
+   text-time="2003-11-18T15:00:11.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="e7d0c42b97d49426b9b88d904fc5f1f7"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:00:11.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="pgl-backlight.c"
+   text-time="2003-11-18T15:00:13.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="de35248e6196c0c2437ce339a9080433"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:00:13.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="pgl-clock.c"
+   text-time="2003-11-18T15:00:15.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="7f9bd8f874b69a255938e453a1988b3b"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:00:15.000000Z"/>
+<entry
+   committed-rev="1164"
+   name="Makefile"
+   text-time="2003-11-18T15:00:16.000000Z"
+   committed-date="2001-08-12T00:24:40.000000Z"
+   checksum="535592373037bec36726e50f83de8212"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T15:00:16.000000Z"/>
+</wc-entries>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3840"
+   name=""
+   committed-date="2003-05-05T18:42:26.188241Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/working/picosm/wt"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:26:02.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3306"
+   name="example_wt.xwt"
+   text-time="2003-11-18T01:25:58.000000Z"
+   committed-date="2002-11-12T03:42:44.000000Z"
+   checksum="28ab8fb51dc352c06cc12344d7ee28b7"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:25:58.000000Z"/>
+<entry
+   committed-rev="3606"
+   name="example_wt.py"
+   text-time="2003-11-18T01:25:58.000000Z"
+   committed-date="2003-03-19T18:25:29.000000Z"
+   checksum="da380073d701e37ac212698df841e19e"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T01:25:58.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="kscreensaver.png"
+   text-time="2003-11-18T01:26:02.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="66533f415eca961c145fd64f9816657c"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:26:02.000000Z"/>
+</wc-entries>

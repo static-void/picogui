@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3835"
+   name=""
+   committed-date="2003-05-05T10:02:55.352841Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/working/pgedit"
+   last-author="bornet"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:47:39.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="2022"
+   name="Makefile.am"
+   text-time="2003-11-18T01:47:38.000000Z"
+   committed-date="2002-02-03T16:55:48.000000Z"
+   checksum="f257c009c3e520d6e8710c839c8e2617"
+   last-author="lonetech"
+   kind="file"
+   prop-time="2003-11-18T01:47:38.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="pgedit.c"
+   text-time="2003-11-18T01:47:39.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="bdadac010998ccde412bbc47b1ed0b98"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:47:39.000000Z"/>
+</wc-entries>

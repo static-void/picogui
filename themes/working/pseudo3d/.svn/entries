@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3978"
+   name=""
+   committed-date="2003-05-23T10:19:38.050153Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/themes/working/pseudo3d"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:20:35.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3978"
+   name="pseudo3d_modcolor.ths"
+   text-time="2003-11-18T15:20:17.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="e88b113cc375ef078c253c3a2a3dd655"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:20:17.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="pseudo3d_modtexture.ths"
+   text-time="2003-11-18T15:20:18.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="6f00ef9ceb7428147d13c69e9e9971ba"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:20:18.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="pseudo3d.ths"
+   text-time="2003-11-18T15:20:20.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="8b8ebd28e4d1e38909b2365dbd7f2a62"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:20:20.000000Z"/>
+<entry
+   name="data"
+   kind="dir"/>
+</wc-entries>

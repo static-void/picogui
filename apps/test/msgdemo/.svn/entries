@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3835"
+   name=""
+   committed-date="2003-05-05T10:02:55.352841Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/test/msgdemo"
+   last-author="bornet"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:21:25.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3806"
+   name="message_transmitter.c"
+   text-time="2003-11-18T01:21:23.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="dcb7b9980f3e9cd82862b8019d36da19"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:21:23.000000Z"/>
+<entry
+   committed-rev="3512"
+   name="Makefile.am"
+   text-time="2003-11-18T01:21:24.000000Z"
+   committed-date="2002-12-19T19:46:10.000000Z"
+   checksum="10df88e1f4f82f03aa0dad8aa84f2719"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T01:21:24.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="message_receiver.c"
+   text-time="2003-11-18T01:21:25.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="913345500b4b7236f002c49aa2eb118d"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:21:25.000000Z"/>
+</wc-entries>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3835"
+   name=""
+   committed-date="2003-05-05T10:02:55.352841Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/working/ghost-launcher"
+   last-author="bornet"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:25:14.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3806"
+   name="ghost-launcher.c"
+   text-time="2003-11-18T01:25:13.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="20c9476441f75473b80baca4c675ed07"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:25:13.000000Z"/>
+<entry
+   committed-rev="3050"
+   name="README"
+   text-time="2003-11-18T01:25:14.000000Z"
+   committed-date="2002-10-20T17:11:42.000000Z"
+   checksum="61c585ebb32335dba8cbd3ea4cf175d8"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T01:25:14.000000Z"/>
+<entry
+   committed-rev="3050"
+   name="vr3.conf"
+   text-time="2003-11-18T01:25:14.000000Z"
+   committed-date="2002-10-20T17:11:42.000000Z"
+   checksum="888b995b76976514ab192fd9267a2c4e"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T01:25:14.000000Z"/>
+</wc-entries>

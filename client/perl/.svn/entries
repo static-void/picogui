@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3978"
+   name=""
+   committed-date="2003-05-23T10:19:38.050153Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/client/perl"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T16:54:10.000000Z"
+   revision="4573"/>
+<entry
+   name="PicoGUI"
+   kind="dir"/>
+<entry
+   committed-rev="2605"
+   name="MANIFEST"
+   text-time="2003-11-18T16:52:55.000000Z"
+   committed-date="2002-07-18T14:29:22.000000Z"
+   checksum="68911fb709987304c5591e4ec449972b"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:52:55.000000Z"/>
+<entry
+   committed-rev="2605"
+   name="Makefile.PL"
+   text-time="2003-11-18T16:53:54.000000Z"
+   committed-date="2002-07-18T14:29:22.000000Z"
+   checksum="7470e3d8449637d6f970fbcb47b49155"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:53:54.000000Z"/>
+<entry
+   committed-rev="37"
+   name="COPYING"
+   text-time="2003-11-18T16:54:02.000000Z"
+   committed-date="2000-04-24T02:55:11.000000Z"
+   checksum="7fbc338309ac38fefcd64b04bb903e34"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:54:02.000000Z"/>
+<entry
+   committed-rev="2605"
+   name="Changes"
+   text-time="2003-11-18T16:54:04.000000Z"
+   committed-date="2002-07-18T14:29:22.000000Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:54:04.000000Z"/>
+<entry
+   committed-rev="2606"
+   name="test.pl"
+   text-time="2003-11-18T16:54:05.000000Z"
+   committed-date="2002-07-18T14:48:51.000000Z"
+   checksum="c1380ff22d4c46e0840f3f602ea17693"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:54:05.000000Z"/>
+<entry
+   name="typing"
+   kind="dir"/>
+<entry
+   committed-rev="2605"
+   name="PicoGUI.pm"
+   text-time="2003-11-18T16:54:08.000000Z"
+   committed-date="2002-07-18T14:29:22.000000Z"
+   checksum="727b75ad6a699d07eecfd3bac15e5ad9"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:54:08.000000Z"/>
+<entry
+   committed-rev="2605"
+   name="README"
+   text-time="2003-11-18T16:54:09.000000Z"
+   committed-date="2002-07-18T14:29:22.000000Z"
+   checksum="c9318e51e91a4ecbddc3b5f359e5c269"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:54:09.000000Z"/>
+</wc-entries>

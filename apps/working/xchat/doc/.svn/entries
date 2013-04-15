@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3835"
+   name=""
+   committed-date="2003-05-05T10:02:55.352841Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/working/xchat/doc"
+   last-author="bornet"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:33:33.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="1697"
+   name="xchat-8.html"
+   text-time="2003-11-18T01:33:07.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="2a87e1a88d3d55696d19f1292d844d46"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:33:07.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="xchat-9.html"
+   text-time="2003-11-18T01:33:08.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="432cf9147b7bd9908e14dd7eaf94b9be"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:33:08.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="xchat.sgml"
+   text-time="2003-11-18T01:33:17.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="59c09f8c4b51ad58a30afbe4b7b2842f"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:33:17.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="xchat-10.html"
+   text-time="2003-11-18T01:33:17.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="f2a50642af8a1cbdc5bdb1af48b4716b"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:33:17.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="xchat-1.html"
+   text-time="2003-11-18T01:33:19.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="0e5a5f4412f3c42e074d4f2f47905622"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:33:19.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="xchat-2.html"
+   text-time="2003-11-18T01:33:20.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="a734e734f3f0c9fe53d9c8d436893503"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:33:20.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="xchat-3.html"
+   text-time="2003-11-18T01:33:21.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="fd39b4df05625a6e387edafc554f76b5"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:33:21.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="xchat.html"
+   text-time="2003-11-18T01:33:22.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="9f67f7539e14ad63fa3bbb8530f667a0"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:33:22.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="xchat-4.html"
+   text-time="2003-11-18T01:33:25.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="6c3292a917c251beb4b1b3caf5b768f1"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:33:25.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="xchat-5.html"
+   text-time="2003-11-18T01:33:27.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="8e623c7412ddce0ac3d9fe1f5ee3df90"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:33:27.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="xchat-6.html"
+   text-time="2003-11-18T01:33:28.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="b7f13b9097cc6436b8210ff6e6a52ca9"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:33:28.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="xchat-7.html"
+   text-time="2003-11-18T01:33:33.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="825385135840d30ef44052cbd408a0ab"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:33:33.000000Z"/>
+</wc-entries>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3840"
+   name=""
+   committed-date="2003-05-05T18:42:26.188241Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/themes/test/crsr_active/data"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:10:44.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3840"
+   name="goldcursor_small_bright.png"
+   text-time="2003-11-18T15:10:41.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="a0dc913f8b87730d6cccb44805c8a9a3"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:10:41.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="pg_initials_small.png"
+   text-time="2003-11-18T15:10:43.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="cf2b0ce90eca6d1091efce2686e11e61"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:10:43.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="goldcursor_small.png"
+   text-time="2003-11-18T15:10:44.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="227daa2340cf0c2cb91b500e1e05847d"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:10:44.000000Z"/>
+</wc-entries>

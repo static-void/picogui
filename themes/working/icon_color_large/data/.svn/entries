@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3841"
+   name=""
+   committed-date="2003-05-05T18:45:20.897937Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/themes/working/icon_color_large/data"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:17:01.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3841"
+   name="icon_color_64_question.pnm"
+   text-time="2003-11-18T15:16:42.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="26f032f956a1b4c483b6b85d0afaa845"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:16:42.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="x.pnm"
+   text-time="2003-11-18T15:16:43.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="fd9af6bea1a6a95720ab11af8cf0bc45"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:16:43.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="icon_color_64_error.pnm"
+   text-time="2003-11-18T15:16:45.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="6c349e6598770d697f8114b8a12a5542"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:16:45.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="check_mask.pnm"
+   text-time="2003-11-18T15:16:46.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="4c6bf4e903a4ae87c7b478311d177e71"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:16:46.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="check.pnm"
+   text-time="2003-11-18T15:16:48.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="7e3e80c278b83955838ea9b4f2c05efc"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:16:48.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="icon_color_64_message.mask.pnm"
+   text-time="2003-11-18T15:16:50.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="f73357f463525ada6fae307061c74d50"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:16:50.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="icon_color_64_question.mask.pnm"
+   text-time="2003-11-18T15:16:52.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="41dd18350bee9ae038087fed912a7b12"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:16:52.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="x_mask.pnm"
+   text-time="2003-11-18T15:16:53.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="0dcd80eca75487a3f57e307c006277dc"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:16:53.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="icon_color_64_error.mask.pnm"
+   text-time="2003-11-18T15:16:56.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="18f5b92c652796a453f31e11da003518"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:16:56.000000Z"/>
+<entry
+   committed-rev="3841"
+   name="icon_color_64_message.pnm"
+   text-time="2003-11-18T15:17:01.000000Z"
+   committed-date="2003-05-05T18:45:20.897937Z"
+   checksum="bacdaa2f47a75f6d7a142153e9ce4797"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:17:01.000000Z"/>
+</wc-entries>

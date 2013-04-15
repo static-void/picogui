@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3835"
+   name=""
+   committed-date="2003-05-05T10:02:55.352841Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/working/xchat/src/fe-picogui"
+   last-author="bornet"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:27:47.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3806"
+   name="output.c"
+   text-time="2003-11-18T01:27:36.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="bb4cafff331ad342a140d9fd0994a320"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:27:36.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="fe-picogui.c"
+   text-time="2003-11-18T01:27:41.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="9d7684f938d8c57a72949f8a0699f0b6"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:27:41.000000Z"/>
+<entry
+   committed-rev="1724"
+   name="Makefile.am"
+   text-time="2003-11-18T01:27:43.000000Z"
+   committed-date="2001-12-16T10:56:05.000000Z"
+   checksum="7f1b7e51a57ca09a4cfb237403ab7cf7"
+   last-author="lonetech"
+   kind="file"
+   prop-time="2003-11-18T01:27:43.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="myglib.h"
+   text-time="2003-11-18T01:27:44.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="76c08f02535a1d8bb5ae7c7195d5e4bb"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:27:44.000000Z"/>
+<entry
+   committed-rev="1724"
+   name="README"
+   text-time="2003-11-18T01:27:44.000000Z"
+   committed-date="2001-12-16T10:56:05.000000Z"
+   checksum="24904b6bdfe180dd4912ef39ca54e052"
+   last-author="lonetech"
+   kind="file"
+   prop-time="2003-11-18T01:27:44.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="fe-picogui.h"
+   text-time="2003-11-18T01:27:46.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="2ac6846be84422d976cf95b0fd317c23"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:27:46.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="glib.c"
+   text-time="2003-11-18T01:27:47.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="afcb7a1042ea5816abe235c621735032"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:27:47.000000Z"/>
+</wc-entries>

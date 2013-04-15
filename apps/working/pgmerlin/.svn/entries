@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3840"
+   name=""
+   committed-date="2003-05-05T18:42:26.188241Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/working/pgmerlin"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:50:09.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3806"
+   name="point.h"
+   text-time="2003-11-18T01:47:46.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="206630949947debb86f8558fa50a736b"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:47:46.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="graphics.c"
+   text-time="2003-11-18T01:47:49.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="fd0ee3a6c55ba0661dfe9ec8f11a1978"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:47:49.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="mapping.h"
+   text-time="2003-11-18T01:47:50.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="a820621eb98c27cd3d4271a08a1d5c3a"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:47:50.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="def.h"
+   text-time="2003-11-18T01:47:51.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="825a781e60aac6c361b19e8c19023d9a"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:47:51.000000Z"/>
+<entry
+   name="keymap"
+   kind="dir"/>
+<entry
+   committed-rev="3806"
+   name="graphics.h"
+   text-time="2003-11-18T01:47:59.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="971191cf64238239ae1f721cf7c6c2f3"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:47:59.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="elasticWizard.c"
+   text-time="2003-11-18T01:48:01.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="6287f0bba2c01bb6c60c2840d9cd9d90"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:48:01.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="wizard.h"
+   text-time="2003-11-18T01:48:02.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="19eed644b79b20630862f79378ce886f"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:48:02.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="pattern.c"
+   text-time="2003-11-18T01:48:03.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="79c8ea18902b364fc5b8dbd2e48eeb2f"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:48:03.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="pgmerlin.c"
+   text-time="2003-11-18T01:48:05.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="ae76f9d402983e6984733b39d5cf04d9"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:48:05.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="event.c"
+   text-time="2003-11-18T01:48:08.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="1d213c1d905fd8c86abab441cd63ef5f"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:48:08.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="pattern.h"
+   text-time="2003-11-18T01:48:09.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="f86ebe643f6996ac76fa842559915092"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:48:09.000000Z"/>
+<entry
+   name="doc"
+   kind="dir"/>
+<entry
+   committed-rev="3806"
+   name="filter.c"
+   text-time="2003-11-18T01:48:52.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="7417edd7a59437b7602e4d35241ba172"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:48:52.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="preprocessor.c"
+   text-time="2003-11-18T01:48:53.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="7cc2b5a2cf9e23af5fe15e473dcc1e4e"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:48:53.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="event.h"
+   text-time="2003-11-18T01:48:54.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="287937056fdc3b02e828e0f42b5b87ba"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:48:54.000000Z"/>
+<entry
+   committed-rev="3787"
+   name="samples.tar.gz"
+   text-time="2003-11-18T01:50:02.000000Z"
+   committed-date="2003-05-03T07:26:06.173011Z"
+   checksum="b69a43d7a2a00f617333e293c1e24622"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:50:02.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="filter.h"
+   text-time="2003-11-18T01:50:04.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="1937f6f7e7fe68cab4a349089bfae80a"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:50:04.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="mapping.c"
+   text-time="2003-11-18T01:50:06.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="02ecdb9f511cff8412927f7db8a0b9a8"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:50:06.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="preprocessor.h"
+   text-time="2003-11-18T01:50:07.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="ae27b30e867363cb58954bc9dbf3d8a1"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:50:07.000000Z"/>
+<entry
+   committed-rev="2491"
+   name="Makefile"
+   text-time="2003-11-18T01:50:09.000000Z"
+   committed-date="2002-05-18T22:55:28.000000Z"
+   checksum="84756db9f087d86c6698129310a363f9"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T01:50:09.000000Z"/>
+</wc-entries>

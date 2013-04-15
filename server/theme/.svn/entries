@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3982"
+   name=""
+   committed-date="2003-05-23T12:00:35.626472Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/server/theme"
+   last-author="lalo"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T16:25:46.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3978"
+   name="memtheme.c"
+   text-time="2003-11-18T16:25:25.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="fefa1fba83aae222a9790022b8e9bb2f"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:25:25.000000Z"/>
+<entry
+   committed-rev="3982"
+   name="fillstyle.c"
+   text-time="2003-11-18T16:25:34.000000Z"
+   committed-date="2003-05-23T12:00:35.626472Z"
+   checksum="085faafd051ee85c9e553abc64075922"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:25:34.000000Z"/>
+<entry
+   committed-rev="3175"
+   name="Makefile.am"
+   text-time="2003-11-18T16:25:39.000000Z"
+   committed-date="2002-11-03T04:54:25.000000Z"
+   checksum="ade341c5baeec725e99147fcd60973de"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:25:39.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="wt.c"
+   text-time="2003-11-18T16:25:41.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="e4d418c9fef26eb9c068b62ee323cb3e"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:25:41.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="crc32.c"
+   text-time="2003-11-18T16:25:46.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="ce27ee9fb5d3774074df5b689958ce6e"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:25:46.000000Z"/>
+</wc-entries>

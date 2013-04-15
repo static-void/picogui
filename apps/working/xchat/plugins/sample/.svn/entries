@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3835"
+   name=""
+   committed-date="2003-05-05T10:02:55.352841Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/working/xchat/plugins/sample"
+   last-author="bornet"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:45:47.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3806"
+   name="sample.c"
+   text-time="2003-11-18T01:45:46.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="8ffb0c3a1b190801ffeb0c158567ce71"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:45:46.000000Z"/>
+<entry
+   committed-rev="1697"
+   name="Makefile"
+   text-time="2003-11-18T01:45:47.000000Z"
+   committed-date="2001-12-15T03:47:51.000000Z"
+   checksum="f657a5c303ff798cf9d1142c1b7ffc3b"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:45:47.000000Z"/>
+</wc-entries>

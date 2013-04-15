@@ -1,0 +1,4 @@
+NAME = Fixed
+SIZE = 13
+STYLE = fixed encoding_unicode
+NORMAL = fixed13ja

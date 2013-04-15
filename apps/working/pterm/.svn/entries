@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3978"
+   name=""
+   committed-date="2003-05-23T10:19:38.050153Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/working/pterm"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:25:53.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3978"
+   name="ptyfork.c"
+   text-time="2003-11-18T01:25:50.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="71554eb014bcf67b1e6fe84f3137bebe"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:25:50.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="main.c"
+   text-time="2003-11-18T01:25:51.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="bf2cb3c263aad648275126116e65910f"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:25:51.000000Z"/>
+<entry
+   committed-rev="1456"
+   name="Makefile.am"
+   text-time="2003-11-18T01:25:52.000000Z"
+   committed-date="2001-10-26T10:50:38.000000Z"
+   checksum="4c4381a8df1ed99d696185e6acbc7f2c"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T01:25:52.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="pterm.h"
+   text-time="2003-11-18T01:25:53.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="a6cdcb65c79f47a014db4a4c3b9edbb1"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:25:53.000000Z"/>
+</wc-entries>

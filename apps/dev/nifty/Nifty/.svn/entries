@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4573"
+   name=""
+   committed-date="2003-11-19T00:45:34.491413Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/dev/nifty/Nifty"
+   last-author="lalo"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:02:35.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3731"
+   name="Subprocess.py"
+   text-time="2003-11-18T15:01:45.000000Z"
+   committed-date="2003-04-02T22:02:14.000000Z"
+   checksum="8cca9c84e81f00c5f19f93a31075bf5c"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:01:45.000000Z"/>
+<entry
+   committed-rev="4573"
+   name="Frame.py"
+   text-time="2003-11-19T01:09:48.000000Z"
+   committed-date="2003-11-19T00:45:34.491413Z"
+   checksum="fd4880dd1a1af2e4cb6ac04173341cde"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-19T01:09:48.000000Z"/>
+<entry
+   committed-rev="4573"
+   name="Textbox.py"
+   text-time="2003-11-19T01:09:49.000000Z"
+   committed-date="2003-11-19T00:45:34.491413Z"
+   checksum="98ef3b52efa82412b706d670894e9a70"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-19T01:09:49.000000Z"/>
+<entry
+   committed-rev="3741"
+   name="Workspace.py"
+   text-time="2003-11-18T15:01:48.000000Z"
+   committed-date="2003-04-03T03:53:28.000000Z"
+   checksum="61c1940ae3b0f465026f99828473bd7f"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:01:48.000000Z"/>
+<entry
+   committed-rev="3694"
+   name="__init__.py"
+   text-time="2003-11-18T15:01:49.000000Z"
+   committed-date="2003-03-25T08:03:28.000000Z"
+   checksum="38fbaefd18573685cfe0dfcaac2a30fb"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:01:49.000000Z"/>
+<entry
+   committed-rev="3732"
+   name="config.py"
+   text-time="2003-11-18T15:01:50.000000Z"
+   committed-date="2003-04-02T22:02:41.000000Z"
+   checksum="8647277aeee4c64a97b9c9a77e4a037a"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:01:50.000000Z"/>
+<entry
+   committed-rev="4570"
+   name="keybindings.py"
+   text-time="2003-11-18T15:01:51.000000Z"
+   committed-date="2003-11-18T00:49:13.293416Z"
+   checksum="9c5a8ddc252405928c7c647d25dd4092"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:01:51.000000Z"/>
+<entry
+   committed-rev="4570"
+   name="Buffer.py"
+   text-time="2003-11-18T15:01:53.000000Z"
+   committed-date="2003-11-18T00:49:13.293416Z"
+   checksum="f1e76438954ae5c06b7396bbc7c18bc1"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:01:53.000000Z"/>
+<entry
+   committed-rev="4573"
+   name="FileBuffer.py"
+   text-time="2003-11-19T01:09:50.000000Z"
+   committed-date="2003-11-19T00:45:34.491413Z"
+   checksum="4a2d5f0f19bfa2a1aae003189d0c55c8"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-19T01:09:50.000000Z"/>
+<entry
+   committed-rev="3729"
+   name="Terminal.py"
+   text-time="2003-11-18T15:01:57.000000Z"
+   committed-date="2003-03-29T05:34:44.000000Z"
+   checksum="85a7092cc1dd9cda683ee885e8c079ee"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:01:57.000000Z"/>
+<entry
+   committed-rev="4573"
+   name="PythonBuffer.py"
+   text-time="2003-11-19T01:09:52.000000Z"
+   committed-date="2003-11-19T00:45:34.491413Z"
+   checksum="c3f0f237a4ef456c4f5a5714e7ca67bc"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-19T01:09:52.000000Z"/>
+<entry
+   committed-rev="3769"
+   name="QuikWriting.py"
+   text-time="2003-11-18T15:02:10.000000Z"
+   committed-date="2003-04-15T22:37:53.000000Z"
+   checksum="efed7a6b62da62982b4dc521456b96d3"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:02:10.000000Z"/>
+<entry
+   committed-rev="3772"
+   name="DebugBuffer.py"
+   text-time="2003-11-18T15:02:11.000000Z"
+   committed-date="2003-04-16T00:26:16.000000Z"
+   checksum="9073a326a7870105bb5d5fbbc49638a6"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:02:11.000000Z"/>
+<entry
+   committed-rev="3745"
+   name="ScratchBuffer.py"
+   text-time="2003-11-18T15:02:13.000000Z"
+   committed-date="2003-04-07T14:32:43.000000Z"
+   checksum="6e352e2e1693b1e954caa679a777a282"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:02:13.000000Z"/>
+<entry
+   name="Poing"
+   kind="dir"/>
+<entry
+   committed-rev="4570"
+   name="Minibuffer.py"
+   text-time="2003-11-18T15:02:35.000000Z"
+   committed-date="2003-11-18T00:49:13.293416Z"
+   checksum="94d2fa204b4214278de1c4ecb9b17585"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T15:02:35.000000Z"/>
+</wc-entries>

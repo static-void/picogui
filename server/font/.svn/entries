@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3978"
+   name=""
+   committed-date="2003-05-23T10:19:38.050153Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/server/font"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T16:45:21.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="1240"
+   name="clean12.bdf"
+   text-time="2003-11-18T16:31:16.000000Z"
+   committed-date="2001-08-31T18:00:03.000000Z"
+   checksum="d041fdc67c9b23c375110156104c8de1"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:31:16.000000Z"/>
+<entry
+   committed-rev="1460"
+   name="times10.fi"
+   text-time="2003-11-18T16:31:20.000000Z"
+   committed-date="2001-10-26T23:56:32.000000Z"
+   checksum="b6d0f66a27a73161fdca1f1a6303551b"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:31:20.000000Z"/>
+<entry
+   committed-rev="1870"
+   name="helvetica10.bdf"
+   text-time="2003-11-18T16:31:25.000000Z"
+   committed-date="2002-01-10T17:41:45.000000Z"
+   checksum="30f07a1002578d8d12e746cda81ab370"
+   last-author="cgrigis"
+   kind="file"
+   prop-time="2003-11-18T16:31:25.000000Z"/>
+<entry
+   committed-rev="1870"
+   name="helvetica12.bdf"
+   text-time="2003-11-18T16:31:30.000000Z"
+   committed-date="2002-01-10T17:41:45.000000Z"
+   checksum="2862da006ba6f97206609ea5a08334af"
+   last-author="cgrigis"
+   kind="file"
+   prop-time="2003-11-18T16:31:30.000000Z"/>
+<entry
+   committed-rev="2435"
+   name="README.font"
+   text-time="2003-11-18T16:31:30.000000Z"
+   committed-date="2002-04-15T18:26:18.000000Z"
+   checksum="15f58680e6f142df08d909e3d0323ae2"
+   last-author="bauermeister"
+   kind="file"
+   prop-time="2003-11-18T16:31:30.000000Z"/>
+<entry
+   committed-rev="1870"
+   name="clean6.bdf"
+   text-time="2003-11-18T16:31:33.000000Z"
+   committed-date="2002-01-10T17:41:45.000000Z"
+   checksum="1303abc6736333a39180ede65f9fa038"
+   last-author="cgrigis"
+   kind="file"
+   prop-time="2003-11-18T16:31:33.000000Z"/>
+<entry
+   committed-rev="1870"
+   name="helvetica14.bdf"
+   text-time="2003-11-18T16:31:37.000000Z"
+   committed-date="2002-01-10T17:41:45.000000Z"
+   checksum="39e256ef8176744c496e0a4de5082ce1"
+   last-author="cgrigis"
+   kind="file"
+   prop-time="2003-11-18T16:31:37.000000Z"/>
+<entry
+   committed-rev="2435"
+   name="clean8.bdf"
+   text-time="2003-11-18T16:31:40.000000Z"
+   committed-date="2002-04-15T18:26:18.000000Z"
+   checksum="59873339bfa2cf65d4ab6abfd65e3463"
+   last-author="bauermeister"
+   kind="file"
+   prop-time="2003-11-18T16:31:40.000000Z"/>
+<entry
+   committed-rev="1404"
+   name="clean6.fi"
+   text-time="2003-11-18T16:31:41.000000Z"
+   committed-date="2001-10-17T22:48:59.000000Z"
+   checksum="e85dd20cf1751937628dec40d76b3855"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:31:41.000000Z"/>
+<entry
+   committed-rev="1240"
+   name="courier12.bdf"
+   text-time="2003-11-18T16:31:50.000000Z"
+   committed-date="2001-08-31T18:00:03.000000Z"
+   checksum="86434f17efc3b1a0187cce081d8ed9db"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:31:50.000000Z"/>
+<entry
+   committed-rev="3743"
+   name="youngatheart.readme"
+   text-time="2003-11-18T16:31:54.000000Z"
+   committed-date="2003-04-03T17:22:36.000000Z"
+   checksum="0b0f54f5e90e2842683961c64c2b62df"
+   last-author="cgrigis"
+   kind="file"
+   prop-time="2003-11-18T16:31:54.000000Z"/>
+<entry
+   committed-rev="2860"
+   name="gelly10.bdf"
+   text-time="2003-11-18T16:31:58.000000Z"
+   committed-date="2002-10-01T09:41:12.000000Z"
+   checksum="af7eba998d2fd146fcc1bd1e89e27b6f"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:31:58.000000Z"/>
+<entry
+   committed-rev="2435"
+   name="clean8.fi"
+   text-time="2003-11-18T16:31:59.000000Z"
+   committed-date="2002-04-15T18:26:18.000000Z"
+   checksum="780b467d9222cccb65e8ee66cbc263ec"
+   last-author="bauermeister"
+   kind="file"
+   prop-time="2003-11-18T16:31:59.000000Z"/>
+<entry
+   committed-rev="1870"
+   name="helvetica18.bdf"
+   text-time="2003-11-18T16:32:08.000000Z"
+   committed-date="2002-01-10T17:41:45.000000Z"
+   checksum="bfd63de70d841e52bca8a97d65d87038"
+   last-author="cgrigis"
+   kind="file"
+   prop-time="2003-11-18T16:32:08.000000Z"/>
+<entry
+   committed-rev="2968"
+   name="helvetica14unicode.bdf"
+   text-time="2003-11-18T16:32:29.000000Z"
+   committed-date="2002-10-11T14:47:19.000000Z"
+   checksum="60ebcf6db50a259b9e0990603326b4b5"
+   last-author="pney"
+   kind="file"
+   prop-time="2003-11-18T16:32:29.000000Z"/>
+<entry
+   committed-rev="2968"
+   name="helvetica14unicode.fi"
+   text-time="2003-11-18T16:32:29.000000Z"
+   committed-date="2002-10-11T14:47:19.000000Z"
+   checksum="e57f9cfe2ff8e256612b04b655b597a5"
+   last-author="pney"
+   kind="file"
+   prop-time="2003-11-18T16:32:29.000000Z"/>
+<entry
+   committed-rev="3743"
+   name="youngatheart18.fi"
+   text-time="2003-11-18T16:32:31.000000Z"
+   committed-date="2003-04-03T17:22:36.000000Z"
+   checksum="1ba20f6971819a514d03cbfc05b62433"
+   last-author="cgrigis"
+   kind="file"
+   prop-time="2003-11-18T16:32:31.000000Z"/>
+<entry
+   committed-rev="1404"
+   name="clean12.fi"
+   text-time="2003-11-18T16:32:31.000000Z"
+   committed-date="2001-10-17T22:48:59.000000Z"
+   checksum="559591a62c2e305667de924cc78fd7dd"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:32:31.000000Z"/>
+<entry
+   committed-rev="1250"
+   name="console8.bdf"
+   text-time="2003-11-18T16:32:39.000000Z"
+   committed-date="2001-09-02T18:12:13.000000Z"
+   checksum="29d9771c5041d78101a7393abd631823"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:32:39.000000Z"/>
+<entry
+   committed-rev="1870"
+   name="helvetica8.bdf"
+   text-time="2003-11-18T16:32:47.000000Z"
+   committed-date="2002-01-10T17:41:45.000000Z"
+   checksum="8e7bd7ad67b7aa4513d66bee1a5b9a7a"
+   last-author="cgrigis"
+   kind="file"
+   prop-time="2003-11-18T16:32:47.000000Z"/>
+<entry
+   committed-rev="1460"
+   name="console8.fi"
+   text-time="2003-11-18T16:32:48.000000Z"
+   committed-date="2001-10-26T23:56:32.000000Z"
+   checksum="de7e0c945644407d310a8134118f1a51"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:32:48.000000Z"/>
+<entry
+   committed-rev="1924"
+   name="helvetica8.fi"
+   text-time="2003-11-18T16:32:51.000000Z"
+   committed-date="2002-01-21T09:02:06.000000Z"
+   checksum="2fd820bd103a7f0b8ccbdf67bd64fbbe"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:32:51.000000Z"/>
+<entry
+   committed-rev="1240"
+   name="lucida10.bdf"
+   text-time="2003-11-18T16:32:59.000000Z"
+   committed-date="2001-08-31T18:00:03.000000Z"
+   checksum="7678813923d62d03c4ee71ab91136df0"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:32:59.000000Z"/>
+<entry
+   committed-rev="1460"
+   name="lucida10.fi"
+   text-time="2003-11-18T16:32:59.000000Z"
+   committed-date="2001-10-26T23:56:32.000000Z"
+   checksum="9a3f76ac5a93d8ee2b88102fd1671343"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:32:59.000000Z"/>
+<entry
+   committed-rev="1240"
+   name="utopia25.bdf"
+   text-time="2003-11-18T16:33:05.000000Z"
+   committed-date="2001-08-31T18:00:03.000000Z"
+   checksum="28d1cff7ee5f08d7b153d36bcdd04f43"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:33:05.000000Z"/>
+<entry
+   committed-rev="1924"
+   name="helvetica10.fi"
+   text-time="2003-11-18T16:33:06.000000Z"
+   committed-date="2002-01-21T09:02:06.000000Z"
+   checksum="7eb84f5d4121bdcd390002c773c0f91f"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:33:06.000000Z"/>
+<entry
+   committed-rev="1870"
+   name="helvetica12b.bdf"
+   text-time="2003-11-18T16:33:10.000000Z"
+   committed-date="2002-01-10T17:41:45.000000Z"
+   checksum="a1e76a73ef6a7417d49e257ce9227fed"
+   last-author="cgrigis"
+   kind="file"
+   prop-time="2003-11-18T16:33:10.000000Z"/>
+<entry
+   committed-rev="1870"
+   name="helvetica12.fi"
+   text-time="2003-11-18T16:33:11.000000Z"
+   committed-date="2002-01-10T17:41:45.000000Z"
+   checksum="ab4e8c5b17c778b9dc3e5eaceaddd647"
+   last-author="cgrigis"
+   kind="file"
+   prop-time="2003-11-18T16:33:11.000000Z"/>
+<entry
+   committed-rev="1870"
+   name="helvetica24.bdf"
+   text-time="2003-11-18T16:33:17.000000Z"
+   committed-date="2002-01-10T17:41:45.000000Z"
+   checksum="ff65c6a340ae80e9946cf699d30c8c9c"
+   last-author="cgrigis"
+   kind="file"
+   prop-time="2003-11-18T16:33:17.000000Z"/>
+<entry
+   committed-rev="1870"
+   name="helvetica14b.bdf"
+   text-time="2003-11-18T16:33:21.000000Z"
+   committed-date="2002-01-10T17:41:45.000000Z"
+   checksum="eb57ccbfc02f538d376ece6ccc86049c"
+   last-author="cgrigis"
+   kind="file"
+   prop-time="2003-11-18T16:33:21.000000Z"/>
+<entry
+   committed-rev="1460"
+   name="utopia25.fi"
+   text-time="2003-11-18T16:33:21.000000Z"
+   committed-date="2001-10-26T23:56:32.000000Z"
+   checksum="dfd1224ab31bb93d06c77cbb8babf32d"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:33:21.000000Z"/>
+<entry
+   committed-rev="1870"
+   name="helvetica24b.bdf"
+   text-time="2003-11-18T16:33:29.000000Z"
+   committed-date="2002-01-10T17:41:45.000000Z"
+   checksum="b6c6c8a74731a2d233500abdfd94bcf7"
+   last-author="cgrigis"
+   kind="file"
+   prop-time="2003-11-18T16:33:29.000000Z"/>
+<entry
+   committed-rev="1870"
+   name="helvetica14.fi"
+   text-time="2003-11-18T16:33:29.000000Z"
+   committed-date="2002-01-10T17:41:45.000000Z"
+   checksum="9f9fa8e99542d31ec3b81cdfa080df2d"
+   last-author="cgrigis"
+   kind="file"
+   prop-time="2003-11-18T16:33:29.000000Z"/>
+<entry
+   committed-rev="1870"
+   name="helvetica24.fi"
+   text-time="2003-11-18T16:33:30.000000Z"
+   committed-date="2002-01-10T17:41:45.000000Z"
+   checksum="11a4ca188d5a377c2c3407040ace9ab1"
+   last-author="cgrigis"
+   kind="file"
+   prop-time="2003-11-18T16:33:30.000000Z"/>
+<entry
+   committed-rev="1240"
+   name="courier12b.bdf"
+   text-time="2003-11-18T16:33:33.000000Z"
+   committed-date="2001-08-31T18:00:03.000000Z"
+   checksum="ed47d378aee3a8efc985cd49313d00bc"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:33:33.000000Z"/>
+<entry
+   committed-rev="3978"
+   name="fixed13ja.bdf"
+   text-time="2003-11-18T16:44:35.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="dfdec325bec937cc90562b4f25509ae0"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:44:34.000000Z"/>
+<entry
+   committed-rev="1460"
+   name="courier12.fi"
+   text-time="2003-11-18T16:44:38.000000Z"
+   committed-date="2001-10-26T23:56:32.000000Z"
+   checksum="924a141af1930d02442db690b6b1912b"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:44:38.000000Z"/>
+<entry
+   committed-rev="1870"
+   name="helvetica18b.bdf"
+   text-time="2003-11-18T16:44:48.000000Z"
+   committed-date="2002-01-10T17:41:45.000000Z"
+   checksum="6781bf70db14eaa6a2918e8b6f6fe440"
+   last-author="cgrigis"
+   kind="file"
+   prop-time="2003-11-18T16:44:48.000000Z"/>
+<entry
+   committed-rev="3743"
+   name="Makefile.am"
+   text-time="2003-11-18T16:44:50.000000Z"
+   committed-date="2003-04-03T17:22:36.000000Z"
+   checksum="cd95ea174208d535ca1b0c17ce9e4294"
+   last-author="cgrigis"
+   kind="file"
+   prop-time="2003-11-18T16:44:50.000000Z"/>
+<entry
+   committed-rev="1870"
+   name="helvetica18.fi"
+   text-time="2003-11-18T16:44:55.000000Z"
+   committed-date="2002-01-10T17:41:45.000000Z"
+   checksum="680d36663bcc1f6ea60c03e91deee971"
+   last-author="cgrigis"
+   kind="file"
+   prop-time="2003-11-18T16:44:55.000000Z"/>
+<entry
+   committed-rev="2860"
+   name="gelly10.fi"
+   text-time="2003-11-18T16:45:00.000000Z"
+   committed-date="2002-10-01T09:41:12.000000Z"
+   checksum="9301fd6eb2cb2816e11a47db81b93e09"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:45:00.000000Z"/>
+<entry
+   committed-rev="1466"
+   name="fixed13ja.fi"
+   text-time="2003-11-18T16:45:02.000000Z"
+   committed-date="2001-10-29T23:57:56.000000Z"
+   checksum="21353eb37ee3e6bf7c4e8cbf1539c766"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:45:02.000000Z"/>
+<entry
+   committed-rev="1870"
+   name="times10.bdf"
+   text-time="2003-11-18T16:45:06.000000Z"
+   committed-date="2002-01-10T17:41:45.000000Z"
+   checksum="58d5a4a772cfb4f73c40884cb45f3ac3"
+   last-author="cgrigis"
+   kind="file"
+   prop-time="2003-11-18T16:45:06.000000Z"/>
+<entry
+   committed-rev="3743"
+   name="youngatheart18.bdf"
+   text-time="2003-11-18T16:45:10.000000Z"
+   committed-date="2003-04-03T17:22:36.000000Z"
+   checksum="1a77fe05059a01c6a4a68867e87ad7c5"
+   last-author="cgrigis"
+   kind="file"
+   prop-time="2003-11-18T16:45:10.000000Z"/>
+<entry
+   committed-rev="1870"
+   name="times10b.bdf"
+   text-time="2003-11-18T16:45:21.000000Z"
+   committed-date="2002-01-10T17:41:45.000000Z"
+   checksum="33b78c582b765e05f91f16f5e7b23c56"
+   last-author="cgrigis"
+   kind="file"
+   prop-time="2003-11-18T16:45:21.000000Z"/>
+</wc-entries>

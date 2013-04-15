@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3840"
+   name=""
+   committed-date="2003-05-05T18:42:26.188241Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/working/tpcal/themes/data"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:26:44.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3840"
+   name="logo3.png"
+   text-time="2003-11-18T01:26:33.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="9a4daad1c9026bd48cb567f4d2c32c0c"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:26:33.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="micropingizauru.png"
+   text-time="2003-11-18T01:26:36.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="5f7ca5577c4f616ba39d63db1d7b2da0"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:26:36.000000Z"/>
+<entry
+   committed-rev="2467"
+   name="picolinux_logo_tiny.bmp"
+   text-time="2003-11-18T01:26:37.000000Z"
+   committed-date="2002-04-23T07:23:52.000000Z"
+   checksum="e3539120300aba630a3499ff4c3a2725"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:26:37.000000Z"/>
+<entry
+   committed-rev="2457"
+   name="tuxcal_logo.bmp"
+   text-time="2003-11-18T01:26:44.000000Z"
+   committed-date="2002-04-21T10:33:58.000000Z"
+   checksum="d7a1c5e3fbb3eaa6a445e56cb5800cdd"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:26:44.000000Z"/>
+</wc-entries>

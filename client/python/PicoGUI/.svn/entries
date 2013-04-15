@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4562"
+   name=""
+   committed-date="2003-11-17T03:48:56.083575Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/client/python/PicoGUI"
+   last-author="lalo"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T16:48:20.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3816"
+   name="network.py"
+   text-time="2003-11-18T16:47:43.000000Z"
+   committed-date="2003-05-04T13:11:12.422129Z"
+   checksum="a58c183dc1149cf98fa8c1db954d6c7c"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:47:43.000000Z"/>
+<entry
+   committed-rev="3428"
+   name="wtfile.py"
+   text-time="2003-11-18T16:47:51.000000Z"
+   committed-date="2002-11-25T12:00:21.000000Z"
+   checksum="10f0ed2e74d5377eed72d6cec745e900"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:47:51.000000Z"/>
+<entry
+   committed-rev="3941"
+   name="__init__.py"
+   text-time="2003-11-18T16:47:52.000000Z"
+   committed-date="2003-05-16T22:09:49.809157Z"
+   checksum="14109558bb248ca7a386e6baf306b38e"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:47:52.000000Z"/>
+<entry
+   committed-rev="3473"
+   name="XWTParser.py"
+   text-time="2003-11-18T16:47:53.000000Z"
+   committed-date="2002-11-26T22:06:25.000000Z"
+   checksum="cc3760332ecb3b91f0cb6cc4d4491344"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:47:53.000000Z"/>
+<entry
+   committed-rev="4561"
+   name="Application.py"
+   text-time="2003-11-18T16:47:56.000000Z"
+   committed-date="2003-11-17T03:47:24.858371Z"
+   checksum="27c365c58718e50bb6456259394eac6e"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:47:56.000000Z"/>
+<entry
+   committed-rev="3752"
+   name="events.py"
+   text-time="2003-11-18T16:47:58.000000Z"
+   committed-date="2003-04-10T14:39:57.000000Z"
+   checksum="74d0cf1a5c6160ca2060b01fe12f3fe2"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:47:58.000000Z"/>
+<entry
+   committed-rev="3960"
+   name="README"
+   text-time="2003-11-18T16:47:59.000000Z"
+   committed-date="2003-05-23T08:31:35.543142Z"
+   checksum="744e8a1ab8fc9781138e6f9f176651b3"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:47:59.000000Z"/>
+<entry
+   committed-rev="4562"
+   name="Server.py"
+   text-time="2003-11-18T16:48:01.000000Z"
+   committed-date="2003-11-17T03:48:56.083575Z"
+   checksum="7e5d4eb9dccd44228e14845b6c4670b1"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:48:01.000000Z"/>
+<entry
+   committed-rev="3691"
+   name="keys.py"
+   text-time="2003-11-18T16:48:03.000000Z"
+   committed-date="2003-03-25T05:09:14.000000Z"
+   checksum="b3e7a9e51e4d75d16ff3ba77c75450e6"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:48:03.000000Z"/>
+<entry
+   committed-rev="3941"
+   name="Canvas.py"
+   text-time="2003-11-18T16:48:03.000000Z"
+   committed-date="2003-05-16T22:09:49.809157Z"
+   checksum="582f351c0146684def30432736b26eed"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:48:03.000000Z"/>
+<entry
+   committed-rev="4435"
+   name="requests.py"
+   text-time="2003-11-18T16:48:05.000000Z"
+   committed-date="2003-06-29T00:27:03.133677Z"
+   checksum="f2ee4251b023667cf7b9a886df842cb2"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:48:05.000000Z"/>
+<entry
+   committed-rev="3475"
+   name="template.py"
+   text-time="2003-11-18T16:48:05.000000Z"
+   committed-date="2002-11-26T23:03:05.000000Z"
+   checksum="445f0dfcd7ea240eccbfcc0372af826a"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T16:48:05.000000Z"/>
+<entry
+   committed-rev="3941"
+   name="constants.py"
+   text-time="2003-11-18T16:48:10.000000Z"
+   committed-date="2003-05-16T22:09:49.809157Z"
+   checksum="11e920015d919948cd345dd6f65a729d"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:48:10.000000Z"/>
+<entry
+   committed-rev="3766"
+   name="infilter.py"
+   text-time="2003-11-18T16:48:11.000000Z"
+   committed-date="2003-04-15T22:35:33.000000Z"
+   checksum="cfdccbd49b4cff37129397c3aca06ed1"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:48:11.000000Z"/>
+<entry
+   committed-rev="3941"
+   name="Gropseq.py"
+   text-time="2003-11-18T16:48:12.000000Z"
+   committed-date="2003-05-16T22:09:49.809157Z"
+   checksum="95407ca70cbb1b1975a19a264a5c419d"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:48:12.000000Z"/>
+<entry
+   committed-rev="2389"
+   name="COPYING"
+   text-time="2003-11-18T16:48:17.000000Z"
+   committed-date="2002-04-10T22:45:38.000000Z"
+   checksum="7fbc338309ac38fefcd64b04bb903e34"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:48:17.000000Z"/>
+<entry
+   committed-rev="3832"
+   name="responses.py"
+   text-time="2003-11-18T16:48:18.000000Z"
+   committed-date="2003-05-05T09:38:05.059463Z"
+   checksum="909d7cd8117a803d16d6ff50f76b5df1"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:48:18.000000Z"/>
+<entry
+   committed-rev="3941"
+   name="Widget.py"
+   text-time="2003-11-18T16:48:20.000000Z"
+   committed-date="2003-05-16T22:09:49.809157Z"
+   checksum="9bf32fbf32a4e1796178cab3d14c3aec"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:48:20.000000Z"/>
+</wc-entries>

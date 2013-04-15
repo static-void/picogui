@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4572"
+   name=""
+   committed-date="2003-11-18T01:08:04.008513Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/client/python"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T16:48:25.000000Z"
+   revision="4573"/>
+<entry
+   name="PicoGUI"
+   kind="dir"/>
+<entry
+   committed-rev="3657"
+   name="pgui-cli_python-cvs-0.ebuild"
+   text-time="2003-11-18T16:48:21.000000Z"
+   committed-date="2003-03-23T09:53:27.000000Z"
+   checksum="631a9ccbbd443bd1935a3c9827aaf028"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:48:21.000000Z"/>
+<entry
+   committed-rev="3054"
+   name="INSTALL.txt"
+   text-time="2003-11-18T16:48:22.000000Z"
+   committed-date="2002-10-20T17:50:59.000000Z"
+   checksum="a7d9ea3a5946325491c273c0a5f9625e"
+   last-author="lalo"
+   kind="file"
+   prop-time="2003-11-18T16:48:22.000000Z"/>
+<entry
+   committed-rev="4572"
+   name="setup.py"
+   text-time="2003-11-18T16:48:24.000000Z"
+   committed-date="2003-11-18T01:08:04.008513Z"
+   checksum="22c3562a825d75da734eab2bdcf5fbdf"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T16:48:24.000000Z"/>
+<entry
+   committed-rev="3933"
+   name="PicoGUIPython.mdl"
+   text-time="2003-11-18T16:48:25.000000Z"
+   committed-date="2003-05-15T14:47:14.323029Z"
+   checksum="b209a75ab2b5c4fe221dd7e64421275a"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T16:48:25.000000Z"/>
+</wc-entries>

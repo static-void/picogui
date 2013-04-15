@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3835"
+   name=""
+   committed-date="2003-05-05T10:02:55.352841Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/dev/clamps"
+   last-author="bornet"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T14:58:51.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3311"
+   name="clamps.py"
+   text-time="2003-11-18T14:58:48.000000Z"
+   committed-date="2002-11-12T11:09:08.000000Z"
+   checksum="7825b589876839ac89e6fe946b79d015"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T14:58:48.000000Z"/>
+<entry
+   committed-rev="2579"
+   name="clamps_fsi.py"
+   text-time="2003-11-18T14:58:49.000000Z"
+   committed-date="2002-06-26T20:24:34.000000Z"
+   checksum="0e7b60900a9e4e476583d8eef0bb6c66"
+   last-author="carpman"
+   kind="file"
+   prop-time="2003-11-18T14:58:49.000000Z"/>
+<entry
+   committed-rev="3310"
+   name="clamps_mime.py"
+   text-time="2003-11-18T14:58:51.000000Z"
+   committed-date="2002-11-12T11:05:16.000000Z"
+   checksum="202e2708d9b8bb0b6749677807046575"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T14:58:51.000000Z"/>
+</wc-entries>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3962"
+   name=""
+   committed-date="2003-05-23T08:43:53.003198Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/test/xwt"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   revision="4573"/>
+<entry
+   committed-rev="3959"
+   name="test.xwt"
+   text-time="2003-11-18T01:20:05.000000Z"
+   committed-date="2003-05-23T08:27:32.261219Z"
+   checksum="0c18ffffa450ff266a23cec1caf8e579"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:20:05.000000Z"/>
+<entry
+   name="data"
+   kind="dir"/>
+<entry
+   committed-rev="3962"
+   name="xwttest.py"
+   text-time="2003-11-18T01:20:23.000000Z"
+   committed-date="2003-05-23T08:43:53.003198Z"
+   checksum="c87a40c06bbef3a7343db15ade2bfc9c"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:20:23.000000Z"/>
+</wc-entries>

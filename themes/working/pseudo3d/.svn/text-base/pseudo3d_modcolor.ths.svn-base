@@ -1,0 +1,49 @@
+/* $Id$
+ *
+ * This is a theme meant to be loaded _in addition to_ pseudo3d.
+ * It adds extra colors and things.
+ * 
+ * Version 1.0
+ *
+ * Micah Dowty
+ */
+
+obj default name = "Color hilights for Pseudo-3D";
+
+/* Panelbars with gradients */
+object panelbar {
+  bgfill = fillstyle {
+    SetColor(shadowcolor);
+    Frame(x,y,w,h);
+    Gradient(x+1,y+1,w-2,h-2,w>h ? 0 : -90,shadowcolor,bgcolor);
+  };
+  bgcolor = 0x0000C0;
+}
+
+/* Background gradient stuff */
+object background {
+   bgfill = fillstyle {
+      Bitmap(x,y,w,h,bitmap1);
+      SetLgop(PG_LGOP_MULTIPLY);
+      Gradient(x,y,w,h,42,0xA89CD8,0x635891);
+   };
+   bitmap1 = LoadBitmap("data/bg.pnm");
+}
+
+/* Tints and hilights for the buttons */
+object button         bgcolor = 0xC0C0D0;
+object button.hilight bgcolor = 0xE0E0FF;
+
+/* Tinted toolbar background */
+object toolbar bgcolor = 0xC0C0E0;
+
+/* Better menu item hilights */
+object menuitem.hilight {
+  bgcolor = 0xE0E0FF;
+  fgcolor = 0x000000;
+}
+
+/* Yellow tinted dialog boxes */
+object popup.messagedlg bgcolor = 0xE0E0C0;
+
+/* The End */

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3978"
+   name=""
+   committed-date="2003-05-23T10:19:38.050153Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/test/themedemo"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:23:09.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3978"
+   name="themedemo.c"
+   text-time="2003-11-18T01:23:08.000000Z"
+   committed-date="2003-05-23T10:19:38.050153Z"
+   checksum="8a255c1c1f86bcb1d4350e0946d61a18"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:23:08.000000Z"/>
+<entry
+   committed-rev="1995"
+   name="Makefile"
+   text-time="2003-11-18T01:23:09.000000Z"
+   committed-date="2002-02-02T04:31:22.000000Z"
+   checksum="1389e09375a60b14bc1b0f99a7fba058"
+   last-author="micahjd"
+   kind="file"
+   prop-time="2003-11-18T01:23:09.000000Z"/>
+</wc-entries>

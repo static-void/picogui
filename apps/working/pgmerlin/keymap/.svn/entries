@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3835"
+   name=""
+   committed-date="2003-05-05T10:02:55.352841Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/working/pgmerlin/keymap"
+   last-author="bornet"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:47:59.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="2484"
+   name="swedish-kbd.map"
+   text-time="2003-11-18T01:47:55.000000Z"
+   committed-date="2002-05-07T15:03:23.000000Z"
+   checksum="56d6732ab88a96997a4ef64fd6921253"
+   last-author="bigthor"
+   kind="file"
+   prop-time="2003-11-18T01:47:55.000000Z"/>
+<entry
+   committed-rev="2484"
+   name="english-kbd.map"
+   text-time="2003-11-18T01:47:59.000000Z"
+   committed-date="2002-05-07T15:03:23.000000Z"
+   checksum="f9551fd96e4271a42fe599dd92221273"
+   last-author="bigthor"
+   kind="file"
+   prop-time="2003-11-18T01:47:59.000000Z"/>
+</wc-entries>

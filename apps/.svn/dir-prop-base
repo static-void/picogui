@@ -1,0 +1,21 @@
+K 10
+svn:ignore
+V 200
+Makefile.in
+INSTALL
+aclocal.m4
+config.guess
+config.h.in
+config.sub
+configure
+install-sh
+ltmain.sh
+missing
+mkinstalldirs
+picogui-apps.spec.in
+stamp-h.in
+.beeinfo
+native-linux-any-any
+ppc-linux-any-any
+
+END

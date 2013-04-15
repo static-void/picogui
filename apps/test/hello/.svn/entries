@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3835"
+   name=""
+   committed-date="2003-05-05T10:02:55.352841Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/test/hello"
+   last-author="bornet"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:22:30.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3806"
+   name="hello.c"
+   text-time="2003-11-18T01:22:28.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="61b389d0e4885b44d57efa83ae38e59a"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:22:28.000000Z"/>
+<entry
+   committed-rev="1979"
+   name="Makefile.am"
+   text-time="2003-11-18T01:22:29.000000Z"
+   committed-date="2002-01-30T15:25:21.000000Z"
+   checksum="528ac21174f6db576aeebd4e9cc5a33c"
+   last-author="bornet"
+   kind="file"
+   prop-time="2003-11-18T01:22:29.000000Z"/>
+<entry
+   committed-rev="3806"
+   name="hello-ja.c"
+   text-time="2003-11-18T01:22:30.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="66f7e938a067782601b1ab9a2655a985"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:22:30.000000Z"/>
+</wc-entries>

@@ -1,0 +1,238 @@
+# -*- python -*-
+#
+# $Id: PicoGUIServer.mdl 4559 2003-11-14 13:20:30Z cgrigis $
+
+import os, string
+from Bee.Autoconf import compile, install, clean, configure, flags
+from Bee.Logic import S
+
+multicompile     = 1
+platform_variant = 1
+
+description = ''' PicoGUI server application '''
+
+help = """
+Provides the PicoGUI server, which is responsible for the
+graphical interface.
+"""
+
+license = ''' GNU GPL '''
+
+prefix = '/usr'
+
+depends = [
+    'kernel', 'processmanager',
+    ('libjpeg', ~S ('platform/m68k-pic-coff')),
+    ('libpng', ~S ('platform/m68k-pic-coff')),
+    ('busybox', S ('platform/ppc-linux')),
+    'btkey-report',
+    ]
+
+asserts = [
+    (S ('module/picoguiserver/start') & S ('platform/m68k-pic-coff'))
+    >> S ('module/pocketapps/bioscall'),
+    (S ('module/picoguiserver/start') & S ('platform/m68k-pic-coff'))
+    >> S ('module/pocketapps/initenv'),
+    (S ('module/picoguiserver/start') & S ('platform/ppc-linux/redwood4'))
+    >> S ('module/ibm-dcr'),
+    ]
+
+runtime = [
+
+            Runtime ('install', 'Install PicoGUI Server',
+                     content = [ 'bin/pgserver'],
+                     depends = [ 'kernel/video',
+                                 ('kernel/keyboard', S ('product/remora')),
+                                 ('libjpeg/library', ~ S ('platform/m68k-pic-coff')),
+                                 ('libpng/library', ~ S ('platform/m68k-pic-coff')),
+                                 'btkey-report/install',
+                                 ],
+                     help = "Install the PicoGUI Server" ),
+
+            Runtime ('start', 'Run PicoGUI Server',
+
+                     content = [ '/etc/rm.d/picoguiserver',
+                                 'bin/picogui-launcher.sh' ],
+                     
+                     depends = [ 'picoguiserver/install',
+                                 'processmanager/start',
+                                 'btkey-report/start',
+                                 ],
+
+                     rcscript = "\n# launch pgserver\npicogui-launcher.sh\n",
+                     
+                     help = "Start the PicoGUI Server" )
+            ]
+
+
+def prepare (module, platform, project):
+    profile = "../profiles/profile.SMARTDATA-%s" % \
+              platform.fqn ()
+
+    cflags, libs = flags ((('processmanager', 'library'),),
+                           platform, project)
+
+    # Other cflags and libs
+    ocflags, olibs = flags ((('btkey-report', 'library'),),
+                            platform, project)
+        
+    command = [
+        "--sysconfdir=/etc",
+        "--prefix=%s" % module.path ['prefix'],
+        "--with-profile=%s" % profile,
+        "--enable-bee",
+        "--with-extra-ipath='%s/include %s'" % (project ['module/kernel'].path ['dfl'],
+                                                ocflags),
+        "--with-pm-cflags='%s'" % cflags,
+        ]
+
+    if not platform.native:
+        command = command + [
+            "--with-prefix=%s" % platform.toolchain,
+            ]
+
+    if not platform.platform == "m68k-pic-coff":
+        cflags, libs = flags ((('libjpeg', 'library'),
+                               ('libpng', 'library')),
+                              platform, project)
+        command += [
+            '--with-extra-cflags="%s"' % cflags,
+            '--with-extra-libs="%s"' % libs,
+            ]
+
+    configure (module, platform, command)
+    return
+
+def install (module, platform, project):
+    sequence ("make install DESTDIR=%s" % module.path ['d_frz'])
+
+    # try to install the mdl file in the root of the frozen directory
+    installfile (module.file, module.path ['r_frz'])
+
+    # generate the PM file
+    file = os.path.join (module.path ['d_frz'], 'etc', 'rm.d', 'picoguiserver')
+    makedirs (os.path.dirname (file))
+
+    fd = open (file, 'w')
+
+    if platform.platform == 'm68k-pic-coff':
+        fd.write ('''
+name = picogui-server
+argv = pgserver
+
+restart  = 1
+announce = 1
+blocked  = 1
+    ''')
+
+    elif platform.platform == 'ppc-linux':
+        fd.write ('''
+name = picogui-server
+argv = pgserver --input-rawttykb.device=/dev/tty1
+
+restart  = 1
+announce = 1
+blocked  = 1
+    ''')
+
+    elif platform.platform == 'native-linux':
+        fd.write ('''
+name = picogui-server
+argv = pgserver -m 640x480 -i btkey -i eventbroker -i ttykb
+
+restart  = 1
+announce = 1
+blocked  = 0
+    ''')
+
+    elif platform.fqn () == 'arm-linux-remora':
+        fd.write ('''
+name = picogui-server
+argv = pgserver --input-ttykb.device=/dev/tty1
+
+restart  = 1
+announce = 1
+blocked  = 0
+    ''')
+
+    else:
+        fd.write ('''
+name = picogui-server
+argv = pgserver
+
+restart  = 1
+announce = 1
+blocked  = 0
+    ''')
+        
+    
+    fd.close ()
+
+    file = os.path.join (module.path ['frz'], 'bin', 'picogui-launcher.sh')
+    makedirs (os.path.dirname (file))
+
+    fd = open (file, 'w')
+
+    if platform.platform == 'm68k-pic-coff':
+        fd.write ('''#!/bin/sh
+    
+# setup env vars
+rm -f /var/pgserver.dynconf
+
+# pre-calibrate the /dev/ts device using bios env var
+bioscall --ts-calibrate=PG_TS_CALIBRATION
+
+if bioscall --test PG_REMORAKB_ON -eq 1
+then
+  if bioscall --test PLATFORM_NAME = "RemoraPilotRun"
+  then
+    echo "/etc/rc: Using Ericsson chatboard on ttyS0"
+    echo "[input-ericsson-chatboard]" >>/var/pgserver.dynconf
+    echo "device = /dev/ttyS0" >>/var/pgserver.dynconf
+  else
+    echo "/etc/rc: Using Remora keyboard on ttyS0"
+    echo "[remora-kb]" >>/var/pgserver.dynconf
+    echo "device = /dev/ttyS0" >>/var/pgserver.dynconf
+    if bioscall --test PG_REMORAKB_BAUD_SHIFT -eq 1
+    then
+      echo "baud_shift = 1" >>/var/pgserver.dynconf
+    fi
+  fi
+fi
+
+# start pgserver
+pm_tell unblock picogui-server
+''')
+
+    elif platform.platform == 'ppc-linux':
+        fd.write ('''#!/bin/sh
+# Set the framebuffer device in 16bpp (YUV)
+echo "setting framebuffer device to 16bpp YUV ..."
+fbset -n -g 640 480 640 480 16 > /dev/null
+
+# Set the PWM to a value where we have correct colors
+if [ -f /etc/pwm_default_value ]
+then
+    change_dcr -y 0x16 `cat /etc/pwm_default_value` > /dev/null
+fi
+
+# start pgserver
+pm_tell unblock picogui-server
+while test $? -gt 0
+do
+  pm_tell unblock picogui-server
+done
+''')
+
+    else:
+        fd.write ('''#!/bin/sh
+
+# automatically launched by the process manager
+''')
+        
+    fd.close ()
+    os.chmod (file, 0755)
+    
+    return
+
+

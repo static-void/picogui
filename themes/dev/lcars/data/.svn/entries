@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3840"
+   name=""
+   committed-date="2003-05-05T18:42:26.188241Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/themes/dev/lcars/data"
+   last-author="micah"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T15:24:40.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3840"
+   name="lcars-check.png"
+   text-time="2003-11-18T15:24:39.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="428a9619d092354c6c820c03eedd26a5"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:24:39.000000Z"/>
+<entry
+   committed-rev="3840"
+   name="lcars-check-on.png"
+   text-time="2003-11-18T15:24:40.000000Z"
+   committed-date="2003-05-05T18:42:26.188241Z"
+   checksum="607ea607c0ef7191ad9b73fcfa7d0360"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T15:24:40.000000Z"/>
+</wc-entries>

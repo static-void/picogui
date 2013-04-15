@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3835"
+   name=""
+   committed-date="2003-05-05T10:02:55.352841Z"
+   url="http://navi.picogui.org/svn/picogui/trunk/pg1/apps/test/shm"
+   last-author="bornet"
+   kind="dir"
+   uuid="5d597a97-97bc-0310-81ef-f259c7ac4693"
+   prop-time="2003-11-18T01:20:34.000000Z"
+   revision="4573"/>
+<entry
+   committed-rev="3806"
+   name="shmtest.c"
+   text-time="2003-11-18T01:20:34.000000Z"
+   committed-date="2003-05-04T06:11:21.559552Z"
+   checksum="1b0a9bfb5d9acbf68f21e990b6383d98"
+   last-author="micah"
+   kind="file"
+   prop-time="2003-11-18T01:20:34.000000Z"/>
+<entry
+   committed-rev="3524"
+   name="Makefile.am"
+   text-time="2003-11-18T01:20:34.000000Z"
+   committed-date="2003-01-09T15:56:14.000000Z"
+   checksum="4984fd17d26ea540ad4fb89f7a2edfb1"
+   last-author="pney"
+   kind="file"
+   prop-time="2003-11-18T01:20:34.000000Z"/>
+</wc-entries>
